@@ -1,0 +1,98 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\title{CMB Constraint Mapping for Dark-Sector Necessity in Tau Core}
+\author{Tau Core Research}
+\date{Private scaffold, June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This private scaffold defines a CMB-facing constraint map for deciding what a
+Tau Core cosmology must reproduce before any dark-sector necessity claim can be
+made. The paper does not fit CMB spectra, does not implement a Boltzmann solver,
+and does not claim that Tau Core explains the CMB. It instead maps CMB acoustic,
+lensing, damping, and growth constraints to minimum Tau Core deliverables. The
+main provisional conclusion is methodological: a completely no-dark Tau Core
+cosmology is not a defensible global claim unless it can reproduce the CMB roles
+normally carried by non-baryonic gravitational sources in standard cosmology.
+\end{abstract}
+
+\section{Scope}
+
+Paper 13 is separated from the galaxy-rotation scoring work. Galaxy rotation can
+test morphology/readout behavior, but the cosmic microwave background (CMB)
+tests early-universe acoustic physics, gravitational potentials, lensing, and
+growth seeds. Therefore the CMB is a stronger arena for asking whether Tau Core
+can remain no-dark or whether an effective base-field response layer is needed.
+
+This scaffold distinguishes three possible later outcomes:
+\[
+\begin{array}{ll}
+\mathrm{TC0}: & \hbox{no effective dark-sector response required},\\
+\mathrm{TC1}: & \hbox{Tau base-field response required},\\
+\mathrm{TC2}: & \hbox{standard CDM/Lambda-like benchmark still required}.
+\end{array}
+\]
+None of these outcomes is claimed here.
+
+\section{External Constraints}
+
+The primary reference point is the Planck 2018 cosmological parameter analysis,
+which reports strong consistency of the base six-parameter flat
+$\Lambda$CDM model with CMB anisotropy and lensing data
+\cite{planck2018parameters}. The relevant pressure on Tau Core is not the name
+``dark matter'' but the role: early gravitational potentials, acoustic peak
+structure, matter-density inference, lensing, and growth consistency.
+
+ACT DR6 CMB lensing provides an independent lensing-based check on the matter
+distribution and growth history \cite{actdr6lensing}, while ACT DR6 extended
+model analyses provide a current reference for how CMB data constrain departures
+from base $\Lambda$CDM \cite{actdr6extended}.
+
+\section{Tau Core Requirement Map}
+
+The constraint map is intentionally conservative. A no-dark Tau Core cosmology
+must not merely fit a late-time galaxy rotation curve. It must also provide:
+
+\begin{enumerate}
+\item an equation-level source model for the acoustic peak phase and ratios;
+\item an effective-density mapping for the role conventionally captured by
+  $\Omega_c h^2$;
+\item a lensing-transfer response consistent with CMB lensing;
+\item a radiation-content and damping-tail audit;
+\item a growth-transfer kernel connecting early perturbations to later
+  structure.
+\end{enumerate}
+
+If these roles cannot be delivered without an effective non-baryonic source,
+then Tau Core must be formulated with a base-field response layer before making
+cosmological claims. Such a layer should not be overpromoted to a detected
+physical field; it is first a required effective role in the theory.
+
+\section{Claim Boundary}
+
+This paper does not claim that Tau Core explains the CMB, does not claim that
+dark matter does not exist, does not detect a Tau dark-sector field, and does
+not provide a CMB likelihood. It provides only a reproducible constraint map and
+a next-artifact target:
+\[
+\texttt{tau\_cmb\_effective\_source\_equation\_v01}.
+\]
+
+\section{Reproducibility}
+
+The repository includes compact CSV manifests and a script:
+\[
+\texttt{python scripts/reproduce.py}.
+\]
+The script regenerates derived tables, validates claim boundaries, builds the
+arXiv source package, and runs public tests.
+
+\bibliographystyle{unsrt}
+\bibliography{refs}
+\end{document}

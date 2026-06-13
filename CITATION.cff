@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+title: "CMB constraint mapping for dark-sector necessity in Tau Core"
+message: "If you use this private scaffold, cite the repository and the external CMB references listed in refs.bib."
+type: software
+authors:
+  - name: "Tau Core Research"
+date-released: "2026-06-13"
+license: MIT
