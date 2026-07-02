@@ -41,6 +41,10 @@ readout footprint if later source, channel, dimension, gauge/null, and
 cross-role gates pass. This is not a physical source claim or a dark-sector
 verdict.
 
+Terminology note: `M_tau` is the Tau-side **morphological body**. `M_seed` and
+`delta M_root` are source-side seed/constraint handles for that body, not
+observed CMB morphology and not a fitted CMB residual template.
+
 Current acoustic diagnostic-route update:
 
 ```text
