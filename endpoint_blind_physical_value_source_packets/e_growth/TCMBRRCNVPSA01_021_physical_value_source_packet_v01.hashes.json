@@ -1,0 +1,10 @@
+{
+  "allows_physical_CMB_score": false,
+  "claim_boundary": "tau_cmb_endpoint_blind_physical_value_source_packet_v01_physical_source_packet_declared_sources_not_supplied_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "likelihood_allowed": false,
+  "physical_value_source_accepted": false,
+  "physical_value_source_supplied": false,
+  "sha256": "4458f4d9f047ae51eb5c2e244f9e3b63e5e5f46765163e8d7ca6d1fc2bc8e66b",
+  "target": "endpoint_blind_physical_value_source_packets/e_growth/TCMBRRCNVPSA01_021_physical_value_source_packet_v01.json"
+}

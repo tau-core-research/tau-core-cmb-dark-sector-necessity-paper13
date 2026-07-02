@@ -1,0 +1,19 @@
+{
+  "accepted_domain_objects": 0,
+  "candidate_rows": 8,
+  "carrier_certificate_passed_rows": 0,
+  "claim_boundary": "tau_cmb_carrier_domain_certificate_candidate_v01_candidate_only_certificates_declared_unpassed_domain_unaccepted_R_CMB_not_materialized_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "declared_candidate_rows": 8,
+  "domain_certificate_passed_rows": 0,
+  "input_chain_clean": true,
+  "input_requirements_audit": "data/derived/tau_cmb_carrier_domain_certificate_requirements_audit_v01.json",
+  "input_requirements_table": "data/derived/tau_cmb_carrier_domain_certificate_requirements_v01.csv",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "audit_tau_cmb_carrier_domain_certificate_candidate_v01",
+  "report_id": "tau_cmb_carrier_domain_certificate_candidate_summary_v01",
+  "score_entry_allowed": false,
+  "status": "CARRIER_DOMAIN_CERTIFICATE_CANDIDATE_DECLARED_UNPASSED",
+  "table": "data/derived/tau_cmb_carrier_domain_certificate_candidate_v01.csv"
+}

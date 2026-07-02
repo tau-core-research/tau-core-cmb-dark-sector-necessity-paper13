@@ -1,0 +1,17 @@
+{
+  "affected_frontier_rows": 1,
+  "claim_boundary": "tau_cmb_growth_transfer_operator_explicit_fail_acceptance_audit_v01_explicit_fail_accepted_no_growth_operator_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "explicit_fail_accepted": true,
+  "input_chain_clean": true,
+  "input_supply_artifact": "physical_value_source_supplies/e_growth/growth_transfer_operator_explicit_fail_supply_v01.json",
+  "input_supply_summary": "data/derived/tau_cmb_growth_transfer_operator_or_explicit_fail_supply_summary_v01.json",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_v07",
+  "numeric_growth_values_accepted": false,
+  "physical_CMB_score_allowed": false,
+  "physical_value_source_accepted": false,
+  "report_id": "tau_cmb_growth_transfer_operator_explicit_fail_acceptance_audit_summary_v01",
+  "status": "CMB_GROWTH_TRANSFER_OPERATOR_EXPLICIT_FAIL_ACCEPTED_PHYSICAL_SCORE_BLOCKED",
+  "target_role": "growth"
+}

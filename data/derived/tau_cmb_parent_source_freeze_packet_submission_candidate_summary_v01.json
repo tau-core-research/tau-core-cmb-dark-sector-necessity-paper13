@@ -1,0 +1,15 @@
+{
+  "accepted_rows": 0,
+  "artifact_hash_rows": 7,
+  "candidate": "payloads/tau_cmb_parent_source_freeze_packet_submission_candidate_v01.csv",
+  "candidate_rows": 7,
+  "claim_boundary": "tau_cmb_parent_source_freeze_packet_submission_candidate_v01_negative_candidate_only_no_populated_source_values_no_source_acceptance_no_phi_derivation_no_score_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "next_minimal_unblock": "provide_real_endpoint_blind_parent_source_values_or_record_explicit_source_unavailability",
+  "payload_submitted": true,
+  "populated_source_value_rows": 0,
+  "report_id": "tau_cmb_parent_source_freeze_packet_submission_candidate_summary_v01",
+  "score_entry_allowed": false,
+  "source_acceptance_allowed": false,
+  "status": "PARENT_SOURCE_FREEZE_PACKET_NEGATIVE_CANDIDATE_REJECTED_NO_POPULATED_VALUES"
+}

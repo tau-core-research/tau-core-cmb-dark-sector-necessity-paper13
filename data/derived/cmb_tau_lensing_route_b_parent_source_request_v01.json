@@ -1,0 +1,75 @@
+{
+  "acceptance_commands": [
+    "make tau-grid-route-b-parent-table-precheck",
+    "make tau-grid-route-b-parent-dry-run",
+    "make tau-grid-route-b-parent-write-staging",
+    "make tau-grid-derivation-intake-audit",
+    "make tau-grid-physical-candidate-precheck",
+    "make tau-grid-handoff-write-staging",
+    "make tau-grid-physical-candidate-package",
+    "make staging-promote-delta-dry-run"
+  ],
+  "claim_boundary": "route_b_parent_source_request_only_no_parent_source_no_grid_no_score_no_dark_sector_verdict",
+  "current_blocker": "missing_endpoint_blind_tau_derived_parent_tau_source_l_table",
+  "dark_sector_verdict": false,
+  "fixed_config_values": {
+    "parent_l_column": "L",
+    "parent_value_column": "parent_tau_source_value",
+    "response_rule": "linear_parent_source_v01",
+    "selected_route": "delta_PP_tau_against_named_fiducial_PP"
+  },
+  "forbidden_inputs": [
+    "ACT residuals",
+    "Planck residuals",
+    "reduced chi2 tuning",
+    "score output tuning",
+    "dark-sector verdict preference",
+    "diagnostic probe parameters",
+    "zero-control definitions promoted as physical response",
+    "template placeholders"
+  ],
+  "materialization_rule": "delta_PP_tau(L)=normalization*parent_tau_source_value(L) for response_rule=linear_parent_source_v01",
+  "next_required_action": "produce_the_parent_source_table_and_config_then_run_parent_table_precheck",
+  "outputs_after_materialization": {
+    "upstream_metadata": "payload_staging/tau_lensing_upstream_l_response_metadata_v01.json",
+    "upstream_table": "payload_staging/tau_lensing_upstream_l_response_v01.csv"
+  },
+  "parent_source_config_required_fields": [
+    "config_id",
+    "selected_route",
+    "response_rule",
+    "parent_source_table",
+    "parent_l_column",
+    "parent_value_column",
+    "normalization",
+    "endpoint_blind_statement",
+    "parameter_policy",
+    "source_chain",
+    "normalization_statement",
+    "known_limit_statement",
+    "claim_boundary"
+  ],
+  "parent_source_table_schema": {
+    "l_column": "L",
+    "l_values": "exact integer sequence 10..3009",
+    "rows": 3000,
+    "value_column": "parent_tau_source_value",
+    "value_requirement": "finite numeric Tau-derived parent-source values; not a template, not a diagnostic probe, not a zero-control promoted as physics"
+  },
+  "physical_tau_score_run": false,
+  "purpose": "Define the exact endpoint-blind Route B parent-source deliverable needed before the Tau-grid materializer may write a physical-candidate upstream L response.",
+  "report_id": "cmb_tau_lensing_route_b_parent_source_request_v01",
+  "required_evidence": [
+    "parent_tau_source(L) is derived from Tau-side morphology/source structure before endpoint score readout",
+    "source_chain names the derivation artifacts or scripts that generated the table",
+    "normalization is finite and fixed before any score, residual, or verdict inspection",
+    "known-limit statement verifies parent_tau_source_value -> 0 implies delta_PP_tau -> 0",
+    "parameter_policy excludes ACT/Planck residual fitting, reduced chi2 tuning, score tuning, and verdict preference",
+    "replay command or generator is identified so the table can be regenerated"
+  ],
+  "required_output_files": {
+    "parent_source_config": "payload_staging/tau_lensing_route_b_parent_source_config_v01.json",
+    "parent_source_table": "payload_staging/tau_lensing_route_b_parent_source_v01.csv"
+  },
+  "score_run": false
+}

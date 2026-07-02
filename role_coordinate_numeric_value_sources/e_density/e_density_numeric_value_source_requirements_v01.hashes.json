@@ -1,0 +1,11 @@
+{
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_source_supply_v01_source_requirement_worklist_supplied_no_numeric_values_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "likelihood_allowed": false,
+  "numeric_value_source_supplied": false,
+  "numeric_values_materialized": false,
+  "score_entry_allowed": false,
+  "sha256": "7c27d6a7c99a1c7a559ed7942a21f9729643efab5be9ecd00cec436dd02ff50e",
+  "target": "role_coordinate_numeric_value_sources/e_density/e_density_numeric_value_source_requirements_v01.json"
+}

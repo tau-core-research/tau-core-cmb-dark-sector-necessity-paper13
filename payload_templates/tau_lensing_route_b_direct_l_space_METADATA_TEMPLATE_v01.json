@@ -1,0 +1,35 @@
+{
+  "claim_boundary": "route_b_direct_l_space_metadata_template_not_payload_no_grid_no_score_no_dark_sector_verdict",
+  "derivation_script_or_formula": "FILL: delta_PP_tau(L) = F_tau_L(parent_tau_source, readout_profile, scale_profile; L)",
+  "endpoint_blind_statement": "FILL: Endpoint-blind parent_tau_source response values are fixed before any endpoint or score readout.",
+  "forbidden_inputs": [
+    "ACT residuals",
+    "Planck residuals",
+    "reduced chi2 tuning",
+    "score output tuning",
+    "dark-sector verdict preference",
+    "diagnostic probe parameters",
+    "zero-control definitions promoted as physical response"
+  ],
+  "formula_role": "endpoint_blind_tau_derived_lensing_l_response_physical_candidate",
+  "known_limit_statement": "FILL: delta_PP_tau tends to zero when parent_tau_source is absent or null-gauged.",
+  "l_column": "L",
+  "normalization_statement": "FILL: dimensionless delta_PP_tau normalization fixed by parent_tau_source convention.",
+  "notes": "This is a Route B metadata template only. Remove template_status and all FILL fields only after the matching 3000-row table is produced from Tau-side evidence.",
+  "parameter_policy": "FILL: No endpoint or score tuning is allowed; all F_tau_L parameters are fixed from Tau-side parent evidence before the 3000-row table is generated.",
+  "route_B_direct_L_space_requirements": [
+    "parent_tau_source is named and endpoint-blind",
+    "F_tau_L is replayable or mathematically specified",
+    "readout_profile and scale_profile are fixed before endpoint score readout",
+    "output table has exact L=10..3009 alignment"
+  ],
+  "route_family": "route_B_direct_L_space",
+  "selected_route": "delta_PP_tau_against_named_fiducial_PP",
+  "source_chain": [
+    "FILL: Tau parent_tau_source evidence artifact",
+    "FILL: F_tau_L derivation/proof artifact",
+    "FILL: replay script that writes payload_staging/tau_lensing_upstream_l_response_v01.csv"
+  ],
+  "template_status": "TEMPLATE_NOT_PAYLOAD",
+  "value_column": "tau_response_value"
+}

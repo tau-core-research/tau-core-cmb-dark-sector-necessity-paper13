@@ -1,0 +1,53 @@
+{
+  "artifact_id": "TCMBCDSEMCHECKREPLAYACC01_001",
+  "artifact_status": "CERTIFICATE_LEVEL_CHECKER_REPLAY_CANDIDATE_SUPPLIED_SEMANTIC_ONLY",
+  "certificate_area": "carrier_well_formedness",
+  "certificate_level_replay_body": {
+    "accepted_trace_rows": [
+      {
+        "component_accepted_rows": "5",
+        "component_rows": "5",
+        "semantic_evidence_field": "carrier_hashes_match",
+        "trace_acceptance_refresh_row_id": "TCMBCDSEMTRACEACCREF01_001"
+      },
+      {
+        "component_accepted_rows": "5",
+        "component_rows": "5",
+        "semantic_evidence_field": "role_basis_valid",
+        "trace_acceptance_refresh_row_id": "TCMBCDSEMTRACEACCREF01_002"
+      },
+      {
+        "component_accepted_rows": "5",
+        "component_rows": "5",
+        "semantic_evidence_field": "role_bundle_closes",
+        "trace_acceptance_refresh_row_id": "TCMBCDSEMTRACEACCREF01_003"
+      }
+    ],
+    "conclusion": "The checker has a semantic certificate-level replay candidate when accepted traces, executable rule, and structural checker replay are all present. This is not a physical R_CMB, likelihood, score, or verdict.",
+    "premises": {
+      "all_semantic_traces_accepted": true,
+      "certificate_rule_executable": true,
+      "checker_execution_succeeded": true,
+      "checker_output_hash_matches": true,
+      "endpoint_blind": true,
+      "structural_checker_replay_present": true
+    },
+    "scope": "semantic certificate-level checker replay only",
+    "steps": [
+      "Replay the accepted semantic evidence traces for the checker.",
+      "Confirm that the checker-level certificate rule is executable from those traces.",
+      "Bind the structural checker replay by hash and checker identity.",
+      "Promote only the semantic certificate-level checker replay candidate; do not promote physical readout or score."
+    ]
+  },
+  "certificate_pass_candidate": true,
+  "certificate_passed_after_supply": false,
+  "checker_name": "run_carrier_ok_checker",
+  "claim_boundary": "tau_cmb_certificate_semantic_evidence_certificate_level_checker_replay_supply_v01_certificate_level_checker_replay_candidate_supplied_semantic_certificate_only_no_domain_acceptance_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "domain_object_accepted": false,
+  "likelihood_allowed": false,
+  "next_required_step": "audit certificate-level checker replay candidates for semantic certificate pass",
+  "physical_R_CMB_materialized": false,
+  "score_entry_allowed": false
+}

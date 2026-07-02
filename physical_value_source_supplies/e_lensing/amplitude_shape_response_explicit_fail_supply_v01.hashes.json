@@ -1,0 +1,8 @@
+{
+  "claim_boundary": "tau_cmb_lensing_amplitude_shape_response_explicit_fail_supply_v01_row_specific_explicit_fail_no_shape_response_value_no_score_no_likelihood_no_verdict",
+  "explicit_fail_supplied": true,
+  "physical_value_source_accepted": false,
+  "score_entry_allowed": false,
+  "sha256": "01efc7108b4b4342f82678e636e3f1ae0e052fee44272b4cb1df9ce290d56b5f",
+  "target": "physical_value_source_supplies/e_lensing/amplitude_shape_response_explicit_fail_supply_v01.json"
+}

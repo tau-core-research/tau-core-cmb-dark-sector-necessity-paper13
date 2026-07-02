@@ -1,0 +1,12 @@
+{
+  "artifact_id": "TCMBCDIEBSAR01_011",
+  "claim_boundary": "tau_cmb_carrier_domain_checker_input_payload_endpoint_blind_source_artifact_materialization_packet_v01_source_artifact_candidates_materialized_not_accepted_no_staging_write_no_payload_acceptance_no_checker_execution_no_certificate_pass_no_domain_acceptance_no_R_CMB_no_score_no_likelihood_no_verdict",
+  "files": {
+    "/Users/jolcsak/Projects/tau-core-cmb-dark-sector-necessity-paper13/payload_sources/tau_cmb_carrier_domain_checker_input_payloads/domain_membership_rule/TCMBCDIPOP01_011_provenance_source.firewall.json": "c76b4e3656359a2bb5c0f6e6a0c1eec66a31fde96d0ff9c32e8d9e723aa31be6",
+    "/Users/jolcsak/Projects/tau-core-cmb-dark-sector-necessity-paper13/payload_sources/tau_cmb_carrier_domain_checker_input_payloads/domain_membership_rule/TCMBCDIPOP01_011_provenance_source.json": "de9d98f2e6a6a59c687c7ad1e32326f6462d99820dfe22e2441556426a6e622b",
+    "/Users/jolcsak/Projects/tau-core-cmb-dark-sector-necessity-paper13/payload_sources/tau_cmb_carrier_domain_checker_input_payloads/domain_membership_rule/TCMBCDIPOP01_011_provenance_source.provenance.json": "355314ccd95b84b255cf1eac19ba8e2076886403c924b2f86e16a08d24354124",
+    "/Users/jolcsak/Projects/tau-core-cmb-dark-sector-necessity-paper13/payload_sources/tau_cmb_carrier_domain_checker_input_payloads/domain_membership_rule/TCMBCDIPOP01_011_provenance_source.replay.json": "934ce8c22e2cff6d9e5cb368d4efc5a2ab112eced5c377019350b5f37761e323"
+  },
+  "hash_scope": "source_artifact_candidate_bundle",
+  "source_artifact_accepted": false
+}

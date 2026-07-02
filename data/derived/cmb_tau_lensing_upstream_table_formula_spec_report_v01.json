@@ -1,0 +1,22 @@
+{
+  "claim_boundary": "tabulated_tau_response_to_grid_spec_only_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "formula_family": "tabulated_l_response_v01",
+  "formula_spec": "payload_staging/tau_lensing_grid_formula_spec_v01.json",
+  "formula_spec_written": true,
+  "l_column": "L",
+  "materialization_command": "make tau-grid-from-formula",
+  "next_required_action": "run_make_tau-grid-from-formula_then_guarded_staging_promotion_dry_run",
+  "report_id": "cmb_tau_lensing_upstream_table_formula_spec_report_v01",
+  "score_run": false,
+  "selected_route": "delta_PP_tau_against_named_fiducial_PP",
+  "source_table": "payload_staging/tau_lensing_upstream_l_response_v01.csv",
+  "source_table_sha256": "1208b9b956f1b03b1a3418f4036529acad63ac4192f493b09bbb7822e8625a98",
+  "upstream_table_stats": {
+    "max_value": 0.9435402214942241,
+    "mean_value": 0.6824866988027103,
+    "min_value": 0.009999793390564156,
+    "rows": 3000
+  },
+  "value_column": "tau_response_value"
+}

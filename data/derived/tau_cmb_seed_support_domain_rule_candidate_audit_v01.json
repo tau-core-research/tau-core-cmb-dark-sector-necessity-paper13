@@ -1,0 +1,68 @@
+{
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_RULE_ROWS_PRESENT",
+      "blocking_reason": "support rule audit requires the six declared candidate rows",
+      "component": "rule_table_shape",
+      "finding": "components=['parent_domain_symbol', 'support_coordinate_basis', 'membership_rule', 'forbidden_endpoint_dependence', 'normalization_dependency', 'zero_control_dependency']"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_SYMBOL_DECLARED_AS_SECTOR_LABEL",
+      "blocking_reason": "parent-domain symbol must remain sector-level and endpoint-blind",
+      "component": "parent_domain_symbol",
+      "finding": "parent-domain symbol is declared as CMB morphology/readout sector label"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_TUPLE_FIELDS_PRESENT_NOT_NORMALIZED",
+      "blocking_reason": "support tuple fields must exist before normalization replay can consume them",
+      "component": "support_tuple_well_formed_candidate",
+      "finding": "payload provides morphology_class, readout_sector, and scale_label candidate fields"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_ENDPOINT_BLIND_CANDIDATE_EVIDENCE",
+      "blocking_reason": "support rule can reference candidate endpoint-blind evidence but cannot accept it",
+      "component": "endpoint_blindness_candidate",
+      "finding": "firewall records endpoint_inputs_used=[] and provenance keeps score closed"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_SCALE_LABEL_NOT_NORMALIZED",
+      "blocking_reason": "support certification requires Tau-side normalization replay",
+      "component": "support_certification",
+      "finding": "scale label remains candidate_not_normalized"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_DOMAIN_CERTIFICATE_PERMISSION_CLOSED",
+      "blocking_reason": "membership cannot promote to domain certificate before support and normalization audits pass",
+      "component": "domain_membership_promotion",
+      "finding": "payload explicitly keeps domain_certificate permission closed"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_ZERO_CONTROL_NOT_DEFINED",
+      "blocking_reason": "null_seed / zero-control must be defined before quotient survival",
+      "component": "zero_control_dependency",
+      "finding": "support rule correctly requires later zero-control over the same convention"
+    }
+  ],
+  "audited_rule_table": "data/derived/tau_cmb_seed_support_domain_rule_candidate_v01.csv",
+  "blocked_rows": 3,
+  "claim_boundary": "tau_cmb_seed_support_domain_rule_candidate_audit_v01_audit_only_support_not_certified_no_payload_acceptance_no_domain_certificate_no_readout_no_score_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "domain_certificate_allowed": false,
+  "failed_rows": 0,
+  "next_minimal_unblock": "tau_cmb_seed_normalization_replay_candidate_v01",
+  "passed_rows": 4,
+  "payload_acceptance_allowed": false,
+  "readout_evaluation_allowed": false,
+  "report_id": "tau_cmb_seed_support_domain_rule_candidate_audit_v01",
+  "score_entry_allowed": false,
+  "status": "SEED_SUPPORT_DOMAIN_RULE_CANDIDATE_AUDITED_BLOCKED_NOT_CERTIFIED",
+  "support_certification_allowed": false,
+  "support_rule_candidate_audited": true
+}

@@ -1,0 +1,20 @@
+{
+  "author_or_agent": "codex",
+  "created_utc": "2026-06-14T21:15:46.681975Z",
+  "derivation_script_or_formula": "For every L in 10..3009, delta_PP_tau(L)=0 by endpoint-blind null-control definition.",
+  "input_artifacts": [
+    "payload_staging/tau_lensing_upstream_l_response_v01.csv",
+    "payload_staging/tau_lensing_upstream_l_response_metadata_v01.json",
+    "payload_staging/tau_lensing_grid_formula_spec_v01.json"
+  ],
+  "no_endpoint_fit_statement": "The grid is identically zero by control definition and is not adjusted using endpoint residuals, score outputs, or verdict preferences.",
+  "notes": "Null-control delta route package; not a Tau response success claim.",
+  "numeric_grid_file": "payloads/tau_lensing_response_delta_pp_v01.csv",
+  "numeric_grid_sha256": "59987561292e4635f654600465cc637ee9ad7dbf2042448a42d586dd14fa25ad",
+  "selected_route": "delta_PP_tau_against_named_fiducial_PP",
+  "source_chain": [
+    "scripts/build_tau_lensing_zero_response_control.py",
+    "scripts/run_tau_lensing_upstream_grid_handoff_dry_run.py",
+    "docs/cmb_tau_lensing_upstream_table_formula_spec_contract_v01.md"
+  ]
+}

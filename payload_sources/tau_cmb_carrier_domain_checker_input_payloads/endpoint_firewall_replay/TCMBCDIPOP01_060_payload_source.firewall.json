@@ -1,0 +1,14 @@
+{
+  "artifact_id": "TCMBCDIEBSAR01_060",
+  "claim_boundary": "tau_cmb_carrier_domain_checker_input_payload_endpoint_blind_source_artifact_materialization_packet_v01_source_artifact_candidates_materialized_not_accepted_no_staging_write_no_payload_acceptance_no_checker_execution_no_certificate_pass_no_domain_acceptance_no_R_CMB_no_score_no_likelihood_no_verdict",
+  "endpoint_blind_attestation": true,
+  "forbidden_inputs": [
+    "CMB endpoint residuals",
+    "ACT/Planck likelihood errors",
+    "score outputs",
+    "post-endpoint tuning fields",
+    "dark-sector verdict labels"
+  ],
+  "source_artifact_accepted": false,
+  "staging_population_allowed": false
+}

@@ -1,0 +1,17 @@
+{
+  "derivation_script_or_formula": "",
+  "endpoint_blind_statement": "",
+  "formula_role": "endpoint_blind_tabulated_tau_lensing_response",
+  "known_limit_statement": "",
+  "l_column": "L",
+  "normalization_statement": "",
+  "notes": "Remove template_status only after all fields describe endpoint-blind Tau-side evidence.",
+  "parameter_policy": "parameters_fixed_before_ACT_or_Planck_residual_score_readout",
+  "selected_route": "direct_tau_PP_grid",
+  "source_chain": [
+    "Tau-side derivation script path",
+    "Tau-side parent evidence artifact path"
+  ],
+  "template_status": "TEMPLATE_NOT_PAYLOAD",
+  "value_column": "tau_response_value"
+}

@@ -1,0 +1,93 @@
+{
+  "blocked_shortcuts": [
+    "do not set N_projection_physical from post-score alpha_star",
+    "do not treat B_ACT @ grid as the physical Phi_lens_tau-to-PP operator",
+    "do not score the scaffold",
+    "do not claim a dark-sector verdict from this scaffold"
+  ],
+  "claim_boundary": "projection_operator_formula_spec_scaffold_only_no_operator_acceptance_no_grid_no_score_no_dark_sector_verdict",
+  "currently_missing_fields": [
+    "projection_kernel",
+    "projection_equation",
+    "normalization",
+    "output_grid",
+    "zero_source_limit",
+    "dimension_and_sign_audit",
+    "endpoint_firewall"
+  ],
+  "dark_sector_verdict": false,
+  "doc": "docs/cmb_tau_lensing_projection_operator_formula_spec_scaffold_v01.md",
+  "formula_scaffold": "tau_PP(L) = N_projection_physical * Integral[K_tau_PP(L; a,k) Phi_lens_tau(a,k) dmu(a,k)]",
+  "operator_name": "Projection_PP[Phi_lens_tau](L)",
+  "physical_tau_score_run": false,
+  "report_id": "cmb_tau_lensing_projection_operator_formula_spec_scaffold_v01",
+  "required_fields": [
+    {
+      "acceptance_condition": "Phi_lens_tau is derived from endpoint-blind Phi_tau_eff and T_tau_CMB, not from ACT/Planck residuals.",
+      "field": "domain_object",
+      "required_value": "Phi_lens_tau(a,k)",
+      "status": "CONTRACT_LOCKED_NO_NUMERIC_FIELD"
+    },
+    {
+      "acceptance_condition": "Kernel, support, measure, and limits are fixed before score readout.",
+      "field": "projection_kernel",
+      "required_value": "K_tau_PP(L; a,k) or equivalent transfer/projection kernel",
+      "status": "KERNEL_MEASURE_SPEC_DECLARED_NOT_FILLED"
+    },
+    {
+      "acceptance_condition": "Integral/sum convention is fully specified, including a,k/L mapping and PP versus delta_PP_tau convention.",
+      "field": "projection_equation",
+      "required_value": "tau_PP(L) = N_projection_physical * Integral[K_tau_PP(L; a,k) Phi_lens_tau(a,k) dmu(a,k)]",
+      "status": "PROJECTION_EQUATION_SPEC_DECLARED_NOT_FILLED"
+    },
+    {
+      "acceptance_condition": "Normalization follows from the operator measure/sign/unit convention; it is not fitted from endpoint residuals.",
+      "field": "normalization",
+      "required_value": "N_projection_physical",
+      "status": "NORMALIZATION_SPEC_DECLARED_NOT_FILLED"
+    },
+    {
+      "acceptance_condition": "Replay emits finite values with exact L alignment before scoring.",
+      "field": "output_grid",
+      "required_value": "3000 rows, L=10..3009, tau_PP(L) or delta_PP_tau(L)",
+      "status": "OUTPUT_REPLAY_SPEC_DECLARED_NOT_FILLED"
+    },
+    {
+      "acceptance_condition": "Limit follows algebraically from the supplied operator and normalization.",
+      "field": "zero_source_limit",
+      "required_value": "Phi_lens_tau -> 0 implies tau_PP or delta_PP_tau contribution -> 0",
+      "status": "PROOF_OBLIGATION_DECLARED_NOT_DISCHARGED"
+    },
+    {
+      "acceptance_condition": "Units/signs are checked before materialization and cannot be inferred after score.",
+      "field": "dimension_and_sign_audit",
+      "required_value": "dimension/sign convention table",
+      "status": "AUDIT_SCHEMA_DECLARED_NOT_FILLED"
+    },
+    {
+      "acceptance_condition": "Certificate reruns after operator, normalization, and replay values are populated.",
+      "field": "endpoint_firewall",
+      "required_value": "post-population firewall certificate",
+      "status": "POST_POPULATION_FIREWALL_SPEC_DECLARED_NOT_RUN"
+    }
+  ],
+  "resume_condition": "Replace scaffold-only fields with endpoint-blind operator/kernel/normalization/replay values, then rerun physical projection packet, audit, decision gate, parent-projection packet, and score guard.",
+  "score_run": false,
+  "source_links": [
+    "docs/cmb_tau_lensing_grid_equation_packet_v01.md",
+    "docs/cmb_tau_lensing_projection_operator_rule_requirement_v01.md",
+    "docs/cmb_tau_lensing_projection_operator_explicit_failure_v01.md",
+    "docs/cmb_tau_lensing_projection_equation_spec_scaffold_v01.md",
+    "docs/cmb_tau_lensing_projection_kernel_measure_spec_scaffold_v01.md",
+    "docs/cmb_tau_lensing_projection_normalization_spec_scaffold_v01.md",
+    "docs/cmb_tau_lensing_projection_output_replay_spec_scaffold_v01.md",
+    "docs/cmb_tau_lensing_projection_post_population_firewall_spec_scaffold_v01.md",
+    "docs/cmb_tau_lensing_projection_formula_spec_acceptance_matrix_v01.md",
+    "docs/cmb_tau_lensing_projection_dimension_sign_audit_scaffold_v01.md",
+    "docs/cmb_tau_lensing_projection_zero_source_limit_obligation_v01.md",
+    "docs/cmb_tau_lensing_projection_normalization_requirement_v01.md",
+    "docs/cmb_tau_lensing_physical_projection_replay_requirement_v01.md"
+  ],
+  "status": "SCAFFOLD_NOT_ACCEPTED_OPERATOR",
+  "why_this_matters": "Converts the explicit operator failure into a concrete endpoint-blind fill-list. It does not unblock scoring until every missing field is supplied and audited."
+}

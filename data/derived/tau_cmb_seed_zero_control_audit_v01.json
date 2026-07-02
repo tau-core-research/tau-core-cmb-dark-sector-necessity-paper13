@@ -1,0 +1,75 @@
+{
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_ZERO_ROWS_PRESENT",
+      "blocking_reason": "zero-control audit requires the six declared rows",
+      "component": "zero_table_shape",
+      "finding": "components=['null_seed_definition', 'same_domain_convention', 'inactive_activation', 'null_readout_role', 'forbidden_promotion', 'quotient_survival_dependency']"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_NULL_SEED_TUPLE_DECLARED",
+      "blocking_reason": "null_seed must use the same canonical scale convention",
+      "component": "null_seed_tuple",
+      "finding": "null seed uses null morphology, CMB readout sector, and canonical scale"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_NORMALIZATION_AUDITED_AS_CANDIDATE",
+      "blocking_reason": "zero-control can reference normalization candidate but cannot accept normalization",
+      "component": "normalization_dependency",
+      "finding": "normalization replay audit has zero failures and remains non-accepted"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_INACTIVE_ACTIVATION_DECLARED",
+      "blocking_reason": "null seed must not create A_tau_candidate",
+      "component": "inactive_activation",
+      "finding": "null seed activation is declared zero or inactive"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_NULL_READOUT_DECLARED",
+      "blocking_reason": "null readout is needed as later quotient/null reference",
+      "component": "null_readout_role",
+      "finding": "null seed readout role is declared as null_readout"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_PROMOTION_FORBIDDEN",
+      "blocking_reason": "control object must remain non-physical and non-scoring",
+      "component": "forbidden_promotion",
+      "finding": "zero-control cannot be promoted to physical response, dark-sector claim, or score input"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_QUOTIENT_RELATION_NOT_DEFINED",
+      "blocking_reason": "quotient survival still requires concrete readout and equivalence relation",
+      "component": "quotient_survival_dependency",
+      "finding": "zero-control supplies null side, but concrete R_CMB and equivalence relation are missing"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_ZERO_CONTROL_ACCEPTANCE_CLOSED",
+      "blocking_reason": "zero-control acceptance requires a later explicit acceptance gate",
+      "component": "zero_control_acceptance",
+      "finding": "zero-control candidate keeps acceptance permissions closed"
+    }
+  ],
+  "audited_zero_table": "data/derived/tau_cmb_seed_zero_control_v01.csv",
+  "blocked_rows": 2,
+  "claim_boundary": "tau_cmb_seed_zero_control_audit_v01_audit_only_zero_control_not_accepted_no_physical_response_no_domain_certificate_no_readout_no_score_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "domain_certificate_allowed": false,
+  "failed_rows": 0,
+  "next_minimal_unblock": "tau_cmb_seed_chain_pre_acceptance_gate_v01",
+  "passed_rows": 6,
+  "physical_response_claim_allowed": false,
+  "readout_evaluation_allowed": false,
+  "report_id": "tau_cmb_seed_zero_control_audit_v01",
+  "score_entry_allowed": false,
+  "status": "SEED_ZERO_CONTROL_AUDITED_BLOCKED_NOT_ACCEPTED",
+  "zero_control_acceptance_allowed": false,
+  "zero_control_audited": true
+}

@@ -1,0 +1,13 @@
+{
+  "template_status": "TEMPLATE_NOT_PAYLOAD",
+  "selected_route": "direct_tau_PP_grid_or_delta_PP_tau_against_named_fiducial_PP",
+  "numeric_grid_file": "payloads/tau_lensing_response_pp_grid_v01.csv_or_payloads/tau_lensing_response_delta_pp_v01.csv",
+  "numeric_grid_sha256": "",
+  "source_chain": "Phi_tau_eff -> T_tau_CMB -> lensing-era potential response -> tau_PP_grid_or_delta_PP_tau",
+  "input_artifacts": [],
+  "derivation_script_or_formula": "",
+  "created_utc": "",
+  "author_or_agent": "",
+  "no_endpoint_fit_statement": "",
+  "notes": "Fill this file for a real payload. This template is not accepted as scoring input."
+}

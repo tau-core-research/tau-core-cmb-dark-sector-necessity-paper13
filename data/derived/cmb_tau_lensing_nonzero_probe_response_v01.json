@@ -1,0 +1,23 @@
+{
+  "claim_boundary": "nonzero_probe_response_only_no_tau_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "next_required_action": "run_make_tau-grid-nonzero-precheck",
+  "parameters": {
+    "L0": 1000.0,
+    "amplitude": 1e-09,
+    "cutoff_L": 2200.0
+  },
+  "probe_status": "NONZERO_PROBE_RESPONSE_WRITTEN",
+  "report_id": "cmb_tau_lensing_nonzero_probe_response_v01",
+  "score_run": false,
+  "selected_route": "delta_PP_tau_against_named_fiducial_PP",
+  "table_stats": {
+    "max_abs_value": 9.435402214942242e-10,
+    "max_value": 9.435402214942242e-10,
+    "mean_value": 6.824866988027092e-10,
+    "min_value": 9.999793390564155e-12,
+    "rows": 3000
+  },
+  "upstream_metadata": "payload_staging/tau_lensing_upstream_l_response_metadata_v01.json",
+  "upstream_table": "payload_staging/tau_lensing_upstream_l_response_v01.csv"
+}

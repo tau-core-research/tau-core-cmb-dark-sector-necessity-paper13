@@ -1,0 +1,48 @@
+{
+  "checks": [
+    {
+      "detail": "payload_staging/tau_lensing_route_b_parent_source_v01.csv",
+      "name": "table_exists",
+      "passes": true
+    },
+    {
+      "detail": [],
+      "name": "table_forbidden_markers_absent",
+      "passes": true
+    },
+    {
+      "name": "table_parse",
+      "passes": true
+    },
+    {
+      "name": "l_alignment_10_3009",
+      "passes": true
+    },
+    {
+      "name": "finite_values",
+      "passes": true
+    },
+    {
+      "detail": {
+        "min_abs": 0.0
+      },
+      "name": "nonzero_parent_source_present",
+      "passes": true
+    }
+  ],
+  "claim_boundary": "route_b_parent_source_precheck_only_no_grid_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "next_required_action": "run_route_b_parent_source_materializer_with_non_template_config",
+  "physical_tau_score_run": false,
+  "precheck_passed": true,
+  "report_id": "cmb_tau_lensing_route_b_parent_source_precheck_v01",
+  "score_run": false,
+  "table_stats": {
+    "max_abs_value": 0.9435402214942241,
+    "max_value": 0.9435402214942241,
+    "mean_value": 0.6824866988027103,
+    "min_value": 0.009999793390564156,
+    "nonzero_count_above_min_abs": 3000,
+    "rows": 3000
+  }
+}

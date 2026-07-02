@@ -1,0 +1,64 @@
+{
+  "accepted_domain_objects": 0,
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_SEVEN_CHECKER_ROWS_PRESENT",
+      "blocking_reason": "implementation scaffold must cover seven non-codomain checker rows",
+      "component": "checker_row_shape",
+      "finding": "rows=7"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_CHECKER_SCRIPTS_PRESENT",
+      "blocking_reason": "all seven checker scripts must be present",
+      "component": "checker_scripts",
+      "finding": "present=7"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_SCAFFOLD_OUTPUTS_PRESENT_AND_PASSED",
+      "blocking_reason": "all seven checker scaffold outputs and hashes must exist and pass structural input checks",
+      "component": "scaffold_outputs",
+      "finding": "outputs=7, passed=7"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_SCAFFOLD_FIREWALL_CLOSED",
+      "blocking_reason": "implementation scaffold must not promote structural smoke checks into scientific certificates or scoring",
+      "component": "promotion_firewall",
+      "finding": "scaffold outputs do not open certificate/domain/score/likelihood/verdict claims"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_CERTIFICATE_ACCEPTANCE_NOT_YET_AUDITED",
+      "blocking_reason": "requires tau_cmb_carrier_domain_checker_scaffold_output_acceptance_audit_v01",
+      "component": "certificate_acceptance",
+      "finding": "structural scaffold outputs exist, but certificate acceptance remains downstream"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_PHYSICAL_R_CMB_NOT_MATERIALIZED",
+      "blocking_reason": "requires physical R_CMB materialization before codomain execution",
+      "component": "physical_R_CMB_materialization",
+      "finding": "codomain/physical readout remains outside the seven scaffold rows"
+    }
+  ],
+  "audited_report": "data/derived/tau_cmb_carrier_domain_checker_implementation_scaffold_v01.json",
+  "blocked_rows": 2,
+  "certificate_passed_rows": 0,
+  "checker_implementation_scaffold_audited": true,
+  "checker_scripts_present_rows": 7,
+  "claim_boundary": "tau_cmb_carrier_domain_checker_implementation_scaffold_audit_v01_audit_only_checker_scaffolds_smoke_executed_not_certificate_pass_no_domain_acceptance_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "failed_rows": 0,
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_carrier_domain_checker_scaffold_output_acceptance_audit_v01",
+  "passed_rows": 4,
+  "physical_R_CMB_materialized": false,
+  "report_id": "tau_cmb_carrier_domain_checker_implementation_scaffold_audit_v01",
+  "scaffold_execution_succeeded_rows": 7,
+  "score_entry_allowed": false,
+  "status": "CARRIER_DOMAIN_CHECKER_IMPLEMENTATION_SCAFFOLD_AUDITED_SMOKE_EXECUTED_NOT_CERTIFICATE"
+}

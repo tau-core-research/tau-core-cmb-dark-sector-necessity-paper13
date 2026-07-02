@@ -1,0 +1,36 @@
+{
+  "alternate_materialization_handoff": {
+    "formula_family": "tabulated_l_response_v01",
+    "preferred_when": "a Tau-side derivation script already produced tau_PP(L) or delta_PP_tau(L)",
+    "required_upstream_object": "endpoint-blind Tau-derived L,value table with exact L=10..3009 alignment"
+  },
+  "claim_boundary": "formula_spec_candidate_only_no_grid_no_score_no_dark_sector_verdict",
+  "derivation_script_or_formula": "Candidate chain: X_tau_CMB -> A_tau(a,k) -> rho_tau_eff(a,k) -> Phi_tau_eff(a,k) -> T_tau_CMB(k,a) -> tau_PP(L) or delta_PP_tau(L). The final L-space formula parameters are not supplied.",
+  "endpoint_blind_statement": "Candidate requires parent-side Tau source evidence before CMB endpoint evaluation; current artifacts do not yet satisfy the endpoint-blind Phi_tau_eff contract.",
+  "formula_family": "power_law_cutoff_response_v01",
+  "formula_role": "candidate_adapter_for_tau_PP_or_delta_PP_tau_after_tau_side_derivation",
+  "known_limit_statement": "Not locked. Requires an LCDM-role reproduce/approximate/fail limit map before score use.",
+  "materializable_now": false,
+  "normalization_statement": "Not locked. Requires a shared Phi_tau_eff normalization and lensing PP projection convention.",
+  "notes": "This candidate deliberately cannot be passed to the materializer as a payload formula spec.",
+  "parameter_policy": "parameters_must_be_fixed_from_parent_side_tau_evidence_before_ACT_or_Planck_score_readout",
+  "parameters": {
+    "L0": null,
+    "amplitude": null,
+    "cutoff_L": null,
+    "cutoff_power": null,
+    "tilt": null,
+    "turnover_L": null,
+    "turnover_power": null
+  },
+  "selected_route": "direct_tau_PP_grid",
+  "source_chain": [
+    "data/derived/tau_cmb_minimal_source_term_candidate_v01.csv",
+    "data/derived/tau_cmb_source_term_dimensional_precheck_v01.csv",
+    "data/derived/tau_cmb_endpoint_blind_phi_tau_derivation_contract_v01.csv",
+    "data/derived/tau_cmb_effective_potential_source_handoff_v01.csv",
+    "docs/cmb_tau_lensing_grid_formula_materializer_contract_v01.md"
+  ],
+  "spec_id": "tau_lensing_grid_formula_spec_candidate_v01",
+  "template_status": "CANDIDATE_NOT_PAYLOAD"
+}

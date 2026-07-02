@@ -1,0 +1,40 @@
+{
+  "accepted_domain_contract": {
+    "a_role": "scale-factor/time support over the lensing-relevant transfer interval",
+    "codomain_role": "potential-like scalar readout compatible with PP projection after transfer",
+    "k_role": "Fourier scale variable under a declared k convention",
+    "status": "contract only; no numeric field supplied",
+    "variables": [
+      "a",
+      "k"
+    ]
+  },
+  "claim_boundary": "projection_domain_lock_only_no_numeric_phi_lens_no_operator_no_score_no_dark_sector_verdict",
+  "construction_contract": "Phi_lens_tau(a,k) = T_tau_CMB(k,a)[Phi_tau_eff]",
+  "dark_sector_verdict": false,
+  "domain_lock_status": "DOMAIN_CONTRACT_LOCKED_FOR_TRANSFER_DEFINITION_ONLY",
+  "locked_for_projection_packet": {
+    "accepted_value": "Phi_lens_tau(a,k) over declared a,k transfer-domain contract; input object is transfer-defined, not numerically supplied",
+    "component_id": "projection_domain",
+    "current_status": "DOMAIN_CONTRACT_LOCKED_TRANSFER_DEFINITION_ONLY"
+  },
+  "physical_tau_score_run": false,
+  "projection_input_object": "Phi_lens_tau(a,k)",
+  "report_id": "cmb_tau_lensing_physical_projection_domain_lock_v01",
+  "score_run": false,
+  "source_evidence": [
+    "docs/cmb_tau_lensing_phi_source_acceptance_audit_v02.md",
+    "docs/cmb_tau_lensing_transfer_payload_v01.md",
+    "docs/cmb_tau_lensing_response_derivation_route_v01.md",
+    "docs/cmb_tau_lensing_grid_equation_packet_v01.md"
+  ],
+  "still_missing": [
+    "numeric or replayable T_tau_CMB operator",
+    "accepted Phi_lens_tau values/kernel",
+    "gauge/sign normalization pass",
+    "physical projection operator rule",
+    "projection normalization",
+    "source-to-grid replay",
+    "projection endpoint firewall certificate"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_payload_value_source_acquisition_v01_source_acquisition_requests_declared_no_sources_acquired_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "likelihood_allowed": false,
+  "score_entry_allowed": false,
+  "sha256": "39a4da49e9eb239ce199f09861fa8a9ad6a18b5b87f8c220dd2a0845c41fe0b5",
+  "target": "role_coordinate_numeric_value_source_acquisition/e_null/TCMBRRCNVPPAY01_030_source_acquisition_v01.json",
+  "value_source_accepted": false,
+  "value_source_acquired": false
+}

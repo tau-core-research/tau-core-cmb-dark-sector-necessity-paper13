@@ -1,0 +1,17 @@
+{
+  "claim_boundary": "tau_cmb_parent_source_component_unblock_plan_v01_plan_only_no_component_supplied_no_source_acceptance_no_phi_derivation_no_score_no_verdict",
+  "component_supplied": false,
+  "dark_sector_verdict_allowed": false,
+  "first_component_reason": "It is the shortest bridge from Tau Core morphology/readout theory to A_tau(a,k) activation without endpoint data.",
+  "first_component_to_attempt": "morphological_seed",
+  "next_minimal_unblock": "materialize_endpoint_blind_morphological_seed_descriptor_candidate",
+  "phi_tau_derivation_allowed": false,
+  "plan_rows": 6,
+  "report_id": "tau_cmb_parent_source_component_unblock_plan_summary_v01",
+  "score_entry_allowed": false,
+  "source_acceptance_allowed": false,
+  "source_unavailability_record": "data/derived/tau_cmb_parent_source_unavailability_record_v01.json",
+  "source_unavailability_status": "PARENT_SOURCE_UNAVAILABILITY_RECORDED_CLEAN_NEGATIVE_AUDIT",
+  "status": "PARENT_SOURCE_COMPONENT_UNBLOCK_PLAN_DECLARED_NO_COMPONENT_SUPPLIED",
+  "table": "data/derived/tau_cmb_parent_source_component_unblock_plan_v01.csv"
+}

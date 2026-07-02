@@ -1,0 +1,91 @@
+{
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_EXPECTED_EXECUTION_ROWS_PRESENT",
+      "blocking_reason": "checker execution packet requires the eight declared areas in order",
+      "component": "execution_row_shape",
+      "finding": "certificate_areas=['carrier_well_formedness', 'domain_membership_rule', 'seed_admissibility', 'null_control_admissibility', 'source_object_admissibility', 'quotient_and_equivalence_survival', 'codomain_compatibility', 'endpoint_firewall_replay']"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_EXECUTION_INPUT_CHAIN",
+      "blocking_reason": "execution audit must be downstream of a clean payload-packet audit",
+      "component": "input_payload_chain",
+      "finding": "execution packet follows the audited proof/checker payload packet"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_EXECUTION_FIELDS_DECLARED",
+      "blocking_reason": "execution rows need checker name, command, prerequisites, inputs, outputs, and blocking reason",
+      "component": "execution_fields_declared",
+      "finding": "each execution row declares checker name, command template, prerequisites, inputs, outputs, pass condition, and blocker"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_EXECUTION_ACCOUNTING",
+      "blocking_reason": "execution packet should declare eight rows with zero executable, attempted, succeeded, passed, or accepted rows",
+      "component": "execution_accounting",
+      "finding": "execution_rows=8, declared=8, can_execute=0, attempted=0, succeeded=0, passed=0, accepted_domain_objects=0"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_EXECUTION_FIREWALL_CLOSED",
+      "blocking_reason": "execution packet must not execute checkers or open downstream claims",
+      "component": "promotion_firewall",
+      "finding": "execution packet declares no executable checker, no attempt, no success, no pass, no accepted domain object, no concrete R_CMB, no score, no likelihood, and no verdict"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_EXECUTION_CLAIM_BOUNDARY",
+      "blocking_reason": "execution packet must preserve execution-envelope-only claim boundary",
+      "component": "claim_boundary",
+      "finding": "row claim boundaries mark the artifact as execution-envelope-only with can_execute false and no score/verdict"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_CHECKER_INPUTS_ABSENT",
+      "blocking_reason": "requires checker input payload request/fulfillment before execution can be allowed",
+      "component": "checker_inputs",
+      "finding": "checker command templates exist but required input artifacts are absent"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_CHECKERS_NOT_EXECUTABLE",
+      "blocking_reason": "requires populated inputs and replay artifacts before execution",
+      "component": "checker_execution",
+      "finding": "can_execute remains false for every checker"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_CERTIFICATES_AND_DOMAIN_ACCEPTANCE",
+      "blocking_reason": "requires checker output audit before certificate pass and domain acceptance",
+      "component": "certificate_and_domain_acceptance",
+      "finding": "no certificate pass or domain-object acceptance is possible without checker outputs"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_R_CMB_NOT_MATERIALIZED",
+      "blocking_reason": "requires concrete R_CMB materialization candidate after accepted domain objects",
+      "component": "concrete_R_CMB",
+      "finding": "concrete R_CMB remains downstream of checker execution and accepted domain objects"
+    }
+  ],
+  "audited_table": "data/derived/tau_cmb_carrier_domain_checker_execution_packet_v01.csv",
+  "blocked_rows": 4,
+  "carrier_certificate_allowed": false,
+  "checker_execution_allowed": false,
+  "claim_boundary": "tau_cmb_carrier_domain_checker_execution_packet_audit_v01_audit_only_execution_envelope_clean_but_not_executable_no_checker_attempt_no_certificate_pass_no_domain_acceptance_no_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "domain_certificate_allowed": false,
+  "domain_object_acceptance_allowed": false,
+  "execution_packet_audited": true,
+  "failed_rows": 0,
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_carrier_domain_checker_input_payload_request_v01",
+  "passed_rows": 6,
+  "report_id": "tau_cmb_carrier_domain_checker_execution_packet_audit_v01",
+  "score_entry_allowed": false,
+  "status": "CARRIER_DOMAIN_CHECKER_EXECUTION_PACKET_AUDITED_BLOCKED_NOT_EXECUTABLE"
+}

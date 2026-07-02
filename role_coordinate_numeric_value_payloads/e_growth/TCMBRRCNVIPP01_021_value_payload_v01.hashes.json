@@ -1,0 +1,10 @@
+{
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_population_value_payload_v01_payload_targets_supplied_values_absent_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "likelihood_allowed": false,
+  "numeric_value_supplied": false,
+  "payload_accepted_for_score": false,
+  "score_entry_allowed": false,
+  "sha256": "f62573cf3fdee270616be9c780adf12bb89958f2b6f6a436cbf38bd25fd4348f",
+  "target": "role_coordinate_numeric_value_payloads/e_growth/TCMBRRCNVIPP01_021_value_payload_v01.json"
+}

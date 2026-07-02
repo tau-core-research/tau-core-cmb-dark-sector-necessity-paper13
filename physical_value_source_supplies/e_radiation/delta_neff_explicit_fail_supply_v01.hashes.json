@@ -1,0 +1,8 @@
+{
+  "claim_boundary": "tau_cmb_delta_neff_or_explicit_fail_supply_v01_radiation_direct_rows_explicit_fail_no_delta_neff_no_bound_eval_no_score_no_likelihood_no_verdict",
+  "explicit_fail_supplied": true,
+  "physical_value_source_accepted": false,
+  "score_entry_allowed": false,
+  "sha256": "66837e00a252289b2c3ad3af47b8f9eea00d08433651e4a007f2b023ffada3fd",
+  "target": "physical_value_source_supplies/e_radiation/delta_neff_explicit_fail_supply_v01.json"
+}

@@ -1,0 +1,28 @@
+{
+  "claim_boundary": "formula_spec_template_only_no_grid_no_score_no_dark_sector_verdict",
+  "derivation_script_or_formula": "value(L)=amplitude*(L/L0)^tilt*exp(-(L/cutoff_L)^cutoff_power)*(1+(L/turnover_L)^2)^(-turnover_power/2) when turnover_L is not null",
+  "endpoint_blind_statement": "",
+  "formula_family": "power_law_cutoff_response_v01",
+  "formula_role": "dimensionless_PP_shape_or_delta_PP_tau_shape",
+  "known_limit_statement": "",
+  "normalization_statement": "",
+  "notes": "Remove template_status only after the formula and parameters are endpoint-blind evidence, not tuned to score residuals.",
+  "parameter_policy": "parameters_fixed_before_ACT_or_Planck_residual_score_readout",
+  "parameters": {
+    "L0": 100.0,
+    "amplitude": 0.0,
+    "cutoff_L": 2000.0,
+    "cutoff_power": 2.0,
+    "tilt": 0.0,
+    "turnover_L": null,
+    "turnover_power": 0.0
+  },
+  "selected_route": "direct_tau_PP_grid",
+  "source_chain": [
+    "Tau parent-side carrier/source evidence artifact path or citation",
+    "Phi_tau_eff or delta_PP_tau derivation artifact path",
+    "normalization/projection convention artifact path"
+  ],
+  "spec_id": "tau_lensing_grid_formula_spec_v01",
+  "template_status": "TEMPLATE_NOT_PAYLOAD"
+}

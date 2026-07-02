@@ -1,0 +1,84 @@
+{
+  "artifact_status": "ROLE_COORDINATE_NUMERIC_VALUE_SOURCE_REQUIREMENT_WORKLIST_SUPPLIED_NOT_NUMERIC",
+  "blocking_reason": "numeric source requirements are enumerated, but no accepted numeric source values are supplied",
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_source_supply_v01_source_requirement_worklist_supplied_no_numeric_values_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "coordinate_symbol": "e_null",
+  "dark_sector_verdict_allowed": false,
+  "endpoint_blind_firewall": {
+    "act_planck_likelihood_used": false,
+    "cmb_endpoint_residuals_used": false,
+    "dark_sector_verdict_used": false,
+    "post_endpoint_tuning_used": false,
+    "score_output_used": false
+  },
+  "input_numeric_materialization_acceptance_audit_summary": "data/derived/tau_cmb_readout_role_coordinate_numeric_materialization_acceptance_audit_summary_v01.json",
+  "likelihood_allowed": false,
+  "next_required_step": "populate endpoint-blind numeric value source files with units, conventions, provenance, and replay",
+  "numeric_value_source_supplied": false,
+  "numeric_values_materialized": false,
+  "role_audit": "data/derived/tau_cmb_readout_role_coordinate_null_audit_v01.json",
+  "role_audit_status": "NULL_ROLE_COORDINATE_AUDITED_BLOCKED_NOT_ACCEPTED",
+  "role_coordinate_acceptance_allowed": false,
+  "role_name": "null",
+  "role_table": "data/derived/tau_cmb_readout_role_coordinate_null_v01.csv",
+  "score_entry_allowed": false,
+  "source_requirement_rows": 5,
+  "source_requirements": [
+    {
+      "blocked_by": "zero-control is audited but not accepted as a readout-domain member",
+      "candidate_definition": "null coordinate requires a same-domain null seed anchor for readout comparison",
+      "coordinate_component": "null_seed_anchor",
+      "coordinate_row_id": "TCMBRRCN01_001",
+      "coordinate_status": "BLOCKED_NULL_SEED_NOT_ACCEPTED",
+      "dimension_role": "control object; no physical units",
+      "formal_slot": "null_seed_tau_CMB",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_seed_zero_control_audit_v01"
+    },
+    {
+      "blocked_by": "null readout role is declared but concrete R_CMB is not materialized",
+      "candidate_definition": "null coordinate requires a declared null readout anchor for quotient comparison",
+      "coordinate_component": "null_readout_anchor",
+      "coordinate_row_id": "TCMBRRCN01_002",
+      "coordinate_status": "BLOCKED_NULL_READOUT_NOT_MATERIALIZED",
+      "dimension_role": "readout-control role; no source amplitude",
+      "formal_slot": "R_CMB(null_seed_tau_CMB) := null_readout",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_seed_zero_control_audit_v01"
+    },
+    {
+      "blocked_by": "equivalence relation, quotient map, and survival condition are not proved",
+      "candidate_definition": "null coordinate provides the anchor side of the future quotient/null comparison",
+      "coordinate_component": "quotient_relation_hook",
+      "coordinate_row_id": "TCMBRRCN01_003",
+      "coordinate_status": "BLOCKED_QUOTIENT_RELATION_NOT_PROVED",
+      "dimension_role": "relation role; no physical units",
+      "formal_slot": "R_CMB(seed) ~ R_CMB(null_seed)",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_seed_readout_quotient_relation_candidate_audit_v01"
+    },
+    {
+      "blocked_by": "zero-control exists as a control candidate but does not prove physical zero-source behavior",
+      "candidate_definition": "null coordinate requires zero-control consistency without substituting it for a physical zero-source proof",
+      "coordinate_component": "zero_source_consistency",
+      "coordinate_row_id": "TCMBRRCN01_004",
+      "coordinate_status": "GUARD_ZERO_SOURCE_CONTROL_DECLARED_NOT_PHYSICAL_PROOF",
+      "dimension_role": "control/known-limit guard; no physical units",
+      "formal_slot": "zero_source -> zero Tau readout contribution",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_seed_zero_control_audit_v01; cmb_tau_lensing_projection_zero_source_limit_obligation_v01"
+    },
+    {
+      "blocked_by": "promotion remains forbidden until a separate non-null source route is accepted",
+      "candidate_definition": "null coordinate forbids promoting the null control into physical response or score evidence",
+      "coordinate_component": "forbidden_promotion",
+      "coordinate_row_id": "TCMBRRCN01_005",
+      "coordinate_status": "PROMOTION_FORBIDDEN_DECLARED",
+      "dimension_role": "claim-boundary guard; no physical units",
+      "formal_slot": "null_seed != physical Tau response",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_seed_zero_control_audit_v01"
+    }
+  ]
+}

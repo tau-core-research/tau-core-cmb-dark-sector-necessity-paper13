@@ -1,0 +1,19 @@
+{
+  "claim_boundary": "tau_cmb_lensing_amplitude_shape_response_explicit_fail_acceptance_audit_v01_explicit_fail_accepted_no_shape_response_value_no_score_no_likelihood_no_verdict",
+  "coordinate_component": "amplitude_shape_response",
+  "coordinate_symbol": "e_lensing",
+  "dark_sector_verdict_allowed": false,
+  "explicit_fail_accepted": true,
+  "formal_slot": "S_lens_tau(L) or delta S_lens_tau(L)",
+  "input_chain_clean": true,
+  "input_supply_artifact": "physical_value_source_supplies/e_lensing/amplitude_shape_response_explicit_fail_supply_v01.json",
+  "input_supply_summary": "data/derived/tau_cmb_lensing_amplitude_shape_response_explicit_fail_supply_summary_v01.json",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_v02",
+  "numeric_value_accepted": false,
+  "physical_CMB_score_allowed": false,
+  "physical_value_source_accepted": false,
+  "report_id": "tau_cmb_lensing_amplitude_shape_response_explicit_fail_acceptance_audit_summary_v01",
+  "status": "CMB_LENSING_AMPLITUDE_SHAPE_RESPONSE_EXPLICIT_FAIL_ACCEPTED_PHYSICAL_SCORE_BLOCKED",
+  "target_role": "lensing"
+}

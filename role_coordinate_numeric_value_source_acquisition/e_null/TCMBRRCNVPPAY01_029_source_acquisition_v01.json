@@ -1,0 +1,30 @@
+{
+  "artifact_status": "VALUE_SOURCE_ACQUISITION_REQUEST_DECLARED_NO_SOURCE_ACQUIRED",
+  "blocking_reason": "source acquisition request is declared, but no endpoint-blind value source is acquired",
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_payload_value_source_acquisition_v01_source_acquisition_requests_declared_no_sources_acquired_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "coordinate_component": "null_seed_anchor",
+  "coordinate_symbol": "e_null",
+  "dark_sector_verdict_allowed": false,
+  "forbidden_inputs": [
+    "CMB endpoint residuals",
+    "ACT/Planck likelihood errors",
+    "score outputs",
+    "post-endpoint tuning fields",
+    "dark-sector verdict labels"
+  ],
+  "formal_slot": "null_seed_tau_CMB",
+  "likelihood_allowed": false,
+  "required_sources": {
+    "endpoint_blind_attestation": "attestation excluding endpoint residuals, likelihood outputs, post-endpoint tuning, and verdict labels",
+    "numeric_value_source": "endpoint-blind numeric source for the formal slot",
+    "provenance_source": "source provenance record independent of endpoint residuals",
+    "replay_source": "local replay command or artifact that regenerates the value",
+    "unit_or_convention_source": "unit, normalization, or convention replay source"
+  },
+  "role_name": "null",
+  "score_entry_allowed": false,
+  "source_population_value_payload_row_id": "TCMBRRCNVPPAY01_029",
+  "value_payload_artifact": "role_coordinate_numeric_value_payloads/e_null/TCMBRRCNVIPP01_029_value_payload_v01.json",
+  "value_source_accepted": false,
+  "value_source_acquired": false
+}

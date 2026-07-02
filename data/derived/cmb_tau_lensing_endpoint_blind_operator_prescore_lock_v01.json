@@ -1,0 +1,37 @@
+{
+  "claim_boundary": "endpoint_blind_operator_prescore_lock_only_no_physical_score_no_dark_sector_verdict",
+  "content_acceptance": false,
+  "content_audit": "data/derived/cmb_tau_lensing_endpoint_blind_operator_packet_content_audit_summary_v01.json",
+  "content_audit_router": "data/derived/cmb_tau_lensing_endpoint_blind_operator_packet_content_audit_router_summary_v01.json",
+  "content_audit_status": "CONTENT_AUDIT_BLOCKED_PARTIAL_CANDIDATE_NOT_ACCEPTED",
+  "content_blocked_rows": [
+    "kernel_measure",
+    "normalization",
+    "zero_source_limit",
+    "dimension_sign_audit",
+    "post_population_firewall"
+  ],
+  "content_partial_rows": [
+    "source_domain",
+    "projection_equation",
+    "output_replay"
+  ],
+  "content_router_status": "CONTENT_AUDIT_ROUTER_READY_NOT_SCORE",
+  "dark_sector_verdict": false,
+  "lock_reasons": [
+    "operator_packet_content_audit_not_accepted",
+    "projection_operator_decision_gate_does_not_allow_physical_score"
+  ],
+  "lock_result": "pre_score_locked",
+  "next_minimal_unblock": "supply_full_kernel_measure_and_normalization_then_fill_dimension_firewall_audits",
+  "operator_decision_gate": "data/derived/cmb_tau_lensing_projection_operator_decision_gate_v01.json",
+  "operator_gate_decision": "DO_NOT_SCORE_EXPLICIT_OPERATOR_FAILURE",
+  "physical_tau_score_run": false,
+  "receipt_audit": "data/derived/cmb_tau_lensing_endpoint_blind_operator_packet_receipt_audit_v01.json",
+  "receipt_decision": "ROUTE_TO_CONTENT_AUDITS_NOT_SCORE",
+  "receipt_status": "OPERATOR_PACKET_RECEIPT_AUDIT_READY_FOR_CONTENT_AUDITS",
+  "report_id": "cmb_tau_lensing_endpoint_blind_operator_prescore_lock_v01",
+  "score_attempt_allowed_for_physical_tau_route": false,
+  "score_run": false,
+  "status": "PHYSICAL_TAU_ROUTE_PRESCORE_LOCKED"
+}

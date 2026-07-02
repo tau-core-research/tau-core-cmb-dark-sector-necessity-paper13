@@ -1,0 +1,21 @@
+{
+  "affected_frontier_rows": 3,
+  "claim_boundary": "tau_cmb_density_source_amplitude_or_explicit_fail_supply_v01_density_direct_rows_explicit_fail_no_density_source_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "explicit_fail_supplied": true,
+  "input_chain_clean": true,
+  "input_density_closure": "data/derived/tau_cmb_density_amplitude_closure_summary_v01.csv",
+  "input_density_derivation": "data/derived/tau_cmb_density_amplitude_derivation_summary_v01.csv",
+  "input_frontier_recompute_v03": "data/derived/tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_summary_v03.json",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_density_source_amplitude_explicit_fail_acceptance_audit_v01",
+  "numeric_value_supplied": false,
+  "physical_value_source_accepted": false,
+  "report_id": "tau_cmb_density_source_amplitude_or_explicit_fail_supply_summary_v01",
+  "score_entry_allowed": false,
+  "status": "CMB_DENSITY_SOURCE_AMPLITUDE_EXPLICIT_FAIL_SUPPLIED_NO_SCORE",
+  "supply_artifact": "physical_value_source_supplies/e_density/density_source_amplitude_explicit_fail_supply_v01.json",
+  "supply_hash_artifact": "physical_value_source_supplies/e_density/density_source_amplitude_explicit_fail_supply_v01.hashes.json",
+  "supply_hash_matches": true,
+  "target_role": "density"
+}

@@ -1,0 +1,15 @@
+{
+  "claim_boundary": "tau_cmb_seed_support_domain_rule_candidate_v01_rule_candidate_only_support_not_certified_no_payload_acceptance_no_domain_certificate_no_readout_no_score_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "domain_certificate_allowed": false,
+  "next_minimal_unblock": "tau_cmb_seed_support_domain_rule_candidate_audit_v01",
+  "payload_acceptance_allowed": false,
+  "readout_evaluation_allowed": false,
+  "report_id": "tau_cmb_seed_support_domain_rule_candidate_summary_v01",
+  "rule_rows": 6,
+  "score_entry_allowed": false,
+  "status": "SEED_SUPPORT_DOMAIN_RULE_CANDIDATE_DECLARED_NOT_CERTIFIED",
+  "support_certification_allowed": false,
+  "support_rule_declared": true,
+  "table": "data/derived/tau_cmb_seed_support_domain_rule_candidate_v01.csv"
+}

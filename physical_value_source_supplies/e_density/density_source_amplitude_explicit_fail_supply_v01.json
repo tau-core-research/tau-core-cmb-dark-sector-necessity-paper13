@@ -1,0 +1,41 @@
+{
+  "artifact_status": "DENSITY_SOURCE_AMPLITUDE_EXPLICIT_FAIL_SUPPLIED_NO_ENDPOINT_BLIND_DENSITY_SOURCE",
+  "claim_boundary": "tau_cmb_density_source_amplitude_or_explicit_fail_supply_v01_density_direct_rows_explicit_fail_no_density_source_no_score_no_likelihood_no_verdict",
+  "coordinate_components_affected": [
+    "tau_effective_density",
+    "endpoint_blind_amplitude",
+    "omega_c_h2_role_comparison"
+  ],
+  "coordinate_symbol": "e_density",
+  "dark_sector_verdict_allowed": false,
+  "endpoint_blind_attestation": true,
+  "explicit_fail_supplied": true,
+  "failure_statement": "No endpoint-blind rho_tau_eff(a,k), A_tau(a,k), or Omega_c h^2 comparison value is accepted: density derivation and match remain blocked and density closure remains partial.",
+  "forbidden_input_attestation": true,
+  "forbidden_inputs": [
+    "CMB endpoint residuals",
+    "ACT/Planck likelihood errors",
+    "score outputs",
+    "post-endpoint tuning fields",
+    "dark-sector verdict labels"
+  ],
+  "formal_slots": [
+    "rho_tau_eff(a,k)",
+    "endpoint_blind(A_tau)",
+    "Omega_c h^2 comparison role"
+  ],
+  "likelihood_allowed": false,
+  "numeric_value_supplied": false,
+  "physical_value_source_accepted": false,
+  "physical_value_source_supplied": false,
+  "provenance": {
+    "density_closure": "data/derived/tau_cmb_density_amplitude_closure_summary_v01.csv",
+    "density_derivation": "data/derived/tau_cmb_density_amplitude_derivation_summary_v01.csv",
+    "frontier_v03": "data/derived/tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_summary_v03.json"
+  },
+  "replay": "make tau-cmb-endpoint-blind-physical-value-source-frontier-recompute-v03 && make tau-cmb-density-source-amplitude-or-explicit-fail-supply",
+  "score_entry_allowed": false,
+  "supply_type": "explicit_fail_evidence",
+  "target_role": "density",
+  "unit_or_convention": "not_applicable_explicit_fail"
+}

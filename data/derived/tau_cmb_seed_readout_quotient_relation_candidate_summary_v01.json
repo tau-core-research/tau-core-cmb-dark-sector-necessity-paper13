@@ -1,0 +1,52 @@
+{
+  "candidate_declarable": true,
+  "claim_boundary": "tau_cmb_seed_readout_quotient_relation_candidate_v01_relation_candidate_only_no_readout_evaluation_no_equivalence_proof_no_survival_proof_no_domain_certificate_no_score_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "dependencies": {
+    "pre_acceptance_gate": {
+      "failed_rows": 0,
+      "path": "data/derived/tau_cmb_seed_chain_pre_acceptance_gate_summary_v01.json",
+      "present": true,
+      "status": "SEED_CHAIN_PRE_ACCEPTANCE_GATE_CLEAN_BLOCKED_ON_READOUT_QUOTIENT"
+    },
+    "quotient_schema": {
+      "failed_rows": null,
+      "path": "data/derived/tau_cmb_morphological_seed_quotient_survival_test_summary_v01.json",
+      "present": true,
+      "status": "MORPHOLOGICAL_SEED_QUOTIENT_SURVIVAL_TEST_DECLARED_BLOCKED"
+    },
+    "readout_interface": {
+      "failed_rows": null,
+      "path": "data/derived/tau_cmb_seed_readout_interface_candidate_summary_v01.json",
+      "present": true,
+      "status": "SEED_READOUT_INTERFACE_CANDIDATE_DECLARED_NOT_ACCEPTED"
+    },
+    "zero_control_audit": {
+      "failed_rows": 0,
+      "path": "data/derived/tau_cmb_seed_zero_control_audit_v01.json",
+      "present": true,
+      "status": "SEED_ZERO_CONTROL_AUDITED_BLOCKED_NOT_ACCEPTED"
+    }
+  },
+  "domain_certificate_allowed": false,
+  "equivalence_proof_allowed": false,
+  "equivalence_relation_declared": true,
+  "next_minimal_unblock": "tau_cmb_seed_readout_quotient_relation_candidate_audit_v01",
+  "null_anchor_declared": true,
+  "quotient_survival_claim_allowed": false,
+  "readout_evaluation_allowed": false,
+  "readout_family_symbol_declared": true,
+  "relation_rows": 6,
+  "remaining_blockers": [
+    "role_space_basis_missing",
+    "readout_domain_certificate_missing",
+    "equivalence_relation_axiom_audit_missing",
+    "non_null_survival_test_missing",
+    "score_entry_closed"
+  ],
+  "report_id": "tau_cmb_seed_readout_quotient_relation_candidate_summary_v01",
+  "score_entry_allowed": false,
+  "status": "SEED_READOUT_QUOTIENT_RELATION_CANDIDATE_DECLARED_NOT_ACCEPTED",
+  "survival_condition_declared": true,
+  "table": "data/derived/tau_cmb_seed_readout_quotient_relation_candidate_v01.csv"
+}

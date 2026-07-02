@@ -1,0 +1,14 @@
+{
+  "A_tau_value_supplied": false,
+  "activation_acceptance_allowed": false,
+  "claim_boundary": "tau_cmb_morphological_seed_activation_rule_candidate_v01_rule_candidate_only_no_activation_proof_no_A_tau_value_no_source_acceptance_no_phi_derivation_no_score_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "next_minimal_unblock": "audit_tau_cmb_morphological_seed_activation_rule_candidate_v01",
+  "report_id": "tau_cmb_morphological_seed_activation_rule_candidate_summary_v01",
+  "rows": 5,
+  "rule_candidate_declared": true,
+  "score_entry_allowed": false,
+  "source_acceptance_allowed": false,
+  "status": "MORPHOLOGICAL_SEED_ACTIVATION_RULE_CANDIDATE_DECLARED_NOT_DERIVED",
+  "table": "data/derived/tau_cmb_morphological_seed_activation_rule_candidate_v01.csv"
+}

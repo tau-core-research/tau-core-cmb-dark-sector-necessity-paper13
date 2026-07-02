@@ -1,0 +1,16 @@
+{
+  "blocked_rows": 5,
+  "claim_boundary": "tau_cmb_scoring_input_gap_matrix_v01_gap_matrix_only_no_input_fulfilled_no_score_no_likelihood_no_dark_sector_verdict",
+  "completed_rows": 0,
+  "dark_sector_verdict_allowed": false,
+  "gap_rows": 5,
+  "immediate_next_artifact": "tau_cmb_concrete_R_CMB_carrier_certificate_v01",
+  "input_bundle_closure_audit": "data/derived/tau_cmb_readout_role_coordinate_bundle_closure_audit_v01.json",
+  "input_bundle_closure_audit_clean": true,
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_concrete_R_CMB_carrier_certificate_v01",
+  "report_id": "tau_cmb_scoring_input_gap_matrix_summary_v01",
+  "score_allowed_rows": 0,
+  "status": "SCORING_INPUT_GAP_MATRIX_DECLARED_ALL_ROWS_BLOCKED_NO_SCORE",
+  "table": "data/derived/tau_cmb_scoring_input_gap_matrix_v01.csv"
+}

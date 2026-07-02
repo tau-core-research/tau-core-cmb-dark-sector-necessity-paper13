@@ -1,0 +1,34 @@
+{
+  "claim_boundary": "physical_projection_replay_requirement_only_no_replay_no_score_no_dark_sector_verdict",
+  "current_decision": "PHYSICAL_REPLAY_NOT_MATERIALIZABLE_YET",
+  "dark_sector_verdict": false,
+  "distinction": {
+    "adapter_replay": "B_ACT @ already materialized grid -> 18-vector; implemented by materialize-replay",
+    "physical_projection_replay": "Phi_lens_tau plus Projection_PP operator plus N_projection_physical -> 3000-row tau_PP or delta_PP grid"
+  },
+  "physical_tau_score_run": false,
+  "replay_status": "OUTPUT_REPLAY_SPEC_DECLARED_NOT_FILLED_OPERATOR_AND_NORMALIZATION_NOT_SUPPLIED",
+  "replay_target": "source-to-3000-grid replay certificate",
+  "report_id": "cmb_tau_lensing_physical_projection_replay_requirement_v01",
+  "required_inputs": [
+    "accepted projection_domain row",
+    "accepted projection_codomain row",
+    "accepted projection_operator_rule row",
+    "accepted projection_normalization row",
+    "endpoint firewall certificate for populated values"
+  ],
+  "required_replay_contents": [
+    "input source artifact paths and hashes",
+    "operator rule artifact path and hash",
+    "normalization artifact path/value/range and hash",
+    "output grid path and sha256",
+    "L alignment L=10..3009",
+    "zero-source known-limit check",
+    "claim boundary no score/no verdict"
+  ],
+  "score_run": false,
+  "spec_scaffold_links": [
+    "docs/cmb_tau_lensing_projection_output_replay_spec_scaffold_v01.md",
+    "data/derived/cmb_tau_lensing_projection_output_replay_spec_scaffold_v01.csv"
+  ]
+}

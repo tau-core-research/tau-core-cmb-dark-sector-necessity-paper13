@@ -1,0 +1,7 @@
+row_id,component,required_content,current_status,acceptance_condition,failure_if
+TCMBPNSS01_001,normalization_role,state whether N_projection_physical is fixed by operator convention or is a pre-score diagnostic parameter,REQUIRED_NOT_FILLED,role is declared before endpoint comparison,"normalization role is chosen after seeing alpha_star, residuals, or chi2"
+TCMBPNSS01_002,finite_value_or_range,finite exact value or finite prior/range,REQUIRED_NOT_FILLED,value/range is finite and endpoint-blind,"normalization is unbounded, NaN/inf, or post-score fitted"
+TCMBPNSS01_003,unit_dimension_role,units or dimensionless convention for N_projection_physical,REQUIRED_NOT_FILLED,"units close with Phi_lens_tau, kernel-measure, and PP/delta_PP_tau codomain",normalization silently absorbs unresolved unit mismatch
+TCMBPNSS01_004,sign_convention,sign role of positive/negative Tau contribution,REQUIRED_NOT_FILLED,sign convention follows operator/domain definitions before score,sign is selected to improve endpoint fit
+TCMBPNSS01_005,zero_source_compatibility,finite normalization participates in zero-source limit proof,REQUIRED_NOT_PROVED,Phi_lens_tau=0 gives zero Tau contribution under finite N_projection_physical,normalization introduces a source-independent additive term
+TCMBPNSS01_006,provenance_firewall,hash/provenance/firewall record for normalization choice,REQUIRED_NOT_SUPPLIED,"record shows no score output, residual, or verdict preference was used",normalization cites endpoint score products or derived post-score alpha

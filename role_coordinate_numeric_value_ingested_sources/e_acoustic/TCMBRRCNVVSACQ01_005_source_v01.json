@@ -1,0 +1,27 @@
+{
+  "allows_dark_sector_verdict": false,
+  "allows_likelihood": false,
+  "allows_physical_CMB_score": false,
+  "artifact_status": "ACOUSTIC_FAILURE_BRANCH_GUARD_SOURCE_INGESTED_PROTOCOL_ONLY",
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_payload_source_ingest_v01_focused_protocol_sources_ingested_no_physical_CMB_score_no_likelihood_no_verdict",
+  "coordinate_component": "scale_horizon_guard",
+  "coordinate_symbol": "e_acoustic",
+  "endpoint_blind_attestation": true,
+  "forbidden_inputs": [
+    "CMB endpoint residuals",
+    "ACT/Planck likelihood errors",
+    "score outputs",
+    "post-endpoint tuning fields",
+    "dark-sector verdict labels"
+  ],
+  "formal_slot": "(k,a_rec,r_s)_convention",
+  "interpretation": "protocol/control value source only; not a physical CMB fit datum",
+  "numeric_value": "1",
+  "provenance": "local acoustic scale/horizon convention guard declaration; no k, a_rec, or r_s value is selected",
+  "replay": "replay by reading tau_cmb_readout_role_coordinate_acoustic_v01.csv and preserving the convention row as non-numeric",
+  "role_name": "acoustic",
+  "source_value_source_acquisition_row_id": "TCMBRRCNVVSACQ01_005",
+  "unit_or_convention": "dimensionless_convention_guard_declared_not_numeric_scale",
+  "value_source_accepted": true,
+  "value_source_acquired": true
+}

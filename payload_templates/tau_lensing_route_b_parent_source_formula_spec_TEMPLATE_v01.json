@@ -1,0 +1,37 @@
+{
+  "alternate_formula_family_example": {
+    "formula_family": "tabulated_parent_source_v01",
+    "parameters": {
+      "l_column": "L",
+      "source_table": "data/derived/endpoint_blind_parent_source_table.csv",
+      "source_table_sha256": "",
+      "value_column": "parent_tau_source_value"
+    }
+  },
+  "claim_boundary": "route_b_parent_source_formula_spec_template_only_no_parent_source_no_grid_no_score_no_verdict",
+  "derivation_script_or_formula": "parent_tau_source_value(L)=amplitude*(L/L0)^tilt*exp(-(L/cutoff_L)^cutoff_power)*(1+(L/turnover_L)^2)^(-turnover_power/2) when turnover_L is not null",
+  "endpoint_blind_statement": "FILL: explain how the parent source and normalization were fixed before endpoint score readout",
+  "formula_family": "power_law_cutoff_parent_source_v01",
+  "formula_role": "endpoint_blind_tau_parent_source_l_shape",
+  "known_limit_statement": "FILL: parent_tau_source_value -> 0 implies delta_PP_tau -> 0",
+  "normalization": 1.0,
+  "normalization_statement": "FILL: dimensionless delta_PP_tau = normalization * parent_tau_source_value",
+  "notes": "Remove template_status only after the formula and parameters are fixed by Tau-side evidence before endpoint score readout. This spec is not itself physical evidence.",
+  "parameter_policy": "FILL: no ACT/Planck residual, reduced-chi2, score-output, or verdict tuning",
+  "parameters": {
+    "L0": 1000.0,
+    "amplitude": 0.0,
+    "cutoff_L": 2200.0,
+    "cutoff_power": 2.0,
+    "tilt": 0.0,
+    "turnover_L": null,
+    "turnover_power": 0.0
+  },
+  "source_chain": [
+    "FILL: Tau parent-side morphology/source evidence artifact",
+    "FILL: formula derivation or replay artifact",
+    "FILL: normalization and known-limit audit artifact"
+  ],
+  "spec_id": "tau_lensing_route_b_parent_source_formula_spec_v01",
+  "template_status": "TEMPLATE_NOT_PAYLOAD"
+}

@@ -1,0 +1,7 @@
+row_id,component,required_content,current_status,acceptance_condition,failure_if
+TCMBPORSS01_001,output_route,direct_tau_PP_grid or delta_PP_tau_against_named_fiducial_PP,REQUIRED_NOT_FILLED,route is declared before materialization and matches the projection equation baseline/delta policy,route is selected after score behavior is known
+TCMBPORSS01_002,L_axis_alignment,"exact L values 10..3009, 3000 rows",REQUIRED_NOT_FILLED,output grid has exact integer L axis and no missing/extra rows,L alignment is inferred from best bandpower fit
+TCMBPORSS01_003,finite_values,all projected values finite,REQUIRED_NOT_PROVED,"finite values follow from finite source, kernel/measure, and normalization","output contains NaN, inf, or unbounded regularization not declared before score"
+TCMBPORSS01_004,replay_inputs,"hashes for Phi_lens_tau/source, equation, kernel/measure, normalization, and route declaration",REQUIRED_NOT_SUPPLIED,all input artifacts are hash-bound and pre-score,any replay input is generated from score outputs or endpoint residuals
+TCMBPORSS01_005,zero_limit_replay,replay check that zero source gives zero Tau contribution,REQUIRED_NOT_PROVED,zero-source obligation is discharged or explicit failure is recorded,zero-control route is substituted for physical zero-limit proof
+TCMBPORSS01_006,post_population_firewall,firewall certificate after output grid values are populated,POST_POPULATION_FIREWALL_SPEC_DECLARED_NOT_RUN,certificate shows no score quantity influenced the output grid,"grid values or route choices cite score, residual, or verdict preference"

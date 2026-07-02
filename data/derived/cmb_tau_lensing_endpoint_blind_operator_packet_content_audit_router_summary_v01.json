@@ -1,0 +1,24 @@
+{
+  "claim_boundary": "endpoint_blind_operator_packet_content_audit_router_only_no_content_acceptance_no_grid_no_score_no_dark_sector_verdict",
+  "content_acceptance": false,
+  "dark_sector_verdict": false,
+  "physical_tau_score_run": false,
+  "receipt_audit": "data/derived/cmb_tau_lensing_endpoint_blind_operator_packet_receipt_audit_v01.json",
+  "receipt_decision": "ROUTE_TO_CONTENT_AUDITS_NOT_SCORE",
+  "receipt_status": "OPERATOR_PACKET_RECEIPT_AUDIT_READY_FOR_CONTENT_AUDITS",
+  "report_id": "cmb_tau_lensing_endpoint_blind_operator_packet_content_audit_router_summary_v01",
+  "routed_slots": [
+    "source_domain",
+    "projection_equation",
+    "kernel_measure",
+    "normalization",
+    "output_replay",
+    "zero_source_limit",
+    "dimension_sign_audit",
+    "post_population_firewall"
+  ],
+  "rows": 8,
+  "score_run": false,
+  "status": "CONTENT_AUDIT_ROUTER_READY_NOT_SCORE",
+  "table": "data/derived/cmb_tau_lensing_endpoint_blind_operator_packet_content_audit_router_v01.csv"
+}

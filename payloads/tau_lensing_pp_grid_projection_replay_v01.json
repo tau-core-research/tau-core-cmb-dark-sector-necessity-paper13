@@ -1,0 +1,29 @@
+{
+  "claim_boundary": "grid_payload_validation_only_no_tau_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "finite_values": true,
+  "grid_file": "/Users/jolcsak/Projects/tau-core-cmb-dark-sector-necessity-paper13/payloads/tau_lensing_response_delta_pp_v01.csv",
+  "grid_sha256": "58e1d3616b4911165fc2b6de7511d43218f87267d427340e824539743f2e4214",
+  "grid_shape": [
+    3000
+  ],
+  "grid_value_sha256_le_float64": "5f056a9525ea10481d150641d6591e53aa4ac20fc7f7379e563e46436bfa1add",
+  "index_alignment": {
+    "L": "10+i",
+    "explicit_L_column_verified": true,
+    "grid_index": "0..2999"
+  },
+  "projection_replay": {
+    "act_binning_file": "/Users/jolcsak/Projects/tau-core-cmb-dark-sector-necessity-paper13/data/external/act_dr6_lensing/extracted/v1.2/binning_matrix_act.txt",
+    "act_binning_sha256": "a88fa3dc1ac5289e0580d8d0c1c3e9ee149f06cf62dad328cb5a248fd9985084",
+    "adapter": "schema_locked_ACT_binning_matrix",
+    "operation": "B_ACT @ grid",
+    "projected_shape": [
+      18
+    ],
+    "projected_vector_sha256_le_float64": "d6562a2d601a292c3ee9db139278950a3ca1290bcc4feedafd71d1baf64ee724"
+  },
+  "report_id": "tau_lensing_grid_payload_validation_v01",
+  "route_id": "delta_PP_tau",
+  "score_computed": false
+}

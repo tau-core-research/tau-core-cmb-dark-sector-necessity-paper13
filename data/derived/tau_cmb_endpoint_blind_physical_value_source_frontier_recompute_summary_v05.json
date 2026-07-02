@@ -1,0 +1,22 @@
+{
+  "claim_boundary": "tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_v05_delta_neff_explicit_failures_accepted_no_physical_source_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "explicit_fail_accepted_rows": 9,
+  "frontier_rows": 16,
+  "input_chain_clean": true,
+  "input_delta_neff_explicit_fail_acceptance": "data/derived/tau_cmb_delta_neff_explicit_fail_acceptance_audit_summary_v01.json",
+  "input_frontier_recompute_v04_table": "data/derived/tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_v04.csv",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_acoustic_response_bundle_or_explicit_fail_supply_v01",
+  "open_frontier_rows": 7,
+  "physical_CMB_score_allowed": false,
+  "physical_value_source_accepted_rows": 0,
+  "radiation_direct_rows_closed": 2,
+  "report_id": "tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_summary_v05",
+  "status": "CMB_ENDPOINT_BLIND_PHYSICAL_VALUE_SOURCE_FRONTIER_RECOMPUTED_DELTA_NEFF_EXPLICIT_FAILS_ACCEPTED",
+  "table": "data/derived/tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_v05.csv",
+  "updated_bucket_counts": {
+    "dependency_blocked": 7,
+    "explicit_fail_accepted": 9
+  }
+}

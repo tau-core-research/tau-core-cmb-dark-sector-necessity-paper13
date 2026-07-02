@@ -1,0 +1,24 @@
+{
+  "chain_pre_acceptance_allowed": true,
+  "claim_boundary": "tau_cmb_seed_chain_pre_acceptance_gate_v01_pre_acceptance_only_clean_audit_chain_not_accepted_no_domain_certificate_no_concrete_R_CMB_no_quotient_no_score_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "domain_certificate_allowed": false,
+  "failed_rows": 0,
+  "gate_rows": 3,
+  "next_minimal_unblock": "tau_cmb_seed_readout_quotient_relation_candidate_v01",
+  "passed_rows": 3,
+  "quotient_survival_allowed": false,
+  "readout_evaluation_allowed": false,
+  "remaining_blockers": [
+    "concrete_R_CMB_missing",
+    "quotient_equivalence_relation_missing",
+    "domain_certificate_acceptance_missing",
+    "score_entry_closed"
+  ],
+  "report_id": "tau_cmb_seed_chain_pre_acceptance_gate_summary_v01",
+  "score_entry_allowed": false,
+  "seed_chain_audit_clean": true,
+  "status": "SEED_CHAIN_PRE_ACCEPTANCE_GATE_CLEAN_BLOCKED_ON_READOUT_QUOTIENT",
+  "table": "data/derived/tau_cmb_seed_chain_pre_acceptance_gate_v01.csv"
+}

@@ -1,0 +1,66 @@
+{
+  "archive_policy": "archive_existing_payload_files_before_replacement_copy",
+  "claim_boundary": "payload_replacement_packet_only_no_score_no_dark_sector_verdict",
+  "created_utc": "2026-06-15T08:37:21.285252Z",
+  "dark_sector_verdict": false,
+  "file_records": [
+    {
+      "active_exists": true,
+      "active_payload": "payloads/tau_lensing_response_delta_pp_v01.csv",
+      "active_sha256": "59987561292e4635f654600465cc637ee9ad7dbf2042448a42d586dd14fa25ad",
+      "changed": true,
+      "replacement_exists": true,
+      "replacement_sha256": "58e1d3616b4911165fc2b6de7511d43218f87267d427340e824539743f2e4214",
+      "replacement_staging": "payload_staging/delta_PP_tau_against_named_fiducial_PP/tau_lensing_response_delta_pp_v01.csv",
+      "role": "numeric_delta_grid"
+    },
+    {
+      "active_exists": true,
+      "active_payload": "payloads/tau_lensing_response_fiducial_pp_reference_v01.json",
+      "active_sha256": "aaa1b9f7333f5555726d48e0da69757352b5045b73fa01cd7f37f27f9a114c52",
+      "changed": true,
+      "replacement_exists": true,
+      "replacement_sha256": "a265a13f0bce29d0dbd97b116913d82af005dac7c0c20beb1865a5b3f1d3cb32",
+      "replacement_staging": "payload_staging/delta_PP_tau_against_named_fiducial_PP/tau_lensing_response_fiducial_pp_reference_v01.json",
+      "role": "fiducial_reference"
+    },
+    {
+      "active_exists": true,
+      "active_payload": "payloads/tau_lensing_response_grid_route_declaration_v01.md",
+      "active_sha256": "4d5af7b96dcf0cc88aafef0bf2d1d9fbb81bcc351ca3ecd7ada7b5683c272589",
+      "changed": true,
+      "replacement_exists": true,
+      "replacement_sha256": "b239589dbf1b2a35906a83d1f83d17a170d163bd653e9038ca329eafe26c241a",
+      "replacement_staging": "payload_staging/delta_PP_tau_against_named_fiducial_PP/tau_lensing_response_grid_route_declaration_v01.md",
+      "role": "route_declaration"
+    },
+    {
+      "active_exists": true,
+      "active_payload": "payloads/tau_lensing_response_grid_provenance_v01.json",
+      "active_sha256": "d3dc857fc3a92aeede1cf866e129d0d670d1888f1021096e1715a96675d39cea",
+      "changed": true,
+      "replacement_exists": true,
+      "replacement_sha256": "d9072186788f57134fa06583419e456d3c03e93726c9c14aa8dfe38514b21585",
+      "replacement_staging": "payload_staging/delta_PP_tau_against_named_fiducial_PP/tau_lensing_response_grid_provenance_v01.json",
+      "role": "route_provenance"
+    }
+  ],
+  "important_boundary": "The replacement promotes a protocol-verified endpoint-blind Route B candidate. It is not empirical validation of the Tau response and not a dark-sector verdict.",
+  "next_required_action": "run_explicit_allow_replace_promotion",
+  "physical_tau_score_run": false,
+  "post_promotion_commands": [
+    "make prepare-delta-hash",
+    "make intake",
+    "make evidence-check",
+    "make route-submission-audit",
+    "make materialize-replay",
+    "make preflight",
+    "make score-attempt-guard"
+  ],
+  "promotion_command": "python3 scripts/promote_tau_lensing_staging_payload.py --route delta_PP_tau_against_named_fiducial_PP --allow-replace --write-report",
+  "replacement_ready": true,
+  "replacement_type": "control_or_prior_payload_to_protocol_verified_route_b_candidate",
+  "report_id": "cmb_tau_lensing_payload_replacement_packet_v01",
+  "score_run": false,
+  "selected_route": "delta_PP_tau_against_named_fiducial_PP"
+}

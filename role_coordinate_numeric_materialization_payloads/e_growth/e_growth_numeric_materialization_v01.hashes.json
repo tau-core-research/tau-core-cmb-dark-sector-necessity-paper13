@@ -1,0 +1,11 @@
+{
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_materialization_supply_v01_candidate_payloads_supplied_role_coordinates_blocked_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "likelihood_allowed": false,
+  "numeric_values_materialized": false,
+  "role_coordinate_accepted": false,
+  "score_entry_allowed": false,
+  "sha256": "54eaa4c9945f8496d248fe6ce861899cd19d026ab16b1f5f3b7a69d94ca6b69a",
+  "target": "role_coordinate_numeric_materialization_payloads/e_growth/e_growth_numeric_materialization_v01.json"
+}

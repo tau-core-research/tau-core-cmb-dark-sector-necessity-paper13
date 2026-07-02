@@ -1,0 +1,9 @@
+{
+  "certificate_passed": false,
+  "claim_boundary": "tau_cmb_checker_scaffold_execution_v01_structural_input_validation_only_no_certificate_pass_no_domain_acceptance_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "likelihood_allowed": false,
+  "score_entry_allowed": false,
+  "sha256": "2a840f28796c3398154d92f57774e1feadb13d2877bfc97445098af92abd810b",
+  "target": "data/derived/tau_cmb_checker_scaffold_outputs/run_endpoint_firewall_checker_scaffold_result_v01.json"
+}

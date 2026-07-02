@@ -1,0 +1,34 @@
+{
+  "artifact_status": "NUMERIC_VALUE_IMPORT_PACKET_TEMPLATE_SUPPLIED_VALUES_ABSENT",
+  "blocking_reason": "import packet schema and template are supplied, but numeric values are absent",
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_import_packet_v01_import_template_supplied_values_absent_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "endpoint_blind_firewall": {
+    "act_planck_likelihood_used": false,
+    "cmb_endpoint_residuals_used": false,
+    "dark_sector_verdict_used": false,
+    "post_endpoint_tuning_used": false,
+    "score_output_used": false
+  },
+  "import_row_count": 33,
+  "import_template_csv": "role_coordinate_numeric_value_import_packets/tau_cmb_readout_role_coordinate_numeric_value_import_template_v01.csv",
+  "input_numeric_value_cell_acceptance_audit_summary": "data/derived/tau_cmb_readout_role_coordinate_numeric_value_cell_acceptance_audit_summary_v01.json",
+  "input_numeric_value_cell_supply_table": "data/derived/tau_cmb_readout_role_coordinate_numeric_value_cell_supply_v01.csv",
+  "likelihood_allowed": false,
+  "next_required_step": "execute endpoint-blind numeric value import by filling all 33 import rows with value, unit/convention, provenance, and replay",
+  "numeric_values_supplied": false,
+  "required_import_fields": [
+    "source_numeric_value_cell_supply_row_id",
+    "role_name",
+    "coordinate_symbol",
+    "coordinate_component",
+    "formal_slot",
+    "cell_artifact",
+    "import_numeric_value",
+    "import_unit_or_convention",
+    "import_provenance",
+    "import_replay",
+    "endpoint_blind_attestation"
+  ],
+  "score_entry_allowed": false
+}

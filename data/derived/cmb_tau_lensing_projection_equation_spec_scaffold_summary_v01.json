@@ -1,0 +1,25 @@
+{
+  "blocked_shortcuts": [
+    "do not use B_ACT @ grid as the physical projection equation",
+    "do not hide a nonzero Tau term in the fiducial PP baseline",
+    "do not choose operator form from post-score residuals"
+  ],
+  "claim_boundary": "projection_equation_spec_scaffold_only_no_equation_acceptance_no_grid_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "minimal_scaffold_equation": "tau_PP_tau_contribution(L) = N_projection_physical * Integral[K_tau_PP(L; a,k) Phi_lens_tau(a,k) dmu(a,k)]",
+  "missing_or_unproved_rows": [
+    "TCMBPESS01_001",
+    "TCMBPESS01_002",
+    "TCMBPESS01_003",
+    "TCMBPESS01_004",
+    "TCMBPESS01_005",
+    "TCMBPESS01_006"
+  ],
+  "physical_tau_score_run": false,
+  "report_id": "cmb_tau_lensing_projection_equation_spec_scaffold_summary_v01",
+  "rows": 6,
+  "score_run": false,
+  "status": "PROJECTION_EQUATION_SPEC_DECLARED_NOT_FILLED",
+  "table": "data/derived/cmb_tau_lensing_projection_equation_spec_scaffold_v01.csv",
+  "target": "Projection_PP[Phi_lens_tau](L)"
+}

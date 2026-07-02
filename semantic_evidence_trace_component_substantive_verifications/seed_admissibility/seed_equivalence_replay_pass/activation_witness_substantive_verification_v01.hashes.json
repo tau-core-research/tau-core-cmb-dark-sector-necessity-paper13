@@ -1,0 +1,11 @@
+{
+  "certificate_passed": false,
+  "claim_boundary": "tau_cmb_certificate_semantic_evidence_substantive_trace_component_local_derivation_replay_body_supply_v01_local_derivation_replay_body_supplied_endpoint_blind_no_certificate_pass_no_domain_acceptance_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "component_accepted_after_body_supply": false,
+  "dark_sector_verdict_allowed": false,
+  "likelihood_allowed": false,
+  "local_derivation_replay_body_supplied": true,
+  "score_entry_allowed": false,
+  "sha256": "53dd0188bedb6b29abf8d843023c31bee1658cd0e890c5ffd2f5564b91f2c3f2",
+  "target": "semantic_evidence_trace_component_substantive_verifications/seed_admissibility/seed_equivalence_replay_pass/activation_witness_substantive_verification_v01.json"
+}

@@ -1,0 +1,55 @@
+{
+  "artifact_id": "TCMBCDSEMPTR01_021",
+  "artifact_status": "POSITIVE_PROOF_TRACE_DRAFT_SUPPLIED_NOT_ACCEPTED_NOT_PROOF",
+  "certificate_area": "quotient_and_equivalence_survival",
+  "certificate_passed": false,
+  "certificate_rule_executable": false,
+  "checker_name": "run_quotient_survival_checker",
+  "claim_boundary": "tau_cmb_certificate_semantic_evidence_positive_proof_trace_supply_v01_draft_positive_traces_supplied_not_accepted_no_evidence_acceptance_no_certificate_pass_no_domain_acceptance_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "domain_object_accepted": false,
+  "endpoint_blind_firewall": {
+    "act_planck_likelihood_used": false,
+    "cmb_endpoint_residuals_used": false,
+    "dark_sector_verdict_used": false,
+    "post_endpoint_tuning_used": false,
+    "score_output_used": false
+  },
+  "likelihood_allowed": false,
+  "next_required_step": "audit and replace draft component declarations with substantive endpoint-blind proof trace content",
+  "physical_R_CMB_materialized": false,
+  "proof_claim_allowed": false,
+  "replacement_artifact": "semantic_evidence_replacements/quotient_and_equivalence_survival/equivalence_relation_pass_accepted_evidence_v01.json",
+  "required_trace_components": [
+    "equivalence relation proof",
+    "null-class identification",
+    "representative independence proof",
+    "non-null witness"
+  ],
+  "score_entry_allowed": false,
+  "semantic_assertion_acceptance_allowed": false,
+  "semantic_evidence_field": "equivalence_relation_pass",
+  "trace_accepted": false,
+  "trace_component_status": [
+    {
+      "component": "equivalence relation proof",
+      "endpoint_blind": true,
+      "status": "DECLARED_NOT_SUBSTANTIVELY_PROVEN"
+    },
+    {
+      "component": "null-class identification",
+      "endpoint_blind": true,
+      "status": "DECLARED_NOT_SUBSTANTIVELY_PROVEN"
+    },
+    {
+      "component": "representative independence proof",
+      "endpoint_blind": true,
+      "status": "DECLARED_NOT_SUBSTANTIVELY_PROVEN"
+    },
+    {
+      "component": "non-null witness",
+      "endpoint_blind": true,
+      "status": "DECLARED_NOT_SUBSTANTIVELY_PROVEN"
+    }
+  ]
+}

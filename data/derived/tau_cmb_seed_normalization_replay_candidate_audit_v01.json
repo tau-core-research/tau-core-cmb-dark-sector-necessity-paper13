@@ -1,0 +1,68 @@
+{
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_NORMALIZATION_ROWS_PRESENT",
+      "blocking_reason": "normalization audit requires the five declared candidate rows",
+      "component": "normalization_table_shape",
+      "finding": "components=['normalization_input_tuple', 'scale_label_canonicalization', 'normalized_seed_descriptor', 'forbidden_operations', 'zero_control_dependency']"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_CANONICAL_MAPPING_DECLARED",
+      "blocking_reason": "canonical scale mapping must be explicit before support certification",
+      "component": "canonical_mapping",
+      "finding": "candidate_not_normalized -> canonical_v01 mapping is present in table and replay"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_TUPLE_INVARIANCE_DECLARED",
+      "blocking_reason": "normalization cannot redefine support coordinates",
+      "component": "tuple_invariance",
+      "finding": "replay keeps morphology class and readout sector fixed"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_ENDPOINT_BOUNDARY_DECLARED",
+      "blocking_reason": "normalization replay must not use endpoint data",
+      "component": "endpoint_boundary",
+      "finding": "firewall endpoint_inputs_used=[] and replay forbids endpoint inputs"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_SUPPORT_RULE_AUDITED_AS_CANDIDATE",
+      "blocking_reason": "normalization can reference support candidate but cannot certify support",
+      "component": "support_rule_dependency",
+      "finding": "support rule candidate audit has zero failures but remains uncertified"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_ZERO_CONTROL_NOT_DEFINED",
+      "blocking_reason": "zero-control must be defined before quotient survival or domain certificate",
+      "component": "zero_control_dependency",
+      "finding": "normalization correctly declares same-scale zero-control dependency"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_NORMALIZATION_ACCEPTANCE_CLOSED",
+      "blocking_reason": "normalization acceptance requires a separate acceptance gate after zero-control",
+      "component": "normalization_acceptance",
+      "finding": "normalization candidate keeps acceptance permissions closed"
+    }
+  ],
+  "audited_normalization_table": "data/derived/tau_cmb_seed_normalization_replay_candidate_v01.csv",
+  "blocked_rows": 2,
+  "claim_boundary": "tau_cmb_seed_normalization_replay_candidate_audit_v01_audit_only_normalization_not_accepted_no_support_certification_no_domain_certificate_no_readout_no_score_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "domain_certificate_allowed": false,
+  "failed_rows": 0,
+  "next_minimal_unblock": "tau_cmb_seed_zero_control_v01",
+  "normalization_acceptance_allowed": false,
+  "normalization_replay_candidate_audited": true,
+  "passed_rows": 5,
+  "readout_evaluation_allowed": false,
+  "report_id": "tau_cmb_seed_normalization_replay_candidate_audit_v01",
+  "score_entry_allowed": false,
+  "status": "SEED_NORMALIZATION_REPLAY_CANDIDATE_AUDITED_BLOCKED_NOT_ACCEPTED",
+  "support_certification_allowed": false
+}

@@ -1,0 +1,16 @@
+{
+  "claim_boundary": "tau_cmb_seed_tau_payload_materialization_packet_v01_template_only_no_payload_values_no_payload_acceptance_no_domain_certificate_no_readout_no_score_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "domain_certificate_allowed": false,
+  "next_minimal_unblock": "populate_seed_tau_payload_from_tau_side_sources_only",
+  "packet_rows": 6,
+  "packet_table": "data/derived/tau_cmb_seed_tau_payload_materialization_packet_v01.csv",
+  "payload_acceptance_allowed": false,
+  "payload_template": "payload_templates/seed_tau_payload_TEMPLATE_v01.csv",
+  "payload_template_sha256": "e2263211d2647c23264fd4cd345805110210b6a525734441a44646fcb4f58194",
+  "payload_values_populated": false,
+  "readout_evaluation_allowed": false,
+  "report_id": "tau_cmb_seed_tau_payload_materialization_packet_summary_v01",
+  "score_entry_allowed": false,
+  "status": "SEED_TAU_PAYLOAD_MATERIALIZATION_PACKET_TEMPLATE_DECLARED_UNPOPULATED"
+}

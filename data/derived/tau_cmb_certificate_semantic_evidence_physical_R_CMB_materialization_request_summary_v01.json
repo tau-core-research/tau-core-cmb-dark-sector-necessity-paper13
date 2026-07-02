@@ -1,0 +1,23 @@
+{
+  "claim_boundary": "tau_cmb_certificate_semantic_evidence_physical_R_CMB_materialization_request_v01_materialization_request_only_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "codomain_checker_passed_rows": 0,
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "domain_object_accepted_rows": 7,
+  "input_chain_clean": true,
+  "input_domain_object_acceptance_summary": "data/derived/tau_cmb_certificate_semantic_evidence_domain_object_acceptance_refresh_summary_v01.json",
+  "input_domain_object_acceptance_table": "data/derived/tau_cmb_certificate_semantic_evidence_domain_object_acceptance_refresh_v01.csv",
+  "input_structural_R_CMB_candidate_audit": "data/derived/tau_cmb_concrete_R_CMB_candidate_gate_audit_v01.json",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_certificate_semantic_evidence_physical_R_CMB_materialization_supply_v01",
+  "numeric_values_materialized_rows": 0,
+  "physical_R_CMB_materialization_request_rows": 7,
+  "physical_R_CMB_materialization_requested_rows": 7,
+  "physical_R_CMB_materialized": false,
+  "physical_R_CMB_materialized_rows": 0,
+  "report_id": "tau_cmb_certificate_semantic_evidence_physical_R_CMB_materialization_request_summary_v01",
+  "score_entry_allowed": false,
+  "status": "CMB_CERTIFICATE_SEMANTIC_EVIDENCE_PHYSICAL_R_CMB_MATERIALIZATION_REQUEST_DECLARED",
+  "structural_R_CMB_candidate_available_rows": 7,
+  "table": "data/derived/tau_cmb_certificate_semantic_evidence_physical_R_CMB_materialization_request_v01.csv"
+}

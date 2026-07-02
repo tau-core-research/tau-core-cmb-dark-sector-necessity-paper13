@@ -1,0 +1,10 @@
+{
+  "cell_value_accepted": false,
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_cell_supply_v01_cell_templates_supplied_values_absent_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "likelihood_allowed": false,
+  "numeric_value_supplied": false,
+  "score_entry_allowed": false,
+  "sha256": "47151de8258febce376ed5cd3f549a9cd4519d5cec2b0af6a572f97be59b9755",
+  "target": "role_coordinate_numeric_value_cells/e_lensing/TCMBRRCNVP01_017_cell_v01.json"
+}

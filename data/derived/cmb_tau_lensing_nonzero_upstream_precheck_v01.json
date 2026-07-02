@@ -1,0 +1,71 @@
+{
+  "checks": [
+    {
+      "detail": "payload_staging/tau_lensing_upstream_l_response_v01.csv",
+      "name": "table_exists",
+      "passes": true
+    },
+    {
+      "detail": "payload_staging/tau_lensing_upstream_l_response_metadata_v01.json",
+      "name": "metadata_exists",
+      "passes": true
+    },
+    {
+      "detail": [],
+      "name": "table_forbidden_markers_absent",
+      "passes": true
+    },
+    {
+      "detail": [],
+      "name": "metadata_forbidden_markers_absent",
+      "passes": true
+    },
+    {
+      "name": "metadata_json_object",
+      "passes": true
+    },
+    {
+      "detail": [],
+      "name": "metadata_required_fields_nonempty",
+      "passes": true
+    },
+    {
+      "name": "metadata_not_control",
+      "passes": true
+    },
+    {
+      "name": "table_parse",
+      "passes": true
+    },
+    {
+      "name": "l_alignment_10_3009",
+      "passes": true
+    },
+    {
+      "name": "finite_values",
+      "passes": true
+    },
+    {
+      "detail": {
+        "min_abs": 0.0
+      },
+      "name": "nonzero_response_present",
+      "passes": true
+    }
+  ],
+  "claim_boundary": "nonzero_upstream_precheck_only_no_grid_promotion_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "next_required_action": "run_make_tau-grid-handoff-write-staging",
+  "precheck_passed": true,
+  "report_id": "cmb_tau_lensing_nonzero_upstream_precheck_v01",
+  "score_run": false,
+  "selected_route": "delta_PP_tau_against_named_fiducial_PP",
+  "table_stats": {
+    "max_abs_value": 9.435402214942242e-10,
+    "max_value": 9.435402214942242e-10,
+    "mean_value": 6.824866988027102e-10,
+    "min_value": 9.999793390564155e-12,
+    "nonzero_count_above_min_abs": 3000,
+    "rows": 3000
+  }
+}

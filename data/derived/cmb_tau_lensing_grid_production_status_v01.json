@@ -1,0 +1,69 @@
+{
+  "active_payload_classification": {
+    "claim_boundary": null,
+    "classification": "physical_candidate",
+    "exists": true,
+    "formula_role": "endpoint_blind_tau_derived_lensing_l_response_physical_candidate",
+    "path": "payloads/tau_lensing_response_grid_provenance_v01.json",
+    "selected_route": "delta_PP_tau_against_named_fiducial_PP"
+  },
+  "claim_boundary": "tau_grid_production_status_only_no_new_grid_no_score_no_dark_sector_verdict",
+  "control_score_output_accepted": false,
+  "dark_sector_verdict": false,
+  "diagnostic_probe_score_output_accepted": false,
+  "next_required_action": "run_make_staging-promote-delta-dry-run",
+  "physical_candidate_package_status": "PHYSICAL_CANDIDATE_DELTA_ROUTE_STAGING_PACKAGE_WRITTEN",
+  "physical_candidate_precheck_failures": [],
+  "physical_candidate_precheck_passed": true,
+  "physical_derivation_intake_audit_passed": true,
+  "physical_derivation_intake_failures": [],
+  "physical_derivation_intake_route_family": "route_B_direct_L_space",
+  "physical_tau_score_output_accepted": true,
+  "physical_tau_score_run": false,
+  "plain_language_status": "A physical-candidate Tau-grid staging package is ready for dry-run promotion.",
+  "production_status": "PHYSICAL_CANDIDATE_STAGING_READY",
+  "report_id": "cmb_tau_lensing_grid_production_status_v01",
+  "required_acceptance_commands": [
+    "make tau-grid-route-b-parent-formula-audit",
+    "make tau-grid-route-b-parent-from-formula-dry-run",
+    "make tau-grid-route-b-parent-from-formula-write-staging",
+    "make tau-grid-route-b-parent-table-precheck",
+    "make tau-grid-route-b-parent-dry-run",
+    "make tau-grid-route-b-parent-write-staging",
+    "make tau-grid-derivation-intake-audit",
+    "make tau-grid-physical-candidate-precheck",
+    "make tau-grid-handoff-write-staging",
+    "make tau-grid-physical-candidate-package",
+    "make staging-promote-delta-dry-run"
+  ],
+  "required_next_files": [
+    "payload_staging/tau_lensing_route_b_parent_source_formula_spec_v01.json",
+    "payload_staging/tau_lensing_route_b_parent_source_v01.csv",
+    "payload_staging/tau_lensing_route_b_parent_source_config_v01.json",
+    "payload_staging/tau_lensing_upstream_l_response_v01.csv",
+    "payload_staging/tau_lensing_upstream_l_response_metadata_v01.json"
+  ],
+  "route_b_parent_source_formula_spec_audit_failures": [],
+  "route_b_parent_source_formula_spec_audit_passed": true,
+  "route_b_parent_source_precheck_failures": [],
+  "route_b_parent_source_precheck_passed": true,
+  "score_run": false,
+  "scoring_route_classification": "physical_candidate",
+  "scoring_status": "PHYSICAL_TAU_SCORE_ACCEPTED",
+  "staging_route_classification": {
+    "claim_boundary": null,
+    "classification": "physical_candidate",
+    "exists": true,
+    "formula_role": "endpoint_blind_tau_derived_lensing_l_response_physical_candidate",
+    "path": "payload_staging/delta_PP_tau_against_named_fiducial_PP/tau_lensing_response_grid_provenance_v01.json",
+    "selected_route": "delta_PP_tau_against_named_fiducial_PP"
+  },
+  "upstream_input_classification": {
+    "claim_boundary": "route_b_parent_source_materialization_only_no_score_no_dark_sector_verdict",
+    "classification": "physical_candidate",
+    "exists": true,
+    "formula_role": "endpoint_blind_tau_derived_lensing_l_response_physical_candidate",
+    "path": "payload_staging/tau_lensing_upstream_l_response_metadata_v01.json",
+    "selected_route": "delta_PP_tau_against_named_fiducial_PP"
+  }
+}

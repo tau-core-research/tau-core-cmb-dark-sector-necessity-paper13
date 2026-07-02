@@ -1,0 +1,18 @@
+{
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_score_acceptance_audit_v01_protocol_value_score_accepted_no_physical_CMB_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "input_chain_clean": true,
+  "input_value_score_summary": "data/derived/tau_cmb_readout_role_coordinate_numeric_value_score_summary_v01.json",
+  "input_value_score_table": "data/derived/tau_cmb_readout_role_coordinate_numeric_value_score_v01.csv",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_readout_role_coordinate_numeric_value_payload_source_ingest_next_role_v01",
+  "physical_CMB_score_allowed": false,
+  "physical_CMB_score_component_accepted_rows": 0,
+  "protocol_value_score": 0.515152,
+  "protocol_value_score_accepted": true,
+  "protocol_value_score_component_accepted_rows": 33,
+  "report_id": "tau_cmb_readout_role_coordinate_numeric_value_score_acceptance_audit_summary_v01",
+  "status": "CMB_READOUT_ROLE_COORDINATE_NUMERIC_VALUE_SCORE_ACCEPTED_PROTOCOL_FOCUSED_BATCH_PHYSICAL_SCORE_BLOCKED",
+  "table": "data/derived/tau_cmb_readout_role_coordinate_numeric_value_score_acceptance_audit_v01.csv",
+  "value_score_acceptance_rows": 33
+}

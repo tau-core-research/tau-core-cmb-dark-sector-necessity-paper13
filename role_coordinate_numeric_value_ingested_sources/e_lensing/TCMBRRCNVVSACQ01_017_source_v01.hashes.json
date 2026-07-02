@@ -1,0 +1,10 @@
+{
+  "allows_physical_CMB_score": false,
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_payload_source_ingest_v01_focused_protocol_sources_ingested_no_physical_CMB_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "likelihood_allowed": false,
+  "sha256": "fecb84ad7673310f9cc17068682df65edd428dbef9688fded840fcf9aef8aa77",
+  "target": "role_coordinate_numeric_value_ingested_sources/e_lensing/TCMBRRCNVVSACQ01_017_source_v01.json",
+  "value_source_accepted": true,
+  "value_source_acquired": true
+}

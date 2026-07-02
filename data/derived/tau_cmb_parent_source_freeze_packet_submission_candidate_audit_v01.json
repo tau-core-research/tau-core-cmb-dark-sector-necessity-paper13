@@ -1,0 +1,37 @@
+{
+  "accepted_rows_in_candidate": [],
+  "audited_candidate": "payloads/tau_cmb_parent_source_freeze_packet_submission_candidate_v01.csv",
+  "claim_boundary": "tau_cmb_parent_source_freeze_packet_submission_candidate_audit_v01_audit_only_no_source_acceptance_no_phi_derivation_no_score_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "decision": "DO_NOT_ACCEPT_NO_POPULATED_SOURCE_VALUES",
+  "endpoint_token_hits": [],
+  "extra_rows": [],
+  "hash_mismatch_rows": [],
+  "missing_hash_rows": [],
+  "missing_required_columns": [],
+  "missing_rows": [],
+  "next_minimal_unblock": "provide_real_endpoint_blind_parent_source_values_or_record_explicit_source_unavailability",
+  "report_id": "tau_cmb_parent_source_freeze_packet_submission_candidate_audit_v01",
+  "required_rows": [
+    "TCMBPSF01_001",
+    "TCMBPSF01_002",
+    "TCMBPSF01_003",
+    "TCMBPSF01_004",
+    "TCMBPSF01_005",
+    "TCMBPSF01_006",
+    "TCMBPSF01_007"
+  ],
+  "rows_received": 7,
+  "score_entry_allowed": false,
+  "source_acceptance_allowed": false,
+  "status": "PARENT_SOURCE_FREEZE_PACKET_AUDIT_REJECTED_NO_POPULATED_SOURCE_VALUES",
+  "unsupplied_payload_rows": [
+    "TCMBPSF01_001",
+    "TCMBPSF01_002",
+    "TCMBPSF01_003",
+    "TCMBPSF01_004",
+    "TCMBPSF01_005",
+    "TCMBPSF01_006",
+    "TCMBPSF01_007"
+  ]
+}

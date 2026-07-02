@@ -1,0 +1,68 @@
+{
+  "accepted_domain_objects": 0,
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_COMPONENT_ROWS_PRESENT",
+      "blocking_reason": "component supply must include every declared trace component",
+      "component": "component_row_shape",
+      "finding": "rows=128"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_COMPONENT_DRAFTS_HASH_BOUND",
+      "blocking_reason": "all component draft files must exist, be hash-bound, and remain endpoint-blind",
+      "component": "component_drafts",
+      "finding": "supplied=128, hash_matched=128"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_COMPONENTS_NOT_ACCEPTED_NOT_PROOF",
+      "blocking_reason": "component draft supply must not promote draft content into proof",
+      "component": "not_proof_boundary",
+      "finding": "component drafts do not open component acceptance, trace acceptance, or certificate execution"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_COMPONENT_FIREWALL_CLOSED",
+      "blocking_reason": "component supply must preserve scoring firewall",
+      "component": "promotion_firewall",
+      "finding": "component supply does not open score, likelihood, or verdict"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_COMPONENT_ACCEPTANCE_NOT_PERFORMED",
+      "blocking_reason": "requires substantive trace component acceptance audit",
+      "component": "component_acceptance",
+      "finding": "component drafts are supplied but not accepted as substantive proof components"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_TRACE_ACCEPTANCE_NOT_ALLOWED",
+      "blocking_reason": "requires accepted substantive trace components",
+      "component": "trace_acceptance",
+      "finding": "traces remain unaccepted until all required components are accepted"
+    }
+  ],
+  "audited_table": "data/derived/tau_cmb_certificate_semantic_evidence_substantive_trace_component_supply_v01.csv",
+  "blocked_rows": 2,
+  "certificate_passed_rows": 0,
+  "certificate_rule_executable_after_component_rows": 0,
+  "claim_boundary": "tau_cmb_certificate_semantic_evidence_substantive_trace_component_supply_audit_v01_audit_only_component_draft_content_supplied_not_accepted_no_certificate_pass_no_domain_acceptance_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "component_accepted_rows": 0,
+  "component_content_supplied_rows": 128,
+  "component_substantively_proven_rows": 0,
+  "component_supply_audited": true,
+  "component_supply_rows": 128,
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "failed_rows": 0,
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_certificate_semantic_evidence_substantive_trace_component_acceptance_audit_v01",
+  "passed_rows": 4,
+  "physical_R_CMB_materialized": false,
+  "report_id": "tau_cmb_certificate_semantic_evidence_substantive_trace_component_supply_audit_v01",
+  "score_entry_allowed": false,
+  "status": "CMB_CERTIFICATE_SEMANTIC_EVIDENCE_TRACE_COMPONENT_SUPPLY_AUDITED_DRAFT_CONTENT_NOT_ACCEPTED",
+  "trace_accepted_after_component_rows": 0
+}

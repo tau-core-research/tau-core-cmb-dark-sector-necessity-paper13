@@ -1,0 +1,33 @@
+{
+  "allows_dark_sector_verdict": false,
+  "allows_likelihood": false,
+  "allows_physical_CMB_score": false,
+  "artifact_status": "ENDPOINT_BLIND_PHYSICAL_VALUE_SOURCE_PACKET_DECLARED_SOURCE_NOT_SUPPLIED",
+  "blocking_reason": "endpoint-blind physical value source or explicit fail evidence is required but not supplied",
+  "claim_boundary": "tau_cmb_endpoint_blind_physical_value_source_packet_v01_physical_source_packet_declared_sources_not_supplied_no_score_no_likelihood_no_verdict",
+  "coordinate_component": "amplitude_shape_response",
+  "coordinate_symbol": "e_lensing",
+  "forbidden_inputs": [
+    "CMB endpoint residuals",
+    "ACT/Planck likelihood errors",
+    "score outputs",
+    "post-endpoint tuning fields",
+    "dark-sector verdict labels"
+  ],
+  "formal_slot": "S_lens_tau(L) or delta S_lens_tau(L)",
+  "frontier_class": "physical_response_required",
+  "physical_value_source_accepted": false,
+  "physical_value_source_supplied": false,
+  "required_next_source": "endpoint-blind S_lens_tau(L) response or explicit fail evidence",
+  "role_name": "lensing",
+  "source_ingest_row_id": "TCMBRRCNVSI01_015",
+  "source_protocol_saturation_row_id": "TCMBRRCNVPSA01_015",
+  "supply_contract": {
+    "endpoint_blind_attestation": "required",
+    "forbidden_input_attestation": "required",
+    "local_replay": "required",
+    "numeric_value_or_explicit_fail": "required",
+    "provenance": "required",
+    "unit_or_convention": "required"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "affected_frontier_rows": 3,
+  "claim_boundary": "tau_cmb_acoustic_response_bundle_explicit_fail_acceptance_audit_v01_explicit_fail_accepted_no_acoustic_values_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "explicit_fail_accepted": true,
+  "input_chain_clean": true,
+  "input_supply_artifact": "physical_value_source_supplies/e_acoustic/acoustic_response_bundle_explicit_fail_supply_v01.json",
+  "input_supply_summary": "data/derived/tau_cmb_acoustic_response_bundle_or_explicit_fail_supply_summary_v01.json",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_v06",
+  "numeric_acoustic_values_accepted": false,
+  "physical_CMB_score_allowed": false,
+  "physical_value_source_accepted": false,
+  "report_id": "tau_cmb_acoustic_response_bundle_explicit_fail_acceptance_audit_summary_v01",
+  "status": "CMB_ACOUSTIC_RESPONSE_BUNDLE_EXPLICIT_FAIL_ACCEPTED_PHYSICAL_SCORE_BLOCKED",
+  "target_role": "acoustic"
+}

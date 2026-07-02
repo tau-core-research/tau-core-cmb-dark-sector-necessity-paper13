@@ -1,0 +1,88 @@
+{
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_EXPECTED_ROLE_SET",
+      "blocking_reason": "bundle must contain acoustic, density, lensing, growth, radiation, and null roles in order",
+      "component": "role_set",
+      "finding": "roles=['acoustic', 'density', 'lensing', 'growth', 'radiation', 'null']"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_ALL_ROLE_AUDITS_PRESENT",
+      "blocking_reason": "every role coordinate must have an audit input before bundle closure",
+      "component": "role_audit_presence",
+      "finding": "all six role-coordinate audits are present"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_ROLE_AUDITS_CLEAN",
+      "blocking_reason": "bundle closure requires zero failed role-audit rows",
+      "component": "role_audit_cleanliness",
+      "finding": "failed_rows_total=0"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_AGGREGATE_ACCOUNTING",
+      "blocking_reason": "bundle audit expects the current six-role accounting totals",
+      "component": "aggregate_accounting",
+      "finding": "passed_rows_total=43, blocked_rows_total=20"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_BUNDLE_FIREWALL_CLOSED",
+      "blocking_reason": "bundle closure must not promote role audits into scoring or verdict claims",
+      "component": "bundle_promotion_firewall",
+      "finding": "concrete R_CMB, carrier certification, CMB likelihood, and dark-sector verdict permissions remain closed"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_BUNDLE_AUDITED_NOT_SCORE_READY",
+      "blocking_reason": "bundle closure must be audited but not score-ready",
+      "component": "closure_status",
+      "finding": "status=READOUT_ROLE_COORDINATE_BUNDLE_AUDITED_BLOCKED_NOT_SCORE_READY, bundle_score_ready=False"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_REMAINING_BLOCKERS_DECLARED",
+      "blocking_reason": "bundle closure must preserve the five core blockers before scoring",
+      "component": "remaining_core_blockers",
+      "finding": "remaining_core_blockers=['concrete R_CMB materialization', 'carrier/domain certification', 'quotient/equivalence and non-null survival proof', 'endpoint-blind rho_tau_eff, A_tau, Phi_tau_eff, and T_tau_CMB', 'cross-role consistency across acoustic, density, lensing, growth, radiation, and null controls']"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_CONCRETE_R_CMB_AND_CARRIER_NOT_CERTIFIED",
+      "blocking_reason": "requires concrete R_CMB materialization and carrier/domain certification",
+      "component": "score_readiness",
+      "finding": "bundle is enumerated, but concrete R_CMB and carrier/domain certification are missing"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_ENDPOINT_BLIND_SOURCE_OBJECTS_MISSING",
+      "blocking_reason": "requires endpoint-blind source object derivations before scoring",
+      "component": "source_objects",
+      "finding": "rho_tau_eff, A_tau, Phi_tau_eff, and T_tau_CMB remain source/readout slots rather than accepted endpoint-blind objects"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_QUOTIENT_SURVIVAL_AND_CROSS_ROLE_CONSISTENCY",
+      "blocking_reason": "requires quotient survival proof and compatible role materialization",
+      "component": "quotient_and_cross_role",
+      "finding": "quotient/equivalence survival and cross-role consistency are not proved"
+    }
+  ],
+  "audited_bundle": "data/derived/tau_cmb_readout_role_coordinate_bundle_closure_v01.json",
+  "blocked_rows": 3,
+  "bundle_closure_audited": true,
+  "bundle_score_ready": false,
+  "carrier_certification_allowed": false,
+  "claim_boundary": "tau_cmb_readout_role_coordinate_bundle_closure_audit_v01_audit_only_bundle_closure_clean_but_not_score_ready_no_concrete_R_CMB_no_carrier_no_likelihood_no_dark_sector_verdict",
+  "cmb_likelihood_allowed": false,
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "failed_rows": 0,
+  "next_minimal_unblock": "tau_cmb_scoring_input_gap_matrix_v01",
+  "passed_rows": 7,
+  "report_id": "tau_cmb_readout_role_coordinate_bundle_closure_audit_v01",
+  "status": "READOUT_ROLE_COORDINATE_BUNDLE_CLOSURE_AUDITED_BLOCKED_NOT_SCORE_READY"
+}

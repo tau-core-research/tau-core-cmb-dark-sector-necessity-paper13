@@ -1,0 +1,95 @@
+{
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_EXPECTED_SOURCE_SUPPLY_ROWS_PRESENT",
+      "blocking_reason": "source artifact supply packet requires 66 rows across the five file categories",
+      "component": "supply_row_shape",
+      "finding": "rows=66"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_SOURCE_SUPPLY_INPUT_CHAIN",
+      "blocking_reason": "source supply audit must be downstream of a clean source artifact request audit",
+      "component": "input_request_chain",
+      "finding": "source supply packet follows a clean audited source artifact request"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_SOURCE_BUNDLES_PRESENT_AWAITING_ACCEPTANCE",
+      "blocking_reason": "supply packet must accurately reflect source artifact file presence",
+      "component": "source_bundle_presence",
+      "finding": "all source artifact bundles are present but unaccepted"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_SOURCE_SUPPLY_ACCOUNTING",
+      "blocking_reason": "source supply packet should declare either zero or complete bundle presence with zero accepted or staging-allowed rows",
+      "component": "source_supply_accounting",
+      "finding": "rows=66, present=66, complete=66, accepted=0, staging_allowed=0"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_SOURCE_SUPPLY_FIREWALL_CLOSED",
+      "blocking_reason": "source supply packet must not promote absent artifacts to accepted/staging status",
+      "component": "promotion_firewall",
+      "finding": "source supply packet does not open source acceptance, staging population, payload acceptance, R_CMB, score, likelihood, or verdict"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_SOURCE_SUPPLY_CLAIM_BOUNDARY",
+      "blocking_reason": "source supply packet must preserve supply-only no-acceptance boundary",
+      "component": "claim_boundary",
+      "finding": "row claim boundaries mark supply-packet-only source artifacts with no acceptance/staging/score/verdict"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_SOURCE_ARTIFACTS_MATERIALIZED_UNACCEPTED",
+      "blocking_reason": "requires source artifact acceptance audit before staging population",
+      "component": "source_artifact_materialization",
+      "finding": "endpoint-blind Tau-side source artifact bundles are materialized but unaccepted"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_SOURCE_ACCEPTANCE_NOT_AVAILABLE",
+      "blocking_reason": "requires source artifact receipt and acceptance audit",
+      "component": "source_artifact_acceptance",
+      "finding": "source artifacts cannot be accepted before materialization, hash, replay, provenance, and firewall checks"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_STAGING_POPULATION_NOT_ALLOWED",
+      "blocking_reason": "requires accepted endpoint-blind source artifacts before staging population",
+      "component": "staging_population",
+      "finding": "staging population remains blocked until source artifacts are accepted"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_CHECKERS_AND_R_CMB",
+      "blocking_reason": "requires accepted payloads before checker execution and downstream certificates",
+      "component": "checker_execution_and_R_CMB",
+      "finding": "checker execution, certificate pass, domain acceptance, and concrete R_CMB remain downstream"
+    }
+  ],
+  "audited_table": "data/derived/tau_cmb_carrier_domain_checker_input_payload_endpoint_blind_source_artifact_supply_packet_v01.csv",
+  "blocked_rows": 3,
+  "carrier_certificate_allowed": false,
+  "checker_execution_allowed": false,
+  "claim_boundary": "tau_cmb_carrier_domain_checker_input_payload_endpoint_blind_source_artifact_supply_packet_audit_v01_audit_only_supply_packet_clean_but_bundle_absent_no_source_acceptance_no_staging_write_no_payload_acceptance_no_checker_execution_no_certificate_pass_no_domain_acceptance_no_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "domain_certificate_allowed": false,
+  "domain_object_acceptance_allowed": false,
+  "failed_rows": 0,
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_carrier_domain_checker_input_payload_endpoint_blind_source_artifact_acceptance_audit_v01",
+  "passed_rows": 7,
+  "payload_acceptance_allowed": false,
+  "report_id": "tau_cmb_carrier_domain_checker_input_payload_endpoint_blind_source_artifact_supply_packet_audit_v01",
+  "score_entry_allowed": false,
+  "source_artifact_acceptance_allowed": false,
+  "source_artifact_materialization_allowed": false,
+  "source_artifact_supply_packet_audited": true,
+  "staging_population_allowed": false,
+  "status": "CARRIER_DOMAIN_CHECKER_INPUT_PAYLOAD_ENDPOINT_BLIND_SOURCE_ARTIFACT_SUPPLY_PACKET_AUDITED"
+}

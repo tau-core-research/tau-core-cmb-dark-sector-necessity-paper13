@@ -1,0 +1,90 @@
+{
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_RELATION_ROWS_PRESENT",
+      "blocking_reason": "relation audit requires the six declared candidate rows",
+      "component": "relation_table_shape",
+      "finding": "components=['readout_family_symbol', 'null_readout_anchor', 'readout_equivalence_relation', 'quotient_class_candidate', 'survival_condition_candidate', 'promotion_firewall']"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_INPUT_CHAIN_CLEAN",
+      "blocking_reason": "relation candidate can only be audited after clean seed-chain and zero-control inputs",
+      "component": "input_dependency_chain",
+      "finding": "pre-acceptance gate and zero-control audit are present with zero failures"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_READOUT_SYMBOL_DECLARED",
+      "blocking_reason": "audit requires a named readout symbol before quotient syntax",
+      "component": "readout_family_symbol",
+      "finding": "seed-level readout family symbol is declared"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_NULL_ANCHOR_DECLARED",
+      "blocking_reason": "quotient relation must expose its null anchor",
+      "component": "null_readout_anchor",
+      "finding": "null seed is anchored to null_readout in the relation candidate"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_EQUIVALENCE_SYNTAX_DECLARED",
+      "blocking_reason": "candidate relation must remain explicitly unproved",
+      "component": "equivalence_relation_syntax",
+      "finding": "readout equivalence relation syntax is declared but not proved"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_SURVIVAL_CONDITION_DECLARED",
+      "blocking_reason": "survival condition must not be promoted to a survival proof",
+      "component": "survival_condition_syntax",
+      "finding": "future non-null survival condition is declared but not tested"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_PROMOTION_FIREWALL_CLOSED",
+      "blocking_reason": "relation candidate must not enter scoring or verdict logic",
+      "component": "promotion_firewall",
+      "finding": "readout evaluation, equivalence proof, survival claim, score, and verdict permissions remain closed"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_EQUIVALENCE_AXIOMS_NOT_PROVED",
+      "blocking_reason": "equivalence relation still requires an axiom/control audit",
+      "component": "equivalence_axiom_proof",
+      "finding": "reflexive/symmetric/transitive proof and control-list audit are not supplied"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_READOUT_NOT_MATERIALIZED",
+      "blocking_reason": "concrete R_CMB must be materialized before readout evaluation",
+      "component": "readout_materialization",
+      "finding": "role-space basis, transfer kernel, units, and numerical map are not supplied"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_SURVIVAL_TEST_NOT_SUPPLIED",
+      "blocking_reason": "survival claim requires a tested non-null representative",
+      "component": "non_null_survival_test",
+      "finding": "non-null class membership and sensitivity test are not supplied"
+    }
+  ],
+  "audited_relation_table": "data/derived/tau_cmb_seed_readout_quotient_relation_candidate_v01.csv",
+  "blocked_rows": 3,
+  "claim_boundary": "tau_cmb_seed_readout_quotient_relation_candidate_audit_v01_audit_only_relation_not_accepted_no_readout_evaluation_no_equivalence_proof_no_survival_proof_no_score_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "domain_certificate_allowed": false,
+  "equivalence_proof_allowed": false,
+  "failed_rows": 0,
+  "next_minimal_unblock": "tau_cmb_seed_readout_equivalence_relation_audit_v01",
+  "passed_rows": 7,
+  "quotient_survival_claim_allowed": false,
+  "readout_evaluation_allowed": false,
+  "relation_acceptance_allowed": false,
+  "relation_candidate_audited": true,
+  "report_id": "tau_cmb_seed_readout_quotient_relation_candidate_audit_v01",
+  "score_entry_allowed": false,
+  "status": "SEED_READOUT_QUOTIENT_RELATION_CANDIDATE_AUDITED_BLOCKED_NOT_ACCEPTED"
+}

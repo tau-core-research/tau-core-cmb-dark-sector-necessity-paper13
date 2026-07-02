@@ -1,0 +1,40 @@
+{
+  "audited_submission": "payloads/cmb_tau_lensing_endpoint_blind_operator_packet_submission_v01.csv",
+  "claim_boundary": "endpoint_blind_operator_packet_receipt_audit_only_no_operator_acceptance_no_grid_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "decision": "ROUTE_TO_CONTENT_AUDITS_NOT_SCORE",
+  "expected_submission": "payloads/cmb_tau_lensing_endpoint_blind_operator_packet_submission_v01.csv",
+  "missing_evidence_artifact_rows": [],
+  "missing_required_columns": [],
+  "missing_slots": [],
+  "next_if_ready": [
+    "endpoint_blind_operator_packet_content_audit_router"
+  ],
+  "physical_tau_score_run": false,
+  "placeholder_rows": [],
+  "report_id": "cmb_tau_lensing_endpoint_blind_operator_packet_receipt_audit_v01",
+  "request": "data/derived/cmb_tau_lensing_endpoint_blind_operator_packet_request_v01.csv",
+  "requested_slots": [
+    "dimension_sign_audit",
+    "kernel_measure",
+    "normalization",
+    "output_replay",
+    "post_population_firewall",
+    "projection_equation",
+    "source_domain",
+    "zero_source_limit"
+  ],
+  "score_run": false,
+  "status": "OPERATOR_PACKET_RECEIPT_AUDIT_READY_FOR_CONTENT_AUDITS",
+  "submission_template": "payload_templates/cmb_tau_lensing_endpoint_blind_operator_packet_submission_TEMPLATE_v01.csv",
+  "supplied_slots": [
+    "dimension_sign_audit",
+    "kernel_measure",
+    "normalization",
+    "output_replay",
+    "post_population_firewall",
+    "projection_equation",
+    "source_domain",
+    "zero_source_limit"
+  ]
+}

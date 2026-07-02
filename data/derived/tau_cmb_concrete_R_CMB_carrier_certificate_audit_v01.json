@@ -1,0 +1,74 @@
+{
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_CERTIFICATE_REQUIREMENT_ROWS_PRESENT",
+      "blocking_reason": "carrier certificate audit requires the seven declared requirement components",
+      "component": "certificate_row_shape",
+      "finding": "certificate_components=['carrier_predicate', 'domain_rule', 'codomain_role_space', 'concrete_readout_map', 'null_anchor_compatibility', 'dimension_gauge_replay', 'endpoint_firewall']"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_GAP_MATRIX_CHAIN",
+      "blocking_reason": "carrier certificate audit must be downstream of the scoring-input gap matrix",
+      "component": "input_gap_chain",
+      "finding": "certificate requirements follow a clean scoring-input gap matrix"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_REQUIREMENT_FIELDS_DECLARED",
+      "blocking_reason": "certificate requirements need formal object, requirement, and evidence source",
+      "component": "requirement_fields_declared",
+      "finding": "each certificate row declares formal object, requirement, and evidence source"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_BLOCK_PARTIAL_ACCOUNTING",
+      "blocking_reason": "carrier certificate requirements should have six blocked rows and one partial codomain row",
+      "component": "block_partial_accounting",
+      "finding": "certificate_rows=7, blocked_rows=6, partial_rows=1"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_CERTIFICATE_FIREWALL_CLOSED",
+      "blocking_reason": "requirements artifact must not certify the carrier or open scoring",
+      "component": "promotion_firewall",
+      "finding": "carrier certificate, concrete R_CMB, score, likelihood, and verdict permissions remain closed"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_CARRIER_AND_DOMAIN_NOT_CERTIFIED",
+      "blocking_reason": "requires accepted carrier predicate and Dom(R_CMB) rule",
+      "component": "carrier_and_domain",
+      "finding": "carrier predicate and domain rule are requirements only"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_CONCRETE_R_CMB_NOT_MATERIALIZED",
+      "blocking_reason": "requires concrete readout map or executable materialization rule",
+      "component": "concrete_readout_map",
+      "finding": "R_CMB remains a schema/interface symbol rather than a concrete map"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_REPLAY_AND_FIREWALL_NOT_RUN",
+      "blocking_reason": "requires replay certificate and endpoint firewall rerun after materialization",
+      "component": "replay_and_firewall",
+      "finding": "dimension/gauge replay and endpoint firewall cannot pass before concrete R_CMB inputs exist"
+    }
+  ],
+  "audited_table": "data/derived/tau_cmb_concrete_R_CMB_carrier_certificate_v01.csv",
+  "blocked_rows": 3,
+  "carrier_certificate_allowed": false,
+  "certificate_requirements_audited": true,
+  "claim_boundary": "tau_cmb_concrete_R_CMB_carrier_certificate_audit_v01_audit_only_requirements_clean_but_carrier_not_certified_R_CMB_not_materialized_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "failed_rows": 0,
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_carrier_domain_predicate_candidate_v01",
+  "passed_rows": 5,
+  "report_id": "tau_cmb_concrete_R_CMB_carrier_certificate_audit_v01",
+  "score_entry_allowed": false,
+  "status": "CONCRETE_R_CMB_CARRIER_CERTIFICATE_REQUIREMENTS_AUDITED_BLOCKED"
+}

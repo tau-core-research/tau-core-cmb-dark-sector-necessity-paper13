@@ -1,0 +1,13 @@
+{
+  "claim_boundary": "zero_response_control_only_no_tau_score_no_dark_sector_verdict",
+  "control_status": "ZERO_RESPONSE_CONTROL_WRITTEN",
+  "dark_sector_verdict": false,
+  "next_required_action": "run_make_tau-grid-handoff-write-staging_for_control_grid_validation",
+  "report_id": "cmb_tau_lensing_zero_response_control_v01",
+  "rows": 3000,
+  "score_run": false,
+  "selected_route": "delta_PP_tau_against_named_fiducial_PP",
+  "upstream_metadata": "payload_staging/tau_lensing_upstream_l_response_metadata_v01.json",
+  "upstream_table": "payload_staging/tau_lensing_upstream_l_response_v01.csv",
+  "value_rule": "delta_PP_tau(L)=0 for L=10..3009"
+}

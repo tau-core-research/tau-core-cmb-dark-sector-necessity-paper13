@@ -1,0 +1,96 @@
+{
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_GROWTH_COORDINATE_ROWS_PRESENT",
+      "blocking_reason": "growth coordinate audit requires the six declared components",
+      "component": "coordinate_row_shape",
+      "finding": "coordinate_components=['domain_specification', 'codomain_specification', 'time_scale_convention', 'operator_rule', 'cross_role_consistency', 'growth_stop_rule']"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_LENSING_AUDIT_CHAIN",
+      "blocking_reason": "growth coordinate audit must be downstream of the audited lensing coordinate and clean candidate summary",
+      "component": "input_lensing_chain",
+      "finding": "growth coordinate follows a clean lensing coordinate audit and growth candidate summary"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_FORMAL_SLOTS_DECLARED",
+      "blocking_reason": "coordinate components need formal slots before materialization",
+      "component": "formal_slots_declared",
+      "finding": "each growth coordinate component has a formal slot"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_DIMENSION_ROLES_DECLARED",
+      "blocking_reason": "coordinate typing requires dimension or convention roles",
+      "component": "dimension_roles_declared",
+      "finding": "each growth coordinate component has a dimension/convention role"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_SOURCE_DEPENDENCIES_DECLARED",
+      "blocking_reason": "coordinate candidate must remain traceable to existing protocol artifacts",
+      "component": "source_dependencies_declared",
+      "finding": "each growth coordinate component is tied to an existing blocker/evidence artifact"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_BLOCK_GUARD_ACCOUNTING",
+      "blocking_reason": "growth coordinate should have two physics blocks and four guard/selection rows",
+      "component": "block_guard_accounting",
+      "finding": "blocked_count=2, guard_count=4"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_GROWTH_COORDINATE_FIREWALL_CLOSED",
+      "blocking_reason": "growth coordinate candidate must not enter scoring or carrier certification",
+      "component": "promotion_firewall",
+      "finding": "coordinate acceptance, growth score, structure match, concrete R_CMB, carrier certification, and verdict permissions remain closed"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_DOMAIN_CODOMAIN_SELECTION_NOT_FIXED",
+      "blocking_reason": "requires a fixed domain/codomain pair before operator use",
+      "component": "domain_codomain_selection",
+      "finding": "domain and codomain families are declared but no endpoint-blind pair is selected"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_TIME_SCALE_CONVENTION_NOT_NUMERIC",
+      "blocking_reason": "requires concrete time/scale convention before comparison",
+      "component": "time_scale_numeric_convention",
+      "finding": "k, scale-factor, epoch, and normalization convention are guarded but not numerically fixed"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_OPERATOR_RULE_NOT_DERIVED",
+      "blocking_reason": "requires endpoint-blind transfer operator, reduced evolution equation, or explicit failure",
+      "component": "operator_rule",
+      "finding": "Transfer_tau[X_tau_CMB](k,a) is not supplied as a lawful propagation rule"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_DEPENDENT_ROLES_STILL_OPEN",
+      "blocking_reason": "requires compatible density, acoustic, lensing, and growth role-coordinate materialization",
+      "component": "cross_role_consistency",
+      "finding": "density, acoustic, and lensing role coordinates remain blocked and unmaterialized"
+    }
+  ],
+  "audited_coordinate_table": "data/derived/tau_cmb_readout_role_coordinate_growth_v01.csv",
+  "blocked_rows": 4,
+  "carrier_certification_allowed": false,
+  "claim_boundary": "tau_cmb_readout_role_coordinate_growth_audit_v01_audit_only_coordinate_not_accepted_no_growth_score_no_structure_match_no_concrete_R_CMB_no_carrier_certification_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "coordinate_acceptance_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "failed_rows": 0,
+  "growth_coordinate_audited": true,
+  "growth_score_allowed": false,
+  "next_minimal_unblock": "tau_cmb_readout_role_coordinate_radiation_v01",
+  "passed_rows": 7,
+  "report_id": "tau_cmb_readout_role_coordinate_growth_audit_v01",
+  "status": "GROWTH_ROLE_COORDINATE_AUDITED_BLOCKED_NOT_MATERIALIZED",
+  "structure_match_allowed": false
+}

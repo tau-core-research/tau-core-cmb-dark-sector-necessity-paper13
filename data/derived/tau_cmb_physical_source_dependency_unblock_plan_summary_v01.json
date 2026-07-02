@@ -1,0 +1,19 @@
+{
+  "claim_boundary": "tau_cmb_physical_source_dependency_unblock_plan_v01_dependency_unblock_plan_only_no_physical_source_acceptance_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "explicit_fail_accepted_rows": 2,
+  "input_chain_clean": true,
+  "input_frontier_recompute_summary_v02": "data/derived/tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_summary_v02.json",
+  "input_frontier_recompute_table_v02": "data/derived/tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_v02.csv",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "build tau_cmb_endpoint_blind_phi_tau_source_or_explicit_fail_supply_v01",
+  "open_frontier_rows": 14,
+  "physical_CMB_score_allowed": false,
+  "physical_value_source_accepted_rows": 0,
+  "report_id": "tau_cmb_physical_source_dependency_unblock_plan_summary_v01",
+  "status": "CMB_PHYSICAL_SOURCE_DEPENDENCY_UNBLOCK_PLAN_ACCEPTED_PRIORITIZED_NO_SCORE",
+  "table": "data/derived/tau_cmb_physical_source_dependency_unblock_plan_v01.csv",
+  "top_priority_recommended_action": "build tau_cmb_endpoint_blind_phi_tau_source_or_explicit_fail_supply_v01",
+  "top_priority_target": "Phi_tau_eff(a,k)",
+  "unblock_plan_rows": 6
+}

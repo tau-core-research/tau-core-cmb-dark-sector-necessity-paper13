@@ -1,0 +1,75 @@
+{
+  "candidate_class": "structural_R_CMB_candidate_shell",
+  "candidate_gate_rows": [
+    {
+      "component": "readout_signature",
+      "finding": "formal R_CMB candidate signature is declared without numeric values",
+      "status": "PASS_STRUCTURAL_SIGNATURE_DECLARED"
+    },
+    {
+      "component": "role_vector_slots",
+      "finding": "e_acoustic, e_density, e_lensing, e_growth, e_radiation, e_null",
+      "status": "PASS_ROLE_VECTOR_SLOTS_ENUMERATED"
+    },
+    {
+      "component": "carrier_domain_certification",
+      "finding": "carrier/domain certificate requirements remain blocked",
+      "status": "BLOCKED_CARRIER_DOMAIN_NOT_CERTIFIED"
+    },
+    {
+      "component": "physical_materialization",
+      "finding": "candidate shell has no physical/numeric readout values",
+      "status": "BLOCKED_PHYSICAL_R_CMB_NOT_MATERIALIZED"
+    },
+    {
+      "component": "promotion_firewall",
+      "finding": "score, likelihood, and dark-sector verdict remain closed",
+      "status": "PASS_NO_SCORE_OR_VERDICT_OPENED"
+    }
+  ],
+  "candidate_id": "tau_cmb_concrete_R_CMB_candidate_gate_v01",
+  "carrier_certificate_passed": false,
+  "checker_execution_allowed": false,
+  "claim_boundary": "tau_cmb_concrete_R_CMB_candidate_gate_v01_structural_candidate_shell_only_not_physical_R_CMB_no_codomain_pass_no_checker_execution_no_score_no_likelihood_no_verdict",
+  "codomain_checker_passed": false,
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "domain_rule_accepted": false,
+  "formal_readout_signature": "R_CMB_candidate: Dom(R_CMB)_candidate -> C_CMB_role_candidate",
+  "input_chain_clean": true,
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_concrete_R_CMB_candidate_gate_audit_v01",
+  "numeric_values_materialized": false,
+  "physical_R_CMB_materialized": false,
+  "role_vector_slots": [
+    "e_acoustic",
+    "e_density",
+    "e_lensing",
+    "e_growth",
+    "e_radiation",
+    "e_null"
+  ],
+  "score_entry_allowed": false,
+  "source_records": [
+    {
+      "exists": true,
+      "path": "data/derived/tau_cmb_carrier_domain_checker_execution_packet_refresh_audit_v01.json",
+      "role": "checker_execution_refresh_audit",
+      "sha256": "5b3e1035c6bdf2d89037a9edea3b55899385176c1f970464270acde25fa17db0"
+    },
+    {
+      "exists": true,
+      "path": "data/derived/tau_cmb_readout_role_coordinate_bundle_closure_audit_v01.json",
+      "role": "role_coordinate_bundle_closure_audit",
+      "sha256": "71d0a7ecb7aa8bf70e17130a6ab8a6838ab9ca57a91c5d140147dd02ae66892a"
+    },
+    {
+      "exists": true,
+      "path": "data/derived/tau_cmb_concrete_R_CMB_carrier_certificate_audit_v01.json",
+      "role": "carrier_certificate_requirement_audit",
+      "sha256": "72671c728bfcd5c6b6e7b21430dd7818c6ad3a5dc6fb2097fb7ca70fe9b8f423"
+    }
+  ],
+  "status": "CONCRETE_R_CMB_STRUCTURAL_CANDIDATE_GATE_DECLARED_NOT_PHYSICAL",
+  "structural_candidate_available_for_codomain_precheck": true
+}

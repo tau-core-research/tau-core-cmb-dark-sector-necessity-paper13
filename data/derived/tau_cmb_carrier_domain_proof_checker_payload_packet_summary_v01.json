@@ -1,0 +1,19 @@
+{
+  "accepted_domain_objects": 0,
+  "certificate_passed_rows": 0,
+  "checkers_executed": 0,
+  "claim_boundary": "tau_cmb_carrier_domain_proof_checker_payload_packet_v01_payload_spec_only_no_checker_execution_no_certificate_pass_no_domain_acceptance_no_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "input_candidate_audit": "data/derived/tau_cmb_carrier_domain_certificate_candidate_audit_v01.json",
+  "input_candidate_table": "data/derived/tau_cmb_carrier_domain_certificate_candidate_v01.csv",
+  "input_chain_clean": true,
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "audit_tau_cmb_carrier_domain_proof_checker_payload_packet_v01",
+  "payload_rows": 8,
+  "payload_specs_declared": 8,
+  "report_id": "tau_cmb_carrier_domain_proof_checker_payload_packet_summary_v01",
+  "score_entry_allowed": false,
+  "status": "CARRIER_DOMAIN_PROOF_CHECKER_PAYLOAD_PACKET_DECLARED_NOT_EXECUTED",
+  "table": "data/derived/tau_cmb_carrier_domain_proof_checker_payload_packet_v01.csv"
+}

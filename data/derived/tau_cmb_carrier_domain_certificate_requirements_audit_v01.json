@@ -1,0 +1,89 @@
+{
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_EXPECTED_REQUIREMENT_ROWS_PRESENT",
+      "blocking_reason": "carrier/domain certificate requirements require the eight declared areas in order",
+      "component": "requirement_row_shape",
+      "finding": "certificate_areas=['carrier_well_formedness', 'domain_membership_rule', 'seed_admissibility', 'null_control_admissibility', 'source_object_admissibility', 'quotient_and_equivalence_survival', 'codomain_compatibility', 'endpoint_firewall_replay']"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_REQUIREMENTS_INPUT_CHAIN",
+      "blocking_reason": "requirements audit must be downstream of the blocked predicate audit and single-pass spine",
+      "component": "input_chain",
+      "finding": "requirements follow the predicate audit and single-pass blocked route"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_REQUIREMENT_FIELDS_DECLARED",
+      "blocking_reason": "requirements need formal statement, acceptance condition, evidence, and blocking reason",
+      "component": "requirement_fields_declared",
+      "finding": "each requirement row declares formal requirement, acceptance condition, evidence, and blocker"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_REQUIREMENT_ACCOUNTING",
+      "blocking_reason": "requirements package should contain eight blocked requirement rows",
+      "component": "requirement_accounting",
+      "finding": "requirement_rows=8, blocked_requirement_rows=8"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_REQUIREMENTS_FIREWALL_CLOSED",
+      "blocking_reason": "requirements artifact must not certify carrier/domain or open score entry",
+      "component": "promotion_firewall",
+      "finding": "carrier, domain, concrete R_CMB, score, likelihood, and verdict permissions remain closed"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_REQUIREMENTS_CLAIM_BOUNDARY",
+      "blocking_reason": "requirements must preserve requirements-only claim boundary",
+      "component": "claim_boundary",
+      "finding": "row claim boundaries mark the artifact as requirements-only with no score and no verdict"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_CARRIER_AND_DOMAIN_CERTIFICATES_NOT_BUILT",
+      "blocking_reason": "requires a carrier/domain certificate candidate with proof/checker payloads",
+      "component": "carrier_and_domain_certificate",
+      "finding": "CarrierOK and DomOK are finite requirements but no certificate object is built"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_ADMISSIBILITY_OBJECTS_NOT_ACCEPTED",
+      "blocking_reason": "requires accepted seed/null/source domain objects and replay evidence",
+      "component": "seed_null_source_admissibility",
+      "finding": "seed, null control, and source objects remain admissibility requirements rather than accepted domain elements"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_QUOTIENT_SURVIVAL_AND_CODOMAIN_OUTPUT",
+      "blocking_reason": "requires quotient survival certificate and concrete codomain output typing",
+      "component": "quotient_and_codomain",
+      "finding": "non-null quotient survival and concrete role-codomain output are not yet proved"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_R_CMB_MATERIALIZATION_AND_FIREWALL",
+      "blocking_reason": "requires concrete R_CMB candidate followed by firewall replay",
+      "component": "concrete_R_CMB_and_firewall",
+      "finding": "concrete R_CMB materialization and post-population endpoint firewall remain downstream"
+    }
+  ],
+  "audited_table": "data/derived/tau_cmb_carrier_domain_certificate_requirements_v01.csv",
+  "blocked_rows": 4,
+  "carrier_certificate_allowed": false,
+  "claim_boundary": "tau_cmb_carrier_domain_certificate_requirements_audit_v01_audit_only_requirements_clean_but_carrier_not_certified_domain_not_certified_R_CMB_not_materialized_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "domain_certificate_allowed": false,
+  "failed_rows": 0,
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_carrier_domain_certificate_candidate_v01",
+  "passed_rows": 6,
+  "report_id": "tau_cmb_carrier_domain_certificate_requirements_audit_v01",
+  "requirements_audited": true,
+  "score_entry_allowed": false,
+  "status": "CARRIER_DOMAIN_CERTIFICATE_REQUIREMENTS_AUDITED_BLOCKED_NOT_SCORE_READY"
+}

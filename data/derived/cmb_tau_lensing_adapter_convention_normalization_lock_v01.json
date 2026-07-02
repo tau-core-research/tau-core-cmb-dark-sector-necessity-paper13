@@ -1,0 +1,49 @@
+{
+  "adapter_convention_candidate": {
+    "N_PP_or_clkk_convention": 1.0,
+    "formula": "m_ACT = B_ACT @ PP_grid",
+    "meaning": "Within the reduced local adapter, the accepted theory object is the package lenspotential PP grid and the package binning matrix maps it directly to the 18-vector comparison space. No additional Tau-side factor is introduced here."
+  },
+  "binning_shape": [
+    18,
+    3000
+  ],
+  "claim_boundary": "adapter_convention_lock_only_no_tau_normalization_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "fiducial_pp_stats_L10_to_L3009": {
+    "max": 1.4309e-07,
+    "mean": 1.3744220266666669e-08,
+    "median": 3.5773999999999997e-09,
+    "min": 1.0699e-09
+  },
+  "inputs": {
+    "act_binning_matrix": "data/external/act_dr6_lensing/extracted/v1.2/binning_matrix_act.txt",
+    "act_readme": "data/external/act_dr6_lensing/extracted/v1.2/README",
+    "fiducial_lenspotential_pp": "data/external/act_dr6_lensing/extracted/v1.2/like_corrs/cosmo2017_10K_acc3_lenspotentialCls.dat"
+  },
+  "lock_status": "SOURCE_SIDE_ADAPTER_CONVENTION_LOCK_CANDIDATE",
+  "non_claims": [
+    "does not prove that CAMB/ACT PP is identical to a fundamental Tau readout variable",
+    "does not derive N_parent_source",
+    "does not derive N_projection",
+    "does not run a score",
+    "does not support a dark-sector verdict"
+  ],
+  "physical_tau_score_run": false,
+  "projected_fiducial_pp_stats": {
+    "max": 1.414775e-07,
+    "mean": 4.804035447290275e-08,
+    "median": 2.4450900596309633e-08,
+    "min": 2.476505157593123e-09
+  },
+  "readme_version_line_present": true,
+  "remaining_tau_normalization_after_this_lock": "N_tau_remaining = N_parent_source * N_projection",
+  "report_id": "cmb_tau_lensing_adapter_convention_normalization_lock_v01",
+  "score_run": false,
+  "source_side_observations": [
+    "ACT package README identifies the directory as DR6 Lensing Likelihood Data v1.2.",
+    "The fiducial lenspotential file header includes a PP column.",
+    "The reduced local adapter contract uses m_ACT = B_ACT @ theory_lenspotential_PP_grid.",
+    "This lock concerns package units only; it is not a Tau-side amplitude derivation."
+  ]
+}

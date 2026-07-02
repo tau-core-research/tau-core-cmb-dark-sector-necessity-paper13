@@ -1,0 +1,93 @@
+{
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_EXPECTED_MATERIALIZATION_ROWS_PRESENT",
+      "blocking_reason": "materialization packet requires one file-slot row for every requested fulfillment path across eight areas and five file categories",
+      "component": "materialization_row_shape",
+      "finding": "rows=66, areas=['carrier_well_formedness', 'codomain_compatibility', 'domain_membership_rule', 'endpoint_firewall_replay', 'null_control_admissibility', 'quotient_and_equivalence_survival', 'seed_admissibility', 'source_object_admissibility'], categories=['firewall', 'hash', 'payload', 'provenance', 'replay']"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_MATERIALIZATION_INPUT_CHAIN",
+      "blocking_reason": "materialization audit must be downstream of a clean fulfillment-packet audit",
+      "component": "input_fulfillment_chain",
+      "finding": "materialization packet follows a clean audited incomplete fulfillment packet"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_TEMPLATE_PATH_MAPPING",
+      "blocking_reason": "materialization packet needs staging-to-template path mapping for every required file slot",
+      "component": "template_path_mapping",
+      "finding": "each required staging file has a declared payload_templates counterpart and materialization requirement"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_MATERIALIZATION_ACCOUNTING",
+      "blocking_reason": "schema-only materialization packet should declare all requested templates with zero materialized or accepted rows",
+      "component": "materialization_accounting",
+      "finding": "rows=66, templates=66, materialized=0, accepted=0, executable=0"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_MATERIALIZATION_FIREWALL_CLOSED",
+      "blocking_reason": "materialization schema must not promote template paths to actual payload files",
+      "component": "promotion_firewall",
+      "finding": "schema-only materialization packet does not open file materialization, acceptance, execution, R_CMB, score, likelihood, or verdict"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_MATERIALIZATION_CLAIM_BOUNDARY",
+      "blocking_reason": "materialization packet must preserve no-materialization/no-acceptance claim boundary",
+      "component": "claim_boundary",
+      "finding": "row claim boundaries mark schema-only materialization with no payload acceptance or score/verdict"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_FILES_NOT_MATERIALIZED",
+      "blocking_reason": "requires actual endpoint-blind payload, replay, provenance, hash, and firewall files",
+      "component": "file_materialization",
+      "finding": "template paths are declared but required payload-staging files are not materialized"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_BINDINGS_NOT_AVAILABLE",
+      "blocking_reason": "requires materialized files before binding checks can pass",
+      "component": "binding_checks",
+      "finding": "hash, provenance, replay, and firewall bindings are not available"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_ACCEPTANCE_AUDIT_NOT_AVAILABLE",
+      "blocking_reason": "requires materialized file bundles and acceptance audit",
+      "component": "payload_acceptance",
+      "finding": "payloads cannot be accepted before materialized files and binding checks"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_EXECUTION_AND_R_CMB",
+      "blocking_reason": "requires accepted payloads before checker execution and downstream certificates",
+      "component": "checker_execution_and_R_CMB",
+      "finding": "checker execution, certificate pass, domain acceptance, and concrete R_CMB remain downstream"
+    }
+  ],
+  "audited_table": "data/derived/tau_cmb_carrier_domain_checker_input_payload_materialization_packet_v01.csv",
+  "blocked_rows": 4,
+  "carrier_certificate_allowed": false,
+  "checker_execution_allowed": false,
+  "claim_boundary": "tau_cmb_carrier_domain_checker_input_payload_materialization_packet_audit_v01_audit_only_schema_clean_but_unmaterialized_no_payload_acceptance_no_checker_execution_no_certificate_pass_no_domain_acceptance_no_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "domain_certificate_allowed": false,
+  "domain_object_acceptance_allowed": false,
+  "failed_rows": 0,
+  "file_materialization_allowed": false,
+  "likelihood_allowed": false,
+  "materialization_packet_audited": true,
+  "next_minimal_unblock": "tau_cmb_carrier_domain_checker_input_payload_file_materialization_v01",
+  "passed_rows": 6,
+  "payload_acceptance_allowed": false,
+  "report_id": "tau_cmb_carrier_domain_checker_input_payload_materialization_packet_audit_v01",
+  "score_entry_allowed": false,
+  "status": "CARRIER_DOMAIN_CHECKER_INPUT_PAYLOAD_MATERIALIZATION_PACKET_AUDITED_SCHEMA_ONLY_NOT_EXECUTABLE"
+}

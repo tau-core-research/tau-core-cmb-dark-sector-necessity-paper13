@@ -1,0 +1,22 @@
+{
+  "blocked_requirement_rows": 8,
+  "carrier_certificate_allowed": false,
+  "claim_boundary": "tau_cmb_carrier_domain_certificate_requirements_v01_requirements_only_carrier_not_certified_domain_not_certified_R_CMB_not_materialized_no_score_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "domain_certificate_allowed": false,
+  "input_chain_clean": true,
+  "input_predicate_audit": "data/derived/tau_cmb_carrier_domain_predicate_candidate_audit_v01.json",
+  "input_seed_domain_certificate": "data/derived/tau_cmb_seed_readout_domain_certificate_summary_v01.json",
+  "input_seed_domain_status": "SEED_READOUT_DOMAIN_CERTIFICATE_DECLARED_BLOCKED",
+  "input_single_pass_spine": "data/derived/tau_cmb_single_pass_derivation_spine_summary_v01.json",
+  "input_zero_control": "data/derived/tau_cmb_seed_zero_control_summary_v01.json",
+  "input_zero_control_status": "SEED_ZERO_CONTROL_DECLARED_NOT_ACCEPTED",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "audit_tau_cmb_carrier_domain_certificate_requirements_v01",
+  "report_id": "tau_cmb_carrier_domain_certificate_requirements_summary_v01",
+  "requirement_rows": 8,
+  "score_entry_allowed": false,
+  "status": "CARRIER_DOMAIN_CERTIFICATE_REQUIREMENTS_DECLARED_BLOCKED",
+  "table": "data/derived/tau_cmb_carrier_domain_certificate_requirements_v01.csv"
+}

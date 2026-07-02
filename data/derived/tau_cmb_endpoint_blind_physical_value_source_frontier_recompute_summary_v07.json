@@ -1,0 +1,22 @@
+{
+  "claim_boundary": "tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_v07_growth_operator_explicit_failure_accepted_no_physical_source_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "explicit_fail_accepted_rows": 13,
+  "frontier_rows": 16,
+  "growth_operator_rows_closed": 1,
+  "input_chain_clean": true,
+  "input_frontier_recompute_v06_table": "data/derived/tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_v06.csv",
+  "input_growth_explicit_fail_acceptance": "data/derived/tau_cmb_growth_transfer_operator_explicit_fail_acceptance_audit_summary_v01.json",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_cross_role_consistency_final_closure_v01",
+  "open_frontier_rows": 3,
+  "physical_CMB_score_allowed": false,
+  "physical_value_source_accepted_rows": 0,
+  "report_id": "tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_summary_v07",
+  "status": "CMB_ENDPOINT_BLIND_PHYSICAL_VALUE_SOURCE_FRONTIER_RECOMPUTED_GROWTH_OPERATOR_EXPLICIT_FAIL_ACCEPTED",
+  "table": "data/derived/tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_v07.csv",
+  "updated_bucket_counts": {
+    "dependency_blocked": 3,
+    "explicit_fail_accepted": 13
+  }
+}

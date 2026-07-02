@@ -1,0 +1,19 @@
+{
+  "blocked_rows": 3,
+  "carrier_certification_allowed": false,
+  "claim_boundary": "tau_cmb_readout_role_coordinate_density_v01_coordinate_candidate_only_not_materialized_no_density_score_no_omega_c_h2_match_no_concrete_R_CMB_no_carrier_certification_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "coordinate_acceptance_allowed": false,
+  "coordinate_rows": 5,
+  "coordinate_symbol": "e_density",
+  "dark_sector_verdict_allowed": false,
+  "density_score_allowed": false,
+  "guard_rows": 2,
+  "input_acoustic_coordinate_audit": "data/derived/tau_cmb_readout_role_coordinate_acoustic_audit_v01.json",
+  "input_acoustic_coordinate_audit_clean": true,
+  "next_minimal_unblock": "tau_cmb_readout_role_coordinate_density_audit_v01",
+  "omega_c_h2_match_allowed": false,
+  "report_id": "tau_cmb_readout_role_coordinate_density_summary_v01",
+  "status": "DENSITY_ROLE_COORDINATE_CANDIDATE_DECLARED_BLOCKED_NOT_MATERIALIZED",
+  "table": "data/derived/tau_cmb_readout_role_coordinate_density_v01.csv"
+}

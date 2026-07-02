@@ -1,0 +1,11 @@
+{
+  "certificate_passed": false,
+  "claim_boundary": "tau_cmb_certificate_semantic_evidence_substantive_assertion_supply_v01_nonnull_status_assertions_supplied_not_accepted_not_proof_no_certificate_pass_no_domain_acceptance_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "likelihood_allowed": false,
+  "proof_claim_allowed": false,
+  "score_entry_allowed": false,
+  "semantic_assertion_accepted": false,
+  "sha256": "2f1fa119871b958bc830ba8013ab79681973cc2cb3e2a9dccbdd36a22dd6213d",
+  "target": "semantic_evidence_replacements/quotient_and_equivalence_survival/non_null_witness_pass_accepted_evidence_v01.json"
+}

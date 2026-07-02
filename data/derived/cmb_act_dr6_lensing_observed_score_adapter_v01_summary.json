@@ -1,0 +1,36 @@
+{
+  "claim_boundary": "cmb_act_dr6_lensing_observed_score_adapter_v01_observed_side_chi2_adapter_only_requires_tau_prediction_no_likelihood_run_no_score_no_dark_sector_verdict",
+  "covariance_condition_number": "841.941478991",
+  "covariance_eigenvalue_max": "1.951483679557964985e-15",
+  "covariance_eigenvalue_min": "2.317837674295900278e-18",
+  "covariance_path": "data/external/act_dr6_lensing/extracted/v1.2/covmat_act.txt",
+  "covariance_positive_definite": true,
+  "covariance_sha256": "e710817fc88e0321e6d2a8dc3805489ada0df3f3d930e6e341e4aa929a36f361",
+  "covariance_shape": [
+    18,
+    18
+  ],
+  "covariance_symmetric": true,
+  "covariance_symmetric_residual_max_abs": "0.000000000000000000e+00",
+  "dark_sector_verdict_allowed": false,
+  "inverse_covariance_path": "data/derived/cmb_act_dr6_lensing_observed_score_adapter_v01_inverse_covariance.csv",
+  "inverse_covariance_sha256": "b3b4d37cb8dd0b6c890a7e0335f34f829e8c7c7f85900f988e144a6df133fbec",
+  "inverse_covariance_shape": [
+    18,
+    18
+  ],
+  "inverse_identity_residual_max_abs": "6.661338147750939243e-16",
+  "likelihood_run": false,
+  "next_required_artifact": "supply_tau_lensing_prediction_vector_in_act_dr6_18_bin_basis",
+  "observed_payload_path": "data/derived/cmb_act_dr6_lensing_observable_payload_v01.csv",
+  "observed_payload_rows": 18,
+  "observed_payload_sha256": "182b679ab65ca2d67756ef86129f3b2030e9760022ff63ba9aee50dc2711c4c9",
+  "score_executable_now": false,
+  "score_formula": "chi2_tau=(y_obs-y_tau)^T C_obs^{-1} (y_obs-y_tau)",
+  "score_rows": 0,
+  "summary_id": "CMB_ACT_DR6_LENSING_OBSERVED_SCORE_ADAPTER_V01",
+  "tau_prediction_required_shape": [
+    18
+  ],
+  "tau_prediction_rows_present": 0
+}

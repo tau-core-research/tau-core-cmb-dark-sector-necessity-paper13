@@ -1,0 +1,68 @@
+{
+  "admissible_next_routes": [
+    {
+      "action": "derive N_tau from Tau-side and adapter-convention sources, update formula spec, rematerialize payload, rerun score",
+      "claim_level_if_successful": "endpoint_blind_physical_candidate_score",
+      "route": "strict_physical_retry"
+    },
+    {
+      "action": "declare a prior/range for normalization before scoring and treat score as parameterized diagnostic",
+      "claim_level_if_successful": "diagnostic_fit_not_dark_sector_verdict",
+      "route": "diagnostic_parameterized_retry"
+    },
+    {
+      "action": "replace the current power-law cutoff unit shape from Tau-side theory before any new endpoint comparison",
+      "claim_level_if_successful": "new_endpoint_blind_shape_candidate_pending_score",
+      "route": "shape_kernel_revision"
+    }
+  ],
+  "checks": [
+    {
+      "detail": "data/derived/cmb_tau_lensing_route_b_normalization_gap_derivation_v01.json",
+      "name": "diagnostic_gap_report_exists",
+      "passes": true
+    },
+    {
+      "detail": "payload_staging/tau_lensing_route_b_parent_source_formula_spec_v01.json",
+      "name": "formula_spec_exists",
+      "passes": true
+    },
+    {
+      "detail": {
+        "normalization": 1.0,
+        "normalization_statement": "dimensionless Route B parent-source convention; downstream delta_PP_tau = normalization * parent_tau_source_value"
+      },
+      "name": "current_formula_spec_has_only_conventional_unit_normalization",
+      "passes": true
+    },
+    {
+      "detail": {
+        "diagnostic_alpha_star": 1.0252273404414796e-08,
+        "promotion_rule": "may be used as target magnitude to explain, not as endpoint-blind input"
+      },
+      "name": "score_informed_alpha_not_promotable",
+      "passes": true
+    }
+  ],
+  "claim_boundary": "normalization_gate_only_no_payload_promotion_no_score_no_dark_sector_verdict",
+  "current_blocker": "The active Route B formula spec uses a unit dimensionless normalization. The post-score alpha gap is derived algebraically, but it is not an endpoint-blind Tau-side normalization.",
+  "dark_sector_verdict": false,
+  "gate_status": "BLOCKED_FOR_PHYSICAL_SCORE_RETRY",
+  "non_admissible_action": "Do not set normalization to the post-score alpha_star and call it a Tau derivation. That would be endpoint leakage.",
+  "physical_tau_score_run": false,
+  "report_id": "cmb_tau_lensing_endpoint_blind_normalization_gate_v01",
+  "required_endpoint_blind_normalization_object": {
+    "formula": "N_tau = N_parent_source * N_projection * N_PP_or_clkk_convention",
+    "object_id": "N_tau_CMB_lensing_v01",
+    "required_fields": [
+      "source-side derivation of N_parent_source",
+      "projection operator normalization N_projection",
+      "PP/clkk and binning convention normalization N_PP_or_clkk_convention",
+      "dimension statement",
+      "known-limit statement N_tau -> 0 or delta_PP_tau -> 0 when parent response -> 0",
+      "endpoint-firewall statement excluding ACT/Planck residuals and score outputs",
+      "frozen value/range before materialization"
+    ]
+  },
+  "score_run": false
+}

@@ -1,0 +1,24 @@
+{
+  "audit_decision": "NUMERIC_ROUTE_READY_FOR_MATERIALIZE_REPLAY",
+  "blocking_layer": "projection_replay",
+  "claim_boundary": "route_submission_audit_only_no_grid_validation_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "failure_route_recorded": false,
+  "firewall_next_required_action": "run_materialize_replay",
+  "firewall_passed": true,
+  "intake_next_required_action": "run_validate_delta_grid_then_projection_replay",
+  "next_required_action": "run_make_materialize_replay",
+  "numeric_route_ready_for_materializer": true,
+  "readiness_decision": "BLOCKED_ON_PROJECTION_REPLAY",
+  "report_id": "tau_lensing_route_submission_audit_v01",
+  "score_run": false,
+  "selected_route_count": 1,
+  "selected_route_kind": "numeric_route",
+  "selected_routes": [
+    "delta_PP_tau_against_named_fiducial_PP"
+  ],
+  "source_reports": {
+    "firewall": "tau_lensing_route_evidence_firewall_v01",
+    "intake": "tau_lensing_route_evidence_intake_v01"
+  }
+}

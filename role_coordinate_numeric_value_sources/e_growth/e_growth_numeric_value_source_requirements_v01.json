@@ -1,0 +1,95 @@
+{
+  "artifact_status": "ROLE_COORDINATE_NUMERIC_VALUE_SOURCE_REQUIREMENT_WORKLIST_SUPPLIED_NOT_NUMERIC",
+  "blocking_reason": "numeric source requirements are enumerated, but no accepted numeric source values are supplied",
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_source_supply_v01_source_requirement_worklist_supplied_no_numeric_values_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "coordinate_symbol": "e_growth",
+  "dark_sector_verdict_allowed": false,
+  "endpoint_blind_firewall": {
+    "act_planck_likelihood_used": false,
+    "cmb_endpoint_residuals_used": false,
+    "dark_sector_verdict_used": false,
+    "post_endpoint_tuning_used": false,
+    "score_output_used": false
+  },
+  "input_numeric_materialization_acceptance_audit_summary": "data/derived/tau_cmb_readout_role_coordinate_numeric_materialization_acceptance_audit_summary_v01.json",
+  "likelihood_allowed": false,
+  "next_required_step": "populate endpoint-blind numeric value source files with units, conventions, provenance, and replay",
+  "numeric_value_source_supplied": false,
+  "numeric_values_materialized": false,
+  "role_audit": "data/derived/tau_cmb_readout_role_coordinate_growth_audit_v01.json",
+  "role_audit_status": "GROWTH_ROLE_COORDINATE_AUDITED_BLOCKED_NOT_MATERIALIZED",
+  "role_coordinate_acceptance_allowed": false,
+  "role_name": "growth",
+  "role_table": "data/derived/tau_cmb_readout_role_coordinate_growth_v01.csv",
+  "score_entry_allowed": false,
+  "source_requirement_rows": 6,
+  "source_requirements": [
+    {
+      "blocked_by": "domain family is narrowed but no single input object is selected",
+      "candidate_definition": "growth coordinate must select an endpoint-blind input object before propagation",
+      "coordinate_component": "domain_specification",
+      "coordinate_row_id": "TCMBRRCG01_001",
+      "coordinate_status": "PARTIAL_DOMAIN_GUARD_DECLARED_NOT_SELECTED",
+      "dimension_role": "domain convention role; units depend on selected input object",
+      "formal_slot": "X_tau_CMB or (rho_tau_eff,Phi_tau_eff)",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_growth_transfer_kernel_closure_v01"
+    },
+    {
+      "blocked_by": "codomain family is narrowed but no comparison variable is selected",
+      "candidate_definition": "growth coordinate must select an observable-side comparison variable and normalization",
+      "coordinate_component": "codomain_specification",
+      "coordinate_row_id": "TCMBRRCG01_002",
+      "coordinate_status": "PARTIAL_CODOMAIN_GUARD_DECLARED_NOT_SELECTED",
+      "dimension_role": "codomain convention role; normalized only after comparison variable is fixed",
+      "formal_slot": "Y_growth_tau(k,a)",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_growth_transfer_kernel_closure_v01"
+    },
+    {
+      "blocked_by": "concrete numeric convention still required before score use",
+      "candidate_definition": "growth coordinate requires k convention, scale-factor convention, epochs, and normalization point",
+      "coordinate_component": "time_scale_convention",
+      "coordinate_row_id": "TCMBRRCG01_003",
+      "coordinate_status": "CONDITIONAL_TIME_SCALE_GUARD_DECLARED_NOT_NUMERIC",
+      "dimension_role": "time/scale convention guard; no standalone physical unit claim",
+      "formal_slot": "K_growth[k,a_initial,a_final,N_growth]",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_growth_transfer_kernel_closure_v01"
+    },
+    {
+      "blocked_by": "no transfer operator, reduced evolution equation, or propagation rule is supplied",
+      "candidate_definition": "growth coordinate requires a lawful propagation operator, reduced evolution equation, or explicit failure",
+      "coordinate_component": "operator_rule",
+      "coordinate_row_id": "TCMBRRCG01_004",
+      "coordinate_status": "BLOCKED_OPERATOR_RULE_NOT_DERIVED",
+      "dimension_role": "operator role; dimension depends on domain/codomain normalization",
+      "formal_slot": "Transfer_tau[X_tau_CMB](k,a)",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_growth_transfer_kernel_closure_v01"
+    },
+    {
+      "blocked_by": "dependent density, acoustic, and lensing coordinates remain blocked and unmaterialized",
+      "candidate_definition": "growth support must not contradict density, acoustic, or lensing readout roles",
+      "coordinate_component": "cross_role_consistency",
+      "coordinate_row_id": "TCMBRRCG01_005",
+      "coordinate_status": "BLOCKED_DEPENDENT_ROLES_STILL_OPEN",
+      "dimension_role": "consistency role; no physical units",
+      "formal_slot": "Consistent(T_tau_CMB,e_density,e_acoustic,e_lensing)",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_readout_role_coordinate_lensing_audit_v01; tau_cmb_growth_transfer_kernel_closure_v01"
+    },
+    {
+      "blocked_by": "run reduced checks or explicitly assign FAIL after transfer evaluation",
+      "candidate_definition": "coordinate keeps a stop/fail branch if no lawful growth transfer or role-consistency route can be supplied",
+      "coordinate_component": "growth_stop_rule",
+      "coordinate_row_id": "TCMBRRCG01_006",
+      "coordinate_status": "STOP_RULE_DECLARED_NOT_TRIGGERED",
+      "dimension_role": "decision guard; no physical units",
+      "formal_slot": "growth_fail_if_transfer_operator_or_consistency_missing",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_known_limit_failure_map_v01"
+    }
+  ]
+}

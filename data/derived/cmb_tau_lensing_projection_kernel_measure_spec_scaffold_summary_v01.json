@@ -1,0 +1,26 @@
+{
+  "claim_boundary": "projection_kernel_measure_spec_scaffold_only_no_kernel_acceptance_no_grid_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "missing_or_unproved_rows": [
+    "TCMBPKMSS01_001",
+    "TCMBPKMSS01_002",
+    "TCMBPKMSS01_003",
+    "TCMBPKMSS01_004",
+    "TCMBPKMSS01_005",
+    "TCMBPKMSS01_006"
+  ],
+  "operator_component": "K_tau_PP(L; a,k)dmu(a,k)",
+  "physical_tau_score_run": false,
+  "report_id": "cmb_tau_lensing_projection_kernel_measure_spec_scaffold_summary_v01",
+  "rows": 6,
+  "score_run": false,
+  "status": "KERNEL_MEASURE_SPEC_DECLARED_NOT_FILLED",
+  "table": "data/derived/cmb_tau_lensing_projection_kernel_measure_spec_scaffold_v01.csv",
+  "unblocks_when": [
+    "domain support is inherited from endpoint-blind Phi artifacts",
+    "measure and L mapping are explicit",
+    "kernel units/sign convention is dimensionally compatible with PP or delta_PP_tau",
+    "integrability/finite replay condition is proved or enforced",
+    "kernel artifact is hash-bound before endpoint comparison"
+  ]
+}

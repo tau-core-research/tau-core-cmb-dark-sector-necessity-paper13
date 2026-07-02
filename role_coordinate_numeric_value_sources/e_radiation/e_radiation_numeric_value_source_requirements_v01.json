@@ -1,0 +1,84 @@
+{
+  "artifact_status": "ROLE_COORDINATE_NUMERIC_VALUE_SOURCE_REQUIREMENT_WORKLIST_SUPPLIED_NOT_NUMERIC",
+  "blocking_reason": "numeric source requirements are enumerated, but no accepted numeric source values are supplied",
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_source_supply_v01_source_requirement_worklist_supplied_no_numeric_values_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "coordinate_symbol": "e_radiation",
+  "dark_sector_verdict_allowed": false,
+  "endpoint_blind_firewall": {
+    "act_planck_likelihood_used": false,
+    "cmb_endpoint_residuals_used": false,
+    "dark_sector_verdict_used": false,
+    "post_endpoint_tuning_used": false,
+    "score_output_used": false
+  },
+  "input_numeric_materialization_acceptance_audit_summary": "data/derived/tau_cmb_readout_role_coordinate_numeric_materialization_acceptance_audit_summary_v01.json",
+  "likelihood_allowed": false,
+  "next_required_step": "populate endpoint-blind numeric value source files with units, conventions, provenance, and replay",
+  "numeric_value_source_supplied": false,
+  "numeric_values_materialized": false,
+  "role_audit": "data/derived/tau_cmb_readout_role_coordinate_radiation_audit_v01.json",
+  "role_audit_status": "RADIATION_ROLE_COORDINATE_AUDITED_BLOCKED_NOT_MATERIALIZED",
+  "role_coordinate_acceptance_allowed": false,
+  "role_name": "radiation",
+  "role_table": "data/derived/tau_cmb_readout_role_coordinate_radiation_v01.csv",
+  "score_entry_allowed": false,
+  "source_requirement_rows": 5,
+  "source_requirements": [
+    {
+      "blocked_by": "Delta_N_eff_tau is declared as a slot but not derived from Tau response",
+      "candidate_definition": "radiation coordinate requires a Tau-derived dimensionless radiation-like contribution under the adopted convention",
+      "coordinate_component": "tau_radiation_like_contribution",
+      "coordinate_row_id": "TCMBRRCR01_001",
+      "coordinate_status": "BLOCKED_TAU_DELTA_NEFF_NOT_DERIVED",
+      "dimension_role": "dimensionless effective relativistic-degree contribution after convention lock",
+      "formal_slot": "Delta_N_eff_tau",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_radiation_guard_evaluation_v01"
+    },
+    {
+      "blocked_by": "concrete numeric bound and provenance are not selected",
+      "candidate_definition": "radiation coordinate requires the external Neff/damping-tail convention and dataset family before comparison",
+      "coordinate_component": "external_bound_convention",
+      "coordinate_row_id": "TCMBRRCR01_002",
+      "coordinate_status": "CONDITIONAL_BOUND_CONVENTION_GUARD_DECLARED_NOT_NUMERIC",
+      "dimension_role": "dimensionless bound convention guard",
+      "formal_slot": "Delta_N_eff_bound",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_radiation_guard_bound_check_v01"
+    },
+    {
+      "blocked_by": "no numerical left-hand side or selected bound is evaluated",
+      "candidate_definition": "radiation coordinate requires numerical evaluation of the Tau contribution against the adopted bound",
+      "coordinate_component": "damping_tail_inequality",
+      "coordinate_row_id": "TCMBRRCR01_003",
+      "coordinate_status": "BLOCKED_BOUND_INEQUALITY_NOT_EVALUATED",
+      "dimension_role": "dimensionless inequality under shared convention",
+      "formal_slot": "Delta_N_eff_tau <= Delta_N_eff_bound",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_radiation_guard_evaluation_v01"
+    },
+    {
+      "blocked_by": "dependent density, acoustic, lensing, and growth coordinates remain blocked and unmaterialized",
+      "candidate_definition": "radiation guard must not contradict density, acoustic, lensing, or growth readout roles",
+      "coordinate_component": "cross_role_consistency",
+      "coordinate_row_id": "TCMBRRCR01_004",
+      "coordinate_status": "BLOCKED_DEPENDENT_ROLES_STILL_OPEN",
+      "dimension_role": "consistency role; no physical units",
+      "formal_slot": "Consistent(Delta_N_eff_tau,A_tau,Phi_tau_eff,T_tau_CMB)",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_readout_role_coordinate_growth_audit_v01; tau_cmb_radiation_guard_evaluation_v01"
+    },
+    {
+      "blocked_by": "run the guard or explicitly assign FAIL after convention and contribution evaluation",
+      "candidate_definition": "coordinate keeps a stop/fail branch if Tau contribution cannot be defined or exceeds the adopted bound",
+      "coordinate_component": "radiation_stop_rule",
+      "coordinate_row_id": "TCMBRRCR01_005",
+      "coordinate_status": "STOP_RULE_DECLARED_NOT_TRIGGERED",
+      "dimension_role": "decision guard; no physical units",
+      "formal_slot": "radiation_fail_if_delta_neff_missing_or_bound_violated",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_known_limit_failure_map_v01"
+    }
+  ]
+}

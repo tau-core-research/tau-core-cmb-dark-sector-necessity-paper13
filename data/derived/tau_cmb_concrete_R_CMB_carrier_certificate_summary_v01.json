@@ -1,0 +1,19 @@
+{
+  "blocked_rows": 6,
+  "carrier_certificate_allowed": false,
+  "certificate_rows": 7,
+  "claim_boundary": "tau_cmb_concrete_R_CMB_carrier_certificate_v01_certificate_requirements_only_carrier_not_certified_R_CMB_not_materialized_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "input_chain_clean": true,
+  "input_null_coordinate_audit": "data/derived/tau_cmb_readout_role_coordinate_null_audit_v01.json",
+  "input_role_basis_audit": "data/derived/tau_cmb_readout_role_space_basis_audit_v01.json",
+  "input_scoring_gap_matrix": "data/derived/tau_cmb_scoring_input_gap_matrix_summary_v01.json",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_concrete_R_CMB_carrier_certificate_audit_v01",
+  "partial_rows": 1,
+  "report_id": "tau_cmb_concrete_R_CMB_carrier_certificate_summary_v01",
+  "score_entry_allowed": false,
+  "status": "CONCRETE_R_CMB_CARRIER_CERTIFICATE_REQUIREMENTS_DECLARED_BLOCKED",
+  "table": "data/derived/tau_cmb_concrete_R_CMB_carrier_certificate_v01.csv"
+}

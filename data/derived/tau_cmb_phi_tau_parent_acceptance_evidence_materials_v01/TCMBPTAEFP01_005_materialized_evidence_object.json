@@ -1,0 +1,12 @@
+{
+  "acceptance_status": "materialized_not_accepted",
+  "artifact": "tau_cmb_phi_tau_parent_acceptance_evidence_materialization_package_v01",
+  "claim_boundary": "tau_cmb_phi_tau_parent_acceptance_evidence_materialization_package_v01_materialization_only_records_created_and_hashed_no_receipt_accepted_no_evidence_accepted_no_decision_gate_reopen_no_scoring_input_accepted_no_phi_derivation_no_score_no_likelihood_no_verdict",
+  "endpoint_blind": "true",
+  "evidence_object": "hash_manifest_bundle",
+  "material_type": "materialized_evidence_object",
+  "package_row_id": "TCMBPTAEFP01_005",
+  "score_status": "not_scored",
+  "source_fulfillment_package": "tau_cmb_phi_tau_parent_acceptance_evidence_fulfillment_package_v01",
+  "target_gate": "hash_manifest_gate"
+}

@@ -1,0 +1,95 @@
+{
+  "artifact_status": "ROLE_COORDINATE_NUMERIC_VALUE_SOURCE_REQUIREMENT_WORKLIST_SUPPLIED_NOT_NUMERIC",
+  "blocking_reason": "numeric source requirements are enumerated, but no accepted numeric source values are supplied",
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_source_supply_v01_source_requirement_worklist_supplied_no_numeric_values_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "coordinate_symbol": "e_lensing",
+  "dark_sector_verdict_allowed": false,
+  "endpoint_blind_firewall": {
+    "act_planck_likelihood_used": false,
+    "cmb_endpoint_residuals_used": false,
+    "dark_sector_verdict_used": false,
+    "post_endpoint_tuning_used": false,
+    "score_output_used": false
+  },
+  "input_numeric_materialization_acceptance_audit_summary": "data/derived/tau_cmb_readout_role_coordinate_numeric_materialization_acceptance_audit_summary_v01.json",
+  "likelihood_allowed": false,
+  "next_required_step": "populate endpoint-blind numeric value source files with units, conventions, provenance, and replay",
+  "numeric_value_source_supplied": false,
+  "numeric_values_materialized": false,
+  "role_audit": "data/derived/tau_cmb_readout_role_coordinate_lensing_audit_v01.json",
+  "role_audit_status": "LENSING_ROLE_COORDINATE_AUDITED_BLOCKED_NOT_MATERIALIZED",
+  "role_coordinate_acceptance_allowed": false,
+  "role_name": "lensing",
+  "role_table": "data/derived/tau_cmb_readout_role_coordinate_lensing_v01.csv",
+  "score_entry_allowed": false,
+  "source_requirement_rows": 6,
+  "source_requirements": [
+    {
+      "blocked_by": "Phi_tau_eff remains a target slot rather than a derived lensing-era source",
+      "candidate_definition": "lensing coordinate requires a potential-like Tau source over the lensing-relevant scale and epoch range",
+      "coordinate_component": "lensing_potential_source",
+      "coordinate_row_id": "TCMBRRCL01_001",
+      "coordinate_status": "BLOCKED_POTENTIAL_SOURCE_NOT_DERIVED",
+      "dimension_role": "potential-source role; units only after metric handoff and normalization",
+      "formal_slot": "Phi_tau_eff(a,k)",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_lensing_transfer_reduced_evaluation_v01"
+    },
+    {
+      "blocked_by": "transfer operator domain, codomain, time/scale convention, and normalization are not specified",
+      "candidate_definition": "lensing coordinate requires a transfer kernel from CMB-era response to lensing-era readout",
+      "coordinate_component": "transfer_kernel",
+      "coordinate_row_id": "TCMBRRCL01_002",
+      "coordinate_status": "BLOCKED_TRANSFER_KERNEL_NOT_SPECIFIED",
+      "dimension_role": "operator role; convention-dependent until transfer law is supplied",
+      "formal_slot": "T_tau_CMB(k,a)",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_lensing_transfer_reduced_evaluation_v01"
+    },
+    {
+      "blocked_by": "concrete numeric projection convention still required before score use",
+      "candidate_definition": "projection geometry must be declared before any amplitude or shape comparison",
+      "coordinate_component": "projection_geometry_guard",
+      "coordinate_row_id": "TCMBRRCL01_003",
+      "coordinate_status": "CONDITIONAL_PROJECTION_GEOMETRY_GUARD_DECLARED_NOT_NUMERIC",
+      "dimension_role": "geometry/convention guard; no standalone physical unit claim",
+      "formal_slot": "G_lens[line_of_sight,distance,kernel]",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_lensing_transfer_benchmark_v01"
+    },
+    {
+      "blocked_by": "no reduced amplitude/shape tendency has been computed from Tau source plus transfer kernel",
+      "candidate_definition": "lensing coordinate needs endpoint-blind amplitude/shape response before ACT/Planck comparison",
+      "coordinate_component": "amplitude_shape_response",
+      "coordinate_row_id": "TCMBRRCL01_004",
+      "coordinate_status": "BLOCKED_AMPLITUDE_SHAPE_NOT_EVALUATED",
+      "dimension_role": "lensing-response role; codomain convention must be locked before numeric use",
+      "formal_slot": "S_lens_tau(L) or delta S_lens_tau(L)",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_lensing_transfer_reduced_evaluation_v01"
+    },
+    {
+      "blocked_by": "density and acoustic role coordinates remain blocked and unmaterialized",
+      "candidate_definition": "lensing support must not contradict density or acoustic readout roles",
+      "coordinate_component": "cross_readout_consistency",
+      "coordinate_row_id": "TCMBRRCL01_005",
+      "coordinate_status": "BLOCKED_CROSS_READOUT_NOT_AVAILABLE",
+      "dimension_role": "consistency role; no physical units",
+      "formal_slot": "Consistent(A_tau,Phi_tau_eff,T_tau_CMB,e_acoustic,e_density)",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_readout_role_coordinate_density_audit_v01; tau_cmb_readout_role_coordinate_acoustic_audit_v01"
+    },
+    {
+      "blocked_by": "run reduced checks or explicitly assign FAIL after source/transfer/projection evaluation",
+      "candidate_definition": "coordinate keeps a stop/fail branch if endpoint-blind lensing source, transfer, projection, or shape response cannot be supplied",
+      "coordinate_component": "lensing_stop_rule",
+      "coordinate_row_id": "TCMBRRCL01_006",
+      "coordinate_status": "STOP_RULE_DECLARED_NOT_TRIGGERED",
+      "dimension_role": "decision guard; no physical units",
+      "formal_slot": "lensing_fail_if_source_transfer_projection_or_shape_missing",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_known_limit_failure_map_v01"
+    }
+  ]
+}

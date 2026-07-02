@@ -1,0 +1,39 @@
+{
+  "claim_boundary": "physical_candidate_upstream_scaffold_template_not_payload_no_grid_no_score_no_dark_sector_verdict",
+  "derivation_script_or_formula": "FILL: replayable formula or script command that produces the exact 3000-row table.",
+  "endpoint_blind_statement": "FILL: state why all parameters and response values were fixed before ACT/Planck endpoint residuals, reduced chi2, score output, or dark-sector verdict readout.",
+  "forbidden_inputs": [
+    "ACT residuals",
+    "Planck residuals",
+    "reduced chi2 tuning",
+    "score output tuning",
+    "dark-sector verdict preference",
+    "diagnostic probe parameters",
+    "zero-control definitions promoted as physical response"
+  ],
+  "formula_role": "endpoint_blind_tau_derived_lensing_l_response_physical_candidate",
+  "known_limit_statement": "FILL: state the zero/null/LCDM comparison limit and what happens when Tau source is absent.",
+  "l_column": "L",
+  "normalization_statement": "FILL: define the dimensionless delta_PP_tau(L) or tau_PP(L) normalization and sign convention.",
+  "notes": "Remove template_status only after this metadata describes a real Tau-derived endpoint-blind 3000-row upstream response table.",
+  "parameter_policy": "FILL: list fixed Tau-side inputs and state the parameter fixation rule; no endpoint tuning.",
+  "route_A_transfer_projection_requirements": [
+    "rho_tau_eff(a,k) = A_tau(a,k) * rho_ref(a)",
+    "k^2 Phi_tau_eff(a,k) = 4*pi*G*a^2*rho_tau_eff(a,k)*Delta_tau(a,k)",
+    "Phi_lens_tau(a,k) = T_tau_CMB(k,a)[Phi_tau_eff]",
+    "tau_PP(L) = Projection_PP[Phi_lens_tau](L)"
+  ],
+  "route_B_direct_L_space_requirements": [
+    "delta_PP_tau(L) = F_tau_L(parent_tau_source, readout_profile, scale_profile; L)",
+    "F_tau_L parameters fixed from Tau-side evidence before endpoint score readout"
+  ],
+  "route_family": "choose_one_of_route_A_transfer_projection_or_route_B_direct_L_space",
+  "selected_route": "delta_PP_tau_against_named_fiducial_PP",
+  "source_chain": [
+    "FILL: Tau-side parent source artifact path",
+    "FILL: derivation script or proof packet path",
+    "FILL: normalization/known-limit audit path"
+  ],
+  "template_status": "TEMPLATE_NOT_PAYLOAD",
+  "value_column": "tau_response_value"
+}

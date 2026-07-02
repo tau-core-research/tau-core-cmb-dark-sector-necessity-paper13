@@ -1,0 +1,22 @@
+{
+  "A_tau_value_allowed": false,
+  "activation_acceptance_allowed": false,
+  "audited_candidate": "data/derived/tau_cmb_morphological_seed_activation_rule_candidate_v01.csv",
+  "claim_boundary": "tau_cmb_morphological_seed_activation_rule_candidate_audit_v01_audit_only_no_activation_acceptance_no_A_tau_value_no_source_acceptance_no_phi_derivation_no_score_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "decision": "ROUTE_TO_QUOTIENT_SURVIVAL_TEST_NOT_ACCEPTED",
+  "endpoint_token_hits": [],
+  "extra_components": [],
+  "incomplete_boundary_rows": [],
+  "missing_blocker_rows": [],
+  "missing_components": [],
+  "missing_required_columns": [],
+  "next_minimal_unblock": "build_tau_cmb_morphological_seed_quotient_survival_test_v01",
+  "report_id": "tau_cmb_morphological_seed_activation_rule_candidate_audit_v01",
+  "rows_received": 5,
+  "score_entry_allowed": false,
+  "self_acceptance_rows": [],
+  "source_acceptance_allowed": false,
+  "status": "MORPHOLOGICAL_SEED_ACTIVATION_RULE_AUDIT_READY_FOR_QUOTIENT_SURVIVAL_TEST",
+  "value_claim_rows": []
+}

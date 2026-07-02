@@ -1,0 +1,10 @@
+{
+  "claim_boundary": "tau_cmb_certificate_semantic_evidence_physical_R_CMB_materialization_supply_v01_materialization_candidate_supplied_role_coordinates_blocked_not_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "likelihood_allowed": false,
+  "numeric_values_materialized": false,
+  "physical_R_CMB_materialized": false,
+  "score_entry_allowed": false,
+  "sha256": "b49475be6e911b5fb1d71524716fbef0bb01f83125713228c0377b09b81d8673",
+  "target": "physical_R_CMB_materialization_payloads/null_control_admissibility/null_control_admissibility_domain_object_v01_physical_R_CMB_materialization_v01.json"
+}

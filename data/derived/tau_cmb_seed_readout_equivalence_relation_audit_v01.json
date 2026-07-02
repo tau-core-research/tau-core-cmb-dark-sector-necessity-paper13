@@ -1,0 +1,89 @@
+{
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_RELATION_CANDIDATE_AUDITED",
+      "blocking_reason": "equivalence audit requires a clean relation-candidate audit input",
+      "component": "input_relation_candidate_audit",
+      "finding": "relation-candidate audit is present with zero failures"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_CARRIER_SPACE_DECLARED",
+      "blocking_reason": "equivalence relation requires a declared carrier/codomain",
+      "component": "carrier_space_declared",
+      "finding": "candidate carrier is the declared CMB role-space candidate"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_RELATION_SYMBOL_DECLARED",
+      "blocking_reason": "relation must be named before axiom audit",
+      "component": "relation_symbol_declared",
+      "finding": "relation symbol is declared and explicitly marked unproved"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_CONTROL_FAMILY_DECLARED",
+      "blocking_reason": "relation must state the controls it quotients by",
+      "component": "control_family_declared",
+      "finding": "null, gauge, convention, and endpoint-blind controls are named"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_NULL_ANCHOR_AVAILABLE",
+      "blocking_reason": "equivalence relation needs a null anchor before null-class tests",
+      "component": "null_anchor_compatibility",
+      "finding": "null anchor is available for future null-class compatibility"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_EQUIVALENCE_FIREWALL_CLOSED",
+      "blocking_reason": "axiom audit must not promote the candidate to a proof or score",
+      "component": "promotion_firewall",
+      "finding": "equivalence proof, survival claim, score, and verdict permissions remain closed"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_REFLEXIVITY_NOT_PROVED",
+      "blocking_reason": "requires a concrete carrier predicate and identity-preserving control list",
+      "component": "reflexivity",
+      "finding": "no formal predicate/control identity proof shows x ~ x on the carrier"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_SYMMETRY_NOT_PROVED",
+      "blocking_reason": "requires symmetric indistinguishability or a symmetric metric/tolerance rule",
+      "component": "symmetry",
+      "finding": "no formal predicate/control symmetry proof shows x ~ y implies y ~ x"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_TRANSITIVITY_NOT_PROVED",
+      "blocking_reason": "requires transitive controls or quotient-safe closure of the tolerance rule",
+      "component": "transitivity",
+      "finding": "no formal predicate/control transitivity proof shows x ~ y and y ~ z imply x ~ z"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_QUOTIENT_MAP_NOT_DEFINED",
+      "blocking_reason": "requires proved equivalence relation plus concrete quotient map",
+      "component": "quotient_well_definedness",
+      "finding": "quotient classes cannot be accepted until the equivalence axioms and carrier map are proved"
+    }
+  ],
+  "audited_relation_table": "data/derived/tau_cmb_seed_readout_quotient_relation_candidate_v01.csv",
+  "blocked_rows": 4,
+  "claim_boundary": "tau_cmb_seed_readout_equivalence_relation_audit_v01_axiom_audit_only_equivalence_not_proved_no_readout_evaluation_no_quotient_map_no_survival_claim_no_score_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "equivalence_relation_audited": true,
+  "equivalence_relation_proved": false,
+  "failed_rows": 0,
+  "next_minimal_unblock": "tau_cmb_seed_readout_equivalence_axiom_proof_obligation_v01",
+  "passed_rows": 6,
+  "quotient_map_allowed": false,
+  "quotient_survival_claim_allowed": false,
+  "readout_evaluation_allowed": false,
+  "report_id": "tau_cmb_seed_readout_equivalence_relation_audit_v01",
+  "score_entry_allowed": false,
+  "status": "SEED_READOUT_EQUIVALENCE_RELATION_AUDITED_BLOCKED_NOT_PROVED"
+}

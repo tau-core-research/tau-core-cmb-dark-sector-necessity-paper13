@@ -1,0 +1,63 @@
+{
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_SOURCE_RECORDS_BOUND",
+      "blocking_reason": "candidate gate requires hash-bound source records",
+      "component": "source_records",
+      "finding": "all source records exist and are hash-bound"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_STRUCTURAL_SIGNATURE",
+      "blocking_reason": "candidate gate requires role-vector signature",
+      "component": "structural_signature",
+      "finding": "formal readout signature and six role slots are declared"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_STRUCTURAL_CANDIDATE_AVAILABLE",
+      "blocking_reason": "candidate gate must be clean before codomain precheck",
+      "component": "candidate_gate_status",
+      "finding": "structural candidate shell is available for codomain precheck"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_CANDIDATE_FIREWALL_CLOSED",
+      "blocking_reason": "candidate shell must not promote structural availability into physical readout",
+      "component": "promotion_firewall",
+      "finding": "candidate shell does not open physical R_CMB, execution, score, likelihood, or verdict"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_PHYSICAL_R_CMB_NOT_MATERIALIZED",
+      "blocking_reason": "requires executable readout materialization rule and values",
+      "component": "physical_R_CMB",
+      "finding": "candidate shell has no physical/numeric readout values"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_CARRIER_DOMAIN_NOT_CERTIFIED",
+      "blocking_reason": "requires accepted carrier predicate and domain rule",
+      "component": "carrier_domain_certification",
+      "finding": "carrier/domain certificate remains blocked"
+    }
+  ],
+  "audited_candidate": "data/derived/tau_cmb_concrete_R_CMB_candidate_gate_v01.json",
+  "blocked_rows": 2,
+  "checker_execution_allowed": false,
+  "claim_boundary": "tau_cmb_concrete_R_CMB_candidate_gate_audit_v01_audit_only_structural_candidate_shell_not_physical_R_CMB_no_codomain_pass_no_checker_execution_no_score_no_likelihood_no_verdict",
+  "codomain_checker_passed": false,
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "failed_rows": 0,
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_carrier_domain_checker_execution_packet_refresh_v02_with_structural_R_CMB_candidate",
+  "passed_rows": 4,
+  "physical_R_CMB_materialized": false,
+  "report_id": "tau_cmb_concrete_R_CMB_candidate_gate_audit_v01",
+  "score_entry_allowed": false,
+  "status": "CONCRETE_R_CMB_STRUCTURAL_CANDIDATE_GATE_AUDITED_NOT_PHYSICAL",
+  "structural_R_CMB_candidate_gate_audited": true,
+  "structural_candidate_available_for_codomain_precheck": true
+}

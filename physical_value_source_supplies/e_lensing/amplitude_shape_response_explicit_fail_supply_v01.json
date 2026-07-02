@@ -1,0 +1,31 @@
+{
+  "artifact_status": "ROW_SPECIFIC_EXPLICIT_FAIL_SUPPLIED_NO_LENSING_AMPLITUDE_SHAPE_RESPONSE",
+  "claim_boundary": "tau_cmb_lensing_amplitude_shape_response_explicit_fail_supply_v01_row_specific_explicit_fail_no_shape_response_value_no_score_no_likelihood_no_verdict",
+  "coordinate_component": "amplitude_shape_response",
+  "coordinate_symbol": "e_lensing",
+  "dark_sector_verdict_allowed": false,
+  "endpoint_blind_attestation": true,
+  "explicit_fail_supplied": true,
+  "failure_statement": "The available reduced lensing score output is a scalar score artifact, not a direct endpoint-blind S_lens_tau(L) or delta S_lens_tau(L) value-source payload.",
+  "forbidden_input_attestation": true,
+  "forbidden_inputs": [
+    "CMB endpoint residuals",
+    "ACT/Planck likelihood errors",
+    "post-endpoint tuning fields",
+    "dark-sector verdict labels"
+  ],
+  "formal_slot": "S_lens_tau(L) or delta S_lens_tau(L)",
+  "likelihood_allowed": false,
+  "numeric_value_supplied": false,
+  "physical_value_source_accepted": false,
+  "physical_value_source_supplied": false,
+  "provenance": {
+    "adapter_or_fail_audit": "data/derived/tau_cmb_lensing_amplitude_shape_response_adapter_or_explicit_fail_summary_v01.json",
+    "reduced_score_output": "payloads/tau_lensing_reduced_score_v01.json"
+  },
+  "replay": "make tau-cmb-lensing-amplitude-shape-response-adapter-or-explicit-fail && make tau-cmb-lensing-amplitude-shape-response-explicit-fail-supply",
+  "score_entry_allowed": false,
+  "supply_type": "explicit_fail_evidence",
+  "target_role": "lensing",
+  "unit_or_convention": "not_applicable_explicit_fail"
+}

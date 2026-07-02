@@ -1,0 +1,24 @@
+{
+  "acceptance": false,
+  "blocked_rows": [
+    "dimension_sign_audit",
+    "kernel_measure",
+    "normalization",
+    "output_replay",
+    "post_population_firewall"
+  ],
+  "candidate_rows": [
+    "source_domain",
+    "projection_equation",
+    "output_replay",
+    "zero_source_limit"
+  ],
+  "claim_boundary": "endpoint_blind_operator_packet_submission_candidate_only_no_operator_acceptance_no_physical_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "physical_tau_score_run": false,
+  "report_id": "cmb_tau_lensing_endpoint_blind_operator_packet_submission_candidate_summary_v01",
+  "rows": 8,
+  "score_run": false,
+  "status": "SUBMISSION_CANDIDATE_SUPPLIED_FOR_AUDIT_NOT_ACCEPTED",
+  "submission": "payloads/cmb_tau_lensing_endpoint_blind_operator_packet_submission_v01.csv"
+}

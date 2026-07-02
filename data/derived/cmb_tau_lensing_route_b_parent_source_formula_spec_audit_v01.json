@@ -1,0 +1,118 @@
+{
+  "audit_passed": true,
+  "checks": [
+    {
+      "detail": "payload_staging/tau_lensing_route_b_parent_source_formula_spec_v01.json",
+      "name": "spec_exists",
+      "passes": true
+    },
+    {
+      "name": "spec_valid_json_object",
+      "passes": true
+    },
+    {
+      "detail": [],
+      "name": "forbidden_markers_absent",
+      "passes": true
+    },
+    {
+      "detail": [],
+      "name": "required_fields_present",
+      "passes": true
+    },
+    {
+      "detail": "power_law_cutoff_parent_source_v01",
+      "name": "formula_family_supported",
+      "passes": true
+    },
+    {
+      "detail": [
+        "before endpoint",
+        "endpoint-blind"
+      ],
+      "name": "endpoint_blind_statement_declares_pre_score_fixation",
+      "passes": true
+    },
+    {
+      "detail": [
+        "residual",
+        "score",
+        "tuning"
+      ],
+      "name": "parameter_policy_excludes_endpoint_tuning",
+      "passes": true
+    },
+    {
+      "detail": "when parent_tau_source_value -> 0, delta_PP_tau -> 0 under the linear_parent_source_v01 adapter",
+      "name": "known_limit_declares_zero_parent_zero_response",
+      "passes": true
+    },
+    {
+      "detail": [
+        {
+          "exists": true,
+          "source": "docs/cmb_tau_lensing_route_b_parent_source_request_v01.md"
+        },
+        {
+          "exists": true,
+          "source": "docs/cmb_tau_lensing_grid_equation_packet_v01.md"
+        },
+        {
+          "exists": true,
+          "source": "docs/tau_cmb_minimal_source_term_candidate_v01.md"
+        },
+        {
+          "exists": true,
+          "source": "docs/tau_cmb_known_limit_and_dimension_audit_v01.md"
+        },
+        {
+          "exists": true,
+          "source": "payload_templates/tau_lensing_route_b_parent_source_formula_spec_TEMPLATE_v01.json"
+        },
+        {
+          "exists": true,
+          "source": "scripts/materialize_tau_lensing_route_b_parent_source_from_formula_spec.py"
+        }
+      ],
+      "name": "source_chain_paths_exist",
+      "passes": true
+    },
+    {
+      "detail": {
+        "nonzero_amplitude": true,
+        "normalization": 1.0,
+        "numeric_parameters": {
+          "L0": 1000.0,
+          "amplitude": 1.0,
+          "cutoff_L": 2200.0,
+          "cutoff_power": 2.0,
+          "tilt": 1.0,
+          "turnover_power": 0.0
+        }
+      },
+      "name": "numeric_parameters_finite_and_nonzero",
+      "passes": true
+    }
+  ],
+  "claim_boundary": "route_b_parent_source_formula_spec_audit_only_no_grid_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "formula_spec_protocol_eligible": true,
+  "next_required_action": "run_make_tau-grid-route-b-parent-from-formula-dry-run",
+  "physical_tau_score_run": false,
+  "proof_status": {
+    "critical_claim_boundary": "audit proves protocol eligibility only; it does not prove that the formula is a correct physical Tau response",
+    "formula_family": "power_law_cutoff_parent_source_v01",
+    "formula_role": "endpoint_blind_tau_parent_source_l_shape_protocol_candidate",
+    "source_chain": [
+      "docs/cmb_tau_lensing_route_b_parent_source_request_v01.md",
+      "docs/cmb_tau_lensing_grid_equation_packet_v01.md",
+      "docs/tau_cmb_minimal_source_term_candidate_v01.md",
+      "docs/tau_cmb_known_limit_and_dimension_audit_v01.md",
+      "payload_templates/tau_lensing_route_b_parent_source_formula_spec_TEMPLATE_v01.json",
+      "scripts/materialize_tau_lensing_route_b_parent_source_from_formula_spec.py"
+    ],
+    "spec_file": "payload_staging/tau_lensing_route_b_parent_source_formula_spec_v01.json"
+  },
+  "report_id": "cmb_tau_lensing_route_b_parent_source_formula_spec_audit_v01",
+  "score_run": false
+}

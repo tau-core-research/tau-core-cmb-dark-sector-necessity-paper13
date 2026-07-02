@@ -1,0 +1,31 @@
+{
+  "bandpower_range": {
+    "max": 2.429987296187917e-07,
+    "min": 2.7375651788860616e-09
+  },
+  "bandpowers": "data/external/act_dr6_lensing/extracted/v1.2/clkk_bandpowers_act.txt",
+  "best_scale": 1.0252273404414798e-08,
+  "binning_matrix": "data/external/act_dr6_lensing/extracted/v1.2/binning_matrix_act.txt",
+  "claim_boundary": "post_score_scale_fit_diagnostic_only_not_endpoint_blind_no_dark_sector_verdict",
+  "covariance": "data/external/act_dr6_lensing/extracted/v1.2/covmat_act.txt",
+  "dark_sector_verdict": false,
+  "diagnostic_status": "POST_SCORE_TUNING_DIAGNOSTIC_NOT_PHYSICAL_CLAIM",
+  "grid": "payloads/tau_lensing_response_delta_pp_v01.csv",
+  "interpretation": "The current Route B candidate has a large amplitude mismatch. A score-informed global scale can remove the order-of-magnitude failure, but this is not endpoint-blind and cannot be promoted as physical evidence without an independent Tau-side normalization rule.",
+  "next_required_action": "derive_endpoint_blind_tau_side_normalization_near_best_scale_or_change_shape_family",
+  "physical_tau_score_run": false,
+  "report_id": "cmb_tau_lensing_route_b_scale_fit_diagnostic_v01",
+  "scaled": {
+    "chi2": 2039.133325043836,
+    "chi2_per_naive_dof": 113.28518472465755,
+    "projected_max": 9.648804061736537e-09,
+    "projected_min": 2.5114701982708763e-10
+  },
+  "score_run": false,
+  "unscaled": {
+    "chi2": 8.561141984817478e+17,
+    "chi2_per_naive_dof": 4.756189991565266e+16,
+    "projected_max": 0.9411379975081042,
+    "projected_min": 0.024496715013368604
+  }
+}

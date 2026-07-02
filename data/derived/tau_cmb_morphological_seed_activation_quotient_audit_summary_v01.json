@@ -1,0 +1,17 @@
+{
+  "A_tau_derivation_allowed": false,
+  "audit_rows": 6,
+  "blocked_rows": 5,
+  "claim_boundary": "tau_cmb_morphological_seed_activation_quotient_audit_v01_audit_only_no_seed_acceptance_no_A_tau_derivation_no_source_acceptance_no_phi_derivation_no_score_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "next_minimal_unblock": "build_tau_cmb_morphological_seed_activation_rule_candidate_v01",
+  "passed_route_only_rows": 1,
+  "report_id": "tau_cmb_morphological_seed_activation_quotient_audit_summary_v01",
+  "score_entry_allowed": false,
+  "seed_acceptance_allowed": false,
+  "seed_descriptor_audit": "data/derived/tau_cmb_morphological_seed_descriptor_candidate_audit_v01.json",
+  "seed_descriptor_audit_status": "MORPHOLOGICAL_SEED_DESCRIPTOR_AUDIT_READY_FOR_ACTIVATION_QUOTIENT_AUDIT",
+  "source_acceptance_allowed": false,
+  "status": "MORPHOLOGICAL_SEED_ACTIVATION_QUOTIENT_AUDIT_BLOCKED_NOT_ACCEPTED",
+  "table": "data/derived/tau_cmb_morphological_seed_activation_quotient_audit_v01.csv"
+}

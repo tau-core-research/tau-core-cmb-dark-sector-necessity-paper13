@@ -1,0 +1,93 @@
+{
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_EXPECTED_POPULATION_ROWS_PRESENT",
+      "blocking_reason": "staging population packet requires the 66 declared population obligations",
+      "component": "population_row_shape",
+      "finding": "rows=66"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_POPULATION_INPUT_CHAIN",
+      "blocking_reason": "population audit must be downstream of a clean template-file materialization audit",
+      "component": "input_file_materialization_chain",
+      "finding": "staging population packet follows a clean audited template-file materialization"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_ENDPOINT_BLIND_POPULATION_RULES",
+      "blocking_reason": "population packet must declare endpoint-blind source rules and acceptance gates",
+      "component": "population_source_rules",
+      "finding": "each row declares Tau-side endpoint-blind population source and acceptance gate"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_TEMPLATES_AVAILABLE",
+      "blocking_reason": "all population obligations require available templates",
+      "component": "template_availability",
+      "finding": "template_available_rows=66"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_POPULATION_ACCOUNTING",
+      "blocking_reason": "population packet should declare 66 obligations with zero staging writes, population, or accepted rows",
+      "component": "population_accounting",
+      "finding": "rows=66, templates=66, staging_written=0, populated=0, accepted=0"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_POPULATION_FIREWALL_CLOSED",
+      "blocking_reason": "population packet must not promote obligations to populated or accepted payloads",
+      "component": "promotion_firewall",
+      "finding": "population packet does not open staging write, acceptance, execution, R_CMB, score, likelihood, or verdict"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_STAGING_PAYLOADS_NOT_POPULATED",
+      "blocking_reason": "requires endpoint-blind population of payload_staging files",
+      "component": "staging_population",
+      "finding": "payload_staging files are declared as targets but remain unpopulated"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_BINDINGS_NOT_AVAILABLE",
+      "blocking_reason": "requires populated staging files and binding audit",
+      "component": "binding_checks",
+      "finding": "hash, provenance, replay, and firewall bindings cannot pass before staging population"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_ACCEPTANCE_AUDIT_NOT_AVAILABLE",
+      "blocking_reason": "requires populated staging files and acceptance audit",
+      "component": "payload_acceptance",
+      "finding": "payloads cannot be accepted before population and binding checks"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_EXECUTION_AND_R_CMB",
+      "blocking_reason": "requires accepted payloads before checker execution and downstream certificates",
+      "component": "checker_execution_and_R_CMB",
+      "finding": "checker execution, certificate pass, domain acceptance, and concrete R_CMB remain downstream"
+    }
+  ],
+  "audited_table": "data/derived/tau_cmb_carrier_domain_checker_input_payload_staging_population_packet_v01.csv",
+  "blocked_rows": 4,
+  "carrier_certificate_allowed": false,
+  "checker_execution_allowed": false,
+  "claim_boundary": "tau_cmb_carrier_domain_checker_input_payload_staging_population_packet_audit_v01_audit_only_population_packet_clean_but_unpopulated_no_payload_acceptance_no_checker_execution_no_certificate_pass_no_domain_acceptance_no_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "domain_certificate_allowed": false,
+  "domain_object_acceptance_allowed": false,
+  "failed_rows": 0,
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_carrier_domain_checker_input_payload_staging_population_execution_v01",
+  "passed_rows": 6,
+  "payload_acceptance_allowed": false,
+  "report_id": "tau_cmb_carrier_domain_checker_input_payload_staging_population_packet_audit_v01",
+  "score_entry_allowed": false,
+  "staging_population_allowed": false,
+  "staging_population_packet_audited": true,
+  "status": "CARRIER_DOMAIN_CHECKER_INPUT_PAYLOAD_STAGING_POPULATION_PACKET_AUDITED_NOT_POPULATED"
+}

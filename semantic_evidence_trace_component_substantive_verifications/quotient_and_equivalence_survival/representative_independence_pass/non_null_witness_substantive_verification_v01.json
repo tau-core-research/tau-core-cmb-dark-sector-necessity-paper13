@@ -1,0 +1,123 @@
+{
+  "artifact_id": "TCMBCDSEMPCACC01_108",
+  "artifact_status": "SUBSTANTIVE_VERIFICATION_CANDIDATE_SUPPLIED_NOT_ACCEPTED",
+  "certificate_area": "quotient_and_equivalence_survival",
+  "certificate_passed": false,
+  "checker_name": "run_quotient_survival_checker",
+  "claim_boundary": "tau_cmb_certificate_semantic_evidence_substantive_trace_component_local_derivation_replay_body_supply_v01_local_derivation_replay_body_supplied_endpoint_blind_no_certificate_pass_no_domain_acceptance_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "component_accepted_after_verification": false,
+  "component_substantively_proven_after_verification": false,
+  "dark_sector_verdict_allowed": false,
+  "likelihood_allowed": false,
+  "local_derivation_replay_body": {
+    "body_status": "LOCAL_DERIVATION_REPLAY_BODY_SUPPLIED_ENDPOINT_BLIND",
+    "claim_boundary": "tau_cmb_certificate_semantic_evidence_substantive_trace_component_local_derivation_replay_body_supply_v01_local_derivation_replay_body_supplied_endpoint_blind_no_certificate_pass_no_domain_acceptance_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+    "conclusion": "Within the endpoint-blind semantic evidence route, this trace component has a local derivation/replay body sufficient for a downstream acceptance audit to inspect component-level verification. This conclusion does not pass a certificate and does not open physical R_CMB, score, likelihood, or dark-sector verdict.",
+    "dependency_boundary": [
+      "component draft artifact",
+      "proof-content candidate artifact",
+      "matching proof-content hash",
+      "endpoint-blind firewall flags"
+    ],
+    "local_scope": "semantic trace-component verification only",
+    "non_claim_boundary": [
+      "not a physical R_CMB readout",
+      "not a CMB likelihood evaluation",
+      "not a score",
+      "not a dark-sector verdict",
+      "not accepted substantive proof until audited"
+    ],
+    "object": {
+      "certificate_area": "quotient_and_equivalence_survival",
+      "checker_name": "run_quotient_survival_checker",
+      "semantic_evidence_field": "representative_independence_pass",
+      "trace_component_name": "non-null witness"
+    },
+    "premises": {
+      "component_artifact_exists": true,
+      "endpoint_blind_verification": true,
+      "proof_content_artifact_exists": true,
+      "proof_content_candidate_nonempty": true,
+      "proof_content_hash_matches": true,
+      "proof_content_references_endpoint_data": false
+    },
+    "steps": [
+      {
+        "mechanical_basis": [
+          "component_artifact_exists",
+          "proof_content_artifact_exists"
+        ],
+        "statement": "The referenced component artifact and proof-content artifact are present in the endpoint-blind semantic evidence chain.",
+        "step": "artifact_continuity"
+      },
+      {
+        "mechanical_basis": [
+          "proof_content_hash_matches"
+        ],
+        "statement": "The proof-content artifact hash matches the recorded hash artifact, so the replayed input is the same artifact audited upstream.",
+        "step": "hash_replay"
+      },
+      {
+        "mechanical_basis": [
+          "endpoint_blind_verification",
+          "proof_content_references_endpoint_data=false"
+        ],
+        "statement": "The verification body uses no endpoint residuals, likelihood deltas, score outputs, post-endpoint tuning, or dark-sector verdict.",
+        "step": "endpoint_firewall"
+      },
+      {
+        "mechanical_basis": [
+          "checker_name",
+          "semantic_evidence_field",
+          "trace_component_name"
+        ],
+        "statement": "The replay body is attached only to the named checker field and trace component; it does not generalize to physical readout or scoring.",
+        "step": "local_checker_relevance"
+      },
+      {
+        "mechanical_basis": [
+          "recorded_dependency_boundary",
+          "non_claims"
+        ],
+        "statement": "The dependency boundary and non-claim boundary are explicit, preserving the distinction between local component verification and certificate/scoring claims.",
+        "step": "dependency_boundary"
+      }
+    ]
+  },
+  "local_derivation_replay_body_accepted": false,
+  "local_derivation_replay_body_supplied": true,
+  "mechanical_checks": {
+    "component_artifact_exists": true,
+    "endpoint_blind_verification": true,
+    "proof_content_artifact_exists": true,
+    "proof_content_candidate_nonempty": true,
+    "proof_content_hash_matches": true,
+    "proof_content_references_endpoint_data": false
+  },
+  "next_required_step": "audit substantive verification candidates against the local derivation/replay standard",
+  "proof_content_artifact": "semantic_evidence_trace_component_proof_content/quotient_and_equivalence_survival/representative_independence_pass/non_null_witness_proof_content_v01.json",
+  "referenced_component_artifact": "semantic_evidence_trace_components/quotient_and_equivalence_survival/representative_independence_pass/non_null_witness_component_draft_v01.json",
+  "score_entry_allowed": false,
+  "semantic_evidence_field": "representative_independence_pass",
+  "substantive_verification_accepted": false,
+  "substantive_verification_candidate_supplied": true,
+  "trace_component_name": "non-null witness",
+  "verification_candidate": {
+    "local_object": "non-null witness",
+    "local_scope": "trace-component proof-content acceptance only",
+    "non_claims": [
+      "not a physical R_CMB readout",
+      "not a CMB likelihood evaluation",
+      "not a score",
+      "not a dark-sector verdict",
+      "not accepted substantive proof until audited"
+    ],
+    "recorded_dependency_boundary": [
+      "component draft artifact",
+      "proof-content candidate artifact",
+      "matching proof-content hash",
+      "endpoint-blind firewall flags"
+    ],
+    "verification_standard": "accept only if mechanical checks are true, endpoint data is absent, and a later audit finds a substantive local derivation or replay tying the component to the named checker field"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "claim_boundary": "route_b_parent_source_materialization_only_no_score_no_dark_sector_verdict",
+  "derivation_script_or_formula": "delta_PP_tau(L) = F_tau_L(parent_tau_source, readout_profile, scale_profile; L); for response_rule=linear_parent_source_v01, delta_PP_tau(L)=normalization*parent_tau_source_value(L)",
+  "endpoint_blind_statement": "endpoint-blind protocol candidate fixed before endpoint score readout; the shape is selected from the predeclared Route B power-law cutoff family and not from ACT/Planck residuals or score outputs",
+  "formula_role": "endpoint_blind_tau_derived_lensing_l_response_physical_candidate",
+  "known_limit_statement": "when parent_tau_source_value -> 0, delta_PP_tau -> 0 under the linear_parent_source_v01 adapter",
+  "l_column": "L",
+  "normalization": 1.0,
+  "normalization_statement": "dimensionless Route B parent-source convention; downstream delta_PP_tau = normalization * parent_tau_source_value",
+  "parameter_policy": "parameters are convention-fixed for a first Tau-side Route B parent-source candidate; no residual tuning, no reduced chi2 tuning, no score tuning, and no verdict tuning are permitted",
+  "parent_source_table": "payload_staging/tau_lensing_route_b_parent_source_v01.csv",
+  "parent_source_table_sha256": "3e822e080deefa01076c21ca43319c4e61ff4e736741b53d968b4986822804b2",
+  "route_family": "route_B_direct_L_space",
+  "selected_route": "delta_PP_tau_against_named_fiducial_PP",
+  "source_chain": [
+    "docs/cmb_tau_lensing_route_b_parent_source_request_v01.md",
+    "docs/cmb_tau_lensing_grid_equation_packet_v01.md",
+    "docs/tau_cmb_minimal_source_term_candidate_v01.md",
+    "docs/tau_cmb_known_limit_and_dimension_audit_v01.md",
+    "payload_templates/tau_lensing_route_b_parent_source_formula_spec_TEMPLATE_v01.json",
+    "scripts/materialize_tau_lensing_route_b_parent_source_from_formula_spec.py",
+    "payload_staging/tau_lensing_route_b_parent_source_formula_spec_v01.json",
+    "payload_staging/tau_lensing_route_b_parent_source_config_v01.json",
+    "payload_staging/tau_lensing_route_b_parent_source_v01.csv"
+  ],
+  "value_column": "tau_response_value"
+}

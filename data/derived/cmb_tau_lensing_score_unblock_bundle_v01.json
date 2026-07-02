@@ -1,0 +1,264 @@
+{
+  "act_environment_ready": true,
+  "blocking_layer": "none",
+  "claim_boundary": "score_unblock_bundle_only_no_score_run_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "forbidden_shortcuts": [
+    "do_not_copy_TEMPLATE_NOT_PAYLOAD_files_to_payloads_as_real_inputs",
+    "do_not_select_route_from_ACT_or_Planck_residuals",
+    "do_not_tune_grid_to_reduced_chi2_or_dark_sector_preference"
+  ],
+  "fulfillment_current_blocker": "real_endpoint_blind_tau_route_evidence_not_submitted",
+  "fulfillment_packet_id": "tau_lensing_scoring_input_fulfillment_packet_v01",
+  "fulfillment_route_packets": {
+    "delta_PP_tau_against_named_fiducial_PP": {
+      "dry_run_command": "make staging-promote-delta-dry-run",
+      "payload_files": [
+        "payloads/tau_lensing_response_delta_pp_v01.csv",
+        "payloads/tau_lensing_response_fiducial_pp_reference_v01.json",
+        "payloads/tau_lensing_response_grid_route_declaration_v01.md",
+        "payloads/tau_lensing_response_grid_provenance_v01.json"
+      ],
+      "payload_presence": {
+        "payloads/tau_lensing_response_delta_pp_v01.csv": true,
+        "payloads/tau_lensing_response_fiducial_pp_reference_v01.json": true,
+        "payloads/tau_lensing_response_grid_provenance_v01.json": true,
+        "payloads/tau_lensing_response_grid_route_declaration_v01.md": true
+      },
+      "post_promotion_commands": [
+        "make prepare-delta-hash",
+        "make intake",
+        "make evidence-check",
+        "make route-submission-audit",
+        "make materialize-replay",
+        "make preflight",
+        "make score-attempt-guard",
+        "make score-report",
+        "make score-output-audit"
+      ],
+      "promotion_command": "make staging-promote-delta",
+      "required_fulfillment": [
+        "3000 finite endpoint-blind delta_PP_tau values indexed by L=10..3009",
+        "fiducial reference JSON with fiducial_reference_file and fiducial_reference_sha256",
+        "route declaration with selected_route=delta_PP_tau_against_named_fiducial_PP and non-empty endpoint_blind_statement",
+        "provenance JSON without template_status",
+        "numeric_grid_sha256 matching the staged delta grid file",
+        "source_chain naming Tau-side parent inputs and named fiducial source, not ACT/Planck residuals",
+        "derivation_script_or_formula naming the replayable derivation or frozen formula",
+        "no_endpoint_fit_statement excluding residual, reduced-chi2, score, or verdict tuning"
+      ],
+      "staging_files": [
+        "payload_staging/delta_PP_tau_against_named_fiducial_PP/tau_lensing_response_delta_pp_v01.csv",
+        "payload_staging/delta_PP_tau_against_named_fiducial_PP/tau_lensing_response_fiducial_pp_reference_v01.json",
+        "payload_staging/delta_PP_tau_against_named_fiducial_PP/tau_lensing_response_grid_route_declaration_v01.md",
+        "payload_staging/delta_PP_tau_against_named_fiducial_PP/tau_lensing_response_grid_provenance_v01.json"
+      ],
+      "staging_presence": {
+        "payload_staging/delta_PP_tau_against_named_fiducial_PP/tau_lensing_response_delta_pp_v01.csv": true,
+        "payload_staging/delta_PP_tau_against_named_fiducial_PP/tau_lensing_response_fiducial_pp_reference_v01.json": true,
+        "payload_staging/delta_PP_tau_against_named_fiducial_PP/tau_lensing_response_grid_provenance_v01.json": true,
+        "payload_staging/delta_PP_tau_against_named_fiducial_PP/tau_lensing_response_grid_route_declaration_v01.md": true
+      }
+    },
+    "direct_tau_PP_grid": {
+      "dry_run_command": "make staging-promote-direct-dry-run",
+      "payload_files": [
+        "payloads/tau_lensing_response_pp_grid_v01.csv",
+        "payloads/tau_lensing_response_grid_route_declaration_v01.md",
+        "payloads/tau_lensing_response_grid_provenance_v01.json"
+      ],
+      "payload_presence": {
+        "payloads/tau_lensing_response_grid_provenance_v01.json": true,
+        "payloads/tau_lensing_response_grid_route_declaration_v01.md": true,
+        "payloads/tau_lensing_response_pp_grid_v01.csv": false
+      },
+      "post_promotion_commands": [
+        "make prepare-direct-hash",
+        "make intake",
+        "make evidence-check",
+        "make route-submission-audit",
+        "make materialize-replay",
+        "make preflight",
+        "make score-attempt-guard",
+        "make score-report",
+        "make score-output-audit"
+      ],
+      "promotion_command": "make staging-promote-direct",
+      "required_fulfillment": [
+        "3000 finite endpoint-blind tau_PP values indexed by L=10..3009",
+        "route declaration with selected_route=direct_tau_PP_grid and non-empty endpoint_blind_statement",
+        "provenance JSON without template_status",
+        "numeric_grid_sha256 matching the staged grid file",
+        "source_chain naming Tau-side parent inputs, not ACT/Planck residuals",
+        "derivation_script_or_formula naming the replayable derivation or frozen formula",
+        "no_endpoint_fit_statement excluding residual, reduced-chi2, score, or verdict tuning"
+      ],
+      "staging_files": [
+        "payload_staging/direct_tau_PP_grid/tau_lensing_response_pp_grid_v01.csv",
+        "payload_staging/direct_tau_PP_grid/tau_lensing_response_grid_route_declaration_v01.md",
+        "payload_staging/direct_tau_PP_grid/tau_lensing_response_grid_provenance_v01.json"
+      ],
+      "staging_presence": {
+        "payload_staging/direct_tau_PP_grid/tau_lensing_response_grid_provenance_v01.json": true,
+        "payload_staging/direct_tau_PP_grid/tau_lensing_response_grid_route_declaration_v01.md": true,
+        "payload_staging/direct_tau_PP_grid/tau_lensing_response_pp_grid_v01.csv": true
+      }
+    },
+    "explicit_failure_no_endpoint_blind_grid": {
+      "dry_run_command": "make staging-promote-failure-dry-run",
+      "payload_files": [
+        "payloads/tau_lensing_response_grid_failure_statement_v01.md"
+      ],
+      "payload_presence": {
+        "payloads/tau_lensing_response_grid_failure_statement_v01.md": false
+      },
+      "post_promotion_commands": [
+        "make intake",
+        "make evidence-check",
+        "make route-submission-audit",
+        "make score-report",
+        "make score-output-audit"
+      ],
+      "promotion_command": "make staging-promote-failure",
+      "required_fulfillment": [
+        "failure statement without TEMPLATE_NOT_PAYLOAD marker",
+        "selected_route=explicit_failure_no_endpoint_blind_grid",
+        "failed_required_object",
+        "reason",
+        "missing_parent_input",
+        "missing_derivation_rule",
+        "missing_numeric_kernel",
+        "missing_normalization",
+        "next_theoretical_blocker"
+      ],
+      "staging_files": [
+        "payload_staging/explicit_failure_no_endpoint_blind_grid/tau_lensing_response_grid_failure_statement_v01.md"
+      ],
+      "staging_presence": {
+        "payload_staging/explicit_failure_no_endpoint_blind_grid/tau_lensing_response_grid_failure_statement_v01.md": true
+      }
+    }
+  },
+  "missing_files_by_route": {},
+  "next_commands": [
+    "make score-fulfillment",
+    "make payload-checklist",
+    "make staging-promote-direct-dry-run or make staging-promote-delta-dry-run or make staging-promote-failure-dry-run",
+    "make staging-promote-direct or make staging-promote-delta or make staging-promote-failure after dry-run promotion is ready",
+    "make route-pack",
+    "make prepare-direct-hash or make prepare-delta-hash after the selected numeric grid exists",
+    "make intake",
+    "make evidence-check",
+    "make route-submission-audit",
+    "make materialize-replay",
+    "make preflight",
+    "make score-readiness",
+    "make score-attempt-guard",
+    "make score-report only if score-attempt-guard allows",
+    "make score-output-audit"
+  ],
+  "next_required_action": "run_make_score_attempt_guard_then_make_score_report_if_allowed",
+  "pipeline_ready": true,
+  "preflight_ready": true,
+  "projection_replay_written": true,
+  "readiness_decision": "READY_TO_SCORE",
+  "report_id": "tau_lensing_score_unblock_bundle_v01",
+  "route_options": {
+    "delta_PP_tau_against_named_fiducial_PP": {
+      "currently_missing_files": [
+        "payloads/tau_lensing_response_delta_pp_v01.csv",
+        "payloads/tau_lensing_response_fiducial_pp_reference_v01.json",
+        "payloads/tau_lensing_response_grid_route_declaration_v01.md",
+        "payloads/tau_lensing_response_grid_provenance_v01.json"
+      ],
+      "post_submission_commands": [
+        "make payload-checklist",
+        "make staging-promote-delta-dry-run",
+        "make staging-promote-delta",
+        "make prepare-delta-hash",
+        "make intake",
+        "make evidence-check",
+        "make route-submission-audit",
+        "make materialize-replay",
+        "make preflight",
+        "make score-attempt-guard",
+        "make score-report",
+        "make score-output-audit"
+      ],
+      "promote_to_payloads_only_after_real_evidence_is_filled": true,
+      "safe_templates": [
+        "payload_templates/tau_lensing_response_delta_pp_v01.csv",
+        "payload_templates/tau_lensing_response_payload_hashes_v01.json",
+        "payloads/tau_lensing_response_grid_route_declaration_TEMPLATE_v01.md",
+        "payload_templates/tau_lensing_response_payload_provenance_v01.json",
+        "payload_templates/tau_lensing_response_firewall_v01.md",
+        "payload_templates/tau_lensing_response_claim_boundary_v01.md"
+      ],
+      "submission_files": [
+        "payloads/tau_lensing_response_delta_pp_v01.csv",
+        "payloads/tau_lensing_response_fiducial_pp_reference_v01.json",
+        "payloads/tau_lensing_response_grid_route_declaration_v01.md",
+        "payloads/tau_lensing_response_grid_provenance_v01.json"
+      ]
+    },
+    "direct_tau_PP_grid": {
+      "currently_missing_files": [
+        "payloads/tau_lensing_response_pp_grid_v01.csv",
+        "payloads/tau_lensing_response_grid_route_declaration_v01.md",
+        "payloads/tau_lensing_response_grid_provenance_v01.json"
+      ],
+      "post_submission_commands": [
+        "make payload-checklist",
+        "make staging-promote-direct-dry-run",
+        "make staging-promote-direct",
+        "make prepare-direct-hash",
+        "make intake",
+        "make evidence-check",
+        "make route-submission-audit",
+        "make materialize-replay",
+        "make preflight",
+        "make score-attempt-guard",
+        "make score-report",
+        "make score-output-audit"
+      ],
+      "promote_to_payloads_only_after_real_evidence_is_filled": true,
+      "safe_templates": [
+        "payload_templates/tau_lensing_response_pp_grid_v01.csv",
+        "payloads/tau_lensing_response_grid_route_declaration_TEMPLATE_v01.md",
+        "payload_templates/tau_lensing_response_payload_provenance_v01.json",
+        "payload_templates/tau_lensing_response_firewall_v01.md",
+        "payload_templates/tau_lensing_response_claim_boundary_v01.md"
+      ],
+      "submission_files": [
+        "payloads/tau_lensing_response_pp_grid_v01.csv",
+        "payloads/tau_lensing_response_grid_route_declaration_v01.md",
+        "payloads/tau_lensing_response_grid_provenance_v01.json"
+      ]
+    },
+    "explicit_failure_no_endpoint_blind_grid": {
+      "currently_missing_files": [
+        "payloads/tau_lensing_response_grid_failure_statement_v01.md"
+      ],
+      "post_submission_commands": [
+        "make payload-checklist",
+        "make staging-promote-failure-dry-run",
+        "make staging-promote-failure",
+        "make intake",
+        "make evidence-check",
+        "make route-submission-audit",
+        "make score-report",
+        "make score-output-audit"
+      ],
+      "promote_to_payloads_only_after_real_evidence_is_filled": true,
+      "safe_templates": [
+        "payloads/tau_lensing_response_grid_failure_statement_TEMPLATE_v01.md"
+      ],
+      "submission_files": [
+        "payloads/tau_lensing_response_grid_failure_statement_v01.md"
+      ]
+    }
+  },
+  "score_run": false,
+  "selected_route_count": 1,
+  "todo_status": "READY_TO_RUN_SCORE_OR_SCORE_ALREADY_RUN"
+}

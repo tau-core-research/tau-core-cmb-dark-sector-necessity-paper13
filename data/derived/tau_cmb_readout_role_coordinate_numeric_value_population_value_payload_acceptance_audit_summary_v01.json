@@ -1,0 +1,20 @@
+{
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_population_value_payload_acceptance_audit_v01_payload_targets_accepted_values_absent_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "input_chain_clean": true,
+  "input_population_value_payload_summary": "data/derived/tau_cmb_readout_role_coordinate_numeric_value_population_value_payload_summary_v01.json",
+  "input_population_value_payload_table": "data/derived/tau_cmb_readout_role_coordinate_numeric_value_population_value_payload_v01.csv",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_readout_role_coordinate_numeric_value_payload_value_source_acquisition_v01",
+  "numeric_value_supplied_rows": 0,
+  "payload_accepted_for_score_rows": 0,
+  "payload_target_accepted_rows": 33,
+  "population_value_payload_acceptance_rows": 33,
+  "provenance_supplied_rows": 0,
+  "replay_supplied_rows": 0,
+  "report_id": "tau_cmb_readout_role_coordinate_numeric_value_population_value_payload_acceptance_audit_summary_v01",
+  "score_entry_allowed": false,
+  "status": "CMB_READOUT_ROLE_COORDINATE_NUMERIC_VALUE_POPULATION_VALUE_PAYLOAD_TARGETS_ACCEPTED_VALUES_ABSENT",
+  "table": "data/derived/tau_cmb_readout_role_coordinate_numeric_value_population_value_payload_acceptance_audit_v01.csv",
+  "unit_or_convention_supplied_rows": 0
+}

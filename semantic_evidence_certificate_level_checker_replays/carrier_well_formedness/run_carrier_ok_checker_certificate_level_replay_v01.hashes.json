@@ -1,0 +1,10 @@
+{
+  "certificate_pass_candidate": true,
+  "certificate_passed_after_supply": false,
+  "claim_boundary": "tau_cmb_certificate_semantic_evidence_certificate_level_checker_replay_supply_v01_certificate_level_checker_replay_candidate_supplied_semantic_certificate_only_no_domain_acceptance_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "likelihood_allowed": false,
+  "score_entry_allowed": false,
+  "sha256": "08dff6b80b78af1bcc0a59e8070d09f1b1f772b6cb81060a3dc8e1329109c203",
+  "target": "semantic_evidence_certificate_level_checker_replays/carrier_well_formedness/run_carrier_ok_checker_certificate_level_replay_v01.json"
+}

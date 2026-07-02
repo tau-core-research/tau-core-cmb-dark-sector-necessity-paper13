@@ -1,0 +1,19 @@
+{
+  "accepted_domain_objects": 0,
+  "certificate_level_checker_replay_acceptance_rows": 7,
+  "certificate_level_replay_accepted_rows": 7,
+  "certificate_passed_rows": 7,
+  "claim_boundary": "tau_cmb_certificate_semantic_evidence_certificate_level_checker_replay_acceptance_audit_v01_semantic_certificate_checker_pass_only_no_domain_acceptance_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "input_certificate_level_checker_replay_supply_summary": "data/derived/tau_cmb_certificate_semantic_evidence_certificate_level_checker_replay_supply_summary_v01.json",
+  "input_certificate_level_checker_replay_supply_table": "data/derived/tau_cmb_certificate_semantic_evidence_certificate_level_checker_replay_supply_v01.csv",
+  "input_chain_clean": true,
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_certificate_semantic_evidence_domain_object_acceptance_refresh_v01",
+  "physical_R_CMB_materialized": false,
+  "report_id": "tau_cmb_certificate_semantic_evidence_certificate_level_checker_replay_acceptance_audit_summary_v01",
+  "score_entry_allowed": false,
+  "status": "CMB_CERTIFICATE_SEMANTIC_EVIDENCE_CERTIFICATE_LEVEL_CHECKER_REPLAYS_ACCEPTED_SEMANTIC_CERTIFICATE_PASS",
+  "table": "data/derived/tau_cmb_certificate_semantic_evidence_certificate_level_checker_replay_acceptance_audit_v01.csv"
+}

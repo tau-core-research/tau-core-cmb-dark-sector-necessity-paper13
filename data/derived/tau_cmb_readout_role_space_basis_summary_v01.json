@@ -1,0 +1,26 @@
+{
+  "basis_rows": 6,
+  "carrier_certification_allowed": false,
+  "carrier_predicate_candidate": "C_CMB^seed := span_or_product_role_basis(e_acoustic,e_density,e_lensing,e_growth,e_radiation,e_null)",
+  "claim_boundary": "tau_cmb_readout_role_space_basis_v01_basis_candidate_only_carrier_not_certified_no_concrete_R_CMB_no_equivalence_proof_no_readout_evaluation_no_score_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "derivation_spine_present": true,
+  "equivalence_proof_allowed": false,
+  "input_axiom_obligation": "data/derived/tau_cmb_seed_readout_equivalence_axiom_proof_obligation_summary_v01.json",
+  "input_axiom_obligation_clean": true,
+  "next_minimal_unblock": "tau_cmb_readout_role_space_basis_audit_v01",
+  "readout_evaluation_allowed": false,
+  "report_id": "tau_cmb_readout_role_space_basis_summary_v01",
+  "role_slots_declared": [
+    "acoustic_phase_height",
+    "density_amplitude",
+    "lensing_potential",
+    "growth_transfer",
+    "radiation_damping_guard",
+    "null_readout"
+  ],
+  "score_entry_allowed": false,
+  "status": "CMB_READOUT_ROLE_SPACE_BASIS_CANDIDATE_DECLARED_NOT_CERTIFIED",
+  "table": "data/derived/tau_cmb_readout_role_space_basis_v01.csv"
+}

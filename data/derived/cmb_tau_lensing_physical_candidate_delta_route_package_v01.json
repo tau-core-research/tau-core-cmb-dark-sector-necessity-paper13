@@ -1,0 +1,103 @@
+{
+  "claim_boundary": "physical_candidate_delta_route_package_only_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "declaration": "payload_staging/delta_PP_tau_against_named_fiducial_PP/tau_lensing_response_grid_route_declaration_v01.md",
+  "fiducial_reference": "payload_staging/delta_PP_tau_against_named_fiducial_PP/tau_lensing_response_fiducial_pp_reference_v01.json",
+  "fiducial_source": "data/external/act_dr6_lensing/extracted/v1.2/like_corrs/cosmo2017_10K_acc3_lenspotentialCls.dat",
+  "fiducial_source_sha256": "53d01931defba4cadda8781f9d6049cc56fea075295f58405812096abc2da9ae",
+  "grid": "payload_staging/delta_PP_tau_against_named_fiducial_PP/tau_lensing_response_delta_pp_v01.csv",
+  "grid_sha256": "58e1d3616b4911165fc2b6de7511d43218f87267d427340e824539743f2e4214",
+  "next_required_action": "run_make_staging-promote-delta-dry-run",
+  "package_status": "PHYSICAL_CANDIDATE_DELTA_ROUTE_STAGING_PACKAGE_WRITTEN",
+  "physical_tau_score_run": false,
+  "precheck": {
+    "checks": [
+      {
+        "detail": "payload_staging/tau_lensing_upstream_l_response_v01.csv",
+        "name": "table_exists",
+        "passes": true
+      },
+      {
+        "detail": "payload_staging/tau_lensing_upstream_l_response_metadata_v01.json",
+        "name": "metadata_exists",
+        "passes": true
+      },
+      {
+        "detail": [],
+        "name": "table_forbidden_markers_absent",
+        "passes": true
+      },
+      {
+        "name": "metadata_json_object",
+        "passes": true
+      },
+      {
+        "detail": [],
+        "name": "metadata_forbidden_markers_absent",
+        "passes": true
+      },
+      {
+        "detail": [],
+        "name": "metadata_required_fields_nonempty",
+        "passes": true
+      },
+      {
+        "detail": [],
+        "name": "metadata_not_control_or_probe",
+        "passes": true
+      },
+      {
+        "detail": {
+          "marker_checks": {
+            "endpoint-blind": true,
+            "known-limit": true,
+            "normalization": true,
+            "tau-derived": true
+          },
+          "missing_markers": []
+        },
+        "name": "metadata_declares_physical_candidate_basis",
+        "passes": true
+      },
+      {
+        "name": "table_parse",
+        "passes": true
+      },
+      {
+        "name": "l_alignment_10_3009",
+        "passes": true
+      },
+      {
+        "name": "finite_values",
+        "passes": true
+      },
+      {
+        "detail": {
+          "min_abs": 0.0
+        },
+        "name": "nonzero_response_present",
+        "passes": true
+      }
+    ],
+    "claim_boundary": "physical_candidate_upstream_precheck_only_no_grid_promotion_no_score_no_dark_sector_verdict",
+    "dark_sector_verdict": false,
+    "next_required_action": "run_make_tau-grid-handoff-write-staging_then_physical_candidate_route_package",
+    "physical_tau_score_run": false,
+    "precheck_passed": true,
+    "report_id": "cmb_tau_lensing_physical_candidate_upstream_precheck_v01",
+    "score_run": false,
+    "selected_route": "delta_PP_tau_against_named_fiducial_PP",
+    "table_stats": {
+      "max_abs_value": 0.9435402214942241,
+      "max_value": 0.9435402214942241,
+      "mean_value": 0.6824866988027103,
+      "min_value": 0.009999793390564156,
+      "nonzero_count_above_min_abs": 3000,
+      "rows": 3000
+    }
+  },
+  "provenance": "payload_staging/delta_PP_tau_against_named_fiducial_PP/tau_lensing_response_grid_provenance_v01.json",
+  "report_id": "cmb_tau_lensing_physical_candidate_delta_route_package_v01",
+  "score_run": false,
+  "selected_route": "delta_PP_tau_against_named_fiducial_PP"
+}

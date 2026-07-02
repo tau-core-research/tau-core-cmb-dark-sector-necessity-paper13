@@ -1,0 +1,26 @@
+{
+  "accepted_rows": [
+    "TCMBPDSAS01_004"
+  ],
+  "blocked_or_unproved_rows": [
+    "TCMBPDSAS01_001",
+    "TCMBPDSAS01_002",
+    "TCMBPDSAS01_003",
+    "TCMBPDSAS01_005",
+    "TCMBPDSAS01_006"
+  ],
+  "claim_boundary": "projection_dimension_sign_audit_scaffold_only_no_operator_acceptance_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "physical_tau_score_run": false,
+  "report_id": "cmb_tau_lensing_projection_dimension_sign_audit_scaffold_summary_v01",
+  "rows": 6,
+  "score_run": false,
+  "status": "AUDIT_SCHEMA_DECLARED_NOT_FILLED",
+  "table": "data/derived/cmb_tau_lensing_projection_dimension_sign_audit_scaffold_v01.csv",
+  "unblocks_when": [
+    "each declaration row is filled from endpoint-blind operator evidence",
+    "zero-source limit is proved from the supplied operator",
+    "post-population endpoint firewall passes",
+    "N_projection_physical is derived or declared as a pre-score diagnostic parameter range"
+  ]
+}

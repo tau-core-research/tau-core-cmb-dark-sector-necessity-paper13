@@ -1,0 +1,31 @@
+{
+  "checks": [
+    {
+      "name": "template_config_rejected",
+      "passes": true
+    },
+    {
+      "name": "fixture_parent_precheck_passed",
+      "passes": true
+    },
+    {
+      "name": "fixture_dry_run_passed",
+      "passes": true
+    },
+    {
+      "name": "fixture_rows_3000",
+      "passes": true
+    },
+    {
+      "name": "fixture_nonzero",
+      "passes": true
+    }
+  ],
+  "claim_boundary": "route_b_parent_source_materializer_smoke_only_no_staging_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "next_required_action": "keep_route_b_parent_source_materializer_in_regression_suite",
+  "physical_tau_score_run": false,
+  "report_id": "cmb_tau_lensing_route_b_parent_source_materializer_smoke_v01",
+  "score_run": false,
+  "smoke_passed": true
+}

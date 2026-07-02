@@ -1,0 +1,23 @@
+{
+  "affected_frontier_rows": 2,
+  "claim_boundary": "tau_cmb_delta_neff_or_explicit_fail_supply_v01_radiation_direct_rows_explicit_fail_no_delta_neff_no_bound_eval_no_score_no_likelihood_no_verdict",
+  "damping_tail_inequality_evaluable": false,
+  "dark_sector_verdict_allowed": false,
+  "explicit_fail_supplied": true,
+  "input_chain_clean": true,
+  "input_frontier_recompute_v04": "data/derived/tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_summary_v04.json",
+  "input_radiation_bound_check": "data/derived/tau_cmb_radiation_guard_bound_check_summary_v01.csv",
+  "input_radiation_coordinate": "data/derived/tau_cmb_readout_role_coordinate_radiation_v01.csv",
+  "input_radiation_evaluation": "data/derived/tau_cmb_radiation_guard_evaluation_summary_v01.csv",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_delta_neff_explicit_fail_acceptance_audit_v01",
+  "numeric_value_supplied": false,
+  "physical_value_source_accepted": false,
+  "report_id": "tau_cmb_delta_neff_or_explicit_fail_supply_summary_v01",
+  "score_entry_allowed": false,
+  "status": "CMB_DELTA_NEFF_EXPLICIT_FAIL_SUPPLIED_NO_SCORE",
+  "supply_artifact": "physical_value_source_supplies/e_radiation/delta_neff_explicit_fail_supply_v01.json",
+  "supply_hash_artifact": "physical_value_source_supplies/e_radiation/delta_neff_explicit_fail_supply_v01.hashes.json",
+  "supply_hash_matches": true,
+  "target_role": "radiation"
+}

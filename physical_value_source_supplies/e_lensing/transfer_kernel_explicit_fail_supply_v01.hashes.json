@@ -1,0 +1,8 @@
+{
+  "claim_boundary": "tau_cmb_lensing_transfer_kernel_explicit_fail_supply_v01_row_specific_explicit_fail_no_operator_no_score_no_likelihood_no_verdict",
+  "explicit_fail_supplied": true,
+  "physical_value_source_accepted": false,
+  "score_entry_allowed": false,
+  "sha256": "03dbc9b7d7298beb2a7b48e6fda9dd62369f845b2356f83bb5be1dc5664434d4",
+  "target": "physical_value_source_supplies/e_lensing/transfer_kernel_explicit_fail_supply_v01.json"
+}

@@ -1,0 +1,4 @@
+L,parent_tau_source_value
+# TEMPLATE_NOT_PAYLOAD,replace with exact integer L=10..3009 and finite values
+# REQUIRED_ROWS,3000
+# CLAIM_BOUNDARY,route_b_parent_source_table_template_not_payload_no_grid_no_score

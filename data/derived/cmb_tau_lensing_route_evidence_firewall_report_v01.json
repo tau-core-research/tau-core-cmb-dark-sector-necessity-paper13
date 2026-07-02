@@ -1,0 +1,41 @@
+{
+  "checks": [
+    {
+      "file": "payloads/tau_lensing_response_grid_route_declaration_v01.md",
+      "forbidden_markers_found": [],
+      "missing_required_fragments": [],
+      "passes": true
+    },
+    {
+      "empty_required_keys": [],
+      "file": "payloads/tau_lensing_response_grid_provenance_v01.json",
+      "forbidden_markers_found": [],
+      "json_parse_ok": true,
+      "mismatched_expected_values": {},
+      "mismatched_file_hashes": {},
+      "missing_hash_files": {},
+      "missing_required_keys": [],
+      "passes": true,
+      "top_level_type": "dict"
+    },
+    {
+      "empty_required_keys": [],
+      "file": "payloads/tau_lensing_response_fiducial_pp_reference_v01.json",
+      "forbidden_markers_found": [],
+      "json_parse_ok": true,
+      "mismatched_expected_values": {},
+      "mismatched_file_hashes": {},
+      "missing_hash_files": {},
+      "missing_required_keys": [],
+      "passes": true,
+      "top_level_type": "dict"
+    }
+  ],
+  "claim_boundary": "route_evidence_firewall_only_no_grid_validation_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "firewall_passed": true,
+  "next_required_action": "run_materialize_replay",
+  "report_id": "tau_lensing_route_evidence_firewall_v01",
+  "score_run": false,
+  "selected_route": "delta_PP_tau_against_named_fiducial_PP"
+}

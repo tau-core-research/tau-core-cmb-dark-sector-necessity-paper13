@@ -1,0 +1,89 @@
+{
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_DENSITY_COORDINATE_ROWS_PRESENT",
+      "blocking_reason": "density coordinate audit requires the five declared components",
+      "component": "coordinate_row_shape",
+      "finding": "coordinate_components=['density_ratio_guard', 'tau_effective_density', 'endpoint_blind_amplitude', 'omega_c_h2_role_comparison', 'density_stop_rule']"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_ACOUSTIC_AUDIT_CHAIN",
+      "blocking_reason": "density coordinate audit must be downstream of the audited acoustic coordinate and clean candidate summary",
+      "component": "input_acoustic_chain",
+      "finding": "density coordinate follows a clean acoustic coordinate audit and density candidate summary"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_FORMAL_SLOTS_DECLARED",
+      "blocking_reason": "coordinate components need formal slots before materialization",
+      "component": "formal_slots_declared",
+      "finding": "each density coordinate component has a formal slot"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_DIMENSION_ROLES_DECLARED",
+      "blocking_reason": "coordinate typing requires dimension or convention roles",
+      "component": "dimension_roles_declared",
+      "finding": "each density coordinate component has a dimension/convention role"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_SOURCE_DEPENDENCIES_DECLARED",
+      "blocking_reason": "coordinate candidate must remain traceable to existing protocol artifacts",
+      "component": "source_dependencies_declared",
+      "finding": "each density coordinate component is tied to an existing blocker/evidence artifact"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_BLOCK_GUARD_ACCOUNTING",
+      "blocking_reason": "density coordinate should have three physics blocks and two guard rows",
+      "component": "block_guard_accounting",
+      "finding": "blocked_count=3, guard_count=2"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_DENSITY_COORDINATE_FIREWALL_CLOSED",
+      "blocking_reason": "density coordinate candidate must not enter scoring or carrier certification",
+      "component": "promotion_firewall",
+      "finding": "coordinate acceptance, density score, Omega_c h^2 match, concrete R_CMB, carrier certification, and verdict permissions remain closed"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_DENSITY_FORMULA_NOT_DERIVED",
+      "blocking_reason": "requires endpoint-blind derivation of rho_tau_eff(a,k)",
+      "component": "density_formula",
+      "finding": "rho_tau_eff(a,k) is declared only as a source slot"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_ENDPOINT_BLIND_AMPLITUDE_MISSING",
+      "blocking_reason": "requires provenance rule for endpoint-blind A_tau",
+      "component": "endpoint_blind_amplitude",
+      "finding": "A_tau(a,k) is not yet proven independent of CMB residual fitting"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_NO_NUMERICAL_COMPARISON",
+      "blocking_reason": "requires numeric A_tau prediction and declared benchmark convention",
+      "component": "omega_c_h2_comparison",
+      "finding": "no benchmark convention or numerical Omega_c h^2 comparison is supplied"
+    }
+  ],
+  "audited_coordinate_table": "data/derived/tau_cmb_readout_role_coordinate_density_v01.csv",
+  "blocked_rows": 3,
+  "carrier_certification_allowed": false,
+  "claim_boundary": "tau_cmb_readout_role_coordinate_density_audit_v01_audit_only_coordinate_not_accepted_no_density_score_no_omega_c_h2_match_no_concrete_R_CMB_no_carrier_certification_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "coordinate_acceptance_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "density_coordinate_audited": true,
+  "density_score_allowed": false,
+  "failed_rows": 0,
+  "next_minimal_unblock": "tau_cmb_readout_role_coordinate_lensing_v01",
+  "omega_c_h2_match_allowed": false,
+  "passed_rows": 7,
+  "report_id": "tau_cmb_readout_role_coordinate_density_audit_v01",
+  "status": "DENSITY_ROLE_COORDINATE_AUDITED_BLOCKED_NOT_MATERIALIZED"
+}

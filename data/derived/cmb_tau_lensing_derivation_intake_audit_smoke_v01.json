@@ -1,0 +1,35 @@
+{
+  "cases": [
+    {
+      "actual_pass": false,
+      "actual_route_family": "route_B_direct_L_space",
+      "case": "probe_must_fail",
+      "case_passed": true,
+      "expected_pass": false,
+      "expected_route_family": "route_B_direct_L_space"
+    },
+    {
+      "actual_pass": true,
+      "actual_route_family": "route_B_direct_L_space",
+      "case": "route_b_fixture_must_pass",
+      "case_passed": true,
+      "expected_pass": true,
+      "expected_route_family": "route_B_direct_L_space"
+    },
+    {
+      "actual_pass": false,
+      "actual_route_family": "ambiguous_or_incomplete",
+      "case": "ambiguous_route_must_fail",
+      "case_passed": true,
+      "expected_pass": false,
+      "expected_route_family": "ambiguous_or_incomplete"
+    }
+  ],
+  "claim_boundary": "derivation_intake_audit_smoke_only_no_grid_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "next_required_action": "keep_derivation_intake_audit_in_regression_suite",
+  "physical_tau_score_run": false,
+  "report_id": "cmb_tau_lensing_derivation_intake_audit_smoke_v01",
+  "score_run": false,
+  "smoke_passed": true
+}

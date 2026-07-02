@@ -1,0 +1,17 @@
+{
+  "affected_frontier_rows": 3,
+  "claim_boundary": "tau_cmb_density_source_amplitude_explicit_fail_acceptance_audit_v01_explicit_fail_accepted_no_density_values_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "explicit_fail_accepted": true,
+  "input_chain_clean": true,
+  "input_supply_artifact": "physical_value_source_supplies/e_density/density_source_amplitude_explicit_fail_supply_v01.json",
+  "input_supply_summary": "data/derived/tau_cmb_density_source_amplitude_or_explicit_fail_supply_summary_v01.json",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_v04",
+  "numeric_value_accepted": false,
+  "physical_CMB_score_allowed": false,
+  "physical_value_source_accepted": false,
+  "report_id": "tau_cmb_density_source_amplitude_explicit_fail_acceptance_audit_summary_v01",
+  "status": "CMB_DENSITY_SOURCE_AMPLITUDE_EXPLICIT_FAIL_ACCEPTED_PHYSICAL_SCORE_BLOCKED",
+  "target_role": "density"
+}

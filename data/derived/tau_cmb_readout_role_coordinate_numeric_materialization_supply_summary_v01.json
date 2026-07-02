@@ -1,0 +1,21 @@
+{
+  "candidate_artifact_supplied_rows": 6,
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_materialization_supply_v01_candidate_payloads_supplied_role_coordinates_blocked_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "hash_matched_rows": 6,
+  "input_chain_clean": true,
+  "input_physical_R_CMB_materialization_acceptance_summary": "data/derived/tau_cmb_certificate_semantic_evidence_physical_R_CMB_materialization_acceptance_audit_summary_v01.json",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_readout_role_coordinate_numeric_materialization_acceptance_audit_v01",
+  "numeric_values_materialized_rows": 0,
+  "report_id": "tau_cmb_readout_role_coordinate_numeric_materialization_supply_summary_v01",
+  "role_coordinate_accepted_rows": 0,
+  "role_coordinate_audit_present_rows": 6,
+  "role_coordinate_numeric_materialization_supply_rows": 6,
+  "role_coordinate_summary_present_rows": 6,
+  "role_coordinate_table_present_rows": 6,
+  "score_entry_allowed": false,
+  "status": "CMB_READOUT_ROLE_COORDINATE_NUMERIC_MATERIALIZATION_CANDIDATES_SUPPLIED_BLOCKED_NOT_NUMERIC",
+  "table": "data/derived/tau_cmb_readout_role_coordinate_numeric_materialization_supply_v01.csv"
+}

@@ -1,0 +1,16 @@
+{
+  "A_tau_value_allowed": false,
+  "blocked_or_partial_rows": 6,
+  "certificate_rows": 6,
+  "claim_boundary": "tau_cmb_seed_readout_domain_certificate_v01_certificate_requirements_only_domain_not_certified_no_readout_evaluation_no_survival_no_A_tau_value_no_score_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "domain_acceptance_allowed": false,
+  "next_minimal_unblock": "materialize_endpoint_blind_seed_tau_payload_with_provenance_and_firewall",
+  "quotient_survival_claim_allowed": false,
+  "readout_evaluation_allowed": false,
+  "report_id": "tau_cmb_seed_readout_domain_certificate_summary_v01",
+  "score_entry_allowed": false,
+  "seed_acceptance_allowed": false,
+  "status": "SEED_READOUT_DOMAIN_CERTIFICATE_DECLARED_BLOCKED",
+  "table": "data/derived/tau_cmb_seed_readout_domain_certificate_v01.csv"
+}

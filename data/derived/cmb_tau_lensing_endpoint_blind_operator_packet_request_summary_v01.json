@@ -1,0 +1,25 @@
+{
+  "accepts_automatic_scoring": false,
+  "claim_boundary": "endpoint_blind_operator_packet_request_only_no_operator_acceptance_no_grid_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "intended_submission_path": "payloads/cmb_tau_lensing_endpoint_blind_operator_packet_submission_v01.csv",
+  "next_gate_after_supply": "operator_packet_receipt_audit",
+  "physical_tau_score_run": false,
+  "report_id": "cmb_tau_lensing_endpoint_blind_operator_packet_request_summary_v01",
+  "requested_rows": [
+    "TCMBEBOPR01_001",
+    "TCMBEBOPR01_002",
+    "TCMBEBOPR01_003",
+    "TCMBEBOPR01_004",
+    "TCMBEBOPR01_005",
+    "TCMBEBOPR01_006",
+    "TCMBEBOPR01_007",
+    "TCMBEBOPR01_008"
+  ],
+  "rows": 8,
+  "score_run": false,
+  "status": "ENDPOINT_BLIND_OPERATOR_PACKET_REQUEST_OPEN",
+  "submission_template": "payload_templates/cmb_tau_lensing_endpoint_blind_operator_packet_submission_TEMPLATE_v01.csv",
+  "table": "data/derived/cmb_tau_lensing_endpoint_blind_operator_packet_request_v01.csv",
+  "target": "minimum supplied packet needed to test Projection_PP[Phi_lens_tau](L) for acceptance"
+}

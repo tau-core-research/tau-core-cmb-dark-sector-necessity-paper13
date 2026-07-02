@@ -1,0 +1,22 @@
+{
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_source_acceptance_audit_v01_requirement_worklist_accepted_as_worklist_only_numeric_values_absent_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "concrete_R_CMB_allowed_rows": 0,
+  "dark_sector_verdict_allowed": false,
+  "input_chain_clean": true,
+  "input_numeric_value_source_supply_summary": "data/derived/tau_cmb_readout_role_coordinate_numeric_value_source_supply_summary_v01.json",
+  "input_numeric_value_source_supply_table": "data/derived/tau_cmb_readout_role_coordinate_numeric_value_source_supply_v01.csv",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_readout_role_coordinate_numeric_value_population_v01",
+  "numeric_value_source_acceptance_rows": 6,
+  "numeric_value_source_accepted_rows": 0,
+  "numeric_value_source_rejected_rows": 6,
+  "numeric_values_materialized_rows": 0,
+  "report_id": "tau_cmb_readout_role_coordinate_numeric_value_source_acceptance_audit_summary_v01",
+  "requirement_worklist_accepted_rows": 6,
+  "role_coordinate_acceptance_allowed_rows": 0,
+  "score_entry_allowed": false,
+  "source_requirement_rows": 33,
+  "status": "CMB_READOUT_ROLE_COORDINATE_NUMERIC_VALUE_SOURCE_REQUIREMENT_WORKLIST_ACCEPTED_VALUES_ABSENT",
+  "table": "data/derived/tau_cmb_readout_role_coordinate_numeric_value_source_acceptance_audit_v01.csv"
+}

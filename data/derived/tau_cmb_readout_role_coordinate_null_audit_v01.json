@@ -1,0 +1,97 @@
+{
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_NULL_COORDINATE_ROWS_PRESENT",
+      "blocking_reason": "null coordinate audit requires the five declared components",
+      "component": "coordinate_row_shape",
+      "finding": "coordinate_components=['null_seed_anchor', 'null_readout_anchor', 'quotient_relation_hook', 'zero_source_consistency', 'forbidden_promotion']"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_CONTROL_AUDIT_CHAIN",
+      "blocking_reason": "null coordinate audit must be downstream of clean control-chain audits",
+      "component": "input_control_chain",
+      "finding": "null coordinate follows clean radiation, zero-control, and quotient-relation candidate audits"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_FORMAL_SLOTS_DECLARED",
+      "blocking_reason": "coordinate components need formal slots before materialization",
+      "component": "formal_slots_declared",
+      "finding": "each null coordinate component has a formal slot"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_DIMENSION_ROLES_DECLARED",
+      "blocking_reason": "null coordinate typing requires explicit control roles",
+      "component": "dimension_roles_declared",
+      "finding": "each null coordinate component has a control/dimension role"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_SOURCE_DEPENDENCIES_DECLARED",
+      "blocking_reason": "null coordinate candidate must remain traceable to control artifacts",
+      "component": "source_dependencies_declared",
+      "finding": "each null coordinate component is tied to existing zero-control or quotient artifacts"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_BLOCK_GUARD_ACCOUNTING",
+      "blocking_reason": "null coordinate should have three acceptance blocks and two control guards",
+      "component": "block_guard_accounting",
+      "finding": "blocked_count=3, guard_count=2"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_NULL_COORDINATE_FIREWALL_CLOSED",
+      "blocking_reason": "null coordinate candidate must not enter physical response, score, or verdict channels",
+      "component": "promotion_firewall",
+      "finding": "coordinate acceptance, physical response, quotient proof, concrete R_CMB, carrier certification, score, and verdict permissions remain closed"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_NULL_SEED_NOT_ACCEPTED",
+      "blocking_reason": "requires readout-domain certificate for the null control side",
+      "component": "null_seed_acceptance",
+      "finding": "null seed is audited as control but not accepted as a readout-domain member"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_NULL_READOUT_NOT_MATERIALIZED",
+      "blocking_reason": "requires concrete readout map or explicit materialization rule",
+      "component": "null_readout_materialization",
+      "finding": "R_CMB(null_seed) := null_readout is declared but concrete R_CMB is not materialized"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_QUOTIENT_RELATION_NOT_PROVED",
+      "blocking_reason": "requires equivalence proof and non-null survival test",
+      "component": "quotient_relation_proof",
+      "finding": "quotient relation hook is declared but equivalence relation, quotient map, and survival condition are not proved"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "GUARD_ZERO_SOURCE_CONTROL_NOT_PHYSICAL_PROOF",
+      "blocking_reason": "zero-control may not substitute for physical projection zero-source proof",
+      "component": "zero_control_not_physical_proof",
+      "finding": "zero-control is kept separate from physical zero-source projection proof"
+    }
+  ],
+  "audited_coordinate_table": "data/derived/tau_cmb_readout_role_coordinate_null_v01.csv",
+  "blocked_rows": 3,
+  "carrier_certification_allowed": false,
+  "claim_boundary": "tau_cmb_readout_role_coordinate_null_audit_v01_audit_only_null_not_accepted_no_physical_response_no_quotient_proof_no_concrete_R_CMB_no_carrier_certification_no_score_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "coordinate_acceptance_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "failed_rows": 0,
+  "next_minimal_unblock": "tau_cmb_readout_role_coordinate_bundle_closure_v01",
+  "null_coordinate_audited": true,
+  "passed_rows": 8,
+  "physical_response_allowed": false,
+  "quotient_proof_allowed": false,
+  "report_id": "tau_cmb_readout_role_coordinate_null_audit_v01",
+  "score_entry_allowed": false,
+  "status": "NULL_ROLE_COORDINATE_AUDITED_BLOCKED_NOT_ACCEPTED"
+}

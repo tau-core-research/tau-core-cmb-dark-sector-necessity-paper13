@@ -1,0 +1,88 @@
+{
+  "acoustic_coordinate_audited": true,
+  "acoustic_score_allowed": false,
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_ACOUSTIC_COORDINATE_ROWS_PRESENT",
+      "blocking_reason": "acoustic coordinate audit requires the six declared components",
+      "component": "coordinate_row_shape",
+      "finding": "coordinate_components=['potential_source_presence', 'phase_support', 'relative_peak_height', 'baryon_loading_coupling', 'scale_horizon_guard', 'failure_branch']"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_BASIS_AUDIT_CHAIN",
+      "blocking_reason": "acoustic coordinate audit must be downstream of the audited role-space basis",
+      "component": "input_basis_chain",
+      "finding": "acoustic coordinate follows a clean role-space basis audit"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_FORMAL_SLOTS_DECLARED",
+      "blocking_reason": "coordinate components need formal slots before materialization",
+      "component": "formal_slots_declared",
+      "finding": "each acoustic coordinate component has a formal slot"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_DIMENSION_ROLES_DECLARED",
+      "blocking_reason": "coordinate typing requires dimension or convention roles",
+      "component": "dimension_roles_declared",
+      "finding": "each acoustic coordinate component has a dimension/convention role"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_SOURCE_DEPENDENCIES_DECLARED",
+      "blocking_reason": "coordinate candidate must remain traceable to existing protocol artifacts",
+      "component": "source_dependencies_declared",
+      "finding": "each acoustic coordinate component is tied to an existing blocker/evidence artifact"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_BLOCK_GUARD_ACCOUNTING",
+      "blocking_reason": "acoustic coordinate should have four physics blocks and two guard rows",
+      "component": "block_guard_accounting",
+      "finding": "blocked_count=4, guard_count=2"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_ACOUSTIC_COORDINATE_FIREWALL_CLOSED",
+      "blocking_reason": "acoustic coordinate candidate must not enter scoring or carrier certification",
+      "component": "promotion_firewall",
+      "finding": "coordinate acceptance, acoustic score, concrete R_CMB, carrier certification, and verdict permissions remain closed"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_SOURCE_NOT_DERIVED",
+      "blocking_reason": "requires endpoint-blind Phi_tau_eff handoff and source timing/sign",
+      "component": "source_materialization",
+      "finding": "pre-recombination Tau potential/source handoff is not derived"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_OSCILLATOR_RESPONSE_NOT_EVALUATED",
+      "blocking_reason": "requires reduced oscillator convention and source-time dependence",
+      "component": "oscillator_response",
+      "finding": "photon-baryon oscillator response is not evaluated for the Tau source"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_AMPLITUDE_AND_COUPLING_NOT_SUPPLIED",
+      "blocking_reason": "requires A_tau normalization and coupling-sign convention",
+      "component": "amplitude_and_coupling",
+      "finding": "endpoint-blind amplitude and baryon-loading coupling sign are missing"
+    }
+  ],
+  "audited_coordinate_table": "data/derived/tau_cmb_readout_role_coordinate_acoustic_v01.csv",
+  "blocked_rows": 3,
+  "carrier_certification_allowed": false,
+  "claim_boundary": "tau_cmb_readout_role_coordinate_acoustic_audit_v01_audit_only_coordinate_not_accepted_no_acoustic_score_no_likelihood_no_concrete_R_CMB_no_carrier_certification_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "coordinate_acceptance_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "failed_rows": 0,
+  "next_minimal_unblock": "tau_cmb_readout_role_coordinate_density_v01",
+  "passed_rows": 7,
+  "report_id": "tau_cmb_readout_role_coordinate_acoustic_audit_v01",
+  "status": "ACOUSTIC_ROLE_COORDINATE_AUDITED_BLOCKED_NOT_MATERIALIZED"
+}

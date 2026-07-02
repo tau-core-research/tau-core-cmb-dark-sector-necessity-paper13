@@ -1,0 +1,28 @@
+{
+  "certificate_scope": "This certifies only the current physical projection operator packet contents. It must be rerun after any projection operator, normalization, or replay value is populated.",
+  "checks": [
+    {
+      "detail": "data/derived/cmb_tau_lensing_physical_projection_operator_packet_v01.csv",
+      "name": "packet_exists",
+      "passes": true
+    },
+    {
+      "detail": [],
+      "name": "forbidden_endpoint_markers_absent",
+      "passes": true
+    },
+    {
+      "detail": [],
+      "name": "no_endpoint_like_numeric_projection_values_populated",
+      "passes": true
+    }
+  ],
+  "claim_boundary": "projection_firewall_certificate_for_current_packet_only_no_operator_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "firewall_certificate_status": "PASS_FOR_CURRENT_SKELETON_ONLY",
+  "packet": "data/derived/cmb_tau_lensing_physical_projection_operator_packet_v01.csv",
+  "physical_tau_score_run": false,
+  "report_id": "cmb_tau_lensing_physical_projection_firewall_certificate_v01",
+  "rows_inspected": 6,
+  "score_run": false
+}

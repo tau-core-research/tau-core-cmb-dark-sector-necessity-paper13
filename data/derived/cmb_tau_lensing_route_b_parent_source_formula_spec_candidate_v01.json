@@ -1,0 +1,11 @@
+{
+  "candidate_spec": "payload_staging/tau_lensing_route_b_parent_source_formula_spec_v01.json",
+  "candidate_status": "PROTOCOL_VERIFIED_CANDIDATE_PENDING_AUDIT",
+  "claim_boundary": "formula_spec_candidate_written_only_no_grid_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "important_boundary": "This creates an endpoint-blind protocol candidate. It does not claim that the formula is the physically correct Tau response.",
+  "next_required_action": "run_make_tau-grid-route-b-parent-formula-audit",
+  "physical_tau_score_run": false,
+  "report_id": "cmb_tau_lensing_route_b_parent_source_formula_spec_candidate_v01",
+  "score_run": false
+}

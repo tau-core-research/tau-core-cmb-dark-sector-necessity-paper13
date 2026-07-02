@@ -1,0 +1,95 @@
+{
+  "artifact_status": "ROLE_COORDINATE_NUMERIC_VALUE_SOURCE_REQUIREMENT_WORKLIST_SUPPLIED_NOT_NUMERIC",
+  "blocking_reason": "numeric source requirements are enumerated, but no accepted numeric source values are supplied",
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_source_supply_v01_source_requirement_worklist_supplied_no_numeric_values_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "coordinate_symbol": "e_acoustic",
+  "dark_sector_verdict_allowed": false,
+  "endpoint_blind_firewall": {
+    "act_planck_likelihood_used": false,
+    "cmb_endpoint_residuals_used": false,
+    "dark_sector_verdict_used": false,
+    "post_endpoint_tuning_used": false,
+    "score_output_used": false
+  },
+  "input_numeric_materialization_acceptance_audit_summary": "data/derived/tau_cmb_readout_role_coordinate_numeric_materialization_acceptance_audit_summary_v01.json",
+  "likelihood_allowed": false,
+  "next_required_step": "populate endpoint-blind numeric value source files with units, conventions, provenance, and replay",
+  "numeric_value_source_supplied": false,
+  "numeric_values_materialized": false,
+  "role_audit": "data/derived/tau_cmb_readout_role_coordinate_acoustic_audit_v01.json",
+  "role_audit_status": "ACOUSTIC_ROLE_COORDINATE_AUDITED_BLOCKED_NOT_MATERIALIZED",
+  "role_coordinate_acceptance_allowed": false,
+  "role_name": "acoustic",
+  "role_table": "data/derived/tau_cmb_readout_role_coordinate_acoustic_v01.csv",
+  "score_entry_allowed": false,
+  "source_requirement_rows": 6,
+  "source_requirements": [
+    {
+      "blocked_by": "Phi_tau_eff remains a target slot rather than a derived pre-recombination source",
+      "candidate_definition": "acoustic coordinate may reference a pre-recombination potential-source slot only after endpoint-blind handoff",
+      "coordinate_component": "potential_source_presence",
+      "coordinate_row_id": "TCMBRRCA01_001",
+      "coordinate_status": "BLOCKED_SOURCE_NOT_DERIVED",
+      "dimension_role": "potential role; dimensionless only after convention replay",
+      "formal_slot": "Phi_tau_eff(a,k)|recombination",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_acoustic_reduced_evaluation_v01"
+    },
+    {
+      "blocked_by": "oscillator response is not evaluated",
+      "candidate_definition": "phase coordinate requires a reduced photon-baryon oscillator response with Tau source timing/sign",
+      "coordinate_component": "phase_support",
+      "coordinate_row_id": "TCMBRRCA01_002",
+      "coordinate_status": "BLOCKED_OSCILLATOR_RESPONSE_NOT_EVALUATED",
+      "dimension_role": "dimensionless phase role",
+      "formal_slot": "phase_tau_acoustic",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_acoustic_reduced_evaluation_v01"
+    },
+    {
+      "blocked_by": "A_tau is only a formal ratio and endpoint-blind amplitude is unavailable",
+      "candidate_definition": "relative-height coordinate requires endpoint-blind A_tau and potential normalization",
+      "coordinate_component": "relative_peak_height",
+      "coordinate_row_id": "TCMBRRCA01_003",
+      "coordinate_status": "BLOCKED_AMPLITUDE_NOT_AVAILABLE",
+      "dimension_role": "dimensionless relative-height role",
+      "formal_slot": "height_ratio_tau_acoustic",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_acoustic_reduced_evaluation_v01"
+    },
+    {
+      "blocked_by": "source-coupling sign and baryon-loading convention are missing",
+      "candidate_definition": "coordinate must state Tau source coupling sign relative to baryon loading before phase/height comparison",
+      "coordinate_component": "baryon_loading_coupling",
+      "coordinate_row_id": "TCMBRRCA01_004",
+      "coordinate_status": "BLOCKED_COUPLING_SIGN_MISSING",
+      "dimension_role": "sign/convention role",
+      "formal_slot": "coupling_sign_tau_baryon",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_acoustic_reduced_evaluation_v01"
+    },
+    {
+      "blocked_by": "numeric convention still required for future evaluation",
+      "candidate_definition": "coordinate must use declared k, scale-factor, recombination epoch, and sound-horizon conventions",
+      "coordinate_component": "scale_horizon_guard",
+      "coordinate_row_id": "TCMBRRCA01_005",
+      "coordinate_status": "CONVENTION_GUARD_DECLARED_NOT_NUMERIC",
+      "dimension_role": "mixed convention guard; not a score coordinate",
+      "formal_slot": "(k,a_rec,r_s)_convention",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_acoustic_reduced_evaluation_v01"
+    },
+    {
+      "blocked_by": "reduced checks are not run and no acoustic decision is assigned",
+      "candidate_definition": "coordinate keeps an explicit FAIL branch if source, phase, or height checks cannot be supplied",
+      "coordinate_component": "failure_branch",
+      "coordinate_row_id": "TCMBRRCA01_006",
+      "coordinate_status": "FAILURE_BRANCH_READY_NOT_TRIGGERED",
+      "dimension_role": "decision guard; no physical units",
+      "formal_slot": "acoustic_fail_if_missing_required_inputs",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_known_limit_failure_map_v01"
+    }
+  ]
+}

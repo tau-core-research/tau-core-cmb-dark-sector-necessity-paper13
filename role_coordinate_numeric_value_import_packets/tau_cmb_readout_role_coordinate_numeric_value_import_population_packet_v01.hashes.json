@@ -1,0 +1,9 @@
+{
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_import_population_packet_v01_population_contract_declared_no_values_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "likelihood_allowed": false,
+  "population_values_supplied": false,
+  "score_entry_allowed": false,
+  "sha256": "6fec6217f990364ab32e8588dac374a93d2f42f75accad6e09802edfce2d2f09",
+  "target": "role_coordinate_numeric_value_import_packets/tau_cmb_readout_role_coordinate_numeric_value_import_population_packet_v01.json"
+}

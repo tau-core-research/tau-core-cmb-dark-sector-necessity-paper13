@@ -1,0 +1,32 @@
+{
+  "accepted_rows": [],
+  "blocked_shortcuts": [
+    "do not score from the scaffold",
+    "do not use post-score alpha_star as physical normalization",
+    "do not use B_ACT adapter replay as the physical source-to-PP operator",
+    "do not issue a dark-sector verdict before an accepted score route exists"
+  ],
+  "blocking_rows": [
+    "TCMBPFSAM01_001",
+    "TCMBPFSAM01_002",
+    "TCMBPFSAM01_003",
+    "TCMBPFSAM01_004",
+    "TCMBPFSAM01_005",
+    "TCMBPFSAM01_006",
+    "TCMBPFSAM01_007"
+  ],
+  "claim_boundary": "projection_formula_spec_acceptance_matrix_only_no_operator_acceptance_no_grid_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "endpoint_blind_operator_packet_request": "docs/cmb_tau_lensing_endpoint_blind_operator_packet_request_v01.md",
+  "only_two_valid_next_paths": [
+    "SUPPLY_ENDPOINT_BLIND_OPERATOR_PACKET",
+    "KEEP_EXPLICIT_NON_SCORE_FAILURE"
+  ],
+  "physical_tau_score_run": false,
+  "report_id": "cmb_tau_lensing_projection_formula_spec_acceptance_matrix_summary_v01",
+  "rows": 7,
+  "score_run": false,
+  "status": "FORMULA_SPEC_ACCEPTANCE_MATRIX_DECLARED_BLOCKED",
+  "table": "data/derived/cmb_tau_lensing_projection_formula_spec_acceptance_matrix_v01.csv",
+  "target": "accepted endpoint-blind Projection_PP[Phi_lens_tau](L) formula-spec"
+}

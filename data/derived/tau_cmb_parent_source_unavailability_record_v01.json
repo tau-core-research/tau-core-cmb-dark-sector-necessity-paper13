@@ -1,0 +1,23 @@
+{
+  "audit_decision": "DO_NOT_ACCEPT_NO_POPULATED_SOURCE_VALUES",
+  "claim_boundary": "tau_cmb_parent_source_unavailability_record_v01_record_only_no_physical_failure_claim_no_source_acceptance_no_phi_derivation_no_score_no_verdict",
+  "clean_negative_audit": true,
+  "dark_sector_verdict_allowed": false,
+  "interpretation": "The repository currently lacks the endpoint-blind CMB parent-source payload needed to accept the freeze packet. This is a source-availability blocker, not evidence that Tau Core fails CMB physics.",
+  "next_minimal_unblock": "supply_endpoint_blind_values_for_one_freeze_packet_component_or_keep_unavailability_record_as_stop_state",
+  "phi_tau_derivation_allowed": false,
+  "physical_failure_claim_allowed": false,
+  "report_id": "tau_cmb_parent_source_unavailability_record_v01",
+  "score_entry_allowed": false,
+  "source_acceptance_allowed": false,
+  "source_audit": "data/derived/tau_cmb_parent_source_freeze_packet_submission_candidate_audit_v01.json",
+  "status": "PARENT_SOURCE_UNAVAILABILITY_RECORDED_CLEAN_NEGATIVE_AUDIT",
+  "unavailable_components": [
+    "B_tau_base_CMB_descriptor",
+    "seed_tau_CMB_descriptor",
+    "R_tau_CMB_input_set",
+    "gauge_norm_tau_CMB_metadata",
+    "source_freeze_firewall_certificate",
+    "freeze_packet_replay_rule"
+  ]
+}

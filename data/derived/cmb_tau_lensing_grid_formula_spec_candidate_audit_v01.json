@@ -1,0 +1,79 @@
+{
+  "accepted_materializer_families": [
+    "power_law_cutoff_response_v01",
+    "tabulated_l_response_v01"
+  ],
+  "blocking_items": [
+    {
+      "object": "A_tau(a,k)",
+      "required_condition": "A_tau(a,k) dimensionless and rho_cdm_ref density-normalized",
+      "status": "CONDITIONAL_PASS_IF_A_TAU_DIMENSIONLESS",
+      "unresolved_dependency": "A_tau derivation not supplied"
+    },
+    {
+      "object": "Phi_tau_eff(a,k)",
+      "required_condition": "Fourier k, scale factor a, potential normalization, and Delta_tau convention declared",
+      "status": "CONDITIONAL_PASS_IF_STANDARD_POISSON_CONVENTION_DECLARED",
+      "unresolved_dependency": "metric handoff convention not supplied"
+    },
+    {
+      "object": "Transfer_tau / T_tau_CMB(k,a)",
+      "required_condition": "declare transfer kernel normalization and propagation law",
+      "status": "BLOCKED_TRANSFER_RULE_UNFILLED",
+      "unresolved_dependency": "Transfer_tau not defined"
+    },
+    {
+      "object": "parent-side Phi_tau_eff provenance",
+      "required_condition": "supply parent-side Tau response inputs before any CMB role comparison",
+      "status": "BLOCKED_PARENT_SIDE_INPUT_NOT_SUPPLIED",
+      "unresolved_dependency": "no parent-side input manifest is supplied"
+    },
+    {
+      "object": "rule(parent -> Phi_tau_eff)",
+      "required_condition": "provide an explicit rule mapping Tau response data into Phi_tau_eff(a,k)",
+      "status": "BLOCKED_DERIVATION_RULE_NOT_SUPPLIED",
+      "unresolved_dependency": "no symbolic or numerical derivation rule is supplied"
+    },
+    {
+      "object": "norm(Phi_tau_eff)",
+      "required_condition": "lock a single normalization before comparing acoustic and lensing readouts",
+      "status": "PARTIAL_CONTRACT_NORMALIZATION_REQUIRED",
+      "unresolved_dependency": "normalization convention remains a requirement, not an implemented lock"
+    },
+    {
+      "object": "Phi_tau_eff(a,k) -> lensing projection",
+      "required_condition": "potential source must connect to lensing amplitude/shape through a declared projection and transfer convention",
+      "status": "BLOCKED_LENSING_RESPONSE_NOT_SUPPLIED",
+      "unresolved_dependency": "no lensing-ready response or transfer-linked potential is supplied"
+    }
+  ],
+  "candidate_formula_family": "power_law_cutoff_response_v01",
+  "candidate_route": "direct_tau_PP_grid",
+  "candidate_spec": "payload_staging/tau_lensing_grid_formula_spec_candidate_v01.json",
+  "candidate_spec_status": "CANDIDATE_NOT_PAYLOAD",
+  "claim_boundary": "formula_spec_candidate_audit_only_no_grid_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "materializable_now": false,
+  "materializer_command_when_ready": "make tau-grid-from-formula",
+  "materializer_contract": "docs/cmb_tau_lensing_grid_formula_materializer_contract_v01.md",
+  "next_required_action": "replace candidate placeholder parameters with a parent-side endpoint-blind Tau derivation, then remove CANDIDATE_NOT_PAYLOAD and run make tau-grid-from-formula",
+  "preferred_grid_handoff": "tabulated_l_response_v01 if a parent-side Tau derivation emits an endpoint-blind L,value table; power_law_cutoff_response_v01 only if its parameters are independently fixed before score readout",
+  "ready_conditions": [
+    "A_tau(a,k) supplied as a dimensionless Tau-response amplitude",
+    "rho_tau_eff(a,k) density normalization selected",
+    "Fourier k, scale factor a, potential normalization, and Delta_tau convention declared",
+    "parent-side Phi_tau_eff derivation rule supplied without endpoint-score construction data",
+    "Transfer_tau or direct L-space delta_PP_tau rule supplied",
+    "power_law_cutoff_response_v01 parameters fixed before score readout, or a new formula family added"
+  ],
+  "report_id": "cmb_tau_lensing_grid_formula_spec_candidate_audit_v01",
+  "score_run": false,
+  "source_skeleton_rows_used": [
+    "TCMBMSC01_001",
+    "TCMBMSC01_002",
+    "TCMBMSC01_003",
+    "TCMBMSC01_004",
+    "TCMBMSC01_005",
+    "TCMBMSC01_006"
+  ]
+}

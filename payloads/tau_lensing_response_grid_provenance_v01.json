@@ -1,0 +1,31 @@
+{
+  "author_or_agent": "codex",
+  "created_utc": "2026-06-15T08:30:14.185190Z",
+  "derivation_script_or_formula": "delta_PP_tau(L) = F_tau_L(parent_tau_source, readout_profile, scale_profile; L); for response_rule=linear_parent_source_v01, delta_PP_tau(L)=normalization*parent_tau_source_value(L)",
+  "formula_role": "endpoint_blind_tau_derived_lensing_l_response_physical_candidate",
+  "input_artifacts": [
+    "payload_staging/tau_lensing_upstream_l_response_v01.csv",
+    "payload_staging/tau_lensing_upstream_l_response_metadata_v01.json",
+    "payload_staging/tau_lensing_grid_formula_spec_v01.json"
+  ],
+  "known_limit_statement": "when parent_tau_source_value -> 0, delta_PP_tau -> 0 under the linear_parent_source_v01 adapter",
+  "no_endpoint_fit_statement": "The physical-candidate Tau grid is fixed before endpoint score readout and is not adjusted using endpoint measurement residuals, score outputs, or verdict preferences.",
+  "normalization_statement": "dimensionless Route B parent-source convention; downstream delta_PP_tau = normalization * parent_tau_source_value",
+  "notes": "Physical-candidate route package; still no score, likelihood, or dark-sector verdict.",
+  "numeric_grid_file": "payloads/tau_lensing_response_delta_pp_v01.csv",
+  "numeric_grid_sha256": "58e1d3616b4911165fc2b6de7511d43218f87267d427340e824539743f2e4214",
+  "parameter_policy": "parameters are convention-fixed for a first Tau-side Route B parent-source candidate; no residual tuning, no reduced chi2 tuning, no score tuning, and no verdict tuning are permitted",
+  "route_classification": "physical_candidate",
+  "selected_route": "delta_PP_tau_against_named_fiducial_PP",
+  "source_chain": [
+    "docs/cmb_tau_lensing_route_b_parent_source_request_v01.md",
+    "docs/cmb_tau_lensing_grid_equation_packet_v01.md",
+    "docs/tau_cmb_minimal_source_term_candidate_v01.md",
+    "docs/tau_cmb_known_limit_and_dimension_audit_v01.md",
+    "payload_templates/tau_lensing_route_b_parent_source_formula_spec_TEMPLATE_v01.json",
+    "scripts/materialize_tau_lensing_route_b_parent_source_from_formula_spec.py",
+    "payload_staging/tau_lensing_route_b_parent_source_formula_spec_v01.json",
+    "payload_staging/tau_lensing_route_b_parent_source_config_v01.json",
+    "payload_staging/tau_lensing_route_b_parent_source_v01.csv"
+  ]
+}

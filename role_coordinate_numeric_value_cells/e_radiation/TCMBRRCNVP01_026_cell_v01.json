@@ -1,0 +1,31 @@
+{
+  "artifact_status": "NUMERIC_VALUE_CELL_TEMPLATE_SUPPLIED_VALUE_ABSENT",
+  "blocked_by": "no numerical left-hand side or selected bound is evaluated",
+  "blocking_reason": "cell template is supplied, but numeric value, unit/convention, provenance, and replay are absent",
+  "cell_value_accepted": false,
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_cell_supply_v01_cell_templates_supplied_values_absent_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "coordinate_component": "damping_tail_inequality",
+  "coordinate_row_id": "TCMBRRCR01_003",
+  "coordinate_symbol": "e_radiation",
+  "dark_sector_verdict_allowed": false,
+  "dimension_role": "dimensionless inequality under shared convention",
+  "endpoint_blind_cell": true,
+  "formal_slot": "Delta_N_eff_tau <= Delta_N_eff_bound",
+  "likelihood_allowed": false,
+  "next_required_step": "populate this cell from an endpoint-blind numeric value import packet",
+  "numeric_value_supplied": false,
+  "provenance_supplied": false,
+  "replay_supplied": false,
+  "required_fields_for_acceptance": {
+    "endpoint_blind_attestation": true,
+    "numeric_value": null,
+    "provenance": null,
+    "replay": null,
+    "unit_or_convention": null
+  },
+  "role_name": "radiation",
+  "score_entry_allowed": false,
+  "source_dependency": "tau_cmb_radiation_guard_evaluation_v01",
+  "source_numeric_value_population_row_id": "TCMBRRCNVP01_026",
+  "unit_or_convention_supplied": false
+}

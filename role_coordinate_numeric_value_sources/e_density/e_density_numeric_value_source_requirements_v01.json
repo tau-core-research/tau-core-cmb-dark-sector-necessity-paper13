@@ -1,0 +1,84 @@
+{
+  "artifact_status": "ROLE_COORDINATE_NUMERIC_VALUE_SOURCE_REQUIREMENT_WORKLIST_SUPPLIED_NOT_NUMERIC",
+  "blocking_reason": "numeric source requirements are enumerated, but no accepted numeric source values are supplied",
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_source_supply_v01_source_requirement_worklist_supplied_no_numeric_values_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "coordinate_symbol": "e_density",
+  "dark_sector_verdict_allowed": false,
+  "endpoint_blind_firewall": {
+    "act_planck_likelihood_used": false,
+    "cmb_endpoint_residuals_used": false,
+    "dark_sector_verdict_used": false,
+    "post_endpoint_tuning_used": false,
+    "score_output_used": false
+  },
+  "input_numeric_materialization_acceptance_audit_summary": "data/derived/tau_cmb_readout_role_coordinate_numeric_materialization_acceptance_audit_summary_v01.json",
+  "likelihood_allowed": false,
+  "next_required_step": "populate endpoint-blind numeric value source files with units, conventions, provenance, and replay",
+  "numeric_value_source_supplied": false,
+  "numeric_values_materialized": false,
+  "role_audit": "data/derived/tau_cmb_readout_role_coordinate_density_audit_v01.json",
+  "role_audit_status": "DENSITY_ROLE_COORDINATE_AUDITED_BLOCKED_NOT_MATERIALIZED",
+  "role_coordinate_acceptance_allowed": false,
+  "role_name": "density",
+  "role_table": "data/derived/tau_cmb_readout_role_coordinate_density_v01.csv",
+  "score_entry_allowed": false,
+  "source_requirement_rows": 5,
+  "source_requirements": [
+    {
+      "blocked_by": "shared density normalization convention still required before numerical use",
+      "candidate_definition": "density coordinate may use the formal ratio only under a shared density-normalization convention",
+      "coordinate_component": "density_ratio_guard",
+      "coordinate_row_id": "TCMBRRCD01_001",
+      "coordinate_status": "CONDITIONAL_RATIO_GUARD_DECLARED_NOT_NUMERIC",
+      "dimension_role": "dimensionless ratio if both densities share normalization",
+      "formal_slot": "A_tau(a,k) := rho_tau_eff(a,k) / rho_cdm_ref(a)",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_density_amplitude_closure_v01"
+    },
+    {
+      "blocked_by": "rho_tau_eff is still a source slot rather than a derived function",
+      "candidate_definition": "density coordinate requires a Tau-derived effective density function",
+      "coordinate_component": "tau_effective_density",
+      "coordinate_row_id": "TCMBRRCD01_002",
+      "coordinate_status": "BLOCKED_DENSITY_FORMULA_NOT_DERIVED",
+      "dimension_role": "density role; units only after source formula and rho_ref convention",
+      "formal_slot": "rho_tau_eff(a,k)",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_density_amplitude_closure_v01"
+    },
+    {
+      "blocked_by": "no provenance rule proves independence from CMB residual fitting",
+      "candidate_definition": "A_tau must be derived before density residual fitting or likelihood tuning",
+      "coordinate_component": "endpoint_blind_amplitude",
+      "coordinate_row_id": "TCMBRRCD01_003",
+      "coordinate_status": "BLOCKED_ENDPOINT_BLIND_AMPLITUDE_MISSING",
+      "dimension_role": "dimensionless amplitude role",
+      "formal_slot": "endpoint_blind(A_tau)",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_density_amplitude_closure_v01"
+    },
+    {
+      "blocked_by": "no benchmark, likelihood, or numeric A_tau prediction",
+      "candidate_definition": "density coordinate may compare to Omega_c h^2 only after numeric A_tau prediction and benchmark convention",
+      "coordinate_component": "omega_c_h2_role_comparison",
+      "coordinate_row_id": "TCMBRRCD01_004",
+      "coordinate_status": "BLOCKED_NO_NUMERICAL_COMPARISON",
+      "dimension_role": "comparison role; not a new unit claim",
+      "formal_slot": "Omega_c h^2 comparison role",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_density_amplitude_closure_v01"
+    },
+    {
+      "blocked_by": "derive endpoint-blind A_tau or explicitly fail the density role",
+      "candidate_definition": "coordinate keeps a stop/fail branch if endpoint-blind A_tau cannot be derived",
+      "coordinate_component": "density_stop_rule",
+      "coordinate_row_id": "TCMBRRCD01_005",
+      "coordinate_status": "STOP_RULE_DECLARED_NOT_TRIGGERED",
+      "dimension_role": "decision guard; no physical units",
+      "formal_slot": "density_fail_if_A_tau_missing",
+      "minimum_numeric_source_condition": "endpoint-blind numeric value source, unit/convention replay, and provenance must be supplied before this coordinate component can become numeric",
+      "source_dependency": "tau_cmb_scorecard_blocker_closure_plan_v01"
+    }
+  ]
+}

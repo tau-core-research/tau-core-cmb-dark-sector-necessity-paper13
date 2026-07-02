@@ -1,0 +1,20 @@
+{
+  "act_planck_match_allowed": false,
+  "blocked_rows": 4,
+  "carrier_certification_allowed": false,
+  "claim_boundary": "tau_cmb_readout_role_coordinate_lensing_v01_coordinate_candidate_only_not_materialized_no_lensing_score_no_act_planck_match_no_concrete_R_CMB_no_carrier_certification_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "coordinate_acceptance_allowed": false,
+  "coordinate_rows": 6,
+  "coordinate_symbol": "e_lensing",
+  "dark_sector_verdict_allowed": false,
+  "guard_rows": 2,
+  "input_density_coordinate_audit": "data/derived/tau_cmb_readout_role_coordinate_density_audit_v01.json",
+  "input_density_coordinate_audit_clean": true,
+  "input_lensing_reduced_evaluation": "data/derived/tau_cmb_lensing_transfer_reduced_evaluation_v01.csv",
+  "lensing_score_allowed": false,
+  "next_minimal_unblock": "tau_cmb_readout_role_coordinate_lensing_audit_v01",
+  "report_id": "tau_cmb_readout_role_coordinate_lensing_summary_v01",
+  "status": "LENSING_ROLE_COORDINATE_CANDIDATE_DECLARED_BLOCKED_NOT_MATERIALIZED",
+  "table": "data/derived/tau_cmb_readout_role_coordinate_lensing_v01.csv"
+}

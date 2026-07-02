@@ -1,0 +1,20 @@
+{
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_population_v01_cell_level_population_table_declared_values_absent_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "declared_cell_rows": 33,
+  "endpoint_blind_cell_rows": 33,
+  "input_chain_clean": true,
+  "input_numeric_value_source_acceptance_audit_summary": "data/derived/tau_cmb_readout_role_coordinate_numeric_value_source_acceptance_audit_summary_v01.json",
+  "input_numeric_value_source_supply_table": "data/derived/tau_cmb_readout_role_coordinate_numeric_value_source_supply_v01.csv",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_readout_role_coordinate_numeric_value_population_acceptance_audit_v01",
+  "numeric_value_population_rows": 33,
+  "numeric_value_present_rows": 0,
+  "provenance_present_rows": 0,
+  "replay_present_rows": 0,
+  "report_id": "tau_cmb_readout_role_coordinate_numeric_value_population_summary_v01",
+  "score_entry_allowed": false,
+  "status": "CMB_READOUT_ROLE_COORDINATE_NUMERIC_VALUE_POPULATION_TABLE_DECLARED_VALUES_ABSENT",
+  "table": "data/derived/tau_cmb_readout_role_coordinate_numeric_value_population_v01.csv",
+  "unit_or_convention_present_rows": 0
+}

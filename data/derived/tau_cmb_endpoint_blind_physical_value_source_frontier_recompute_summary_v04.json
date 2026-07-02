@@ -1,0 +1,22 @@
+{
+  "claim_boundary": "tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_v04_density_explicit_failures_accepted_no_physical_source_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "density_rows_closed": 3,
+  "explicit_fail_accepted_rows": 7,
+  "frontier_rows": 16,
+  "input_chain_clean": true,
+  "input_density_explicit_fail_acceptance": "data/derived/tau_cmb_density_source_amplitude_explicit_fail_acceptance_audit_summary_v01.json",
+  "input_frontier_recompute_v03_table": "data/derived/tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_v03.csv",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_delta_neff_or_explicit_fail_supply_v01",
+  "open_frontier_rows": 9,
+  "physical_CMB_score_allowed": false,
+  "physical_value_source_accepted_rows": 0,
+  "report_id": "tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_summary_v04",
+  "status": "CMB_ENDPOINT_BLIND_PHYSICAL_VALUE_SOURCE_FRONTIER_RECOMPUTED_DENSITY_EXPLICIT_FAILS_ACCEPTED",
+  "table": "data/derived/tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_v04.csv",
+  "updated_bucket_counts": {
+    "dependency_blocked": 9,
+    "explicit_fail_accepted": 7
+  }
+}

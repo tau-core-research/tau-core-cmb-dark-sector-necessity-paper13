@@ -1,0 +1,8 @@
+{
+  "claim_boundary": "tau_cmb_endpoint_blind_phi_tau_source_or_explicit_fail_supply_v01_shared_phi_explicit_fail_no_phi_source_no_score_no_likelihood_no_verdict",
+  "explicit_fail_supplied": true,
+  "physical_value_source_accepted": false,
+  "score_entry_allowed": false,
+  "sha256": "980df0897ee76caa6dbd79bc668d79847c256ab88c8100bef6774ca60ca50e37",
+  "target": "physical_value_source_supplies/e_shared/phi_tau_eff_explicit_fail_supply_v01.json"
+}

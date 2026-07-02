@@ -1,0 +1,25 @@
+# seed_tau normalization replay candidate v01
+
+Input tuple:
+
+xi_seed = (
+  morphology_class = M_tau^CMB as parent-side projection-conditioning morphology class,
+  readout_sector = parent Tau morphology / CMB readout sector,
+  scale_label = CMB_readout_sector_scale_label_candidate_not_normalized
+)
+
+Candidate transformation:
+
+N_seed(xi_seed) keeps morphology_class and readout_sector fixed and maps
+scale_label=CMB_readout_sector_scale_label_candidate_not_normalized
+to scale_label=CMB_readout_sector_scale_label_canonical_v01.
+
+Endpoint boundary:
+
+No CMB residuals, peak-shape fits, likelihood deltas, score outputs, or
+post-endpoint tuning fields are read by this replay candidate.
+
+Acceptance boundary:
+
+This replay is a candidate only. It does not accept normalization, certify
+support, certify domain membership, evaluate readout, or enter scoring.

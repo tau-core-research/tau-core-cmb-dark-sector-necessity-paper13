@@ -1,0 +1,29 @@
+{
+  "claim_boundary": "tau_cmb_source_grounding_gate_v01_gate_only_no_cmb_source_acceptance_no_transfer_kernel_no_projection_kernel_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict_allowed": false,
+  "declared_partial_rows": [
+    "TCMBSGG01_002",
+    "TCMBSGG01_006"
+  ],
+  "derivation_spine": "docs/tau_cmb_cosmology_derivation_spine_v01.md",
+  "gate_rows": 7,
+  "method_imported_rows": [
+    "TCMBSGG01_001"
+  ],
+  "next_minimal_unblock": "populate_endpoint_blind_CMB_parent_source_freeze_packet_with_hashable_replay",
+  "paper10_source_freeze_reference": "/Users/jolcsak/Projects/tau-core-cosmology-friedmann-readout-paper10/data/source_manifest/cosmology_source_grounding_gate_v1.csv",
+  "parent_source_freeze_packet": "docs/tau_cmb_parent_source_freeze_packet_v01.md",
+  "physical_tau_score_allowed": false,
+  "report_id": "tau_cmb_source_grounding_gate_summary_v01",
+  "required_not_proved_rows": [
+    "TCMBSGG01_003",
+    "TCMBSGG01_004",
+    "TCMBSGG01_005"
+  ],
+  "score_entry_allowed": false,
+  "source_acceptance_allowed": false,
+  "status": "SOURCE_GROUNDING_GATE_DECLARED_BLOCKED",
+  "table": "data/derived/tau_cmb_source_grounding_gate_v01.csv",
+  "tau_core_morphology_reference": "/Users/jolcsak/Projects/tau-core-theory/source_material/tau_core_foundations/morphology_conditioned_projection_principle_v01.md",
+  "tau_core_readout_reference": "/Users/jolcsak/Projects/tau-core-theory/docs/tau_core_morphological_readout_formalization_sketches_001.md"
+}

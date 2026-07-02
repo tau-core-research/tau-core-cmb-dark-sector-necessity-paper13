@@ -1,0 +1,20 @@
+{
+  "claim_boundary": "projection_post_population_firewall_spec_scaffold_only_no_firewall_pass_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "not_a_certificate": "current skeleton PASS_FOR_CURRENT_SKELETON_ONLY remains separate",
+  "pending_rows": [
+    "TCMBPPFSS01_001",
+    "TCMBPPFSS01_002",
+    "TCMBPPFSS01_003",
+    "TCMBPPFSS01_004",
+    "TCMBPPFSS01_005",
+    "TCMBPPFSS01_006"
+  ],
+  "physical_tau_score_run": false,
+  "report_id": "cmb_tau_lensing_projection_post_population_firewall_spec_scaffold_summary_v01",
+  "rows": 6,
+  "scope": "firewall requirements after operator, kernel, normalization, and output grid values are populated",
+  "score_run": false,
+  "status": "POST_POPULATION_FIREWALL_SPEC_DECLARED_NOT_RUN",
+  "table": "data/derived/cmb_tau_lensing_projection_post_population_firewall_spec_scaffold_v01.csv"
+}

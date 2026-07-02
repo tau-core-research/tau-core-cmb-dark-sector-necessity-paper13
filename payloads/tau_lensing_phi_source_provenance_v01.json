@@ -1,0 +1,34 @@
+{
+  "payload_id": "tau_lensing_phi_source_provenance_v01",
+  "payload_class": "Phi source provenance",
+  "status": "submitted_for_review_not_accepted",
+  "parent_gate": "docs/cmb_tau_lensing_phi_source_payload_submission_v01.md",
+  "depends_on": [
+    "payloads/tau_lensing_phi_source_identity_v01.md"
+  ],
+  "source_object": "Phi_tau_eff(a,k)",
+  "source_role": "pre-transfer Tau-side effective potential-response identity for the CMB lensing route",
+  "derivation_rule_status": "not_supplied_in_this_payload",
+  "replay_trace_status": "not_replayable_until_derivation_rule_normalization_time_scale_and_lensing_interface_exist",
+  "endpoint_blind_firewall": {
+    "uses_ACT_bandpowers": false,
+    "uses_ACT_covariance": false,
+    "uses_ACT_residuals": false,
+    "uses_Planck_residuals": false,
+    "uses_lensing_score": false,
+    "uses_dark_sector_verdict_preference": false
+  },
+  "allowed_inputs": [
+    "Tau Core parent-side definitions already accepted outside this payload",
+    "symbolic domain and codomain declarations from the Phi source identity payload",
+    "future endpoint-blind normalization and transfer payloads"
+  ],
+  "disallowed_inputs": [
+    "ACT DR6 bandpower residuals",
+    "Planck residuals",
+    "reduced score value",
+    "post-hoc dark-sector necessity verdict",
+    "parameter choices selected to improve the CMB score"
+  ],
+  "claim_boundary": "phi_source_provenance_payload_only_no_derivation_rule_no_normalization_no_transfer_no_pp_grid_no_tau_score_no_dark_sector_verdict"
+}

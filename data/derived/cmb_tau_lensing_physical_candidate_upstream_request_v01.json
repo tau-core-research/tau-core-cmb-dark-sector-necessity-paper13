@@ -1,0 +1,80 @@
+{
+  "acceptance_commands": [
+    "make tau-grid-physical-candidate-precheck",
+    "make tau-grid-handoff-write-staging",
+    "make tau-grid-physical-candidate-package",
+    "make staging-promote-delta-dry-run"
+  ],
+  "allowed_routes": {
+    "route_A_transfer_projection": {
+      "chain": [
+        "rho_tau_eff(a,k) = A_tau(a,k) * rho_ref(a)",
+        "k^2 Phi_tau_eff(a,k) = 4*pi*G*a^2*rho_tau_eff(a,k)*Delta_tau(a,k)",
+        "Phi_lens_tau(a,k) = T_tau_CMB(k,a)[Phi_tau_eff]",
+        "tau_PP(L) = Projection_PP[Phi_lens_tau](L)"
+      ],
+      "minimum_evidence": [
+        "endpoint-blind A_tau(a,k) or equivalent Tau parent source",
+        "Phi_tau_eff normalization and sign convention",
+        "T_tau_CMB domain, codomain, time/scale convention, and operator rule",
+        "PP projection convention from lensing potential to L-space",
+        "known-limit audit against zero-response/LCDM comparison behavior"
+      ],
+      "status": "preferred_physical_route"
+    },
+    "route_B_direct_L_space": {
+      "chain": [
+        "delta_PP_tau(L) = F_tau_L(parent_tau_source, readout_profile, scale_profile; L)",
+        "write exact L,value table without fitting ACT/Planck residuals"
+      ],
+      "minimum_evidence": [
+        "parent Tau source object used by F_tau_L",
+        "parameter-free or endpoint-blind parameter fixation rule",
+        "normalization convention for dimensionless delta_PP_tau(L)",
+        "known-limit audit showing zero/null behavior when Tau source is absent"
+      ],
+      "status": "allowed_only_if_tau_derived_before_endpoint_score"
+    }
+  },
+  "claim_boundary": "physical_candidate_upstream_request_only_no_grid_no_score_no_dark_sector_verdict",
+  "current_blocker": "no_tau_derived_endpoint_blind_numeric_l_response_table",
+  "dark_sector_verdict": false,
+  "forbidden_inputs": [
+    "ACT residuals",
+    "Planck residuals",
+    "reduced chi2 tuning",
+    "score output tuning",
+    "dark-sector verdict preference",
+    "diagnostic probe parameters",
+    "zero-control definitions promoted as physical response"
+  ],
+  "metadata_required_fields": [
+    "selected_route",
+    "l_column",
+    "value_column",
+    "formula_role",
+    "endpoint_blind_statement",
+    "parameter_policy",
+    "source_chain",
+    "normalization_statement",
+    "known_limit_statement",
+    "derivation_script_or_formula",
+    "claim_boundary"
+  ],
+  "next_required_action": "produce the required upstream table and metadata from route_A or route_B, then run make tau-grid-physical-candidate-precheck",
+  "physical_tau_score_run": false,
+  "purpose": "Define the exact upstream deliverable needed to replace the current control/probe with a Tau-derived endpoint-blind CMB lensing Tau-grid candidate.",
+  "report_id": "cmb_tau_lensing_physical_candidate_upstream_request_v01",
+  "required_output_files": {
+    "metadata": "payload_staging/tau_lensing_upstream_l_response_metadata_v01.json",
+    "table": "payload_staging/tau_lensing_upstream_l_response_v01.csv"
+  },
+  "score_run": false,
+  "table_schema": {
+    "l_column": "L",
+    "l_values": "exact integers 10..3009",
+    "rows": 3000,
+    "value_column": "tau_response_value",
+    "value_requirement": "finite numeric delta_PP_tau(L) or tau_PP(L) response values"
+  }
+}

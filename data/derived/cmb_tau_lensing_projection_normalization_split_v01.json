@@ -1,0 +1,51 @@
+{
+  "claim_boundary": "projection_normalization_split_only_no_physical_projection_derivation_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "effect_on_parent_projection_packet": {
+    "N_projection_row_status": "adapter replay can be marked convention-locked for Route B diagnostics; physical projection normalization is an explicit non-score failure until the operator route is resumed",
+    "may_populate_numeric_N_projection_for_physical_score": false,
+    "may_reference_adapter_replay_N_for_protocol_audit": true
+  },
+  "inputs": {
+    "equation_packet": "docs/cmb_tau_lensing_grid_equation_packet_v01.md",
+    "projection_replay": "payloads/tau_lensing_pp_grid_projection_replay_v01.json"
+  },
+  "physical_projection_obligation": {
+    "N_projection_physical": null,
+    "locked": [
+      "domain contract: Phi_lens_tau(a,k) = T_tau_CMB(k,a)[Phi_tau_eff], transfer-defined over a,k, no numeric field supplied",
+      "codomain convention: 3000-row L-space PP-style target, tau_PP(L) or delta_PP_tau(L), L=10..3009",
+      "endpoint firewall: pass for current skeleton only; rerun after operator/normalization/replay values"
+    ],
+    "meaning": "Tau physics map from Phi_lens_tau(a,k) to tau_PP(L) or delta_PP_tau(L)",
+    "missing": [
+      "lensing kernel or transfer support",
+      "Fourier and L-space convention",
+      "linearity/nonlinearity rule",
+      "dimension and sign convention",
+      "endpoint-blind replay from parent source to 3000-point PP grid"
+    ],
+    "operator": "Projection_PP[Phi_lens_tau](L)",
+    "partially_structured": [
+      "operator-rule accepted forms are declared and the current packet records an explicit non-score operator failure",
+      "physical source-to-grid replay requirements are declared but not materializable on the failure branch",
+      "N_projection_physical policy is declared; no numeric normalization before an accepted operator rule replaces the failure"
+    ],
+    "status": "EXPLICIT_NON_SCORE_FAILURE_NO_PHYSICAL_PROJECTION_OPERATOR_SUPPLIED"
+  },
+  "physical_tau_score_run": false,
+  "report_id": "cmb_tau_lensing_projection_normalization_split_v01",
+  "route_b_adapter_projection": {
+    "N_projection_adapter_replay": 1.0,
+    "claim": "adapter replay normalization only; not a physical Phi-to-PP projection",
+    "locked": true,
+    "meaning": "validation/replay map from an already materialized L-space Tau grid to ACT bandpower comparison space",
+    "operator": "B_ACT @ grid",
+    "projected_shape": [
+      18
+    ],
+    "route_id": "delta_PP_tau"
+  },
+  "score_run": false,
+  "split_status": "ROUTE_B_ADAPTER_REPLAY_LOCKED_PHYSICAL_PROJECTION_EXPLICIT_NON_SCORE_FAILURE"
+}

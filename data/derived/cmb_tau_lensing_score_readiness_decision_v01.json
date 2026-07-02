@@ -1,0 +1,17 @@
+{
+  "act_environment_ready": true,
+  "blocking_layer": "none",
+  "claim_boundary": "score_readiness_decision_only_no_score_run_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "next_required_action": "run_make_score_attempt_guard_then_make_score_report_if_allowed",
+  "pipeline_ready": true,
+  "preflight_ready": true,
+  "projection_replay_written": true,
+  "readiness_decision": "READY_TO_SCORE",
+  "report_id": "tau_lensing_score_readiness_decision_v01",
+  "route_evidence_firewall_passed": true,
+  "route_evidence_firewall_selected_route": "delta_PP_tau_against_named_fiducial_PP",
+  "score_run": false,
+  "selected_route_count": 1,
+  "source_pipeline_report_id": "tau_lensing_scoring_pipeline_ready_dry_run_v01"
+}

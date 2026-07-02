@@ -1,0 +1,14 @@
+{
+  "template_status": "TEMPLATE_NOT_PAYLOAD",
+  "fiducial_reference_file": "payloads/tau_lensing_response_fiducial_pp_reference_v01.json",
+  "fiducial_reference_sha256": "",
+  "generated_utc": "",
+  "files": [
+    {
+      "path": "",
+      "byte_size": null,
+      "sha256": ""
+    }
+  ],
+  "notes": "Replace with hashes for submitted payload files. This template is not accepted as scoring input."
+}

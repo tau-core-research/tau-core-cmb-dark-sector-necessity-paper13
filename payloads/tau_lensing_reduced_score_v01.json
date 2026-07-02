@@ -1,0 +1,14 @@
+{
+  "chi2_per_naive_dof": 4.756189991565266e+16,
+  "chi2_tau": 8.561141984817478e+17,
+  "claim_boundary": "reduced_tau_lensing_score_only_no_likelihood_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "grid_sha256": "58e1d3616b4911165fc2b6de7511d43218f87267d427340e824539743f2e4214",
+  "likelihood_run": false,
+  "naive_dof": 18,
+  "projected_shape": [
+    18
+  ],
+  "report_id": "tau_lensing_reduced_score_v01",
+  "route_id": "delta_PP_tau"
+}

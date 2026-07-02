@@ -1,0 +1,11 @@
+{
+  "certificate_passed": false,
+  "claim_boundary": "tau_cmb_certificate_semantic_evidence_positive_proof_trace_supply_v01_draft_positive_traces_supplied_not_accepted_no_evidence_acceptance_no_certificate_pass_no_domain_acceptance_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "likelihood_allowed": false,
+  "proof_claim_allowed": false,
+  "score_entry_allowed": false,
+  "sha256": "06ab3f88ad9374ff437133509ac3af94514cde6b10a56a57cc44709ecf001b70",
+  "target": "semantic_evidence_positive_traces/endpoint_firewall_replay/provenance_lock_pass_positive_trace_request_v01.json",
+  "trace_accepted": false
+}

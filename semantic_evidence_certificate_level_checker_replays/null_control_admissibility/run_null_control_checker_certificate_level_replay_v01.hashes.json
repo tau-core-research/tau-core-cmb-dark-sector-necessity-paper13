@@ -1,0 +1,10 @@
+{
+  "certificate_pass_candidate": true,
+  "certificate_passed_after_supply": false,
+  "claim_boundary": "tau_cmb_certificate_semantic_evidence_certificate_level_checker_replay_supply_v01_certificate_level_checker_replay_candidate_supplied_semantic_certificate_only_no_domain_acceptance_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "likelihood_allowed": false,
+  "score_entry_allowed": false,
+  "sha256": "39264b9181ef90e9d2d27a723ee419e70deede10347c143d2d061a90e44f20f9",
+  "target": "semantic_evidence_certificate_level_checker_replays/null_control_admissibility/run_null_control_checker_certificate_level_replay_v01.json"
+}

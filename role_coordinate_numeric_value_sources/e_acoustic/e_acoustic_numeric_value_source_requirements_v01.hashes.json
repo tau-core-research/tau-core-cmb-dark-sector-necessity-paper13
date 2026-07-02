@@ -1,0 +1,11 @@
+{
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_source_supply_v01_source_requirement_worklist_supplied_no_numeric_values_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "likelihood_allowed": false,
+  "numeric_value_source_supplied": false,
+  "numeric_values_materialized": false,
+  "score_entry_allowed": false,
+  "sha256": "dccf01cb85aabd8554442725be3306f6b92f5407595d679e6a785b50823fd795",
+  "target": "role_coordinate_numeric_value_sources/e_acoustic/e_acoustic_numeric_value_source_requirements_v01.json"
+}

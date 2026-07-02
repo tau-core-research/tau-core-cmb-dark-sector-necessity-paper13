@@ -1,0 +1,12 @@
+{
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_import_packet_v01_import_template_supplied_values_absent_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "files": {
+    "role_coordinate_numeric_value_import_packets/tau_cmb_readout_role_coordinate_numeric_value_import_packet_v01.json": "c918e6dd4dbeab43998e168e806aba0968ba36f1639a8733f5920178d9b7f361",
+    "role_coordinate_numeric_value_import_packets/tau_cmb_readout_role_coordinate_numeric_value_import_template_v01.csv": "5565cea04080dc5d1a35d0c975cf416b073840d8daa61274372cf129633ca123"
+  },
+  "hash_scope": "numeric_value_import_packet_template_bundle",
+  "likelihood_allowed": false,
+  "numeric_values_supplied": false,
+  "score_entry_allowed": false
+}

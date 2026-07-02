@@ -1,0 +1,110 @@
+{
+  "claim_boundary": "route_evidence_pack_only_templates_no_payload_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "forbidden_shortcuts": [
+    "do_not_copy_TEMPLATE_NOT_PAYLOAD_files_to_payloads_as_real_inputs",
+    "do_not_select_route_from_ACT_or_Planck_residuals",
+    "do_not_tune_grid_to_reduced_chi2_or_dark_sector_preference"
+  ],
+  "next_required_action": "fill_exactly_one_staging_route_evidence_set_then_run_guarded_staging_promotion",
+  "report_id": "tau_lensing_route_evidence_pack_v01",
+  "route_options": {
+    "delta_PP_tau_against_named_fiducial_PP": {
+      "currently_missing_files": [
+        "payloads/tau_lensing_response_delta_pp_v01.csv",
+        "payloads/tau_lensing_response_fiducial_pp_reference_v01.json",
+        "payloads/tau_lensing_response_grid_route_declaration_v01.md",
+        "payloads/tau_lensing_response_grid_provenance_v01.json"
+      ],
+      "post_submission_commands": [
+        "make payload-checklist",
+        "make staging-promote-delta-dry-run",
+        "make staging-promote-delta",
+        "make prepare-delta-hash",
+        "make intake",
+        "make evidence-check",
+        "make route-submission-audit",
+        "make materialize-replay",
+        "make preflight",
+        "make score-attempt-guard",
+        "make score-report",
+        "make score-output-audit"
+      ],
+      "promote_to_payloads_only_after_real_evidence_is_filled": true,
+      "safe_templates": [
+        "payload_templates/tau_lensing_response_delta_pp_v01.csv",
+        "payload_templates/tau_lensing_response_payload_hashes_v01.json",
+        "payloads/tau_lensing_response_grid_route_declaration_TEMPLATE_v01.md",
+        "payload_templates/tau_lensing_response_payload_provenance_v01.json",
+        "payload_templates/tau_lensing_response_firewall_v01.md",
+        "payload_templates/tau_lensing_response_claim_boundary_v01.md"
+      ],
+      "submission_files": [
+        "payloads/tau_lensing_response_delta_pp_v01.csv",
+        "payloads/tau_lensing_response_fiducial_pp_reference_v01.json",
+        "payloads/tau_lensing_response_grid_route_declaration_v01.md",
+        "payloads/tau_lensing_response_grid_provenance_v01.json"
+      ]
+    },
+    "direct_tau_PP_grid": {
+      "currently_missing_files": [
+        "payloads/tau_lensing_response_pp_grid_v01.csv",
+        "payloads/tau_lensing_response_grid_route_declaration_v01.md",
+        "payloads/tau_lensing_response_grid_provenance_v01.json"
+      ],
+      "post_submission_commands": [
+        "make payload-checklist",
+        "make staging-promote-direct-dry-run",
+        "make staging-promote-direct",
+        "make prepare-direct-hash",
+        "make intake",
+        "make evidence-check",
+        "make route-submission-audit",
+        "make materialize-replay",
+        "make preflight",
+        "make score-attempt-guard",
+        "make score-report",
+        "make score-output-audit"
+      ],
+      "promote_to_payloads_only_after_real_evidence_is_filled": true,
+      "safe_templates": [
+        "payload_templates/tau_lensing_response_pp_grid_v01.csv",
+        "payloads/tau_lensing_response_grid_route_declaration_TEMPLATE_v01.md",
+        "payload_templates/tau_lensing_response_payload_provenance_v01.json",
+        "payload_templates/tau_lensing_response_firewall_v01.md",
+        "payload_templates/tau_lensing_response_claim_boundary_v01.md"
+      ],
+      "submission_files": [
+        "payloads/tau_lensing_response_pp_grid_v01.csv",
+        "payloads/tau_lensing_response_grid_route_declaration_v01.md",
+        "payloads/tau_lensing_response_grid_provenance_v01.json"
+      ]
+    },
+    "explicit_failure_no_endpoint_blind_grid": {
+      "currently_missing_files": [
+        "payloads/tau_lensing_response_grid_failure_statement_v01.md"
+      ],
+      "post_submission_commands": [
+        "make payload-checklist",
+        "make staging-promote-failure-dry-run",
+        "make staging-promote-failure",
+        "make intake",
+        "make evidence-check",
+        "make route-submission-audit",
+        "make score-report",
+        "make score-output-audit"
+      ],
+      "promote_to_payloads_only_after_real_evidence_is_filled": true,
+      "safe_templates": [
+        "payloads/tau_lensing_response_grid_failure_statement_TEMPLATE_v01.md"
+      ],
+      "submission_files": [
+        "payloads/tau_lensing_response_grid_failure_statement_v01.md"
+      ]
+    }
+  },
+  "score_run": false,
+  "selected_route_count": 1,
+  "source_todo_report_id": "tau_lensing_scoring_todo_v01",
+  "todo_status": "READY_TO_RUN_SCORE_OR_SCORE_ALREADY_RUN"
+}

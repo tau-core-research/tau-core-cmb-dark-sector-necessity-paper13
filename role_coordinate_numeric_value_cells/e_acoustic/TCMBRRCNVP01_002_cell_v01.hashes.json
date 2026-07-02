@@ -1,0 +1,10 @@
+{
+  "cell_value_accepted": false,
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_cell_supply_v01_cell_templates_supplied_values_absent_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "likelihood_allowed": false,
+  "numeric_value_supplied": false,
+  "score_entry_allowed": false,
+  "sha256": "45af30fbc1dd231e32e7661389dd52e3cea9da817515adfde5e89bd3253500f7",
+  "target": "role_coordinate_numeric_value_cells/e_acoustic/TCMBRRCNVP01_002_cell_v01.json"
+}

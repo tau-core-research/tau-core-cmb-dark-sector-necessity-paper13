@@ -1,0 +1,83 @@
+{
+  "artifact_status": "PHYSICAL_R_CMB_MATERIALIZATION_CANDIDATE_SUPPLIED_NOT_PHYSICAL",
+  "blocking_reason": "role-coordinate audits are present but remain blocked/not materialized",
+  "certificate_area": "carrier_well_formedness",
+  "checker_name": "run_carrier_ok_checker",
+  "claim_boundary": "tau_cmb_certificate_semantic_evidence_physical_R_CMB_materialization_supply_v01_materialization_candidate_supplied_role_coordinates_blocked_not_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "codomain_checker_passed": false,
+  "dark_sector_verdict_allowed": false,
+  "domain_object_name": "carrier_well_formedness_domain_object_v01",
+  "endpoint_blind_firewall": {
+    "act_planck_likelihood_used": false,
+    "cmb_endpoint_residuals_used": false,
+    "dark_sector_verdict_used": false,
+    "post_endpoint_tuning_used": false,
+    "score_output_used": false
+  },
+  "likelihood_allowed": false,
+  "next_required_step": "accept and materialize role-coordinate numeric values before physical R_CMB can pass",
+  "numeric_values_materialized": false,
+  "physical_R_CMB_materialized": false,
+  "role_coordinate_audit_records": [
+    {
+      "blocked_rows": 3,
+      "concrete_R_CMB_allowed": false,
+      "exists": true,
+      "failed_rows": 0,
+      "path": "data/derived/tau_cmb_readout_role_coordinate_acoustic_audit_v01.json",
+      "status": "ACOUSTIC_ROLE_COORDINATE_AUDITED_BLOCKED_NOT_MATERIALIZED"
+    },
+    {
+      "blocked_rows": 3,
+      "concrete_R_CMB_allowed": false,
+      "exists": true,
+      "failed_rows": 0,
+      "path": "data/derived/tau_cmb_readout_role_coordinate_density_audit_v01.json",
+      "status": "DENSITY_ROLE_COORDINATE_AUDITED_BLOCKED_NOT_MATERIALIZED"
+    },
+    {
+      "blocked_rows": 4,
+      "concrete_R_CMB_allowed": false,
+      "exists": true,
+      "failed_rows": 0,
+      "path": "data/derived/tau_cmb_readout_role_coordinate_lensing_audit_v01.json",
+      "status": "LENSING_ROLE_COORDINATE_AUDITED_BLOCKED_NOT_MATERIALIZED"
+    },
+    {
+      "blocked_rows": 4,
+      "concrete_R_CMB_allowed": false,
+      "exists": true,
+      "failed_rows": 0,
+      "path": "data/derived/tau_cmb_readout_role_coordinate_growth_audit_v01.json",
+      "status": "GROWTH_ROLE_COORDINATE_AUDITED_BLOCKED_NOT_MATERIALIZED"
+    },
+    {
+      "blocked_rows": 3,
+      "concrete_R_CMB_allowed": false,
+      "exists": true,
+      "failed_rows": 0,
+      "path": "data/derived/tau_cmb_readout_role_coordinate_radiation_audit_v01.json",
+      "status": "RADIATION_ROLE_COORDINATE_AUDITED_BLOCKED_NOT_MATERIALIZED"
+    },
+    {
+      "blocked_rows": 3,
+      "concrete_R_CMB_allowed": false,
+      "exists": true,
+      "failed_rows": 0,
+      "path": "data/derived/tau_cmb_readout_role_coordinate_null_audit_v01.json",
+      "status": "NULL_ROLE_COORDINATE_AUDITED_BLOCKED_NOT_ACCEPTED"
+    }
+  ],
+  "role_coordinate_audits_present": true,
+  "role_coordinates_accepted": false,
+  "role_vector_slots": [
+    "e_acoustic",
+    "e_density",
+    "e_lensing",
+    "e_growth",
+    "e_radiation",
+    "e_null"
+  ],
+  "score_entry_allowed": false,
+  "structural_R_CMB_candidate_available": true
+}

@@ -1,0 +1,26 @@
+{
+  "claim_boundary": "tau_cmb_parent_source_freeze_packet_v01_freeze_packet_only_no_source_acceptance_no_phi_derivation_no_transfer_kernel_no_score_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "derivation_spine": "docs/tau_cmb_cosmology_derivation_spine_v01.md",
+  "freeze_rows": 7,
+  "frozen_value_supplied_rows": 0,
+  "next_minimal_unblock": "populate_endpoint_blind_CMB_parent_source_freeze_packet_with_hashable_replay",
+  "packet_acceptance_allowed": false,
+  "parent_input_manifest": "docs/tau_cmb_phi_tau_parent_input_candidate_manifest_v01.md",
+  "report_id": "tau_cmb_parent_source_freeze_packet_summary_v01",
+  "required_not_supplied_rows": [
+    "TCMBPSF01_002",
+    "TCMBPSF01_003",
+    "TCMBPSF01_004",
+    "TCMBPSF01_005",
+    "TCMBPSF01_006",
+    "TCMBPSF01_007"
+  ],
+  "score_entry_allowed": false,
+  "source_acceptance_allowed": false,
+  "source_grounding_gate": "docs/tau_cmb_source_grounding_gate_v01.md",
+  "status": "PARENT_SOURCE_FREEZE_PACKET_DECLARED_UNPOPULATED",
+  "submission_candidate": "payloads/tau_cmb_parent_source_freeze_packet_submission_candidate_v01.csv",
+  "submission_template": "payload_templates/tau_cmb_parent_source_freeze_packet_submission_TEMPLATE_v01.csv",
+  "table": "data/derived/tau_cmb_parent_source_freeze_packet_v01.csv"
+}

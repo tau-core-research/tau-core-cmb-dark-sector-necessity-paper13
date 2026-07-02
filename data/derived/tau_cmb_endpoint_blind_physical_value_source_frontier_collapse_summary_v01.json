@@ -1,0 +1,21 @@
+{
+  "claim_boundary": "tau_cmb_endpoint_blind_physical_value_source_frontier_collapse_v01_triage_only_no_physical_source_acceptance_no_score_no_likelihood_no_verdict",
+  "collapse_bucket_counts": {
+    "bridge_candidate_available_not_accepted": 1,
+    "dependency_blocked": 14,
+    "explicit_fail_candidate_available_not_accepted": 1
+  },
+  "dark_sector_verdict_allowed": false,
+  "frontier_rows": 16,
+  "input_chain_clean": true,
+  "input_packet_acceptance_summary": "data/derived/tau_cmb_endpoint_blind_physical_value_source_packet_acceptance_audit_summary_v01.json",
+  "input_packet_table": "data/derived/tau_cmb_endpoint_blind_physical_value_source_packet_v01.csv",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_endpoint_blind_physical_value_source_bridge_audit_or_explicit_fail_supply_v01",
+  "physical_CMB_score_allowed": false,
+  "physical_value_source_accepted_rows": 0,
+  "physical_value_source_supplied_rows": 0,
+  "report_id": "tau_cmb_endpoint_blind_physical_value_source_frontier_collapse_summary_v01",
+  "status": "CMB_ENDPOINT_BLIND_PHYSICAL_VALUE_SOURCE_FRONTIER_COLLAPSED_TO_TRIAGE_NO_SOURCES_ACCEPTED",
+  "table": "data/derived/tau_cmb_endpoint_blind_physical_value_source_frontier_collapse_v01.csv"
+}

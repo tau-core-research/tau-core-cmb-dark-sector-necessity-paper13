@@ -74,14 +74,4056 @@ then Tau Core must be formulated with a base-field response layer before making
 cosmological claims. Such a layer should not be overpromoted to a detected
 physical field; it is first a required effective role in the theory.
 
+\section{Effective Source Equation Target}
+
+The next artifact is an equation-target scaffold rather than a solved equation.
+It declares the fields that a Tau Core CMB response would have to provide:
+\[
+B_{\tau,\mathrm{base}}^{\mathrm{CMB}},\quad
+\delta M_{\mathrm{CMB}},\quad
+\mathrm{Response}_{\tau}^{\mathrm{CMB}},\quad
+\rho_{\tau,\mathrm{eff}}(a,k),\quad
+\Phi_{\tau,\mathrm{eff}}(a,k),\quad
+T_{\tau}^{\mathrm{CMB}}(k,a).
+\]
+The intended dependency is
+\[
+B_{\tau,\mathrm{base}}^{\mathrm{CMB}},\delta M_{\mathrm{CMB}},OI,\ell,h
+\longrightarrow
+\mathrm{Response}_{\tau}^{\mathrm{CMB}}
+\longrightarrow
+\rho_{\tau,\mathrm{eff}},\Phi_{\tau,\mathrm{eff}},T_{\tau}^{\mathrm{CMB}}.
+\]
+This is not yet a Boltzmann-system source term, a likelihood, or a fitted
+parameter model. It is a target that prevents the standard CDM source role from
+being hidden inside an unconstrained residual. A future version must either
+match the acoustic, lensing, damping, and growth roles of the standard source,
+or state an explicit failure mode.
+
+\section{Tau-Side Cosmology Derivation Spine}
+
+The requirement map is not sufficient by itself. To test the CMB route, Tau
+Core must also supply a Tau-side cosmological derivation chain. The current
+minimal spine is recorded in
+\[
+\texttt{tau\_cmb\_cosmology\_derivation\_spine\_v01}.
+\]
+It is a derivation scaffold, not a solved cosmology. Its purpose is to make the
+missing mathematical objects explicit:
+\[
+\hbox{Tau background/readout}
+\longrightarrow
+\rho_{\tau,\mathrm{eff}}(a,k)
+\longrightarrow
+\Phi_{\tau,\mathrm{eff}}(a,k)
+\longrightarrow
+\Phi_{\mathrm{lens},\tau}(a,k)
+\longrightarrow
+\tau PP(L).
+\]
+The minimal formula spine is
+\[
+H_{\tau}:=\frac{d\ln a_{\tau}}{d t_{\mathrm{readout}}},
+\]
+\[
+\rho_{\tau,\mathrm{eff}}(a,k):=A_{\tau}(a,k)\rho_{\mathrm{ref}}(a),
+\]
+\[
+k^2\Phi_{\tau,\mathrm{eff}}(a,k)
+=
+4\pi G a^2\rho_{\tau,\mathrm{eff}}(a,k)\Delta_{\tau}(a,k),
+\]
+\[
+\Phi_{\mathrm{lens},\tau}(a,k)
+=
+T_{\tau}^{\mathrm{CMB}}(k,a)[\Phi_{\tau,\mathrm{eff}}],
+\]
+and
+\[
+\tau PP(L)
+=
+N_{\mathrm{projection}}^{\mathrm{physical}}
+\int K_{\tau PP}(L;a,k)\Phi_{\mathrm{lens},\tau}(a,k)\,d\mu(a,k).
+\]
+The first entries are definitions or role-matching comparison slots. They do
+not yet constitute a Tau field equation, a perturbation solver, or a
+Boltzmann-compatible source insertion. The score-critical blockers remain the
+endpoint-blind transfer operator $T_{\tau}^{\mathrm{CMB}}$, the projection
+kernel and measure $K_{\tau PP}d\mu$, the physical projection normalization,
+the zero-source proof, and the post-population endpoint firewall.
+
+\section{Tau CMB Source-Grounding Gate}
+
+The derivation spine also needs a source-grounding gate. Paper 10 already
+introduced the methodological discipline that source-side labels and amplitudes
+must be frozen before residuals, role scores, or fit-improvement information
+are inspected. Tau Core theory also requires that a projected source be tied to
+a morphology/readout structure rather than treated as an arbitrary endpoint
+residual.
+
+Paper 13 records this bridge in
+\[
+\texttt{tau\_cmb\_source\_grounding\_gate\_v01}.
+\]
+The gate binds
+\[
+\hbox{source-freeze}
+\rightarrow
+\hbox{morphology activation}
+\rightarrow
+\hbox{quotient/null survival}
+\rightarrow
+\hbox{closure stability}
+\rightarrow
+\hbox{CMB readout survival}
+\]
+to the CMB chain
+\[
+\rho_{\tau,\mathrm{eff}}
+\rightarrow
+\Phi_{\tau,\mathrm{eff}}
+\rightarrow
+T_{\tau}^{\mathrm{CMB}}
+\rightarrow
+K_{\tau PP}d\mu
+\rightarrow
+\tau PP(L).
+\]
+In v01 the gate is declared but blocked:
+\[
+\texttt{SOURCE\_GROUNDING\_GATE\_DECLARED\_BLOCKED}.
+\]
+It accepts no CMB source, supplies no transfer kernel, supplies no projection
+kernel, and permits no score or dark-sector verdict. Its function is to prevent
+the CMB route from silently importing a residual-fitted source into
+\(\rho_{\tau,\mathrm{eff}}\) or \(\Phi_{\tau,\mathrm{eff}}\).
+
+\section{Parent-Source Freeze Packet}
+
+The first concrete downstream object of the source-grounding gate is
+\[
+\texttt{tau\_cmb\_parent\_source\_freeze\_packet\_v01}.
+\]
+This packet declares the fields that must be fixed before a Tau-side CMB source
+can enter the derivation spine:
+\[
+B_{\tau,\mathrm{base}}^{\mathrm{CMB}},\quad
+\mathrm{seed}_{\tau}^{\mathrm{CMB}},\quad
+R_{\tau}^{\mathrm{CMB}}\hbox{ inputs},\quad
+\hbox{gauge/normalization metadata},\quad
+\hbox{firewall certificate},\quad
+\hbox{replay rule}.
+\]
+It explicitly excludes ACT or Planck residuals, CMB role score outputs,
+fit-improvement flags, post-hoc source choices, and operator tuning from
+endpoint target shape. In v01 the packet is declared but unpopulated:
+\[
+\texttt{PARENT\_SOURCE\_FREEZE\_PACKET\_DECLARED\_UNPOPULATED}.
+\]
+Thus it does not accept a source, derive \(\Phi_{\tau,\mathrm{eff}}\), or open
+score entry. Its role is narrower: make the next source-grounding deliverable
+finite and replayable.
+
+The corresponding submission template is
+\[
+\texttt{tau\_cmb\_parent\_source\_freeze\_packet\_submission\_TEMPLATE\_v01.csv}.
+\]
+It requires a packet identity, base-field descriptor, morphological seed,
+response-operator input set, gauge/normalization metadata, endpoint-firewall
+certificate, replay rule, provenance, artifact hashes, and endpoint-exclusion
+statements. The template is unpopulated and therefore accepts no source.
+
+The current materialized submission candidate is a negative candidate: it
+contains stable row hashes but no populated Tau-side source values. It is
+therefore rejected for source acceptance and only records the present blocker
+state reproducibly. The candidate audit records the decision
+\[
+\texttt{DO\_NOT\_ACCEPT\_NO\_POPULATED\_SOURCE\_VALUES}.
+\]
+The corresponding unavailability record states that the current blocker is
+source availability, not a physical CMB failure claim:
+\[
+\texttt{PARENT\_SOURCE\_UNAVAILABILITY\_RECORDED\_CLEAN\_NEGATIVE\_AUDIT}.
+\]
+The current component-unblock plan ranks the first source-side attempt as an
+endpoint-blind morphological-seed descriptor, because it is the shortest bridge
+from Tau Core morphology/readout theory to a possible \(A_{\tau}(a,k)\)
+activation object without using CMB endpoint information.
+The first materialized descriptor candidate is recorded as
+\[
+\texttt{tau\_cmb\_morphological\_seed\_descriptor\_candidate\_v01}.
+\]
+It declares a parent-side CMB morphology/readout activation candidate and a
+firewall list, but it is not seed-accepted and cannot derive \(A_{\tau}\),
+\(\rho_{\tau,\mathrm{eff}}\), or \(\Phi_{\tau,\mathrm{eff}}\).
+The candidate audit may route it to activation/quotient auditing, but that route
+is still explicitly not seed acceptance.
+The activation/quotient audit records that the descriptor is clean enough for
+deeper audits, while the physics-bearing requirements remain blocked:
+activation sufficiency, quotient/null survival, closure stability, readout
+survival, and seed-specific firewall/replay evidence are not yet supplied.
+The next activation-rule candidate only declares a conditional skeleton
+\[
+\mathrm{Act}_{\tau}^{\mathrm{CMB}}[\mathrm{seed}_{\tau}^{\mathrm{CMB}}](a,k)
+\rightarrow
+A_{\tau,\mathrm{candidate}}(a,k),
+\]
+with no accepted activation map, no value for \(A_{\tau}\), and no source
+acceptance.
+The activation-rule candidate audit can route the skeleton to a quotient/null
+survival test, but it still permits no activation acceptance or \(A_{\tau}\)
+value.
+The quotient/null survival test declares the needed readout-null schema
+\[
+\mathrm{Null}_{R}(\mathrm{seed}_{\tau}^{\mathrm{CMB}})
+\quad\Longleftrightarrow\quad
+R_{\mathrm{CMB}}(\mathrm{seed}_{\tau}^{\mathrm{CMB}})
+\sim
+N_{R}^{\mathrm{CMB}},
+\]
+but the concrete \(R_{\mathrm{CMB}}\), null model, equivalence relation,
+quotient map, survival condition, and zero-seed control are not yet supplied.
+The seed readout-interface candidate then fixes the minimum schema required for
+the next step:
+\[
+\mathrm{seed}_{\tau}^{\mathrm{CMB}}\in \mathrm{Dom}(R_{\mathrm{CMB}}),
+\qquad
+R_{\mathrm{CMB}}(\mathrm{seed}_{\tau}^{\mathrm{CMB}})
+\rightarrow
+\mathcal{C}_{\mathrm{CMB,role}},
+\]
+with the later comparison
+\[
+R_{\mathrm{CMB}}(\mathrm{seed}_{\tau}^{\mathrm{CMB}})
+\sim
+N_{R}^{\mathrm{CMB}}.
+\]
+This is only an interface scaffold: it supplies no domain certificate, no
+null model, no dimensional replay, no zero-seed control proof, no
+\(A_{\tau}\) value, and no scoring entry.
+The associated domain-certificate requirements make the first missing
+acceptance condition explicit:
+\[
+\mathrm{seed}_{\tau}^{\mathrm{CMB}}\in \mathrm{Dom}(R_{\mathrm{CMB}})
+\]
+is not certified until an endpoint-blind seed payload, support convention,
+domain rule, provenance/hash replay, endpoint firewall, and zero-seed control
+are supplied. Thus the named seed descriptor remains route-useful but not
+score-eligible.
+The subsequent seed-payload materialization packet narrows this to a concrete
+file contract. It declares an unpopulated endpoint-blind
+\texttt{seed\_tau\_payload.csv} template, together with required provenance,
+replay, hash, firewall, and zero-control evidence. The packet is deliberately
+not a payload acceptance: it contains no seed values and therefore cannot
+certify the readout domain or feed the score.
+The first concrete candidate payload then fills this template from the
+Tau-side morphological-seed descriptor only, producing a payload, provenance
+record, replay note, hash manifest, and firewall attestation. This makes the
+seed auditable as a candidate object, but still does not accept the payload,
+certify the readout domain, evaluate quotient survival, assign \(A_{\tau}\), or
+open scoring.
+The candidate audit verifies candidate-level presence, hash binding,
+provenance closure, replay declaration, and endpoint-firewall attestation, but
+keeps acceptance closed because the support coordinate system, Tau-side
+normalization replay, and null-limit/zero-control role remain undefined.
+These three blockers are ordered rather than independent: the support-domain
+rule must be fixed first, because both normalization replay and null-seed
+control have to be stated over the same parent-domain convention.
+The first support-domain rule candidate introduces the symbolic convention
+\[
+\tau_{\mathrm{CMB,parent}}
+  := \{\mathrm{morphology\_readout\_sector}=\mathrm{CMB}\},
+\qquad
+\xi_{\mathrm{seed}}
+  :=(\mathrm{morphology\_class},\mathrm{readout\_sector},\mathrm{scale\_label}),
+\]
+and allows only the conditional candidate statement that
+\(\mathrm{seed}_{\tau}^{\mathrm{CMB}}\) may be checked for parent-domain
+membership when \(\xi_{\mathrm{seed}}\) is well-formed and endpoint-blind.
+This is not a support certification or a readout-domain certificate.
+The support-rule audit can check the symbolic rule shape, candidate tuple
+fields, and endpoint-blind evidence, but it must still keep certification
+closed until a Tau-side normalization replay fixes the scale label and the
+zero-control object is defined.
+The normalization replay candidate then fixes only the scale-label convention:
+\[
+N_{\mathrm{seed}}(\xi_{\mathrm{seed}})
+:
+\mathrm{CMB\_readout\_sector\_scale\_label\_candidate\_not\_normalized}
+\mapsto
+\mathrm{CMB\_readout\_sector\_scale\_label\_canonical\_v01},
+\]
+while keeping the morphology class and readout sector unchanged. This replay is
+endpoint-blind and deterministic as a candidate, but it is not a normalization
+acceptance, support certification, or readout-domain certificate.
+The normalization replay audit can therefore pass the mapping shape, tuple
+invariance, endpoint boundary, and support-rule dependency at candidate level,
+while still blocking acceptance until zero-control is defined and a separate
+normalization-acceptance gate is opened.
+The zero-control candidate closes this missing control side by declaring
+\[
+\mathrm{null\_seed}_{\tau}^{\mathrm{CMB}}
+ :=(\mathrm{null\_morphology\_control},
+    \mathrm{CMB\_readout\_sector},
+    \mathrm{CMB\_readout\_sector\_scale\_label\_canonical\_v01}),
+\]
+with the control-only conditions
+\[
+\mathrm{Act}_{\tau}^{\mathrm{CMB}}[\mathrm{null\_seed}](a,k):=0
+\quad\hbox{or inactive},
+\qquad
+R_{\mathrm{CMB}}(\mathrm{null\_seed}) := \mathrm{null\_readout}.
+\]
+This zero-control object is not a physical Tau response and cannot be promoted
+to a dark-sector or scoring claim.
+The zero-control audit can pass the null-seed tuple, same-normalization
+dependency, inactive activation, null-readout role, and forbidden-promotion
+boundary at candidate level. It still blocks acceptance because concrete
+\(R_{\mathrm{CMB}}\), a quotient equivalence relation, and a separate
+pre-acceptance gate are not yet supplied.
+The seed-chain pre-acceptance gate then combines the support-domain,
+normalization-replay, and zero-control audits. Since all three inputs have zero
+failed rows, the candidate chain is audit-clean, but the gate still blocks
+domain certification, concrete readout evaluation, quotient survival, scoring,
+and any dark-sector verdict until a concrete \(R_{\mathrm{CMB}}\) and quotient
+equivalence relation are provided.
+The readout/quotient relation candidate names this missing object by declaring
+a seed-level readout-family symbol \(R_{\mathrm{CMB}}^{\mathrm{seed}}\), the
+null anchor
+\[
+R_{\mathrm{CMB}}^{\mathrm{seed}}
+  (\mathrm{null\_seed}_{\tau}^{\mathrm{CMB}})
+  := \mathrm{null\_readout},
+\]
+and the future survival condition
+\[
+\mathrm{Surv}_{R}(\mathrm{seed}_{\tau}^{\mathrm{CMB}})
+\Longleftrightarrow
+\neg\bigl(
+R_{\mathrm{CMB}}^{\mathrm{seed}}(\mathrm{seed}_{\tau}^{\mathrm{CMB}})
+\sim_{R_{\mathrm{CMB}},\mathrm{seed}}
+\mathrm{null\_readout}
+\bigr).
+\]
+This remains a relation candidate only: the equivalence axioms, role-space
+basis, domain certificate, and non-null survival test are still open.
+The corresponding relation-candidate audit can check the declared readout
+symbol, null anchor, quotient syntax, survival-condition syntax, and promotion
+firewall. It still blocks acceptance on the missing equivalence axiom/control
+audit, concrete readout materialization, and non-null survival test.
+The equivalence-relation audit makes this first blocker explicit: the carrier
+symbol, relation symbol, null anchor, and control-family labels are visible, but
+reflexivity, symmetry, transitivity, and quotient well-definedness are not yet
+proved because no concrete carrier predicate or quotient-safe control rule is
+supplied.
+The resulting proof-obligation artifact narrows the next mathematical work to
+the chain
+\[
+C_{\mathrm{CMB}}^{\mathrm{seed}}
+\rightarrow K_{\mathrm{CMB}}
+\rightarrow
+\{\hbox{reflexivity},\hbox{ symmetry},\hbox{ transitivity}\}
+\rightarrow q_{R},
+\]
+where \(C_{\mathrm{CMB}}^{\mathrm{seed}}\) is the future carrier predicate,
+\(K_{\mathrm{CMB}}\) is the future control predicate, and \(q_R\) is the future
+quotient map. This is an obligation list, not an equivalence proof.
+The first carrier-side unblock declares a role-space basis candidate
+\[
+C_{\mathrm{CMB}}^{\mathrm{seed}}
+  := \mathrm{span/product}\{
+e_{\mathrm{acoustic}}, e_{\mathrm{density}}, e_{\mathrm{lensing}},
+e_{\mathrm{growth}}, e_{\mathrm{radiation}}, e_{\mathrm{null}}\},
+\]
+where the entries are CMB readout-role slots rather than endpoint-fitted
+spectral residuals. This still does not certify the carrier or materialize
+\(R_{\mathrm{CMB}}\); each coordinate requires a later endpoint-blind
+coordinate definition and dimension replay.
+The role-space basis audit can check the expected role slots, basis symbols,
+endpoint-firewall labels, dimension labels, and null anchor. It still blocks
+carrier certification and concrete \(R_{\mathrm{CMB}}\) because the individual
+role coordinates are not materialized.
+The first role-coordinate candidate materializes only the acoustic slot syntax:
+\(e_{\mathrm{acoustic}}\) is split into potential-source presence, acoustic
+phase support, relative peak-height support, baryon-loading coupling,
+scale/horizon convention, and an explicit failure branch. This is still not an
+acoustic score because the pre-recombination source, oscillator response,
+endpoint-blind amplitude, and coupling sign are not supplied.
+The acoustic coordinate audit checks the component list, formal slots,
+dimension roles, dependency trace, and promotion firewall. It keeps the
+coordinate blocked on source materialization, oscillator response, amplitude,
+and coupling, so no acoustic score or carrier certification follows.
+The density role-coordinate candidate similarly makes \(e_{\mathrm{density}}\)
+explicit through the formal ratio guard \(A_{\tau}=\rho_{\tau,\mathrm{eff}}/
+\rho_{\mathrm{cdm,ref}}\), the \(\rho_{\tau,\mathrm{eff}}\) slot,
+endpoint-blind \(A_{\tau}\), the \(\Omega_c h^2\) comparison role, and a density
+stop rule. It remains unmaterialized and does not provide an \(\Omega_c h^2\)
+match.
+The density coordinate audit checks the component list, formal slots,
+dimension roles, dependency trace, block/guard accounting, and promotion
+firewall. It keeps the coordinate blocked on deriving
+\(\rho_{\tau,\mathrm{eff}}\), proving endpoint-blind \(A_{\tau}\), and supplying
+a numerical \(\Omega_c h^2\) comparison, so no density score, match, or carrier
+certification follows.
+The lensing role-coordinate candidate then makes \(e_{\mathrm{lensing}}\)
+explicit through the potential-source slot \(\Phi_{\tau,\mathrm{eff}}\), the
+transfer slot \(T_{\tau,\mathrm{CMB}}\), projection-geometry guard,
+amplitude/shape response slot, cross-readout consistency check, and lensing
+stop rule. It remains unmaterialized and does not provide an ACT/Planck
+lensing match.
+The lensing coordinate audit checks the component list, formal slots,
+dimension roles, dependency trace, block/guard accounting, and promotion
+firewall. It keeps the coordinate blocked on deriving
+\(\Phi_{\tau,\mathrm{eff}}\), specifying \(T_{\tau,\mathrm{CMB}}\), evaluating
+endpoint-blind amplitude/shape response, and proving cross-readout consistency,
+so no lensing score, ACT/Planck match, or carrier certification follows.
+The growth role-coordinate candidate then makes \(e_{\mathrm{growth}}\)
+explicit through the domain-selection slot, codomain-selection slot,
+time/scale convention guard, transfer-operator rule, cross-role consistency
+check, and growth stop rule. It remains unmaterialized and does not provide a
+growth score or structure-growth match.
+The growth coordinate audit checks the component list, formal slots, dimension
+roles, dependency trace, block/guard accounting, and promotion firewall. It
+keeps the coordinate blocked on endpoint-blind domain/codomain selection,
+numeric time/scale convention, a lawful transfer operator, and cross-role
+consistency, so no growth score, structure-growth match, or carrier
+certification follows.
+The radiation role-coordinate candidate then makes \(e_{\mathrm{radiation}}\)
+explicit through the Tau radiation-like contribution
+\(\Delta N_{\mathrm{eff},\tau}\), the external bound convention
+\(\Delta N_{\mathrm{eff},\mathrm{bound}}\), the damping-tail inequality,
+cross-role consistency, and a radiation stop rule. It remains unmaterialized
+and does not provide a numerical \(\Delta N_{\mathrm{eff}}\) bound evaluation.
+The radiation coordinate audit checks the component list, formal slots,
+dimension roles, dependency trace, block/guard accounting, and promotion
+firewall. It keeps the coordinate blocked on deriving
+\(\Delta N_{\mathrm{eff},\tau}\), evaluating the damping-tail inequality under
+a selected external bound, and proving cross-role consistency, so no radiation
+score, bound evaluation, or carrier certification follows.
+The null role-coordinate candidate then makes \(e_{\mathrm{null}}\) explicit as
+a control coordinate rather than a physical source coordinate. It contains the
+null-seed anchor, null-readout anchor, quotient-relation hook, zero-source
+consistency guard, and forbidden-promotion guard. It remains unaccepted and
+does not prove a quotient relation, materialize concrete \(R_{\mathrm{CMB}}\),
+or supply score evidence.
+The null coordinate audit checks the component list, formal slots, control
+roles, dependency trace, block/guard accounting, and promotion firewall. It
+keeps the null coordinate blocked on null-seed domain acceptance, concrete
+null-readout materialization, and quotient-relation proof, while preserving
+the guard that zero-control is not a physical zero-source proof.
+The role-coordinate bundle closure then aggregates the six audited coordinates
+\[
+e_{\mathrm{acoustic}}, e_{\mathrm{density}}, e_{\mathrm{lensing}},
+e_{\mathrm{growth}}, e_{\mathrm{radiation}}, e_{\mathrm{null}}
+\]
+into a single closure status. The bundle is audit-visible, but it is still not
+score-ready: concrete \(R_{\mathrm{CMB}}\), carrier/domain certification,
+quotient survival, endpoint-blind source objects, and cross-role consistency
+remain open.
+The bundle-closure audit verifies that all six role-coordinate audits are
+present and clean, that aggregate accounting has zero failures, and that the
+bundle-level promotion firewall remains closed. It preserves the not-score-ready
+status and routes the next step to a scoring-input gap matrix rather than to
+likelihood evaluation.
+The scoring-input gap matrix ranks the remaining blockers before any score
+attempt: concrete \(R_{\mathrm{CMB}}\) and carrier certification first,
+quotient survival second, endpoint-blind source objects third, cross-role
+consistency fourth, and role-specific numerical guards fifth. In v01 all rows
+remain blocked and no likelihood or dark-sector verdict is opened.
+The concrete \(R_{\mathrm{CMB}}\) carrier-certificate artifact then expands the
+first gap into finite certificate requirements: carrier predicate, domain rule,
+codomain role space, concrete readout map, null-anchor compatibility,
+dimension/gauge replay, and endpoint firewall. It is a requirements artifact
+only; it does not certify the carrier or materialize \(R_{\mathrm{CMB}}\).
+The carrier-certificate audit verifies that these seven requirements are
+present, that the input chain comes from the scoring-input gap matrix, and that
+all score, likelihood, and verdict permissions remain closed. It routes the
+next step to a carrier/domain predicate candidate rather than to a concrete
+readout map.
+The carrier/domain predicate candidate then states the first nontrivial
+readout-domain rule: \(x\in C_{\mathrm{CMB}}^{\mathrm{seed}}\) only if it is a
+well-formed CMB role-space representative, and \(x\in\mathrm{Dom}(R_{\mathrm{CMB}})\)
+only if parent-side support, normalization, firewall, and replay conditions are
+satisfied. Null controls and source objects are handled separately so that a
+control object cannot become physical response evidence.
+The carrier/domain predicate audit verifies that this declaration has the
+expected five-row shape, follows the blocked carrier-certificate audit, and
+keeps carrier, domain, concrete-readout, score, and verdict permissions closed.
+It therefore makes the next obligation sharper: a carrier/domain certificate
+requirements artifact is needed before \(R_{\mathrm{CMB}}\) can be materialized.
+To keep the route visible as a single object, Paper 13 also records a
+single-pass derivation spine. This spine writes the whole chain
+\[
+\hbox{seed}
+\to C_{\mathrm{CMB}}^{\mathrm{seed}}
+\to \mathrm{Dom}(R_{\mathrm{CMB}})
+\to R_{\mathrm{CMB}}
+\to \rho_{\tau,\mathrm{eff}}
+\to \Phi_{\tau,\mathrm{eff}}
+\to T_{\tau}^{\mathrm{CMB}}
+\to K_{\tau PP}d\mu
+\to \hbox{score}
+\to \hbox{dark-sector decision}
+\]
+in one table, with each row labelled as definition, candidate, required object,
+blocked audit item, scoring gate, or forbidden verdict. It is a route spine,
+not a proof: it opens no likelihood and no dark-sector verdict.
+The carrier/domain certificate-requirements artifact then turns the first
+nontrivial proof step into a finite checklist: carrier well-formedness, domain
+membership, seed admissibility, null-control admissibility, source-object
+admissibility, quotient/equivalence survival, codomain compatibility, and
+endpoint-firewall replay. This is still a requirements layer, not a certificate;
+it exists to make the next proof obligation finite before any concrete
+\(R_{\mathrm{CMB}}\) materialization is attempted.
+The corresponding requirements audit confirms that this finite checklist has
+the expected eight-row shape, follows the single-pass blocked route and
+predicate audit, and keeps all certification, likelihood, score, and verdict
+permissions closed. Its downstream target is a certificate candidate, not a
+scoring run.
+The carrier/domain certificate candidate introduces named candidate objects
+such as \(CarrierOK_{\mathrm{cand}}\), \(DomOK_{\mathrm{cand}}\),
+seed/null/source admissibility candidates, quotient-survival candidate,
+codomain-compatibility candidate, and endpoint-firewall candidate. These names
+create payload slots for the next proof/checker work, but no pass flag, domain
+acceptance flag, concrete \(R_{\mathrm{CMB}}\), likelihood, score, or verdict is
+opened.
+The candidate audit verifies that these named certificate objects have a clean
+eight-row candidate shape and that all pass, domain-acceptance, concrete
+readout, likelihood, score, and verdict permissions remain closed. It routes the
+next step to proof/checker payloads rather than to readout materialization.
+The proof/checker payload packet then specifies the minimum input and output
+contracts for these candidate checks: carrier well-formedness, joint domain
+membership, seed/null/source admissibility, quotient survival, codomain
+compatibility, and endpoint-firewall replay. The packet is still not execution:
+no checker is run, no certificate passes, and no domain object is accepted.
+The payload-packet audit checks that these contracts are complete and still only
+specifications: every checker remains unexecuted, every certificate remains
+unpassed, every domain object remains unaccepted, and no concrete readout,
+likelihood, score, or verdict is opened.
+The checker execution packet then declares concrete command templates and
+prerequisite rules for the same eight checks. It is an execution envelope only:
+all \texttt{can\_execute}, \texttt{execution\_attempted},
+\texttt{execution\_succeeded}, certificate-pass, and domain-acceptance flags
+remain false.
+The execution-packet audit verifies this envelope and confirms that the route is
+blocked by absent checker input payloads rather than by a hidden score or
+likelihood step. Its next target is an input-payload request for the checkers.
+The checker input-payload request then names the concrete payload, replay,
+provenance, hash, and firewall files needed for each checker before any
+\texttt{can\_execute} flag may be reconsidered. This is a request only: no
+payload is supplied or accepted, and no checker is run.
+The request audit verifies that this request list is complete and remains
+unfulfilled: no payload, replay, provenance, hash, or firewall bundle is
+supplied or accepted, and the route remains non-executable.
+The input-payload fulfillment packet then maps each audited checker request to
+concrete payload-staging paths. It is still not an acceptance decision: absent
+or incomplete bundles keep \texttt{can\_execute}, certificate pass, domain
+acceptance, concrete \(R_{\mathrm{CMB}}\), score, likelihood, and verdict
+closed.
+The fulfillment-packet audit verifies the path map and records that the
+payload-staging bundles remain incomplete. The next narrow target is therefore
+a materialization packet for the requested checker inputs, not scoring.
+The materialization packet refines this into file-slot level obligations:
+payload, replay, provenance, hash, and firewall template paths are declared for
+each checker area. Its audit keeps the packet schema-only: no required file is
+materialized, no binding check passes, and no downstream execution or scoring
+permission is opened.
+The next file-materialization artifact writes the corresponding unpopulated
+\texttt{payload\_templates} files and hash-binds them. This still does not
+populate \texttt{payload\_staging}, accept checker inputs, or open execution.
+The staging-population packet then states the endpoint-blind Tau-side source
+rules under which those templates may later be populated into
+\texttt{payload\_staging}. Its audit keeps the route unpopulated and
+non-executable.
+The source-artifact request then names those endpoint-blind Tau-side artifacts,
+hashes, replay traces, provenance records, and firewall attestations without
+supplying or accepting them.
+The source-artifact supply packet checks those requested paths and records that
+the endpoint-blind source bundles are still absent; source acceptance and
+staging population remain closed.
+The materialization packet then creates endpoint-blind Tau-side source artifact
+candidate bundles under \texttt{payload\_sources}. These candidates are
+hash-bound and provenance/replay/firewall accompanied, but they are not accepted
+source inputs and do not permit staging population.
+The source-artifact acceptance audit then checks the complete candidate bundles
+for presence, hash binding, local source-inventory completeness, provenance,
+replay, endpoint-blind firewall status, and claim-boundary cleanliness. Passing
+this audit accepts the source artifacts only for the next staging-population
+step. It still does not write \texttt{payload\_staging}, accept checker
+payloads, execute checkers, materialize concrete \(R_{\mathrm{CMB}}\), open
+score entry, compute a likelihood, or decide the dark-sector question.
+After this acceptance, the corresponding staging-population execution step
+writes the declared \texttt{payload\_staging} checker-input files from accepted
+endpoint-blind Tau-side source bundles. Its audit verifies that 66 staging files
+are present and hash-bound while all payload-acceptance, checker-execution,
+concrete \(R_{\mathrm{CMB}}\), score, likelihood, and dark-sector verdict
+permissions remain closed.
+The input-payload acceptance audit then accepts those 66 populated staging files
+as checker inputs only. This closes the missing-input portion of the route, but
+it still does not execute a checker, pass a carrier/domain certificate, accept a
+domain object, materialize concrete \(R_{\mathrm{CMB}}\), open score entry,
+compute a likelihood, or decide the dark-sector question. The next narrow
+artifact is a refreshed checker-execution packet.
+The refreshed checker-execution packet records that all eight checker areas now
+have accepted input payloads. Seven rows are execution-ready but not attempted.
+The codomain-compatibility row remains blocked because it still requires a
+concrete \(R_{\mathrm{CMB}}\) candidate. Thus the route has moved past missing
+checker inputs, but it has not opened checker execution, certificate pass,
+domain acceptance, score entry, likelihood, or a dark-sector verdict.
+The next candidate gate introduces a structural \(R_{\mathrm{CMB}}\) shell with
+the formal signature
+\[
+R_{\mathrm{CMB}}^{\mathrm{cand}}:\mathrm{Dom}(R_{\mathrm{CMB}})_{\mathrm{cand}}
+\rightarrow C_{\mathrm{CMB}}^{\mathrm{role}} .
+\]
+This gives the codomain route an auditable structural target, but it is not a
+physical or numerical CMB readout. Carrier/domain certification, physical
+materialization, checker execution, score entry, likelihood, and the
+dark-sector verdict all remain closed.
+The v02 execution refresh incorporates this structural shell into the checker
+readiness accounting. All eight checker areas become structural-precheck-ready;
+seven are full checker-execution-ready but not attempted. The codomain row is
+no longer blocked by the absence of any readout target, but remains blocked by
+the absence of a physical \(R_{\mathrm{CMB}}\) materialization. Thus the route
+advances toward scoring without opening physical readout, certificate pass,
+likelihood, or verdict claims.
+The v01 execution-attempt packet then isolates the seven non-codomain rows that
+are already full-checker-execution-ready. It records the expected executable
+checker scripts for these rows and verifies that the corresponding
+\texttt{run\_*\_checker.py} implementations are not yet present. This is a
+narrower blocker than missing source payloads: the route has reached the
+implementation layer for seven checker families, while the codomain row remains
+separately blocked by physical \(R_{\mathrm{CMB}}\) materialization. No checker
+success, certificate pass, domain-object acceptance, physical readout, score,
+likelihood, or dark-sector verdict is opened by this attempt packet.
+The implementation-scaffold step then supplies the seven expected
+\texttt{run\_*\_checker.py} scripts and executes them against the accepted
+staging payloads. These scaffold checkers validate only structural input
+properties: required JSON files are present and parseable, checker/area
+metadata are consistent, endpoint-blind firewall flags remain closed, and
+downstream permissions remain false. All seven scaffold executions produce
+hash-bound outputs, but they are explicitly non-certifying outputs: no
+carrier/domain certificate, domain-object acceptance, physical
+\(R_{\mathrm{CMB}}\), score entry, likelihood, or dark-sector verdict follows
+from them. The next narrow step is therefore not more source acquisition, but an
+output-acceptance audit deciding whether these non-certifying scaffold outputs
+are sufficient to advance to certificate-level checker implementations.
+The scaffold-output acceptance audit accepts all seven hash-bound scaffold
+outputs only as inputs for certificate-level checker development. This removes
+the immediate implementation-absence blocker, while preserving the scientific
+claim boundary: structural checker smoke outputs are not certificate passes,
+not domain-object acceptances, not physical \(R_{\mathrm{CMB}}\), not scores,
+not likelihoods, and not dark-sector evidence. The next scoring-relevant
+blocker is therefore the certificate-level rule implementation itself.
+The certificate-level checker rule implementation makes that blocker explicit.
+For each of the seven non-codomain checker families it declares the predicates
+that would be needed for certificate execution, such as carrier closure,
+domain support/normalization/replay, seed activation and quotient survival,
+null-control no-response, endpoint-blind source derivation, representative
+independence, and endpoint-firewall replay. The audit finds that the scaffold
+outputs are accepted, but the current staging payloads do not yet contain the
+semantic evidence fields required to execute those predicates as certificates.
+Thus the blocker has moved from missing executable checkers to missing semantic
+certificate evidence. Scoring remains closed.
+The semantic-evidence materialization matrix converts this blocker into a
+field-level supply list. It enumerates the endpoint-blind evidence artifacts
+needed for the seven certificate families before any certificate execution can
+be attempted. This matrix still materializes zero evidence rows and accepts
+zero evidence rows; its role is to make the next supply step finite and
+auditable rather than letting the proof route expand indefinitely.
+The semantic-evidence artifact supply step then writes the 28 declared
+candidate files and corresponding hash manifests. Each supplied file is marked
+as endpoint-blind, candidate-only, not accepted, and not proof. This removes the
+empty-file blocker without promoting the candidates into certificate evidence:
+certificate execution, domain acceptance, physical \(R_{\mathrm{CMB}}\), score
+entry, likelihood, and dark-sector verdict all remain closed. The next blocker
+is evidence acceptance or replacement, not evidence discovery.
+The semantic-evidence acceptance audit then rejects all 28 candidate files as
+certificate evidence, while confirming that they are present, hash-bound, and
+endpoint-blind. The rejection is intentional and informative: the candidate
+files contain no non-null accepted semantic assertions and no proof-claim
+permission. Thus the route has moved from missing evidence files to a finite
+replacement request for accepted semantic assertions. No certificate execution,
+physical readout, score entry, likelihood, or verdict is opened.
+The replacement request turns this rejection into a finite worklist: all 28
+rows now have a required replacement artifact path and an explicit acceptance
+standard. A valid replacement must provide a non-null semantic assertion, an
+endpoint-blind proof trace, and proof/acceptance flags before certificate-rule
+execution can even be reconsidered. The request itself supplies zero
+replacements and opens no certificate, readout, score, likelihood, or verdict.
+The replacement-supply step materializes those 28 replacement paths as
+hash-bound draft files. These files are still not accepted semantic evidence:
+they intentionally contain no non-null semantic assertion and no proof-claim
+permission. The blocker is therefore sharpened again, from missing replacement
+files to missing substantive endpoint-blind proof traces and accepted semantic
+assertions.
+The substantive-assertion supply step places non-null assertions into all 28
+draft replacements. These are negative status assertions: each replacement now
+states that it does not yet establish its certificate predicate as accepted
+semantic evidence. This satisfies the requirement that the files contain an
+assertion, while preserving the boundary that no positive proof claim,
+certificate execution, physical readout, score, likelihood, or verdict has been
+opened.
+The positive-proof-trace request converts these negative status assertions into
+a finite worklist for accepted evidence. For each of the 28 fields it specifies
+the endpoint-blind trace components needed before a replacement may be updated
+to a positive accepted semantic assertion. The request supplies no trace and
+opens no certificate execution, physical readout, score, likelihood, or verdict.
+The positive-proof-trace supply step materializes those 28 requested trace
+paths as hash-bound draft traces. Each draft declares the required trace
+components and endpoint-blind firewall status, but the components are marked as
+declared rather than substantively proven. Thus the blocker moves from missing
+trace files to trace acceptance and substantive proof content, while certificate
+execution and scoring remain closed.
+The positive-proof-trace acceptance audit rejects all 28 draft traces as proof
+traces, while confirming that the trace files are present, hash-bound,
+endpoint-blind, and component-declared. The rejection is again targeted: no
+component is yet marked as substantively proven. The next finite blocker is
+therefore substantive trace-component supply, not trace discovery.
+The substantive trace-component supply step expands the 28 draft traces into
+component-level draft content files. These component files are endpoint-blind
+and hash-bound, but remain non-certifying: no component is accepted as
+substantively proven, no trace is accepted, and no certificate execution or
+score entry is opened.
+The substantive trace-component acceptance audit then rejects all component
+drafts as proof content while confirming that the component artifacts are
+present, hash-bound, endpoint-blind, and populated with draft content. The next
+finite blocker is no longer component discovery, but substantive proof-content
+replacement for those component drafts.
+The trace-component proof-content request turns that rejection into a finite
+worklist: every rejected component receives a required proof-content artifact
+path and an endpoint-blind acceptance standard. The request supplies no proof
+content and opens no component acceptance, trace acceptance, certificate
+execution, physical readout, score, likelihood, or verdict.
+The proof-content supply step materializes endpoint-blind proof-content
+candidates for that finite 128-row worklist. These candidates are concrete,
+hash-bound inputs for a later acceptance audit, but they are still not accepted
+as substantive component proofs and do not open certificate execution, physical
+readout, score, likelihood, or verdict.
+The proof-content acceptance audit preserves that boundary: it confirms that
+the candidate files are supplied, hash-bound, nonempty, and endpoint-blind, but
+rejects promotion because accepted substantive verification is not yet present.
+The next blocker is therefore substantive verification supply, not scoring.
+The substantive-verification supply step records endpoint-blind verification
+candidates and mechanical checks for the same 128-row worklist. It verifies
+artifact presence, proof-content hash continuity, and endpoint-firewall closure
+as auditable inputs, while leaving substantive-verification acceptance,
+component acceptance, certificate execution, and scoring closed.
+The refreshed substantive-verification acceptance audit separates component
+acceptance from downstream claims: after local replay bodies are supplied, all
+128 component-level verifications are accepted, but trace acceptance,
+certificate execution, physical readout, score, likelihood, and verdict remain
+closed until their own refresh gates pass.
+The local derivation/replay body supply step fills that missing body for all
+128 rows while preserving the endpoint-blind and non-scoring firewall. The body
+states local premises, replay steps, dependency boundaries, non-claims, and a
+component-level conclusion for downstream acceptance auditing.
+The trace-acceptance refresh groups those accepted components into 28 semantic
+evidence traces and accepts a trace only when all of its components are accepted.
+This moves the route to certificate-rule execution refresh without opening
+physical readout, score, likelihood, or verdict.
+The certificate-rule execution refresh groups the 28 accepted traces into seven
+checker-level certificate rules. All seven rules become executable, but checker
+execution replay is still required before any certificate can pass or scoring can
+open.
+The checker execution replay supply binds the seven existing checker outputs to
+those executable rules. The replay artifacts are present, hash-bound, and
+structurally successful, but they remain scaffold-level outputs rather than
+certificate-level checker passes; the checker replay acceptance audit therefore
+keeps certificate pass, physical readout, score, likelihood, and verdict closed.
+The certificate-level checker replay supply then wraps each executable rule with
+its accepted semantic traces and hash-bound structural checker replay. The
+acceptance audit promotes these seven rows only to semantic certificate-level
+checker pass, while leaving domain-object acceptance, physical readout, score,
+likelihood, and dark-sector verdict closed.
+The domain-object acceptance refresh accepts seven semantic certificate domain
+objects from those checker passes. This is still an internal semantic-domain
+acceptance: physical \texttt{R\_CMB}, score, likelihood, and dark-sector verdict
+remain closed until a dedicated materialization gate is supplied and audited.
+The physical \texttt{R\_CMB} materialization request turns that remaining gap
+into a finite worklist: each accepted semantic domain object receives an
+endpoint-blind materialization artifact requirement. The request uses the
+audited structural \texttt{R\_CMB} candidate shell, but supplies no numeric
+readout values and opens no score, likelihood, or verdict.
+The physical \texttt{R\_CMB} materialization supply provides hash-bound,
+endpoint-blind materialization candidates for those seven requests, but the
+acceptance audit rejects them as physical readouts because role-coordinate
+numeric materialization is still absent. The next blocker is therefore no
+longer semantic certification but accepted numeric role-coordinate
+materialization.
+The role-coordinate numeric materialization supply then instantiates the six
+readout-coordinate payloads
+\[
+e_{\mathrm{acoustic}},\ e_{\mathrm{density}},\ e_{\mathrm{lensing}},\
+e_{\mathrm{growth}},\ e_{\mathrm{radiation}},\ e_{\mathrm{null}}
+\]
+as endpoint-blind, hash-bound candidate artifacts. The acceptance audit rejects
+all six as numeric materializations, because the corresponding coordinates are
+still candidate-only and no accepted numeric value source or concrete
+\texttt{R\_CMB} allowance is present. This narrows the pre-scoring blocker to a
+role-coordinate numeric value-source supply; it still opens no score,
+likelihood, or dark-sector verdict.
+The numeric value-source supply converts this blocker into a finite source
+worklist: six role-coordinate requirement artifacts are supplied and hash-bound,
+containing 33 concrete source requirements extracted from the blocked
+coordinate tables. The corresponding acceptance audit accepts these artifacts
+only as a worklist, not as numeric value sources. The population step then
+expands the worklist into 33 endpoint-blind numeric-value cells, but the
+population acceptance audit rejects all cells for score entry because the
+numeric value, unit/convention replay, provenance, and replay fields are still
+empty. The next blocker is therefore the cell-level numeric value supply, not a
+new semantic or architectural proof packet.
+The cell-supply step provides one hash-bound template artifact for each of the
+33 numeric-value cells. The corresponding acceptance audit accepts all 33
+artifacts only as templates and rejects all 33 as score inputs, since the
+actual numeric values, unit/convention records, provenance records, and replay
+records remain absent. The next blocker is thus an endpoint-blind numeric value
+import packet that can populate these templates without using endpoint
+residuals, likelihood outputs, post-endpoint tuning, or a dark-sector verdict.
+The numeric value import-packet step supplies exactly that packet as a
+hash-bound JSON manifest plus a 33-row CSV import template. This is accepted
+only as an import template: all rows remain rejected as score inputs because
+the numeric value, unit/convention, provenance, and replay fields are empty.
+The next blocker is therefore import execution, namely filling the 33 rows from
+endpoint-blind sources and replaying the same acceptance checks.
+The import-execution step now runs this packet mechanically and records a
+no-op receipt: all 33 rows are attempted, but no cell is populated and no cell
+artifact is written because the import rows still contain no numeric values,
+unit/convention records, provenance records, or replay records. The acceptance
+audit therefore accepts the execution only as a no-op receipt and rejects it
+for score entry. The next blocker is a populated endpoint-blind import
+population packet.
+The import-population packet now declares the exact 33-row population contract:
+each row must provide a numeric value, a unit/convention record, provenance, a
+replay record, and endpoint-blind attestation before it can become a score
+input. The acceptance audit accepts all 33 rows only as a contract and rejects
+all 33 for score entry because no population value payload is supplied. Thus
+the next blocker is no longer packet shape or execution mechanics, but the
+actual endpoint-blind value payload for these 33 rows.
+The population value-payload step supplies one hash-bound payload target for
+each of the 33 rows. The acceptance audit accepts all 33 artifacts only as
+payload targets and rejects all 33 for score entry because the numeric value,
+unit/convention, provenance, and replay fields are still absent. The next
+blocker is therefore value-source acquisition for these payloads rather than
+another protocol-shape step.
+The value-source acquisition step now declares one endpoint-blind source
+request for each payload target. Each request requires a numeric source, a
+unit/convention source, provenance, replay, and endpoint-blind attestation
+while explicitly excluding endpoint residuals, likelihood outputs,
+post-endpoint tuning, and verdict labels. The acceptance audit accepts all 33
+rows only as acquisition requests and rejects all 33 for score entry because no
+value source has yet been acquired.
+The value-score step then computes the protocol value-readiness score
+\[
+S_{\mathrm{value}}=\frac{N_{\mathrm{accepted\ value\ sources}}}
+{N_{\mathrm{required\ value\ sources}}} .
+\]
+After the focused protocol ingest batch, seventeen protocol/control value sources are
+accepted, so
+\[
+S_{\mathrm{value}}=\frac{17}{33}\simeq 0.515152 .
+\]
+This is an accepted protocol score, not a physical CMB fit score: it records
+that the five \(e_{\mathrm{null}}\) control sources and the
+\(e_{\mathrm{radiation}}\) convention/stop-rule guards are now populated,
+together with the role-level convention and stop/failure guards for
+\(e_{\mathrm{acoustic}}\), \(e_{\mathrm{density}}\),
+\(e_{\mathrm{lensing}}\), and \(e_{\mathrm{growth}}\), plus the partial
+growth domain/codomain interface declarations. No physical CMB component has
+been accepted. In particular, no \(\Delta N_{\mathrm{eff}}\) contribution,
+numeric external bound, damping-tail inequality, density amplitude, acoustic
+response, lensing transfer kernel, or growth transfer operator has been
+evaluated. The physical CMB score, likelihood, and dark-sector verdict
+therefore remain closed.
+
+A protocol-saturation audit closes the protocol-only frontier at this point.
+The remaining 16 rows are classified as requiring endpoint-blind physical
+sources, response amplitudes, transfer operators, benchmark comparisons,
+cross-role consistency evidence, inequality evaluation, or explicit fail
+evidence. Consequently the next minimal unblock is not another protocol guard
+but an endpoint-blind physical value-source packet.
+
+The endpoint-blind physical value-source packet declares 16 hash-bound supply
+contracts for those frontier rows. Each contract requires either a numeric
+value or explicit fail evidence, a unit/convention, provenance, local replay,
+endpoint-blind attestation, and forbidden-input attestation. The packet
+acceptance audit accepts all 16 contracts as packet contracts, but accepts zero
+physical value sources for score input. Thus the next minimal unblock is
+physical value-source supply, not score execution.
+
+A one-pass frontier-collapse triage then inspects all 16 physical value-source
+contracts at once. It accepts no physical sources, but classifies the frontier
+as 14 dependency-blocked rows, one bridge-candidate row requiring a dedicated
+bridge audit, and one explicit-fail candidate requiring a dedicated fail-supply
+audit. This prevents promoting related upstream artifacts into CMB score inputs
+without a row-specific endpoint-blind bridge.
+
+The lensing bridge-candidate audit then checks the two non-dependency candidates
+and accepts no automatic bridge. The reduced lensing score output is not
+promoted into an \(S_{\mathrm{lens},\tau}(L)\) value-source row without a
+row-specific adapter, and the related projection-operator explicit failure is
+not promoted automatically into \(T_{\tau,\mathrm{CMB}}(k,a)\). It does,
+however, permit a row-specific explicit-fail supply attempt for the lensing
+transfer-kernel row.
+
+That row-specific supply closes the \(e_{\mathrm{lensing}}\) transfer-kernel
+row only as explicit non-score failure: no lawful endpoint-blind
+\(T_{\tau,\mathrm{CMB}}(k,a)\) transfer-kernel operator is supplied, no numeric
+transfer-kernel value is accepted, and physical CMB scoring remains blocked.
+A frontier recompute records this closure as one accepted explicit failure,
+leaving 15 physical value-source frontier rows open and zero physical value
+sources accepted.
+The subsequent amplitude/shape-response adapter audit rejects automatic
+promotion of the reduced lensing score into an
+\(S_{\mathrm{lens},\tau}(L)\) or \(\delta S_{\mathrm{lens},\tau}(L)\)
+value-source row. A row-specific explicit failure is therefore supplied and
+accepted for the amplitude/shape-response row as well. The v02 frontier
+recompute records two accepted explicit failures, 14 open dependency-blocked
+rows, and zero accepted physical value sources.
+A dependency-unblock plan then ranks the remaining blockers by frontier impact.
+The top-priority target is the shared endpoint-blind
+\(\Phi_{\tau,\mathrm{eff}}(a,k)\) source, because it can affect acoustic
+source presence, lensing potential source, acoustic phase support, and later
+cross-role consistency checks. This plan is only a prioritized unblock plan; it
+does not accept \(\Phi_{\tau,\mathrm{eff}}\), run a CMB score, or support a
+dark-sector verdict.
+The corresponding source-or-fail supply accepts only explicit fail evidence:
+the endpoint-blind \(\Phi_{\tau,\mathrm{eff}}(a,k)\) derivation contract is
+unsatisfied, the potential-source handoff remains blocked, and the parent-input
+payload candidate is unaccepted. The v03 frontier recompute propagates this
+failure only to the two direct potential-source rows, leaving downstream
+acoustic and cross-role rows dependency-blocked pending separate audits. The
+frontier status is therefore four accepted explicit failures, 12 open
+dependency-blocked rows, and zero accepted physical value sources.
+The density source/amplitude supply then closes the three direct density rows
+only as explicit non-score failures: no endpoint-blind
+\(\rho_{\tau,\mathrm{eff}}(a,k)\), \(A_\tau(a,k)\), or
+\(\Omega_c h^2\) comparison value is accepted because the density derivation and
+match remain blocked and density closure remains partial. The v04 frontier
+recompute records seven accepted explicit failures, nine open
+dependency-blocked rows, and zero accepted physical value sources.
+The \(\Delta N_{\mathrm{eff},\tau}\) radiation supply then closes the two
+direct radiation rows only as explicit non-score failures. No endpoint-blind
+Tau-side radiation-like stress-energy or energy-density mapping is accepted, so
+\(\Delta N_{\mathrm{eff},\tau}\) is not derived. The damping-tail inequality is
+therefore non-evaluable because its left-hand side and a shared bound convention
+are not accepted. This is not a numerical
+\(\Delta N_{\mathrm{eff},\tau}=0\) result, not bound satisfaction, not bound
+violation, and not a CMB likelihood result. The v05 frontier recompute records
+nine accepted explicit failures, seven open dependency-blocked rows, and zero
+accepted physical value sources.
+The acoustic response-bundle supply then closes the three direct acoustic rows
+only as explicit non-score failures. The frontier contains no accepted
+endpoint-blind Tau acoustic source \(S_{\tau,\mathrm{ac}}(k,a)\), no accepted
+oscillator response equation or Green function, no accepted endpoint-blind
+amplitude normalization, and no baryon-loading coupling law with a fixed sign
+convention. The phase, relative peak-height, and baryon-loading rows therefore
+do not provide physical CMB value sources. This is not a claim that Tau Core has
+no acoustic effect, not a CMB peak fit, not an empirical exclusion, and not a
+dark-sector verdict. The v06 frontier recompute records 12 accepted explicit
+failures, four open dependency-blocked rows, and zero accepted physical value
+sources.
+Following the local-source-first, common-parent-later strategy, the growth
+transfer-operator supply then treats \(T_{\tau,\mathrm{CMB}}\) as a local
+readout scaffold that could later be promoted to a common Tau-parent readout
+only if its own operator exists first. No endpoint-blind Tau CMB input state
+\(X_{\tau}^{\mathrm{CMB}}(k,a)\), initial-condition map, evolution rule,
+CMB-source output map, normalization rule, or gauge/convention packet is
+accepted. Therefore
+\(\mathrm{Transfer}_{\tau}[X_{\tau}^{\mathrm{CMB}}](k,a)\) is closed only as
+an explicit non-score failure. This is not a numerical growth constraint, not a
+structure-growth comparison, not a claim that Tau Core has no growth response,
+and not a dark-sector verdict. The v07 frontier recompute records 13 accepted
+explicit failures, three open dependency-blocked rows, and zero accepted
+physical value sources.
+This also fixes the interpretation rule used by the present paper: local CMB
+source labels are treated first as endpoint-blind row-level scaffolds, not as
+independent ontology claims. A future Tau-side unification may try to promote
+such local scaffolds to readouts of a common parent disturbance response,
+schematically
+\[
+D_\tau[M_{\rm seed}]
+  :=
+  \mathrm{Response}_\tau(B_\tau^{\rm base},M_{\rm seed}
+  \ {\rm or}\ \delta M_{\rm root}),
+\]
+where \(D_\tau[M_{\rm seed}]\) denotes only a candidate parent-field
+disturbance or relaxation-response target induced by a morphological seed or
+closure defect. In this hierarchy, \(M_{\rm seed}\) is the disturbance,
+excitation, or closure-defect source class; \(D_\tau[M_{\rm seed}]\) is the
+base-substrate response target; and any CMB-facing dark-sector-like quantity
+would be a projection/readout footprint of that response, not the seed itself.
+The present paper does not accept such a response as a physical CMB source,
+does not supply a CMB likelihood, and does not reach a dark-sector verdict.
+
+\section{Known-Limit and Dimension Audit}
+
+The v01 known-limit and dimensional audit does not promote the target. It
+records that all eight target components have declared dimensional roles or
+comparison roles, but none has a formula-level dimensional proof and none
+matches the corresponding $\Lambda$CDM role. In particular,
+\[
+\rho_{\tau,\mathrm{eff}}(a,k)
+\]
+has only the density slot that would have to confront the inferred
+$\Omega_c h^2$ role, while
+\[
+\Phi_{\tau,\mathrm{eff}}(a,k),\quad T_{\tau}^{\mathrm{CMB}}(k,a)
+\]
+remain unfilled potential and transfer targets.
+
+The audit therefore blocks no-dark CMB claims and Tau-response claims. Its
+next-artifact target is
+\[
+\texttt{tau\_cmb\_minimal\_source\_term\_candidate\_v01}.
+\]
+
+\section{Minimal Source-Term Candidate}
+
+The minimal source-term candidate makes the next object testable without
+claiming that the object is correct. It introduces the response-state skeleton
+\[
+X_{\tau}^{\mathrm{CMB}}
+=
+\mathrm{Response}_{\tau}^{\mathrm{CMB}}
+\left(
+B_{\tau,\mathrm{base}}^{\mathrm{CMB}},
+\delta M_{\mathrm{CMB}};
+OI,\ell,h
+\right),
+\]
+and a density-like comparison slot
+\[
+\rho_{\tau,\mathrm{eff}}(a,k)
+=
+A_{\tau}(a,k)\rho_{\mathrm{cdm,ref}}(a).
+\]
+This density row is only conditionally dimension-checkable: $A_{\tau}$ must be
+a dimensionless Tau-response amplitude derived from the theory, not a
+post-fit residual.
+
+For CMB acoustic and lensing checks the scaffold also records the
+standard-form comparison slot
+\[
+k^2\Phi_{\tau,\mathrm{eff}}(a,k)
+=
+4\pi G a^2\rho_{\tau,\mathrm{eff}}(a,k)\Delta_{\tau}(a,k).
+\]
+This is not asserted as a derived Tau field equation. It is a role-matching
+target that makes the dimensional and known-limit obligations explicit. The
+remaining rows declare a transfer-kernel slot, a radiation-content guard, and
+an explicit $\Lambda$CDM-role limit-or-failure branch. No row matches an LCDM
+role in this version, and no row permits a Tau-response or dark-sector verdict.
+
+\section{Source-Term Dimensional Precheck}
+
+The dimensional precheck separates conditionally usable skeletons from rows
+that still block scoring. Three rows are conditionally precheckable:
+\[
+\rho_{\tau,\mathrm{eff}}(a,k)
+=
+A_{\tau}(a,k)\rho_{\mathrm{cdm,ref}}(a),
+\]
+\[
+k^2\Phi_{\tau,\mathrm{eff}}(a,k)
+=
+4\pi G a^2\rho_{\tau,\mathrm{eff}}(a,k)\Delta_{\tau}(a,k),
+\]
+and
+\[
+\Delta N_{\mathrm{eff},\tau}
+\leq
+\Delta N_{\mathrm{eff,bound}}.
+\]
+These rows still require conventions or derivations, so they are not full
+dimensional proofs. The response-state operator, transfer kernel, and
+known-limit branch remain blocked because their domain, propagation rule, and
+comparison map have not yet been supplied.
+
+The next scoring-facing artifact is therefore not a likelihood run, but an
+LCDM-role scoring rubric:
+\[
+\texttt{tau\_cmb\_lcdm\_role\_scoring\_rubric\_v01}.
+\]
+
+\section{LCDM Role Scoring Rubric}
+
+The scoring rubric defines the roles that a later Tau CMB candidate must pass
+before a no-dark or effective dark-sector decision can be considered. It does
+not compute scores. Each role has three possible levels:
+\begin{align*}
+0 &= \hbox{role absent or hard-failed},\\
+1 &= \hbox{partial qualitative support},\\
+2 &= \hbox{quantitative compatibility}.
+\end{align*}
+The rubric rows are:
+\begin{enumerate}
+\item acoustic peak phase and height;
+\item $\Omega_c h^2$ density inference;
+\item CMB lensing potential;
+\item damping-tail and radiation guard;
+\item growth-seed and transfer consistency;
+\item known-limit or explicit failure branch.
+\end{enumerate}
+
+All rows are currently marked not scoreable. This is deliberate: the paper has
+declared the scoring rules, but it has not supplied the response operator,
+transfer kernel, known-limit map, or likelihood benchmark required to score
+them. The next artifact is therefore a scorecard template rather than a CMB
+verdict:
+\[
+\texttt{tau\_cmb\_role\_scorecard\_template\_v01}.
+\]
+
+\section{Role Scorecard Template}
+
+The scorecard template converts the rubric into the table shape that a future
+scoring run must fill. In this version all six rows have status
+\[
+\texttt{NOT\_COMPUTED\_INPUT\_BLOCKED}.
+\]
+No score is assigned, no hard failure is triggered, and no evidence pointer is
+available. Each row instead names the minimum artifact needed to unblock it:
+an acoustic benchmark, a density-amplitude derivation, a lensing-transfer
+benchmark, a radiation-guard bound check, a growth-transfer kernel, or a
+known-limit/failure map.
+
+This makes the path to scoring explicit without pretending that the scoring has
+already been performed. The next artifact is an unblock plan:
+\[
+\texttt{tau\_cmb\_score\_input\_unblock\_plan\_v01}.
+\]
+
+\section{Score Input Unblock Plan}
+
+The unblock plan ranks the missing inputs instead of expanding the proof tree
+in every direction. The first target is the known-limit/failure map:
+\[
+\texttt{tau\_cmb\_known\_limit\_failure\_map\_v01}.
+\]
+It is prioritized because every later score needs to say whether the Tau object
+reproduces, approximates, or fails the corresponding standard CMB source role.
+Only after that map is declared does it become efficient to attempt density,
+acoustic, lensing, growth, and radiation-guard scoring inputs.
+
+The ranked order is:
+\begin{enumerate}
+\item known-limit/failure map;
+\item density-amplitude derivation;
+\item acoustic reduced benchmark;
+\item lensing-transfer benchmark;
+\item growth-transfer kernel;
+\item radiation-guard bound check.
+\end{enumerate}
+This plan computes no score and does not remove the need for a CMB likelihood
+before any final verdict.
+
+\section{Known-Limit Failure Map}
+
+The known-limit failure map assigns each CMB role a disciplined decision space:
+\[
+\{\mathrm{REPRODUCE},\ \mathrm{APPROXIMATE},\ \mathrm{FAIL},\
+\mathrm{UNRESOLVED}\}.
+\]
+In this version every role remains
+\[
+\texttt{UNRESOLVED\_INPUT\_MISSING}.
+\]
+The map therefore does not declare success or failure. It only prevents a later
+score from silently replacing the standard CMB source role with an undefined
+Tau residual. A future artifact must provide enough evidence to move each role
+into reproduce, approximate, or fail. The next focused artifact is:
+\[
+\texttt{tau\_cmb\_density\_amplitude\_derivation\_v01}.
+\]
+
+\section{Density Amplitude Derivation}
+
+The density-amplitude artifact declares the formal amplitude slot
+\[
+A_{\tau}(a,k)
+:=
+\frac{\rho_{\tau,\mathrm{eff}}(a,k)}
+{\rho_{\mathrm{cdm,ref}}(a)}.
+\]
+This amplitude is conditionally dimensionless if both densities use the same
+normalization convention. This is a useful formal step because it isolates the
+quantity that would have to replace or approximate the density role normally
+inferred as $\Omega_c h^2$.
+
+However, this version does not derive a numerical $A_{\tau}$, does not prove
+endpoint-blind provenance, and does not match the $\Omega_c h^2$ role. The
+density score remains blocked until $A_{\tau}(a,k)$ is derived from Tau-side
+data rather than tuned from CMB residuals. The next focused artifact is:
+\[
+\texttt{tau\_cmb\_acoustic\_role\_reduced\_benchmark\_v01}.
+\]
+
+\section{Acoustic Role Reduced Benchmark}
+
+The acoustic benchmark declares the reduced checks that a Tau effective
+potential would have to pass before a full spectrum likelihood is meaningful:
+potential-source presence, phase support, peak-height support, baryon loading,
+scale convention, and an explicit failure branch.
+
+Every row is currently
+\[
+\texttt{DECLARED\_NOT\_EVALUATED}.
+\]
+Thus the artifact does not solve the photon-baryon Boltzmann system and does
+not claim that Tau Core matches acoustic peaks. It only states the reduced
+conditions that would be needed to promote the acoustic scorecard row. The next
+focused artifact is:
+\[
+\texttt{tau\_cmb\_lensing\_transfer\_benchmark\_v01}.
+\]
+
+\section{Lensing Transfer Benchmark}
+
+The lensing-transfer benchmark declares the reduced checks that
+$\Phi_{\tau,\mathrm{eff}}$ and $T_{\tau}^{\mathrm{CMB}}$ would have to satisfy
+before the CMB lensing scorecard row can be promoted. The declared checks are
+potential-source presence, transfer-kernel presence, projection geometry,
+amplitude/shape support, cross-readout consistency, and an explicit failure
+branch.
+
+Every row is currently
+\[
+\texttt{DECLARED\_NOT\_EVALUATED}.
+\]
+Thus the artifact does not evaluate Planck or ACT lensing data and does not
+claim that Tau Core matches CMB lensing. It only states the reduced conditions
+needed before a lensing score can be computed. The next focused artifact is:
+\[
+\texttt{tau\_cmb\_growth\_transfer\_kernel\_v01}.
+\]
+
+\section{Growth Transfer Kernel}
+
+The growth-transfer kernel artifact declares what must be specified before a
+CMB-era Tau response can be propagated into later growth or lensing readouts.
+It requires a domain, codomain, time/scale convention, operator rule,
+cross-role consistency gate, and explicit failure branch.
+
+Every row is currently
+\[
+\texttt{DECLARED\_NOT\_SPECIFIED}.
+\]
+Thus the artifact supplies no transfer operator and does not compare against
+growth or structure data. It only prevents an unspecified propagation step from
+being treated as an available Tau response. The next focused artifact is:
+\[
+\texttt{tau\_cmb\_radiation\_guard\_bound\_check\_v01}.
+\]
+
+\section{Radiation Guard Bound Check}
+
+The radiation guard artifact declares the bound-check scaffold for
+\[
+\Delta N_{\mathrm{eff},\tau}
+\leq
+\Delta N_{\mathrm{eff,bound}}.
+\]
+It requires a Tau radiation-like contribution, an external bound convention, a
+damping-tail inequality, cross-role consistency, and an explicit failure
+branch.
+
+Every row is currently
+\[
+\texttt{DECLARED\_NOT\_EVALUATED}.
+\]
+Thus the artifact evaluates no numerical bound and does not compare against
+Planck, ACT, or other damping-tail data. It only records the guard that must be
+run before the radiation row can be scored. The next focused artifact is:
+\[
+\texttt{tau\_cmb\_scorecard\_readiness\_audit\_v01}.
+\]
+
+\section{Scorecard Readiness Audit}
+
+The readiness audit checks whether the six scorecard rows are ready for actual
+score computation. In this version the result is:
+\[
+\texttt{score\_ready\_rows}=0,\qquad
+\texttt{score\_blocked\_rows}=6.
+\]
+The input artifacts now exist as scaffolds, maps, benchmarks, guards, or kernel
+requirements, but none has been evaluated or specified enough to compute a CMB
+score. Therefore the paper has reached an auditable pre-scoring state, not a
+scoring result. The next focused artifact is:
+\[
+\texttt{tau\_cmb\_scorecard\_blocker\_closure\_plan\_v01}.
+\]
+
+\section{Scorecard Blocker Closure Plan}
+
+The blocker closure plan converts the readiness audit into a ranked closure
+sequence with stop rules. The current closure order is density amplitude,
+acoustic reduced evaluation, lensing-transfer reduced evaluation, growth kernel
+closure, radiation guard evaluation, and known-limit decision update. The
+immediate next artifact is:
+\[
+\texttt{tau\_cmb\_density\_amplitude\_closure\_v01}.
+\]
+
+No closure is completed in this version, and no score is computed. The plan is
+included only to keep the next work targeted: each blocker must either close
+under its criterion or fail explicitly before the scorecard can be promoted.
+
+\section{Density Amplitude Closure}
+
+The density-amplitude closure closes only the formal ratio
+\[
+A_{\tau}(a,k)
+:=
+\frac{\rho_{\tau,\mathrm{eff}}(a,k)}
+{\rho_{\mathrm{cdm,ref}}(a)}.
+\]
+The ratio is conditionally dimensionless when both densities share the same
+normalization. The blocker remains partially open because
+\(\rho_{\tau,\mathrm{eff}}\) is not derived, endpoint-blind \(A_{\tau}\) is not
+supplied, and the \(\Omega_c h^2\) role is not numerically compared. Therefore
+the density score remains blocked. The next focused artifact is:
+\[
+\texttt{tau\_cmb\_acoustic\_reduced\_evaluation\_v01}.
+\]
+
+\section{Acoustic Reduced Evaluation}
+
+The reduced acoustic evaluation checks the previously declared acoustic
+benchmark without promoting it to a Boltzmann solve or likelihood. The formal
+scale/sound-horizon convention guard is closed as a required precondition, and
+the explicit failure branch is partially ready. The physics-bearing checks
+remain blocked:
+\[
+\Phi_{\tau,\mathrm{eff}}(a,k),\quad
+A_{\tau}(a,k),\quad
+\text{source timing/sign},\quad
+\text{baryon-loading coupling}
+\]
+are not yet supplied in an endpoint-blind form suitable for an acoustic score.
+Therefore the acoustic score remains blocked. The next focused artifact is:
+\[
+\texttt{tau\_cmb\_lensing\_transfer\_reduced\_evaluation\_v01}.
+\]
+
+\section{Lensing Transfer Reduced Evaluation}
+
+The reduced lensing-transfer evaluation checks the declared lensing benchmark
+without promoting it to a Planck/ACT lensing fit or full CMB likelihood. The
+formal projection-geometry guard is closed as a required precondition, and the
+explicit failure branch is partially ready. The physics-bearing checks remain
+blocked:
+\[
+\Phi_{\tau,\mathrm{eff}}(a,k),\quad
+T_{\tau,\mathrm{CMB}}(k,a),\quad
+\text{amplitude/shape response},\quad
+\text{cross-readout consistency}
+\]
+are not yet supplied in an endpoint-blind form suitable for a lensing score.
+Therefore the lensing score remains blocked. The next focused artifact is:
+\[
+\texttt{tau\_cmb\_growth\_transfer\_kernel\_closure\_v01}.
+\]
+
+\section{Growth Transfer Kernel Closure}
+
+The growth-transfer kernel closure narrows the formal kernel scaffold without
+promoting it to a physical transfer operator. The domain and codomain families
+are partially closed, and the time/scale convention guard is closed as a
+required precondition. The physics-bearing operator remains missing:
+\[
+\mathrm{Transfer}_{\tau}[X_{\tau,\mathrm{CMB}}](k,a).
+\]
+Cross-role consistency also remains blocked because the density, acoustic, and
+lensing inputs are not yet score-ready. Therefore the growth score remains
+blocked. The next focused artifact is:
+\[
+\texttt{tau\_cmb\_radiation\_guard\_evaluation\_v01}.
+\]
+
+\section{Radiation Guard Evaluation}
+
+The radiation-guard evaluation checks the damping-tail guard only at reduced
+protocol level. The external-bound convention guard is closed as a required
+precondition, but the Tau-side contribution is not derived:
+\[
+\Delta N_{\mathrm{eff},\tau}.
+\]
+Therefore the bound inequality
+\[
+\Delta N_{\mathrm{eff},\tau}
+\leq
+\Delta N_{\mathrm{eff},\mathrm{bound}}
+\]
+is not numerically evaluated. Cross-role consistency also remains blocked while
+the density, acoustic, lensing, and growth rows are not score-ready. Therefore
+the radiation score remains blocked. The next focused artifact is:
+\[
+\texttt{tau\_cmb\_known\_limit\_decision\_update\_v01}.
+\]
+
+\section{Known-Limit Decision Update}
+
+The known-limit decision update reads the focused v01 closure/evaluation
+artifacts and updates the six CMB role decisions. No role is promoted to
+\texttt{REPRODUCE}, \texttt{APPROXIMATE}, or \texttt{FAIL}: the focused gates
+triggered no hard failures, but they also did not provide the source, operator,
+amplitude, bound, or cross-role evidence needed to score a CMB role. Thus every
+role remains:
+\[
+\texttt{UNRESOLVED\_EVIDENCE\_INSUFFICIENT}.
+\]
+The scorecard remains blocked. The next focused artifact is:
+\[
+\texttt{tau\_cmb\_scorecard\_prescore\_blocker\_summary\_v01}.
+\]
+
+\section{Scorecard Prescore Blocker Summary}
+
+The prescore blocker summary collects the six CMB role decisions after the
+focused v01 closure/evaluation sequence. It adds no new physics and computes no
+score. Instead, it records that every score row remains blocked:
+\[
+\texttt{score\_ready\_rows}=0,\qquad
+\texttt{score\_blocked\_rows}=6.
+\]
+Each role remains in an unresolved evidence state, with a specific minimum
+next input attached to it. This prevents premature scorecard promotion. The
+next focused artifact is:
+\[
+\texttt{tau\_cmb\_minimal\_scoring\_input\_contract\_v01}.
+\]
+
+\section{Minimal Scoring Input Contract}
+
+The minimal scoring input contract declares the entry conditions for a future
+CMB scorecard run. It does not supply the inputs and does not compute a score.
+In v01 every contract row remains:
+\[
+\texttt{UNSATISFIED\_INPUT\_MISSING}.
+\]
+Consequently,
+\[
+\texttt{score\_entry\_allowed\_rows}=0.
+\]
+The contract is useful because it converts the pre-score blockers into explicit
+entry conditions for scoring. The next focused artifact is:
+\[
+\texttt{tau\_cmb\_scoring\_execution\_gate\_v01}.
+\]
+
+\section{Scoring Execution Gate}
+
+The scoring execution gate applies the minimal input contract to decide whether
+a scorecard run is allowed. In v01, all contract inputs remain unsatisfied, so
+every role is blocked:
+\[
+\texttt{run\_allowed\_rows}=0,\qquad
+\texttt{run\_blocked\_rows}=6.
+\]
+No score is computed:
+\[
+\texttt{score\_computed\_rows}=0.
+\]
+Thus the paper reaches a reproducible scoring gate, but not a scoring result.
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_scoring\_input\_fulfillment\_plan\_v01}.
+\]
+
+\section{Scoring Input Fulfillment Plan}
+
+The scoring-input fulfillment plan converts the blocked execution gate into a
+ranked work order. It does not complete any input and does not compute a score.
+In v01:
+\[
+\texttt{completed\_rows}=0,\qquad
+\texttt{pending\_rows}=6.
+\]
+The first required artifact is a common endpoint-blind Tau effective-potential
+source handoff:
+\[
+\texttt{tau\_cmb\_effective\_potential\_source\_handoff\_v01}.
+\]
+This comes first because both acoustic and lensing scoring depend on a shared
+\(\Phi_{\tau,\mathrm{eff}}\) convention before their role-specific checks can
+be meaningfully evaluated.
+
+\section{Planck PR3 Peak Observed-Side Input Chain}
+
+The Planck PR3 peak input chain gives the acoustic route a concrete
+observed-side target without opening score entry. The source-freeze packet
+selects official Planck PR3 TT/TE/EE binned spectra and a baseline
+minimum-theory reference, while the extraction rule materializes a compact
+observed peak table:
+\[
+\texttt{peak\_rows\_extracted}=36.
+\]
+The scoring-input candidate then marks all observed rows as ready, but the
+Tau-side response audit supplies neither an endpoint-blind Tau peak prediction
+nor an accepted null-response control:
+\[
+\texttt{tau\_prediction\_supplied\_rows}=0,\qquad
+\texttt{score\_ready\_rows}=0.
+\]
+The score-attempt guard therefore remains closed. The Tau-prediction
+materialization specification converts that blocker into a concrete payload
+contract: each observed row requires a locked Tau model artifact, endpoint-blind
+derivation trace, predicted peak position, predicted observable value,
+uncertainty model, spectrum-role convention, normalization convention, and
+comparison rule. In this version the payload is not supplied:
+\[
+\texttt{accepted\_materialization\_rows}=0,\qquad
+\texttt{missing\_prediction\_rows}=36.
+\]
+Thus the Planck PR3 chain advances the scoring route by completing the observed
+side and specifying the Tau-side payload, but it computes no CMB score,
+likelihood, Tau acoustic response claim, or dark-sector verdict.
+The subsequent payload-supply artifact closes the empty-payload path explicitly:
+\[
+\texttt{explicit\_empty\_supply\_rows}=36,\qquad
+\texttt{accepted\_payload\_rows}=0,\qquad
+\texttt{score\_ready\_rows}=0.
+\]
+It supplies no predicted peak positions, amplitudes, uncertainties, or
+null-response controls. Its role is to stop the protocol from cycling through
+missing-payload gates and to route the next focused work to:
+\[
+\texttt{tau\_cmb\_acoustic\_tau\_prediction\_source\_derivation\_v01}.
+\]
+The acoustic Tau-prediction source-derivation artifact then declares the
+minimal source target
+\[
+S_{\tau,\mathrm{ac}}(k,a)
+  := P_{\mathrm{ac}}\!\left[
+       \Phi_{\tau,\mathrm{eff}}, A_{\tau}, \Theta_{\tau,\mathrm{ac}},
+       C_{\mathrm{rec}}
+     \right](k,a),
+\]
+where \(P_{\mathrm{ac}}\) is an unfilled acoustic projection/operator slot.
+This is a derivation spine, not a solved source. In this version:
+\[
+\texttt{derived\_source\_rows}=0,\qquad
+\texttt{executable\_prediction\_rows}=0,\qquad
+\texttt{accepted\_planck\_payload\_rows}=0.
+\]
+The remaining focused blocker is therefore the acoustic source-operator payload,
+not the observed Planck peak table.
+The source-operator payload contract makes this blocker concrete by splitting
+\(P_{\mathrm{ac}}\) into required rows for domain/basis lock,
+\(\Phi_{\tau,\mathrm{eff}}\), \(A_{\tau}\), oscillator kernel,
+baryon-loading coupling, projection-to-peak payload, uncertainty/null policy,
+and the score firewall. In this version:
+\[
+\texttt{required\_operator\_payload\_rows}=7,\qquad
+\texttt{payload\_accepted\_rows}=0,\qquad
+\texttt{derived\_source\_rows}=0.
+\]
+Thus the next focused artifact is no longer another abstract gate but an
+operator-payload supply attempt:
+\[
+\texttt{tau\_cmb\_acoustic\_source\_operator\_payload\_supply\_v01}.
+\]
+That supply attempt is explicit and empty in this version:
+\[
+\texttt{operator\_payload\_supplied\_rows}=0,\qquad
+\texttt{operator\_payload\_accepted\_rows}=0,\qquad
+\texttt{operator\_payload\_rejected\_rows}=7,\qquad
+\texttt{score\_ready\_rows}=0.
+\]
+It therefore closes the contract-to-supply bookkeeping gap without promoting a
+physical Tau response. The next substantive step is a minimal acoustic operator
+model attempt,
+\[
+\texttt{tau\_cmb\_acoustic\_minimal\_operator\_model\_attempt\_v01},
+\]
+which must supply endpoint-blind domain conventions, source inputs, an
+oscillator/kernel rule, baryon-loading coupling, projection-to-peak mapping,
+and an uncertainty or accepted null policy before any score can be computed.
+The minimal operator model attempt makes this formula-level shape explicit:
+\[
+\Theta_{\tau,\mathrm{ac}}(k,a_{\mathrm{rec}})
+  =
+  \int da\,
+  G_{\tau,\mathrm{ac}}(k,a;a_{\mathrm{rec}})
+  S_{\tau,\mathrm{ac}}(k,a),
+\]
+followed by a peak-projection slot
+\[
+\Pi_{\mathrm{peak}}[P_{\mathrm{ac}}]
+  \to
+  \{\ell_{\mathrm{pred}},D_{\ell,\mathrm{pred}},
+  \sigma_{\tau},\texttt{spectrum\_role}\}.
+\]
+In this version, however, the attempt remains non-executable:
+\[
+\texttt{candidate\_rule\_rows\_declared}=4,\qquad
+\texttt{dependency\_blocked\_rows}=3,\qquad
+\texttt{operator\_model\_accepted\_rows}=0,\qquad
+\texttt{score\_ready\_rows}=0.
+\]
+The next artifact is therefore a focused dependency-unblock plan for the
+acoustic operator, not a CMB score:
+\[
+\texttt{tau\_cmb\_acoustic\_operator\_dependency\_unblock\_plan\_v01}.
+\]
+That unblock plan orders the remaining work into seven critical rows plus the
+score firewall:
+\[
+\texttt{unblock\_rows\_declared}=8,\qquad
+\texttt{critical\_unblock\_rows}=7,\qquad
+\texttt{completed\_unblock\_rows}=0,\qquad
+\texttt{score\_ready\_rows}=0.
+\]
+The first required unblock artifact is:
+\[
+\texttt{tau\_cmb\_acoustic\_domain\_basis\_lock\_acceptance\_v01}.
+\]
+Only after the domain/basis lock, \(\Phi_{\tau,\mathrm{eff}}\), \(A_{\tau}\),
+oscillator kernel, baryon-loading coupling, peak projection, and
+uncertainty/null policy are accepted can the score firewall be reconsidered.
+The first row is convention-level and can be accepted without promoting a
+physical acoustic response. The domain/basis lock fixes \(k\), \(a\),
+\(a_{\mathrm{rec}}\), \(\ell\), the formal \(da\) measure placeholder,
+the TT/TE/EE spectrum-role basis, and the endpoint-blind comparison boundary:
+\[
+\texttt{lock\_rows\_declared}=7,\qquad
+\texttt{lock\_rows\_accepted}=7,\qquad
+\texttt{operator\_model\_accepted\_rows}=1,\qquad
+\texttt{score\_ready\_rows}=0.
+\]
+This closes only the domain/basis convention row. It does not derive
+\(S_{\tau,\mathrm{ac}}\), does not predict Planck peaks, and does not release
+the score firewall. The next required artifact becomes:
+\[
+\texttt{tau\_cmb\_phi\_tau\_eff\_acoustic\_input\_acceptance\_v01}.
+\]
+The \(\Phi_{\tau,\mathrm{eff}}\) acoustic input audit then accepts only the
+source-slot identity, not the full effective-potential input:
+\[
+\texttt{accepted\_rows}=1,\qquad
+\texttt{blocked\_rows}=3,\qquad
+\texttt{partial\_rows}=1,\qquad
+\texttt{phi\_tau\_eff\_acoustic\_input\_accepted}=\texttt{false}.
+\]
+The blocked rows are endpoint-blind provenance, timing/sign convention, and
+baryon-photon coupling; the normalization row remains partial. Thus the next
+focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_eff\_endpoint\_blind\_provenance\_acceptance\_v01}.
+\]
+That endpoint-blind provenance acceptance audit accepts only the exclusion
+policy:
+\[
+\texttt{accepted\_policy\_rows}=1,\qquad
+\texttt{blocked\_rows}=4,\qquad
+\texttt{partial\_rows}=1,\qquad
+\texttt{endpoint\_blind\_provenance\_accepted}=\texttt{false}.
+\]
+The missing items are the parent-input manifest, parent-side content,
+derivation rule, and replay package. Therefore no \(\Phi_{\tau,\mathrm{eff}}\)
+source derivation, CMB peak prediction, likelihood, score, or dark-sector
+verdict is promoted. The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_candidate\_manifest\_acceptance\_v01}.
+\]
+
+\section{Acoustic Diagnostic Route Theory Import}
+
+The Tau Core theory repository now records a sharper acoustic diagnostic route
+for the Planck PR3 peak chain. The imported status is:
+\[
+\texttt{ACOUSTIC\_DIAGNOSTIC\_PRE\_SCORE\_INPUT\_READY}.
+\]
+This means that the observed-side acoustic source vector is frozen for
+diagnostic use: official Planck PR3 TT/TE/EE binned spectra are selected, the
+best-fit theory file remains control-only, artifact hashes are recorded, and a
+deterministic binned peak/extremum extraction defines a reduced
+\(O_{\mathrm{CMB}}^{\mathrm{peak}}\) source-value candidate. The allowed error
+envelope is only a binned diagonal diagnostic envelope, not a full Planck
+covariance or likelihood.
+
+The same import also declares a cross-role fail policy. An acoustic-only
+diagnostic cannot be promoted to a CMB lensing pass, a growth pass, a damping
+guard pass, or a global TC0/TC1/TC2 verdict. The physical CMB score remains
+blocked unless lensing, growth, damping, and full likelihood/channel-map
+requirements are supplied separately.
+
+The required Tau-side object is now named explicitly:
+\[
+Y_{\tau}^{\mathrm{ac}}
+ =
+R_{\mathrm{ac}}\!\left(
+P_{\mathrm{CMB}}\!\left(
+D_{\tau}[
+F_{\tau}(M_{\mathrm{seed}}^{\mathrm{CMB}},
+B_{\tau}^{\mathrm{base}},C_{\mathrm{CMB}})
+;B_{\tau}^{\mathrm{base}}]
+\right)\right).
+\]
+This is a formula-spec contract, not a populated prediction. It must output TT
+peak positions, TT relative heights, TE signed phase extrema, EE peak positions,
+EE relative heights, and a damping proxy, with null and wrong-family controls.
+No component of \(Y_{\tau}^{\mathrm{ac}}\) may be tuned to Planck peak residuals
+after the observed source vector is frozen.
+
+Thus Paper 13's acoustic route has advanced from missing observed input to a
+bounded diagnostic pre-score contract, but not to a physical CMB result:
+\[
+\texttt{tau\_side\_prediction\_values}=\texttt{UNFILLED},\qquad
+\texttt{physical\_score}=\texttt{NOT\_READY},\qquad
+\texttt{dark\_sector\_verdict}=\texttt{NOT\_READY}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_acoustic\_tau\_prediction\_vector\_population\_or\_explicit\_fail\_v01}.
+\]
+
+That artifact is now populated as an explicit Tau-side failure record rather
+than a score attempt. It checks the required vector
+\[
+Y_{\tau}^{\mathrm{ac}}
+ =
+(\theta_{\mathrm{peak},\tau},
+P_{\mathrm{pos},\tau},
+P_{\mathrm{height},\tau},
+P_{\mathrm{phase},\tau},
+P_{\mathrm{damp},\tau},
+E_{\mathrm{peak},\tau})
+\]
+and records:
+\[
+\texttt{tau\_prediction\_values\_supplied}=\texttt{false},\qquad
+\texttt{channel\_map\_supplied}=\texttt{false},\qquad
+\texttt{diagnostic\_score\_run}=\texttt{false}.
+\]
+The route status is therefore
+\[
+\texttt{Y\_TAU\_AC\_POPULATION\_EXPLICIT\_FAIL}.
+\]
+This is not a physical CMB failure claim. It says only that the observed
+Planck PR3 acoustic source vector and diagnostic policy are ready, while the
+Tau-side acoustic prediction vector is not populated in an endpoint-blind form.
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_acoustic\_operator\_population\_work\_order\_v01}.
+\]
+
+\section{Effective Potential Source Handoff}
+
+The effective-potential source handoff declares the shared source slot
+\[
+\Phi_{\tau,\mathrm{eff}}(a,k)
+\]
+needed by the acoustic and lensing roles. This is only a handoff declaration,
+not a source derivation. Endpoint-blind provenance, normalization, timing/sign,
+baryon-photon coupling, and lensing projection response remain missing. Thus
+the source handoff is not completed:
+\[
+\texttt{source\_handoff\_completed}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_endpoint\_blind\_phi\_tau\_derivation\_contract\_v01}.
+\]
+
+\section{Endpoint-Blind Phi Tau Derivation Contract}
+
+The endpoint-blind derivation contract declares what must be true before
+\(\Phi_{\tau,\mathrm{eff}}(a,k)\) may be treated as a Tau-derived source.
+It excludes CMB endpoint residuals, role scores, and likelihood residuals from
+the construction path. It does not derive the source:
+\[
+\texttt{endpoint\_blind\_contract\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_provenance\_v01}.
+\]
+
+\section{Phi Tau Parent Input Provenance}
+
+The parent-input provenance artifact declares the upstream input slots required
+before \(\Phi_{\tau,\mathrm{eff}}(a,k)\) can be derived without endpoint
+contamination. The required inputs include a parent manifest identity, a
+base-field state, a morphology or seed descriptor, response-operator inputs,
+gauge and normalization metadata, an endpoint firewall audit, and a replay
+status. No parent inputs are supplied in this artifact:
+\[
+\texttt{parent\_input\_provenance\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_candidate\_manifest\_v01}.
+\]
+
+\section{Phi Tau Parent Input Candidate Manifest}
+
+The candidate manifest gives the parent-input provenance scaffold a concrete
+candidate packet target. It declares candidate classes for the base-field state,
+morphological seed, response operator, gauge and normalization metadata,
+endpoint firewall, and provenance replay. These candidates are not accepted as
+source inputs:
+\[
+\texttt{candidate\_manifest\_satisfied}=\texttt{false}.
+\]
+The candidate manifest acceptance audit accepts only the packet identity and no
+parent-side source content:
+\[
+\texttt{accepted\_identity\_rows}=1,\qquad
+\texttt{accepted\_parent\_input\_rows}=0,\qquad
+\texttt{blocked\_rows}=4,\qquad
+\texttt{partial\_rows}=2.
+\]
+The base-field state, morphological seed, response operator, and provenance
+replay remain blocked; gauge/normalization metadata and the firewall rule remain
+partial. Thus the candidate packet is addressable, but it is not a
+\(\Phi_{\tau,\mathrm{eff}}\) source.
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_candidate\_manifest\_acceptance\_v01}.
+\]
+
+\section{Phi Tau Parent Input Firewall Audit}
+
+The firewall audit evaluates the candidate parent-input manifest at rule level.
+It checks the declared endpoint-exclusion roles for the manifest identity,
+base-field state, morphology seed, response operator, gauge/normalization
+metadata, firewall rule, and replay candidate. Because no concrete payload
+packet exists, the audit cannot pass the endpoint firewall:
+\[
+\texttt{endpoint\_firewall\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_payload\_stub\_v01}.
+\]
+
+\section{Phi Tau Parent Input Payload Stub}
+
+The payload stub converts the candidate manifest into a file-level schema that
+can be inspected by the next firewall-execution gate. It creates empty payload
+slots for the manifest identity, base-field state, morphology seed, response
+operator, gauge/normalization metadata, endpoint firewall metadata, and replay
+metadata. It supplies no concrete parent-side Tau values:
+\[
+\texttt{payload\_stub\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_firewall\_execution\_v01}.
+\]
+
+\section{Phi Tau Parent Input Firewall Execution}
+
+The firewall execution artifact runs the endpoint firewall at schema level
+against the payload stub. Reserved endpoint-derived fields are empty in the
+stub schema, so the schema-level firewall execution is satisfied. This is not a
+payload-level pass, because no concrete parent-side Tau values or executable
+replay are supplied:
+\[
+\texttt{payload\_firewall\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_concrete\_payload\_requirements\_v01}.
+\]
+
+\section{Phi Tau Parent Input Concrete Payload Requirements}
+
+The concrete-payload requirements artifact states what must be supplied before
+a payload-level firewall pass can be claimed. It requires a base-field state,
+morphological seed, response-operator input set, locked gauge/normalization
+metadata, payload-level firewall certificate, and executable provenance replay.
+Each physical row must declare dimensional or unit status and endpoint-blind
+provenance. No concrete payload is supplied here:
+\[
+\texttt{concrete\_payload\_requirements\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_concrete\_payload\_candidate\_v01}.
+\]
+
+\section{Phi Tau Parent Input Concrete Payload Candidate}
+
+The concrete-payload candidate artifact declares a candidate parent-input
+package for the base-field state, morphology seed, response operator, and
+gauge/normalization metadata, together with firewall-certificate and replay
+slots. The candidate package is not accepted: dimensional checks, payload-level
+firewall certification, and executable replay remain absent.
+\[
+\texttt{concrete\_payload\_candidate\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_payload\_firewall\_audit\_v01}.
+\]
+
+\section{Phi Tau Parent Input Payload Firewall Audit}
+
+The payload-firewall audit inspects the concrete payload candidate package for
+endpoint-derived fields. No populated endpoint-derived fields are detected, but
+the payload-level firewall still does not pass: dimensional checks, a
+payload-level firewall certificate, and executable replay are missing.
+\[
+\texttt{payload\_firewall\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_source\_content\_closure\_decision\_v01}.
+\]
+
+\section{Phi Tau Parent Source Content Closure Decision}
+
+The parent-source-content closure decision consolidates the candidate payload
+and payload-firewall audit into a single source-readiness decision. The checked
+payload fields are endpoint-clean, but the source content is not closed:
+\[
+\texttt{candidate\_content\_rows}=5,\qquad
+\texttt{endpoint\_clean\_rows}=7,\qquad
+\texttt{dimension\_or\_lock\_passed\_rows}=0,
+\]
+\[
+\texttt{payload\_firewall\_passed\_rows}=0,\qquad
+\texttt{replay\_available\_rows}=0,\qquad
+\texttt{accepted\_parent\_input\_rows}=0.
+\]
+Therefore endpoint-blind provenance is not accepted, no
+\(\Phi_{\tau,\mathrm{eff}}\) source derivation is allowed, and no CMB score or
+dark-sector verdict is promoted. The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_dimension\_replay\_certificate\_v01}.
+\]
+
+\section{Phi Tau Parent Input Dimension Replay Certificate}
+
+The dimension/replay certificate artifact declares the certificates required
+before the parent-input payload can be accepted: dimensional or unit checks for
+physical rows, executable replay, and a payload-level firewall certificate. No
+certificate package is supplied in this artifact:
+\[
+\texttt{dimension\_replay\_certificate\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_certificate\_candidate\_v01}.
+\]
+
+\section{Phi Tau Parent Input Certificate Candidate}
+
+The certificate-candidate artifact declares candidate certificates for the
+base-field, seed, response-operator, gauge/normalization, payload-firewall, and
+replay rows. No candidate certificate passes, and no parent payload is accepted:
+\[
+\texttt{certificate\_candidate\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_certificate\_audit\_v01}.
+\]
+
+\section{Phi Tau Parent Input Certificate Audit}
+
+The certificate-audit artifact audits the seven parent-input certificate
+candidates. All seven candidates fail the audit because no certificate evidence
+is supplied. Therefore no parent input is accepted for scoring:
+\[
+\texttt{certificate\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_certificate\_closure\_decision\_v01}.
+\]
+
+\section{Phi Tau Parent Certificate Closure Decision}
+
+The parent-certificate closure decision consolidates the dimension/replay
+requirements, certificate candidates, and certificate audit. Requirements are
+declared, candidate certificates are declared, and all candidate certificates
+are audited. However, no certificate evidence is supplied and no certificate
+passes:
+\[
+\texttt{requirements\_declared\_rows}=7,\qquad
+\texttt{candidate\_declared\_rows}=7,\qquad
+\texttt{candidate\_audited\_rows}=7,
+\]
+\[
+\texttt{certificate\_evidence\_supplied\_rows}=0,\qquad
+\texttt{dimension\_passed\_rows}=0,\qquad
+\texttt{replay\_passed\_rows}=0,
+\]
+\[
+\texttt{firewall\_passed\_rows}=0,\qquad
+\texttt{certificate\_passed\_rows}=0,\qquad
+\texttt{payload\_accepted\_rows}=0.
+\]
+Therefore the parent certificate layer is not closed and no
+\(\Phi_{\tau,\mathrm{eff}}\) source derivation or score entry is allowed. The
+next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_certificate\_evidence\_request\_v01}.
+\]
+
+\section{Phi Tau Parent Input Certificate Evidence Request}
+
+The evidence-request artifact converts the failed certificate audit into
+explicit evidence requirements. All seven parent-input rows request evidence,
+but no dimension, replay, or firewall evidence is supplied in this artifact:
+\[
+\texttt{certificate\_evidence\_request\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_certificate\_evidence\_package\_candidate\_v01}.
+\]
+
+\section{Phi Tau Parent Input Certificate Evidence Package Candidate}
+
+The evidence-package-candidate artifact groups the seven evidence requests into
+an audit-ready package structure. It declares dimension, replay, and firewall
+evidence slots, but no evidence payload is supplied and no package passes:
+\[
+\texttt{certificate\_evidence\_package\_candidate\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_certificate\_evidence\_package\_audit\_v01}.
+\]
+
+\section{Phi Tau Parent Input Certificate Evidence Package Audit}
+
+The evidence-package-audit artifact audits the unpopulated evidence-package
+candidate. The slots are declared, but no evidence payload is supplied; therefore
+the package is rejected for scoring-input acceptance:
+\[
+\texttt{certificate\_evidence\_package\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_evidence\_package\_closure\_decision\_v01}.
+\]
+
+\section{Phi Tau Parent Evidence Package Closure Decision}
+
+The evidence-package closure decision consolidates the evidence request, package
+candidate, and package audit into one scoring-facing decision. All seven
+evidence rows are requested, declared, and audited, but none supplies dimension,
+replay, or firewall evidence; no evidence package passes; no certificate passes;
+and no parent payload is accepted:
+\[
+\texttt{phi\_tau\_parent\_evidence\_package\_closed}=\texttt{false}.
+\]
+This artifact is a decision-only blocker certificate. It does not derive
+\texttt{Phi\_tau\_eff}, compute a score, provide a CMB likelihood, or decide
+whether a dark sector is needed. The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_scoring\_acceptance\_precheck\_v01}.
+\]
+
+\section{Phi Tau Parent Input Scoring Acceptance Precheck}
+
+The scoring-acceptance precheck summarizes the parent-input gates before any CMB
+score may be computed. Evidence-package pass, certificate pass, payload
+acceptance, and \texttt{Phi\_tau\_eff} derivability are all absent:
+\[
+\texttt{scoring\_acceptance\_precheck\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_scoring\_acceptance\_unblock\_plan\_v01}.
+\]
+
+\section{Phi Tau Parent Input Scoring Acceptance Unblock Plan}
+
+The scoring-acceptance unblock plan ranks the five steps needed before parent
+inputs may enter a CMB scoring run: populated evidence package, certificate
+pass, payload acceptance, endpoint-blind \texttt{Phi\_tau\_eff} derivation, and
+scoring-input acceptance. No unblock step is completed:
+\[
+\texttt{scoring\_acceptance\_unblock\_plan\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_populated\_evidence\_package\_candidate\_v01}.
+\]
+
+\section{Phi Tau Parent Input Populated Evidence Package Candidate}
+
+The populated-evidence-package candidate declares the payload records that would
+be required to populate the evidence package. No payload record is supplied in
+this artifact, so the populated package candidate remains unsatisfied:
+\[
+\texttt{populated\_evidence\_package\_candidate\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_populated\_evidence\_package\_audit\_v01}.
+\]
+
+\section{Phi Tau Parent Input Populated Evidence Package Audit}
+
+The populated-evidence-package audit checks whether the declared payload records
+are actually supplied. All seven rows fail because the required payload records
+remain absent:
+\[
+\texttt{populated\_evidence\_package\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_evidence\_payload\_submission\_gate\_v01}.
+\]
+
+\section{Phi Tau Parent Evidence Payload Acquisition Candidate and Audit}
+
+The evidence-payload acquisition candidate records a concrete local payload
+candidate for each of the seven parent evidence rows. The sources are
+endpoint-blind semantic replay artifacts or replay-supply tables, and each
+source is bound by a SHA256 hash. The acquisition audit verifies:
+\[
+\texttt{candidate\_payload\_supplied\_rows}=7,\qquad
+\texttt{candidate\_payload\_audit\_passed\_rows}=7.
+\]
+This is a payload-candidate acquisition, not a parent-input acceptance. The same
+audit therefore also records:
+\[
+\texttt{certificate\_passed\_rows}=0,\qquad
+\texttt{parent\_payload\_accepted\_rows}=0,\qquad
+\texttt{score\_ready\_rows}=0.
+\]
+The acquisition does not derive \texttt{Phi\_tau\_eff}, compute a score, provide
+a CMB likelihood, or decide whether a dark sector is needed.
+
+\section{Phi Tau Parent Evidence Payload Intake Bridge Decision}
+
+The intake bridge decision connects the acquired payload candidates to the
+canonical submission and materialization route. It records that the candidate
+payloads are present, hash-bound, and audit-passed as candidates:
+\[
+\texttt{candidate\_payload\_audit\_passed\_rows}=7.
+\]
+It also records that the canonical payload packets and receipt bindings are not
+yet present:
+\[
+\texttt{canonical\_submission\_packet\_present\_rows}=0,\qquad
+\texttt{receipt\_binding\_present\_rows}=0.
+\]
+Thus the next blocker is no longer raw payload discovery, but canonical
+repackaging plus dimension/replay/firewall receipt binding. The bridge still
+records:
+\[
+\texttt{parent\_payload\_accepted\_rows}=0,\qquad
+\texttt{certificate\_passed\_rows}=0,\qquad
+\texttt{score\_ready\_rows}=0.
+\]
+
+\section{Phi Tau Parent Canonical Payload Packet}
+
+The canonical payload packet artifact repackages the seven acquired payload
+candidates into canonical packet rows with source hashes and receipt bindings.
+It records:
+\[
+\texttt{canonical\_packet\_present\_rows}=7,\qquad
+\texttt{receipt\_binding\_present\_rows}=7,\qquad
+\texttt{canonical\_repackaging\_completed\_rows}=7.
+\]
+The packet layer is still not an acceptance layer. Its binding coverage remains
+partial:
+\[
+\texttt{dimension\_binding\_present\_rows}=4,\quad
+\texttt{replay\_binding\_present\_rows}=6,\quad
+\texttt{firewall\_binding\_present\_rows}=3.
+\]
+Consequently the artifact records:
+\[
+\texttt{parent\_payload\_accepted\_rows}=0,\qquad
+\texttt{certificate\_passed\_rows}=0,\qquad
+\texttt{score\_ready\_rows}=0.
+\]
+
+\section{Phi Tau Parent Input Evidence Payload Submission Gate}
+
+The evidence-payload submission gate declares what payload submissions would be
+accepted for audit. No payload is received or accepted in this artifact:
+\[
+\texttt{evidence\_payload\_submission\_gate\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_evidence\_payload\_receipt\_candidate\_v01}.
+\]
+
+\section{Phi Tau Parent Input Evidence Payload Receipt Candidate}
+
+The evidence-payload receipt candidate declares receipt records that would bind
+payload objects to provenance hashes, replay commands, and artifact paths. No
+payload is received, so no receipt is accepted:
+\[
+\texttt{evidence\_payload\_receipt\_candidate\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_evidence\_payload\_receipt\_audit\_v01}.
+\]
+
+\section{Phi Tau Parent Input Evidence Payload Receipt Audit}
+
+The evidence-payload receipt audit checks whether declared receipt candidates
+can be validated against concrete endpoint-blind payload records. No payload
+record is available, so no receipt is validated or accepted:
+\[
+\texttt{evidence\_payload\_receipt\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_evidence\_payload\_receipt\_remediation\_plan\_v01}.
+\]
+
+\section{Phi Tau Parent Input Evidence Payload Receipt Remediation Plan}
+
+The evidence-payload receipt remediation plan declares the missing payload and
+receipt bindings required to repair the failed receipt audit. The plan supplies
+no payload and completes no remediation step:
+\[
+\texttt{evidence\_payload\_receipt\_remediation\_plan\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_evidence\_payload\_materialization\_packet\_v01}.
+\]
+
+\section{Phi Tau Parent Input Evidence Payload Materialization Packet}
+
+The evidence-payload materialization packet declares the endpoint-blind packet
+slots that would have to be materialized before parent-side Phi Tau input
+evidence can enter acceptance. No packet is materialized or accepted:
+\[
+\texttt{evidence\_payload\_materialization\_packet\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_evidence\_payload\_materialization\_audit\_v01}.
+\]
+
+\section{Phi Tau Parent Input Evidence Payload Materialization Audit}
+
+The evidence-payload materialization audit checks whether the declared packet
+slots have become concrete endpoint-blind payload packets. No payload packet is
+materialized, so no packet is accepted:
+\[
+\texttt{evidence\_payload\_materialization\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_evidence\_payload\_acceptance\_precheck\_v01}.
+\]
+
+\section{Phi Tau Parent Input Evidence Payload Acceptance Precheck}
+
+The evidence-payload acceptance precheck checks whether payload packets are
+eligible for acceptance after materialization, receipt, dimension, replay, and
+firewall gates. The materialization audit is not satisfied, so no payload is
+accepted:
+\[
+\texttt{evidence\_payload\_acceptance\_precheck\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_evidence\_payload\_acceptance\_unblock\_plan\_v01}.
+\]
+
+\section{Phi Tau Parent Input Evidence Payload Acceptance Unblock Plan}
+
+The evidence-payload acceptance unblock plan orders the gates that must be
+cleared before payload acceptance can be reconsidered: materialization, receipt,
+dimension, replay, firewall, evidence-package pass, and scoring-input
+acceptance. No unblock step is completed:
+\[
+\texttt{evidence\_payload\_acceptance\_unblock\_plan\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_evidence\_payload\_acceptance\_decision\_gate\_v01}.
+\]
+
+\section{Phi Tau Parent Input Evidence Payload Acceptance Decision Gate}
+
+The evidence-payload acceptance decision gate applies the rule that acceptance
+may open only after all upstream evidence gates are completed and audit-passed.
+The unblock plan is not completed, so acceptance remains closed:
+\[
+\texttt{evidence\_payload\_acceptance\_decision\_gate\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_evidence\_payload\_scoring\_input\_candidate\_v01}.
+\]
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Candidate}
+
+The evidence-payload scoring-input candidate declares candidate scoring inputs
+that would be constructed from accepted endpoint-blind evidence payloads. The
+acceptance decision gate is closed, so no scoring input is accepted:
+\[
+\texttt{evidence\_payload\_scoring\_input\_candidate\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_evidence\_payload\_scoring\_input\_audit\_v01}.
+\]
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Audit}
+
+The evidence-payload scoring-input audit checks whether declared scoring-input
+candidates can be accepted for scoring. The audit rejects all candidates because
+accepted endpoint-blind evidence payloads are absent and the acceptance decision
+gate remains closed:
+\[
+\texttt{evidence\_payload\_scoring\_input\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\[
+\texttt{tau\_cmb\_phi\_tau\_parent\_input\_evidence\_payload\_scoring\_input\_remediation\_plan\_v01}.
+\]
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Remediation Plan}
+
+The evidence-payload scoring-input remediation plan states the minimal inputs
+required to reopen the rejected scoring-input audit. It remains a plan only:
+no remediation step is completed, no payload is accepted, and no scoring input
+is accepted:
+\[
+\texttt{evidence\_payload\_scoring\_input\_remediation\_plan\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_remediation_packet_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Remediation Packet}
+
+The evidence-payload scoring-input remediation packet turns the remediation
+plan into packet slots and packet-schema requirements. It remains a schema
+only: no packet is materialized, no packet audit passes, and no scoring input
+is accepted:
+\[
+\texttt{evidence\_payload\_scoring\_input\_remediation\_packet\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_remediation_packet_audit_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Remediation Packet Audit}
+
+The evidence-payload scoring-input remediation packet audit checks whether the
+declared packet slots have been materialized and submitted. The audit rejects
+all packet slots because no remediation packet is materialized:
+\[
+\texttt{evidence\_payload\_scoring\_input\_remediation\_packet\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_materialization_request_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Materialization Request}
+
+The evidence-payload scoring-input materialization request declares the concrete
+packet files, provenance files, replay commands, hashes, and firewall
+attestations required to reopen the rejected remediation-packet audit. The
+request is not fulfilled:
+\[
+\texttt{evidence\_payload\_scoring\_input\_materialization\_request\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_materialization_request_audit_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Materialization Request Audit}
+
+The evidence-payload scoring-input materialization request audit checks whether
+the declared materialization request has been fulfilled. The request exists and
+is audited, but no requested packet is materialized or submitted:
+\[
+\texttt{evidence\_payload\_scoring\_input\_materialization\_request\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_materialization_packet_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Materialization Packet}
+
+The evidence-payload scoring-input materialization packet declares the packet
+shell requested by the materialization request audit. It names the expected
+payload, provenance, replay, hash-manifest, and firewall-attestation files, but
+actual payloads are absent:
+\[
+\texttt{evidence\_payload\_scoring\_input\_materialization\_packet\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_materialization_packet_audit_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Materialization Packet Audit}
+
+The evidence-payload scoring-input materialization packet audit checks whether
+the declared packet shell is supported by actual payload, provenance, replay,
+hash-manifest, and firewall-attestation files. The shell is audited, but all
+actual payload evidence remains absent:
+\[
+\texttt{evidence\_payload\_scoring\_input\_materialization\_packet\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_fulfillment_request_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Fulfillment Request}
+
+The evidence-payload scoring-input payload fulfillment request specifies the
+minimum actual payload package required before scoring can be reopened. It
+requires seven supplied payloads with provenance, deterministic replay, hash
+manifests, firewall attestations, endpoint-blind construction, known-limit
+status, and dimensional declarations. The requested payloads are not supplied:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_fulfillment\_request\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_fulfillment_request_audit_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Fulfillment Request Audit}
+
+The evidence-payload scoring-input payload fulfillment request audit checks
+whether the requested payload package has actually been supplied. The request
+is audited, but no requested payload, provenance, replay, hash-manifest, or
+firewall-attestation file is supplied:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_fulfillment\_request\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_packet_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Packet}
+
+The evidence-payload scoring-input payload submission packet declares the
+submission shell required after the failed fulfillment-request audit. It names
+seven submission slots and the required payload, provenance, replay,
+hash-manifest, and firewall-attestation files, but no payload is submitted:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_packet\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_packet_audit_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Packet Audit}
+
+The evidence-payload scoring-input payload submission packet audit checks
+whether the declared submission packet is supported by submitted payload,
+provenance, replay, hash-manifest, and firewall-attestation evidence. The
+packet shell is audited, but no required evidence is submitted:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_packet\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_remediation_plan_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Remediation Plan}
+
+The evidence-payload scoring-input payload submission remediation plan turns
+the failed submission-packet audit into targeted completion actions. It lists
+the required payload, provenance, replay, hash-manifest, firewall,
+endpoint-blind, known-limit, and dimensional evidence that must be supplied.
+The remediation is planned but not completed:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_remediation\_plan\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_remediation_packet_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Remediation Packet}
+
+The evidence-payload scoring-input payload submission remediation packet turns
+the remediation plan into a packet shell. It declares remediation slots and
+expected completion, provenance, replay, hash-manifest, and firewall
+attestation files. The packet is not materialized and remediation is not
+completed:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_remediation\_packet\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_remediation_packet_audit_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Remediation Packet Audit}
+
+The evidence-payload scoring-input payload submission remediation packet audit
+checks whether the declared packet shell can be promoted into an accepted
+scoring input. It cannot. The packet is declared, but it is not materialized,
+submitted, completed, hash-bound, replay-bound, or endpoint-firewall attested:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_remediation\_packet\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_materialization_request_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Materialization Request}
+
+The evidence-payload scoring-input payload submission materialization request
+turns the rejected remediation-packet audit into concrete materialization
+requirements. It requests payload files, completion evidence, provenance files,
+replay command files, hash manifests, and endpoint-firewall attestations. The
+request is declared but not fulfilled:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_materialization\_request\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_materialization_request_audit_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Materialization Request Audit}
+
+The evidence-payload scoring-input payload submission materialization request
+audit checks whether the declared materialization request has been fulfilled.
+It has not: no requested packet is materialized or submitted and no completion,
+provenance, replay, hash-manifest, or endpoint-firewall evidence is supplied:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_materialization\_request\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_materialization_packet_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Materialization Packet}
+
+The evidence-payload scoring-input payload submission materialization packet
+declares the packet shell requested by the materialization-request audit. It
+names the expected payload, completion-evidence, provenance, replay,
+hash-manifest, and endpoint-firewall files. The actual files are absent and no
+packet is materialized or submitted:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_materialization\_packet\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_materialization_packet_audit_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Materialization Packet Audit}
+
+The evidence-payload scoring-input payload submission materialization packet
+audit checks the declared packet shell. The shell is audited, but the actual
+payload, completion evidence, provenance, replay, hash-manifest, and
+endpoint-firewall evidence remain absent:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_materialization\_packet\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_fulfillment_request_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Fulfillment Request}
+
+The evidence-payload scoring-input payload submission fulfillment request turns
+the failed materialization-packet audit into concrete payload requirements. It
+specifies the required payload files, completion evidence, provenance, replay,
+hash-manifest, endpoint-firewall, known-limit, and dimensional evidence. The
+request is declared but not supplied:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_fulfillment\_request\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_fulfillment_request_audit_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Fulfillment Request Audit}
+
+The evidence-payload scoring-input payload submission fulfillment request audit
+checks the concrete submission payload request. The request is audited, but the
+payload, completion evidence, provenance, replay, hash-manifest, and
+endpoint-firewall evidence remain absent:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_fulfillment\_request\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_execution_packet_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Execution Packet}
+
+The evidence-payload scoring-input payload submission execution packet declares
+the execution envelope that would be needed after a successful payload
+submission. It is blocked because payload supply, completion evidence,
+provenance, replay, hash-manifest, endpoint-firewall evidence, payload
+acceptance, and scoring-input acceptance remain absent:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_execution\_packet\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_execution_packet_audit_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Execution Packet Audit}
+
+The evidence-payload scoring-input payload submission execution packet audit
+checks the blocked execution envelope. The packet is declared and audited, but
+it cannot execute because payload supply, completion evidence, provenance,
+replay, hash-manifest, endpoint-firewall evidence, payload acceptance, and
+scoring-input acceptance remain absent:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_execution\_packet\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_execution_unblock_plan_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Execution Unblock Plan}
+
+The evidence-payload scoring-input payload submission execution unblock plan
+lists the ordered evidence objects needed before the audited execution packet
+could be reconsidered. No unblock action is completed, and execution remains
+disallowed:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_execution\_unblock\_plan\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_execution_unblock_plan_audit_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Execution Unblock Plan Audit}
+
+The evidence-payload scoring-input payload submission execution unblock plan
+audit checks the declared unblock requirements. The requirements are audited,
+but no evidence object is supplied, no unblock action is completed, and
+execution remains disallowed:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_execution\_unblock\_plan\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_request_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Request}
+
+The evidence-payload scoring-input payload submission evidence object request
+names the concrete evidence objects needed before execution can be reconsidered.
+The evidence objects are requested but not supplied, audited, or accepted:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_request\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_request_audit_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Request Audit}
+
+The evidence-payload scoring-input payload submission evidence object request
+audit checks the concrete requested evidence objects. The request is audited,
+but no evidence object is supplied, audited as evidence, or accepted:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_request\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_gate_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Gate}
+
+The evidence-payload scoring-input payload submission evidence object receipt
+gate opens the receipt channel for the requested evidence objects. No evidence
+object is received, no receipt is validated, and no evidence is accepted:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_receipt\_gate\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_gate_audit_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Gate Audit}
+
+The evidence-payload scoring-input payload submission evidence object receipt
+gate audit checks the open receipt gate. The gate is audited, but no evidence
+object is received, validated, or accepted:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_receipt\_gate\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_candidate_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Candidate}
+
+The evidence-payload scoring-input payload submission evidence object receipt
+candidate declares the expected receipt objects. No evidence object is received,
+no receipt is validated, and no receipt is accepted:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_receipt\_candidate\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_candidate_audit_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Candidate Audit}
+
+The evidence-payload scoring-input payload submission evidence object receipt
+candidate audit checks the declared receipt candidates. The candidate list is
+audited, but no evidence object or receipt object is received:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_receipt\_candidate\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_candidate_remediation_plan_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Candidate Remediation Plan}
+
+The evidence-payload scoring-input payload submission evidence object receipt
+candidate remediation plan lists the missing evidence and receipt objects
+required after the candidate audit. No remediation is completed and no evidence
+object is received:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_receipt\_candidate\_remediation\_plan\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_materialization_packet_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Materialization Packet}
+
+The evidence-payload scoring-input payload submission evidence object receipt
+materialization packet declares packet slots for the required evidence and
+receipt objects. No evidence object is materialized:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_receipt\_materialization\_packet\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_materialization_audit_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Materialization Audit}
+
+The evidence-payload scoring-input payload submission evidence object receipt
+materialization audit checks whether the packet slots have materialized evidence
+and receipt objects. No evidence object is materialized:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_receipt\_materialization\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_precheck_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Acceptance Precheck}
+
+The evidence-payload scoring-input payload submission evidence object receipt
+acceptance precheck checks whether the materialized evidence and receipt objects
+are eligible for acceptance. The materialization audit is not satisfied, so no
+evidence object or receipt is accepted:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_receipt\_acceptance\_precheck\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_unblock_plan_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Acceptance Unblock Plan}
+
+The evidence-payload scoring-input payload submission evidence object receipt
+acceptance unblock plan declares the actions required to open acceptance after
+the failed precheck. No unblock action is completed:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_receipt\_acceptance\_unblock\_plan\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_unblock_plan_audit_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Acceptance Unblock Plan Audit}
+
+The evidence-payload scoring-input payload submission evidence object receipt
+acceptance unblock plan audit checks the declared unblock plan. The plan is
+audited, but no unblock action is completed and no evidence object or receipt is
+accepted:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_receipt\_acceptance\_unblock\_plan\_audit\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_decision_gate_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Acceptance Decision Gate}
+
+The evidence-payload scoring-input payload submission evidence object receipt
+acceptance decision gate applies the rule that acceptance may open only after
+the unblock plan audit passes. The unblock plan audit is not passed, so
+acceptance remains closed:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_receipt\_acceptance\_decision\_gate\_satisfied}=\texttt{false}.
+\]
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_decision_gate_audit_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Acceptance Decision Gate Audit}
+
+The evidence-payload scoring-input payload submission evidence object receipt
+acceptance decision gate audit checks that the closed acceptance decision is
+traceable to the failed unblock-plan audit and grants no downstream permission:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_receipt\_acceptance\_decision\_gate\_audit\_satisfied}=\texttt{true}.
+\]
+This is an audit pass for a closed gate only; no evidence object, receipt,
+execution, score, likelihood, or verdict is accepted.
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_record_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Acceptance Record}
+
+The evidence-payload scoring-input payload submission evidence object receipt
+acceptance record records the closed acceptance decision after the decision-gate
+audit. This is a record pass for a closed gate only:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_receipt\_acceptance\_record\_satisfied}=\texttt{true}.
+\]
+No evidence object, receipt, execution, score, likelihood, or verdict is
+accepted. The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_precheck_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Scoring Handoff Precheck}
+
+The evidence-object receipt scoring handoff precheck checks whether the closed
+acceptance record can be handed to scoring. It cannot:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_receipt\_scoring\_handoff\_precheck\_satisfied}=\texttt{false}.
+\]
+No evidence object, receipt, payload, or scoring input is accepted.
+The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_unblock_plan_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Scoring Handoff Unblock Plan}
+
+The scoring handoff unblock plan declares the exit conditions that would be
+required before scoring handoff could open. The plan is not completed:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_receipt\_scoring\_handoff\_unblock\_plan\_satisfied}=\texttt{false}.
+\]
+No handoff is unblocked, no payload or scoring input is accepted, no execution
+is allowed, and no score, likelihood, or verdict is produced. The next focused
+artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_unblock_plan_audit_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Scoring Handoff Unblock Plan Audit}
+
+The scoring handoff unblock plan audit checks the internal consistency of the
+unblock plan. The audit passes only as a plan-consistency check:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_receipt\_scoring\_handoff\_unblock\_plan\_audit\_satisfied}=\texttt{true}.
+\]
+The handoff remains blocked: no evidence object, receipt, payload, or scoring
+input is accepted, no execution is allowed, and no score, likelihood, or verdict
+is produced. The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_decision_gate_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Scoring Handoff Decision Gate}
+
+The scoring handoff decision gate records the post-audit handoff decision. The
+gate is satisfied as a closed decision:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_receipt\_scoring\_handoff\_decision\_gate\_satisfied}=\texttt{true}.
+\]
+The decision result is \texttt{handoff\_closed}, because accepted evidence,
+receipt, payload, and scoring-input records are absent. No scoring handoff,
+execution, score, likelihood, or verdict follows from this closed decision. The
+next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_decision_gate_audit_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Scoring Handoff Decision Gate Audit}
+
+The scoring handoff decision gate audit checks whether the closed handoff
+decision is internally consistent. The audit passes as a closed-decision
+consistency check:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_receipt\_scoring\_handoff\_decision\_gate\_audit\_satisfied}=\texttt{true}.
+\]
+The audited decision remains \texttt{handoff\_closed}; no scoring handoff,
+execution, score, likelihood, or verdict follows. The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_acceptance_record_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Scoring Handoff Acceptance Record}
+
+The scoring handoff acceptance record records the audited closed handoff
+decision. The record is satisfied only as a closed-handoff record:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_receipt\_scoring\_handoff\_acceptance\_record\_satisfied}=\texttt{true}.
+\]
+The recorded decision remains \texttt{handoff\_closed}; no scoring handoff,
+execution, score, likelihood, or verdict follows. The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_acceptance_record_audit_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Scoring Handoff Acceptance Record Audit}
+
+The scoring handoff acceptance record audit checks whether the closed handoff
+record is internally consistent. The audit passes as a closed-record
+consistency check:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_receipt\_scoring\_handoff\_acceptance\_record\_audit\_satisfied}=\texttt{true}.
+\]
+The recorded decision remains \texttt{handoff\_closed}; no scoring handoff,
+execution, score, likelihood, or verdict follows. The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_final_pre_score_lock_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Scoring Handoff Final Pre-Score Lock}
+
+The final pre-score lock records the closed scoring-handoff state immediately
+before any score could be attempted. The lock is satisfied only as a lock:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_receipt\_scoring\_handoff\_final\_pre\_score\_lock\_satisfied}=\texttt{true}.
+\]
+The lock result is \texttt{pre\_score\_locked}; no scoring handoff, execution,
+score, likelihood, or verdict follows. The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_final_pre_score_lock_audit_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Scoring Handoff Final Pre-Score Lock Audit}
+
+The final pre-score lock audit checks that the \texttt{pre\_score\_locked}
+state is internally consistent with the still-missing acceptance conditions.
+The audit is satisfied only as a lock-consistency audit:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_receipt\_scoring\_handoff\_final\_pre\_score\_lock\_audit\_satisfied}=\texttt{true}.
+\]
+The audit result is
+\texttt{pre\_score\_lock\_consistent\_with\_missing\_acceptance\_conditions};
+no scoring handoff, execution, score, likelihood, or verdict follows. The next
+focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_score_attempt_blocker_certificate_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Scoring Handoff Score Attempt Blocker Certificate}
+
+The score-attempt blocker certificate records that a score attempt is still
+blocked after the final pre-score lock audit. The certificate is satisfied only
+as a blocker certificate:
+\[
+\texttt{evidence\_payload\_scoring\_input\_payload\_submission\_evidence\_object\_receipt\_scoring\_handoff\_score\_attempt\_blocker\_certificate\_satisfied}=\texttt{true}.
+\]
+The certified blocker is
+\texttt{score\_attempt\_blocked\_by\_missing\_acceptance\_conditions};
+\texttt{score\_attempt\_allowed}=\texttt{false}. No scoring handoff, execution,
+score, likelihood, or verdict follows. The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_score_attempt_unblock_conditions_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Scoring Handoff Score Attempt Unblock Conditions}
+
+The score-attempt unblock-conditions artifact declares the minimal conditions
+that must be satisfied before a score attempt can be considered. The conditions
+are declared, but they are not satisfied:
+\[
+\texttt{score\_attempt\_unblock\_conditions\_satisfied}=\texttt{false}.
+\]
+Thus \texttt{score\_attempt\_allowed\_now}=\texttt{false} and
+\texttt{score\_attempt\_blocked\_now}=\texttt{true}. No scoring handoff,
+execution, score, likelihood, or verdict follows. The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_unblock_condition_evidence_request_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Scoring Handoff Unblock Condition Evidence Request}
+
+The unblock-condition evidence request opens requests for the accepted records
+needed to satisfy the score-attempt unblock conditions. It requests evidence
+only:
+\[
+\texttt{unblock\_condition\_evidence\_request\_satisfied}=\texttt{true}.
+\]
+The request records \texttt{evidence\_requested\_rows}=7,
+\texttt{evidence\_received\_rows}=0, and
+\texttt{evidence\_accepted\_rows}=0. Thus no scoring handoff, execution, score,
+likelihood, or verdict follows. The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_unblock_condition_evidence_receipt_candidate_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Scoring Handoff Unblock Condition Evidence Receipt Candidate}
+
+The unblock-condition evidence receipt-candidate artifact prepares receipt
+candidates for the requested accepted records. It remains a candidate-only
+artifact:
+\[
+\texttt{unblock\_condition\_evidence\_receipt\_candidate\_satisfied}=\texttt{true}.
+\]
+The artifact records \texttt{receipt\_candidate\_prepared\_rows}=7,
+\texttt{evidence\_received\_rows}=0,
+\texttt{receipt\_accepted\_rows}=0, and
+\texttt{evidence\_accepted\_rows}=0. Thus no scoring handoff, execution, score,
+likelihood, or verdict follows. The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_unblock_condition_evidence_receipt_candidate_audit_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Scoring Handoff Unblock Condition Evidence Receipt Candidate Audit}
+
+The unblock-condition evidence receipt-candidate audit checks that the seven
+prepared receipt candidates are internally consistent while still not accepted
+as received evidence:
+\[
+\texttt{unblock\_condition\_evidence\_receipt\_candidate\_audit\_satisfied}=\texttt{true}.
+\]
+The audit records \texttt{audit\_passed\_rows}=7,
+\texttt{receipt\_candidate\_prepared\_rows}=7,
+\texttt{evidence\_received\_rows}=0,
+\texttt{receipt\_accepted\_rows}=0, and
+\texttt{evidence\_accepted\_rows}=0. Thus no scoring handoff, execution, score,
+likelihood, or verdict follows. The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_unblock_condition_evidence_receipt_remediation_plan_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Scoring Handoff Unblock Condition Evidence Receipt Remediation Plan}
+
+The unblock-condition evidence receipt remediation plan declares the seven
+actions required before requested evidence records can be materialized and
+considered for acceptance:
+\[
+\texttt{unblock\_condition\_evidence\_receipt\_remediation\_plan\_satisfied}=\texttt{false}.
+\]
+The plan records \texttt{receipt\_candidate\_audit\_passed\_rows}=7 but
+\texttt{remediation\_completed\_rows}=0,
+\texttt{evidence\_received\_rows}=0,
+\texttt{receipt\_accepted\_rows}=0, and
+\texttt{evidence\_accepted\_rows}=0. Thus no scoring handoff, execution, score,
+likelihood, or verdict follows. The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_unblock_condition_evidence_receipt_materialization_packet_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Scoring Handoff Unblock Condition Evidence Receipt Materialization Packet}
+
+The unblock-condition evidence receipt materialization packet declares packet
+slots for the seven requested evidence records:
+\[
+\texttt{unblock\_condition\_evidence\_receipt\_materialization\_packet\_satisfied}=\texttt{false}.
+\]
+The packet records \texttt{packet\_declared\_rows}=7 but
+\texttt{evidence\_materialized\_rows}=0,
+\texttt{evidence\_received\_rows}=0,
+\texttt{receipt\_accepted\_rows}=0, and
+\texttt{evidence\_accepted\_rows}=0. Thus no scoring handoff, execution, score,
+likelihood, or verdict follows. The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_unblock_condition_evidence_receipt_materialization_audit_v01}.
+\end{center}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Scoring Handoff Unblock Condition Evidence Receipt Materialization Audit}
+
+The unblock-condition evidence receipt materialization audit checks the declared
+materialization packet slots and fails until evidence objects and receipts are
+actually materialized:
+\[
+\texttt{unblock\_condition\_evidence\_receipt\_materialization\_audit\_satisfied}=\texttt{false}.
+\]
+The audit records \texttt{packet\_audited\_rows}=7 but
+\texttt{materialization\_audit\_passed\_rows}=0,
+\texttt{evidence\_materialized\_rows}=0,
+\texttt{receipt\_accepted\_rows}=0, and
+\texttt{evidence\_accepted\_rows}=0. Thus no scoring handoff, execution, score,
+likelihood, or verdict follows. The next focused artifact is:
+\begin{center}
+\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_unblock_condition_evidence_receipt_acceptance_precheck_v01}.
+\end{center}
+
 \section{Claim Boundary}
 
 This paper does not claim that Tau Core explains the CMB, does not claim that
 dark matter does not exist, does not detect a Tau dark-sector field, and does
 not provide a CMB likelihood. It provides only a reproducible constraint map and
-a next-artifact target:
+a sequence of next-artifact targets:
+\begin{itemize}
+\item \texttt{tau\_cmb\_effective\_source\_equation\_v01};
+\item \texttt{tau\_cmb\_known\_limit\_and\_dimension\_audit\_v01};
+\item \texttt{tau\_cmb\_minimal\_source\_term\_candidate\_v01};
+\item \texttt{tau\_cmb\_source\_term\_dimensional\_precheck\_v01};
+\item \texttt{tau\_cmb\_lcdm\_role\_scoring\_rubric\_v01};
+\item \texttt{tau\_cmb\_role\_scorecard\_template\_v01};
+\item \texttt{tau\_cmb\_score\_input\_unblock\_plan\_v01};
+\item \texttt{tau\_cmb\_known\_limit\_failure\_map\_v01};
+\item \texttt{tau\_cmb\_density\_amplitude\_derivation\_v01};
+\item \texttt{tau\_cmb\_acoustic\_role\_reduced\_benchmark\_v01};
+\item \texttt{tau\_cmb\_lensing\_transfer\_benchmark\_v01};
+\item \texttt{tau\_cmb\_growth\_transfer\_kernel\_v01};
+\item \texttt{tau\_cmb\_radiation\_guard\_bound\_check\_v01};
+\item \texttt{tau\_cmb\_scorecard\_readiness\_audit\_v01};
+\item \texttt{tau\_cmb\_scorecard\_blocker\_closure\_plan\_v01};
+\item \texttt{tau\_cmb\_density\_amplitude\_closure\_v01};
+\item \texttt{tau\_cmb\_acoustic\_reduced\_evaluation\_v01};
+\item \texttt{tau\_cmb\_lensing\_transfer\_reduced\_evaluation\_v01};
+\item \texttt{tau\_cmb\_growth\_transfer\_kernel\_closure\_v01};
+\item \texttt{tau\_cmb\_radiation\_guard\_evaluation\_v01};
+\item \texttt{tau\_cmb\_known\_limit\_decision\_update\_v01};
+\item \texttt{tau\_cmb\_scorecard\_prescore\_blocker\_summary\_v01};
+\item \texttt{tau\_cmb\_minimal\_scoring\_input\_contract\_v01};
+\item \texttt{tau\_cmb\_scoring\_execution\_gate\_v01};
+\item \texttt{tau\_cmb\_scoring\_input\_fulfillment\_plan\_v01};
+\item \texttt{tau\_cmb\_planck\_pr3\_peak\_source\_freeze\_packet\_v01};
+\item \texttt{tau\_cmb\_planck\_pr3\_peak\_extraction\_rule\_v01};
+\item \texttt{tau\_cmb\_planck\_pr3\_peak\_scoring\_input\_candidate\_v01};
+\item \texttt{tau\_cmb\_planck\_pr3\_peak\_tau\_prediction\_or\_null\_response\_v01};
+\item \texttt{tau\_cmb\_planck\_pr3\_peak\_score\_attempt\_guard\_v01};
+\item \texttt{tau\_cmb\_planck\_pr3\_peak\_tau\_prediction\_materialization\_v01};
+\item \texttt{tau\_cmb\_planck\_pr3\_peak\_tau\_prediction\_payload\_supply\_v01};
+\item \texttt{tau\_cmb\_acoustic\_tau\_prediction\_source\_derivation\_v01};
+\item \texttt{tau\_cmb\_acoustic\_source\_operator\_payload\_v01};
+\item \texttt{tau\_cmb\_acoustic\_source\_operator\_payload\_supply\_v01};
+\item \texttt{tau\_cmb\_acoustic\_minimal\_operator\_model\_attempt\_v01};
+\item \texttt{tau\_cmb\_acoustic\_operator\_dependency\_unblock\_plan\_v01};
+\item \texttt{tau\_cmb\_acoustic\_domain\_basis\_lock\_acceptance\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_eff\_acoustic\_input\_acceptance\_v01};
+\item \texttt{tau\_cmb\_effective\_potential\_source\_handoff\_v01};
+\item \texttt{tau\_cmb\_endpoint\_blind\_phi\_tau\_derivation\_contract\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_provenance\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_candidate\_manifest\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_firewall\_audit\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_payload\_stub\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_firewall\_execution\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_concrete\_payload\_requirements\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_concrete\_payload\_candidate\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_payload\_firewall\_audit\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_dimension\_replay\_certificate\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_certificate\_candidate\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_certificate\_audit\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_certificate\_evidence\_request\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_certificate\_evidence\_package\_candidate\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_certificate\_evidence\_package\_audit\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_scoring\_acceptance\_precheck\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_scoring\_acceptance\_unblock\_plan\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_populated\_evidence\_package\_candidate\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_populated\_evidence\_package\_audit\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_evidence\_payload\_submission\_gate\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_evidence\_payload\_receipt\_candidate\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_evidence\_payload\_receipt\_audit\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_evidence\_payload\_receipt\_remediation\_plan\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_evidence\_payload\_materialization\_packet\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_evidence\_payload\_materialization\_audit\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_evidence\_payload\_acceptance\_precheck\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_evidence\_payload\_acceptance\_unblock\_plan\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_evidence\_payload\_acceptance\_decision\_gate\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_evidence\_payload\_scoring\_input\_candidate\_v01};
+\item \texttt{tau\_cmb\_phi\_tau\_parent\_input\_evidence\_payload\_scoring\_input\_audit\_v01};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_remediation_plan_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_remediation_packet_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_remediation_packet_audit_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_materialization_request_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_materialization_request_audit_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_materialization_packet_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_materialization_packet_audit_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_fulfillment_request_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_fulfillment_request_audit_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_packet_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_packet_audit_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_remediation_plan_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_remediation_packet_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_remediation_packet_audit_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_materialization_request_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_materialization_request_audit_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_materialization_packet_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_materialization_packet_audit_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_fulfillment_request_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_fulfillment_request_audit_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_execution_packet_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_execution_packet_audit_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_execution_unblock_plan_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_execution_unblock_plan_audit_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_request_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_request_audit_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_gate_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_gate_audit_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_candidate_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_candidate_audit_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_candidate_remediation_plan_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_materialization_packet_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_materialization_audit_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_precheck_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_unblock_plan_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_unblock_plan_audit_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_decision_gate_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_decision_gate_audit_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_record_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_precheck_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_unblock_plan_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_unblock_plan_audit_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_decision_gate_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_decision_gate_audit_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_acceptance_record_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_acceptance_record_audit_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_final_pre_score_lock_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_final_pre_score_lock_audit_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_score_attempt_blocker_certificate_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_score_attempt_unblock_conditions_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_unblock_condition_evidence_request_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_unblock_condition_evidence_receipt_candidate_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_unblock_condition_evidence_receipt_candidate_audit_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_unblock_condition_evidence_receipt_remediation_plan_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_unblock_condition_evidence_receipt_materialization_packet_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_unblock_condition_evidence_receipt_materialization_audit_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_unblock_condition_evidence_receipt_acceptance_precheck_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_unblock_condition_evidence_receipt_acceptance_unblock_plan_v01}};
+\item {\footnotesize\url{tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_scoring_handoff_unblock_condition_evidence_receipt_acceptance_unblock_plan_audit_v01}}.
+\end{itemize}
+
+\section{Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Scoring Handoff Unblock Condition Evidence Receipt Acceptance Precheck}
+
+The acceptance-precheck artifact for the scoring-handoff unblock-condition
+evidence receipt layer closes the next pre-scoring checkpoint after the
+unblock-condition evidence receipt materialization audit. It records seven
+precheck rows and preserves the blocker: the upstream materialization audit has
+not passed, no evidence object is materialized, no receipt is accepted, and no
+evidence object is accepted.
+
 \[
-\texttt{tau\_cmb\_effective\_source\_equation\_v01}.
+\begin{array}{ll}
+\texttt{unblock\_condition\_evidence\_receipt\_acceptance\_precheck\_rows\_declared} &= 7,\\
+\texttt{materialization\_audit\_passed\_rows} &= 0,\\
+\texttt{receipt\_accepted\_rows} &= 0,\\
+\texttt{evidence\_accepted\_rows} &= 0,\\
+\texttt{acceptance\_precheck\_passed\_rows} &= 0,\\
+\texttt{score\_attempt\_blocked\_now\_rows} &= 7.
+\end{array}
+\]
+
+This is not a Tau-response derivation and not a likelihood evaluation. It is an endpoint-blind precheck record showing that the score attempt remains blocked until materialized evidence objects, accepted receipts, accepted evidence records, and an open scoring handoff exist.
+
+\section{Evidence Receipt Acceptance Unblock Plan}
+
+The acceptance-unblock plan and audit artifacts convert the failed precheck
+into explicit exit requirements. All seven rows require materialization-audit
+pass, accepted receipt, accepted evidence object, and open handoff before a
+score attempt can be considered.
+
+\[
+\begin{array}{ll}
+\texttt{materialization\_audit\_required\_rows} &= 7,\\
+\texttt{receipt\_acceptance\_required\_rows} &= 7,\\
+\texttt{evidence\_acceptance\_required\_rows} &= 7,\\
+\texttt{handoff\_open\_required\_rows} &= 7,\\
+\texttt{unblock\_completed\_rows} &= 0.
+\end{array}
+\]
+
+\section{Evidence Receipt Acceptance Unblock Plan Audit}
+
+The audit confirms that the plan has been declared and audited, but not
+completed. Thus it narrows the remaining scoring blocker without opening the
+scoring route.
+
+\[
+\begin{array}{ll}
+\texttt{unblock\_plan\_audited\_rows} &= 7,\\
+\texttt{unblock\_plan\_audit\_passed\_rows} &= 0,\\
+\texttt{receipt\_accepted\_rows} &= 0,\\
+\texttt{evidence\_accepted\_rows} &= 0,\\
+\texttt{score\_attempt\_blocked\_now\_rows} &= 7.
+\end{array}
+\]
+
+These artifacts do not derive \(\Phi_{\tau,\mathrm{eff}}\), do not compute a
+score, and do not provide a CMB likelihood or dark-sector verdict.
+
+\section{Evidence Receipt Acceptance Decision Gate}
+
+The decision gate closes the acceptance route after the failed unblock-plan
+audit. It is not a negative CMB result; it is a protocol statement that the
+score route cannot open until the required evidence and handoff conditions are
+materialized.
+
+\[
+\begin{array}{ll}
+\texttt{decision\_gate\_closed\_rows} &= 7,\\
+\texttt{unblock\_plan\_audit\_passed\_rows} &= 0,\\
+\texttt{receipt\_accepted\_rows} &= 0,\\
+\texttt{evidence\_accepted\_rows} &= 0,\\
+\texttt{score\_attempt\_blocked\_now\_rows} &= 7.
+\end{array}
+\]
+
+\section{Evidence Receipt Decision Gate Audit}
+
+The decision-gate audit verifies that the closed gate is traceable to unmet
+acceptance and handoff conditions, and that it grants no downstream scoring
+permission.
+
+\[
+\begin{array}{ll}
+\texttt{decision\_gate\_audit\_passed\_rows} &= 7,\\
+\texttt{decision\_gate\_closed\_rows} &= 7,\\
+\texttt{open\_handoff\_rows} &= 0,\\
+\texttt{scores\_computed\_rows} &= 0,\\
+\texttt{cmb\_likelihood\_available\_rows} &= 0.
+\end{array}
+\]
+
+\section{Acceptance Evidence Fulfillment Package}
+
+The fulfillment package consolidates the seven evidence rows into one
+pre-score payload specification. It declares the materials needed to reopen the
+closed gate, but does not materialize or accept those materials.
+
+\[
+\begin{array}{ll}
+\texttt{acceptance\_evidence\_fulfillment\_package\_rows\_declared} &= 7,\\
+\texttt{requirements\_declared\_rows} &= 7,\\
+\texttt{required\_material\_count\_total} &= 49,\\
+\texttt{decision\_gate\_reopen\_allowed\_rows} &= 0,\\
+\texttt{score\_attempt\_blocked\_now\_rows} &= 7.
+\end{array}
+\]
+
+\section{Acceptance Evidence Materialization Package}
+
+The materialization package turns the fulfillment specification into file-level
+endpoint-blind materials. It creates and hashes the seven material records
+required for each of the seven evidence rows, while keeping acceptance and
+scoring closed.
+
+\[
+\begin{array}{ll}
+\texttt{acceptance\_evidence\_materialization\_package\_rows\_declared} &= 7,\\
+\texttt{material\_records\_required} &= 49,\\
+\texttt{material\_records\_created} &= 49,\\
+\texttt{material\_records\_hashed} &= 49,\\
+\texttt{receipt\_accepted\_rows} &= 0,\\
+\texttt{evidence\_accepted\_rows} &= 0,\\
+\texttt{score\_attempt\_blocked\_now\_rows} &= 7.
+\end{array}
+\]
+
+\section{Materialization Audit and Acceptance Precheck}
+
+The audit/precheck artifact verifies the forty-nine hashed material records and
+promotes the materialization stage from created material to audited material.
+It also passes the receipt and evidence acceptance prechecks, while keeping the
+final acceptance and scoring gates closed.
+
+\[
+\begin{array}{ll}
+\texttt{materialization\_audit\_passed\_rows} &= 7,\\
+\texttt{receipt\_acceptance\_precheck\_passed\_rows} &= 7,\\
+\texttt{evidence\_acceptance\_precheck\_passed\_rows} &= 7,\\
+\texttt{material\_hashes\_verified\_total} &= 49,\\
+\texttt{receipt\_accepted\_rows} &= 0,\\
+\texttt{evidence\_accepted\_rows} &= 0,\\
+\texttt{score\_attempt\_blocked\_now\_rows} &= 7.
+\end{array}
+\]
+
+\section{Receipt and Evidence Acceptance Reopen Gate}
+
+The receipt/evidence acceptance reopen-gate artifact consumes the successful
+materialization audit and precheck result. It accepts all seven endpoint-blind
+receipt/evidence objects and reopens the decision gate for the next scoring
+handoff stage, while still refusing to accept a scoring payload or score-ready
+input.
+
+\[
+\begin{array}{ll}
+\texttt{receipt\_accepted\_rows} &= 7,\\
+\texttt{evidence\_accepted\_rows} &= 7,\\
+\texttt{acceptance\_record\_created\_rows} &= 7,\\
+\texttt{decision\_gate\_reopen\_allowed\_rows} &= 7,\\
+\texttt{payload\_accepted\_rows} &= 0,\\
+\texttt{scoring\_input\_accepted\_rows} &= 0,\\
+\texttt{score\_attempt\_blocked\_now\_rows} &= 7.
+\end{array}
+\]
+
+\section{Acceptance Evidence Scoring Handoff Package}
+
+The scoring-handoff package consumes the accepted receipt/evidence objects and
+opens an endpoint-blind handoff route to the scoring-input acceptance gate. This
+is still not a scoring step: no scoring input is accepted and no CMB likelihood
+is evaluated.
+
+\[
+\begin{array}{ll}
+\texttt{scoring\_handoff\_package\_created\_rows} &= 7,\\
+\texttt{scoring\_handoff\_opened\_rows} &= 7,\\
+\texttt{scoring\_input\_candidate\_created\_rows} &= 7,\\
+\texttt{scoring\_input\_accepted\_rows} &= 0,\\
+\texttt{scores\_computed\_rows} &= 0,\\
+\texttt{cmb\_likelihood\_available\_rows} &= 0,\\
+\texttt{score\_attempt\_blocked\_now\_rows} &= 7.
+\end{array}
+\]
+
+\section{Acceptance Evidence Scoring Input Decision Package}
+
+The scoring-input decision package closes the handoff route by explicit null
+response. The accepted evidence is sufficient to open a handoff candidate, but
+it is not a score-ready input. Therefore the package records a closed decision
+without accepting scoring input or attempting a likelihood evaluation.
+
+\[
+\begin{array}{ll}
+\texttt{scoring\_handoff\_opened\_rows} &= 7,\\
+\texttt{scoring\_input\_candidate\_created\_rows} &= 7,\\
+\texttt{scoring\_input\_acceptance\_decision\_closed\_rows} &= 7,\\
+\texttt{explicit\_null\_response\_routed\_rows} &= 7,\\
+\texttt{scoring\_input\_accepted\_rows} &= 0,\\
+\texttt{score\_ready\_input\_available\_rows} &= 0,\\
+\texttt{score\_attempt\_blocked\_now\_rows} &= 7.
+\end{array}
+\]
+
+\section{Acceptance Evidence Score Attempt Guard}
+
+The score-attempt guard consumes the scoring-input decision package and executes
+the final pre-score firewall for the accepted-evidence chain. Since no
+score-ready input is available, all seven score attempts are denied and no
+likelihood evaluation is permitted.
+
+\[
+\begin{array}{ll}
+\texttt{score\_attempt\_guard\_executed\_rows} &= 7,\\
+\texttt{scoring\_input\_acceptance\_decision\_closed\_rows} &= 7,\\
+\texttt{explicit\_null\_response\_routed\_rows} &= 7,\\
+\texttt{score\_ready\_input\_available\_rows} &= 0,\\
+\texttt{scoring\_input\_accepted\_rows} &= 0,\\
+\texttt{score\_attempt\_denied\_rows} &= 7,\\
+\texttt{score\_attempt\_blocked\_now\_rows} &= 7.
+\end{array}
+\]
+
+\section{Acceptance Evidence Null-Response Lock}
+
+The null-response lock records the closed state after the score-attempt guard.
+The route is no longer merely awaiting a score attempt: it is locked as an
+explicit null response until a real score-ready input with accepted scoring
+input replaces it.
+
+\[
+\begin{array}{ll}
+\texttt{score\_attempt\_guard\_executed\_rows} &= 7,\\
+\texttt{score\_attempt\_denied\_rows} &= 7,\\
+\texttt{explicit\_null\_response\_routed\_rows} &= 7,\\
+\texttt{null\_response\_locked\_rows} &= 7,\\
+\texttt{score\_ready\_input\_available\_rows} &= 0,\\
+\texttt{scoring\_input\_accepted\_rows} &= 0,\\
+\texttt{score\_attempt\_blocked\_now\_rows} &= 7.
+\end{array}
+\]
+
+\section{Acceptance Evidence Route Completion Certificate}
+
+The route-completion certificate records the terminal state of the accepted
+evidence route. For the present input set, the route is complete and ends in
+the null-response locked state. Reopening the scoring route requires a real
+score-ready input with accepted scoring input.
+
+\[
+\begin{array}{ll}
+\texttt{route\_completed\_rows} &= 7,\\
+\texttt{terminal\_state\_reached\_rows} &= 7,\\
+\texttt{terminal\_state} &= \texttt{null\_response\_locked},\\
+\texttt{null\_response\_locked\_rows} &= 7,\\
+\texttt{score\_ready\_input\_available\_rows} &= 0,\\
+\texttt{scoring\_input\_accepted\_rows} &= 0,\\
+\texttt{scores\_computed\_rows} &= 0.
+\end{array}
+\]
+
+\section{Source Data Acquisition Status}
+
+The acquisition status artifact verifies the official CMB source-data receipt
+against local working copies under \texttt{data/external/}. In the current
+local workspace, all receipt-listed entries are available and hash matched:
+four Planck PR3 products and two ACT DR6 lensing products. These files are not
+redistributed by the public repository package. The artifact is a source
+acquisition and provenance check only; it does not run a likelihood, construct
+a Tau prediction, compute a score, or permit a dark-sector verdict.
+
+\[
+\begin{array}{ll}
+\texttt{receipt\_rows\_consumed} &= 6,\\
+\texttt{local\_paths\_expected} &= 6,\\
+\texttt{hash\_matched\_rows} &= 6,\\
+\texttt{size\_matched\_rows} &= 6,\\
+\texttt{accepted\_local\_working\_copy\_rows} &= 6,\\
+\texttt{planck\_pr3\_rows\_ready} &= 4,\\
+\texttt{act\_dr6\_lensing\_rows\_ready} &= 2,\\
+\texttt{accepted\_for\_scoring\_rows} &= 0.
+\end{array}
+\]
+
+\section{ACT DR6 Lensing Observable Payload}
+
+The ACT DR6 lensing observable-payload artifact extracts the baseline ACT
+lensing convergence bandpowers from the locally acquired ACT DR6 lensing
+likelihood package. It binds the bandpower file, covariance matrix, and binning
+matrix by local hash and records their numerical dimensions. This is the first
+concrete CMB lensing observed-data payload on the route toward a score, but it
+is not a Tau-side response, likelihood adapter, likelihood evaluation, score,
+or dark-sector verdict.
+
+\[
+\begin{array}{ll}
+\texttt{source\_files\_present} &= 3,\\
+\texttt{source\_files\_hash\_bound} &= 3,\\
+\texttt{bandpower\_rows} &= 18,\\
+\texttt{covariance\_shape} &= 18\times18,\\
+\texttt{binning\_matrix\_shape} &= 18\times3000,\\
+\texttt{shape\_consistent} &= \texttt{true},\\
+\texttt{observable\_payload\_rows} &= 18,\\
+\texttt{accepted\_observable\_payload\_rows} &= 18,\\
+\texttt{accepted\_for\_scoring\_rows} &= 0.
+\end{array}
+\]
+
+\section{ACT DR6 Lensing Observed Score Adapter}
+
+The observed-score-adapter artifact fixes the reduced score expression for the
+ACT DR6 lensing observed side:
+\[
+\chi^2_{\tau} =
+(y_{\mathrm{obs}}-y_{\tau})^{T}
+C_{\mathrm{obs}}^{-1}
+(y_{\mathrm{obs}}-y_{\tau}).
+\]
+Here \(y_{\mathrm{obs}}\) is the 18-bin ACT DR6 lensing bandpower vector and
+\(y_{\tau}\) must be supplied later as a Tau-side prediction in the same 18-bin
+readout basis. The adapter verifies that the covariance is symmetric and
+positive definite, computes its inverse, and records a machine-precision
+identity residual. It does not supply \(y_{\tau}\), does not run the ACT
+likelihood, and does not compute a Tau score.
+
+\[
+\begin{array}{ll}
+\texttt{observed\_payload\_rows} &= 18,\\
+\texttt{covariance\_shape} &= 18\times18,\\
+\texttt{inverse\_covariance\_shape} &= 18\times18,\\
+\texttt{covariance\_positive\_definite} &= \texttt{true},\\
+\texttt{covariance\_condition\_number} &\approx 841.94,\\
+\texttt{inverse\_identity\_residual\_max\_abs} &\approx 6.66\times10^{-16},\\
+\texttt{tau\_prediction\_required\_shape} &= 18,\\
+\texttt{score\_executable\_now} &= \texttt{false}.
+\end{array}
+\]
+
+\section{ACT DR6 Tau Prediction Score Preflight}
+
+The Tau-prediction preflight converts the observed-score adapter into an exact
+input contract for the missing Tau-side vector. The required score-ready input
+is
+\[
+\texttt{data/score\_ready\_input/act\_dr6\_lensing\_tau\_prediction\_vector\_v01.csv}.
+\]
+It must contain 18 finite \(\tau\)-predicted \(C_L^{\kappa\kappa}\) values in
+the locked ACT DR6 lensing readout basis, with endpoint-blind provenance
+declared before the observed endpoint is scored. The current package writes the
+template, the expected score-ready input path, and the preflight result. The
+input file is populated as a Tau Core-specific null-response control vector:
+all 18 Tau-predicted ACT lensing values are set to zero with source id
+\texttt{tau\_core\_null\_response\_control\_v01}. This is a control baseline,
+not a fitted physical Tau response.
+
+\[
+\begin{array}{ll}
+\texttt{template\_rows} &= 18,\\
+\texttt{prediction\_file\_present} &= \texttt{true},\\
+\texttt{prediction\_rows} &= 18,\\
+\texttt{accepted\_prediction\_rows} &= 18,\\
+\texttt{score\_executable\_now} &= \texttt{true},\\
+\texttt{score\_computed} &= \texttt{true},\\
+\chi^2_{\tau,\mathrm{null}} &\approx 2129.12,\\
+\chi^2_{\tau,\mathrm{null}}/\mathrm{dof}_{\mathrm{naive}} &\approx 118.28,\\
+\texttt{next\_required\_artifact} &=
+\texttt{review\_null\_control\_claim\_boundary}.
+\end{array}
+\]
+
+\section{ACT DR6 Tau Shape Response Controls}
+
+The next diagnostic step screens a small predeclared family of nonzero Tau
+Core-style morphology response controls in the same ACT DR6 18-bin readout
+basis. Each candidate has the analytic form
+\[
+s(L)=\frac{(L/L_c)^p}{1+(L/L_c)^{p+q}},\qquad
+y_{\tau}(L)=A\,\frac{s(L)}{\max s}.
+\]
+The amplitude ladder and shape parameters are fixed by the script before
+scoring. Therefore this is not a final endpoint-fitted Tau response. It is a
+control-family screen asking whether simple nonzero Tau-like response shapes can
+improve on the null-response baseline.
+
+\[
+\begin{array}{ll}
+\texttt{candidate\_count} &= 12,\\
+\chi^2_{\tau,\mathrm{null}} &\approx 2129.12,\\
+\texttt{best\_candidate\_short} &= \texttt{broad\_lowL\_A1e-07},\\
+\chi^2_{\tau,\mathrm{best\ control}} &\approx 401.44,\\
+\chi^2_{\tau,\mathrm{best\ control}}/\mathrm{dof}_{\mathrm{naive}}
+&\approx 22.30,\\
+\Delta\chi^2_{\mathrm{vs\ null}} &\approx 1727.68,\\
+\texttt{fractional\_chi2\_improvement\_vs\_null} &\approx 0.811.
+\end{array}
+\]
+
+This result supports only a narrow diagnostic statement: the zero Tau-response
+control is not competitive with simple nonzero Tau-like response controls on
+this reduced ACT lensing adapter. It does not validate the shape as a physical
+Tau response and does not decide dark-sector necessity.
+
+\section{ACT DR6 Tau Nonzero Response Candidate Packet}
+
+The best screened shape-control is materialized as a separate nonzero candidate
+packet. The candidate vector has 18 rows in the ACT DR6 lensing readout basis,
+but it is not promoted to a physical Tau prediction. Its role is to turn the
+screening result into a concrete Tau-side derivation target.
+
+\[
+\begin{array}{ll}
+\texttt{candidate\_rows} &= 18,\\
+\chi^2_{\tau,\mathrm{candidate}} &\approx 401.44,\\
+\chi^2_{\tau,\mathrm{candidate}}/\mathrm{dof}_{\mathrm{naive}}
+&\approx 22.30,\\
+\Delta\chi^2_{\mathrm{vs\ null}} &\approx 1727.68,\\
+\texttt{open\_derivation\_obligations} &= 4,\\
+\texttt{physical\_tau\_response\_claim\_allowed} &= \texttt{false}.
+\end{array}
+\]
+
+The open obligations are: derive the shape parameters from Tau-side morphology,
+derive or bound the amplitude from Tau-side normalization, prove the zero-source
+known limit, and test the same candidate on an independent readout or holdout.
+Until these obligations are closed, the candidate remains a diagnostic target,
+not a physical Tau response.
+
+\section{Planck Lensing Cross-Readout Holdout}
+
+The first cross-readout stress test transfers the ACT-selected nonzero
+candidate unchanged to the Planck lensing bandpower block distributed in the
+same ACT DR6 lensing package. The candidate parameters are not refitted to
+Planck. The diagnostic uses the 9 Planck lensing bandpowers, the Planck binning
+matrix, and the bottom-right \(9\times9\) block of the combined ACT+Planck
+covariance matrix. This is a reduced holdout diagnostic rather than a Planck
+likelihood evaluation.
+
+\[
+\begin{array}{ll}
+\texttt{planck\_rows} &= 9,\\
+\texttt{planck\_covariance\_positive\_definite} &= \texttt{true},\\
+\texttt{candidate\_transferred\_without\_planck\_refit} &= \texttt{true},\\
+\chi^2_{\tau,\mathrm{Planck\ null}} &\approx 1974.92,\\
+\chi^2_{\tau,\mathrm{Planck\ candidate}} &\approx 307.72,\\
+\Delta\chi^2_{\mathrm{Planck\ vs\ null}} &\approx 1667.21,\\
+\texttt{fractional\_chi2\_improvement\_vs\_null} &\approx 0.844,\\
+\texttt{NZRESP\_OBL\_004} &=
+\texttt{partially\_addressed\_not\_closed}.
+\end{array}
+\]
+
+This strengthens the candidate only at the diagnostic level: the same nonzero
+shape remains useful outside the ACT-only adapter, so the result is less likely
+to be a single-endpoint artifact. It still does not derive the response from
+Tau-side morphology, does not establish the amplitude normalization, and does
+not decide whether Tau Core requires an effective dark-sector response.
+
+\section{Nonzero Candidate Derivation Status Audit}
+
+The ACT and Planck diagnostics allow a sharper obligation audit. The candidate
+response family is now fixed at the formula-control level as
+\[
+S(L;L_c,p,q)=
+\frac{(L/L_c)^p}{1+(L/L_c)^{p+q}}\bigg/\max_L S_{\mathrm{raw}},
+\qquad
+R_{\tau}^{\kappa\kappa}(L)=A\,S(L;L_c,p,q).
+\]
+This does not derive the response from Tau-side dynamics. It does, however,
+make the zero-response limit explicit: if the response amplitude is absent or
+\(A=0\), then \(R_{\tau}^{\kappa\kappa}(L)=0\) for every \(L\), and hence the
+readout vector is the null-control vector in every lensing bin.
+
+\[
+\begin{array}{ll}
+\texttt{obligations\_total} &= 4,\\
+\texttt{closed\_formula\_level} &= 1,\\
+\texttt{partially\_addressed} &= 1,\\
+\texttt{open\_tau\_derivation} &= 2,\\
+\texttt{zero\_limit\_closed\_for\_formula\_family} &= \texttt{true},\\
+\texttt{cross\_readout\_holdout\_support\_present} &= \texttt{true},\\
+\texttt{shape\_tau\_derivation\_present} &= \texttt{false},\\
+\texttt{amplitude\_tau\_derivation\_present} &= \texttt{false}.
+\end{array}
+\]
+
+The remaining physical-theory blockers are therefore no longer diffuse. The
+candidate must still either derive or reject \(L_c,p,q\) from Tau morphology and
+derive or bound \(A\) from Tau normalization without endpoint selection. Until
+those two conditions are met, the response remains a diagnostic candidate even
+though it improves both the ACT and Planck reduced lensing diagnostics relative
+to the null response.
+
+\section{Tau Lensing Response-Origin Routes}
+
+The nonzero lensing candidate can now be posed as an origin problem. The
+reduced ACT and Planck diagnostics prefer a nonzero broad low-\(L\) response
+over the null response, but they do not decide whether that response is a
+direct seed projection, an induced Tau base-field response, or a hybrid. The
+route audit therefore declares the alternatives without selecting between them:
+\[
+\begin{array}{ll}
+\texttt{ROUTE\_00\_NULL} &: M_{\mathrm{seed}}\ \mathrm{absent}\ \mathrm{or}\ A=0
+  \rightarrow R_{\tau}^{\kappa\kappa}(L)=0,\\
+\texttt{ROUTE\_01\_SEED\_ONLY} &: M_{\mathrm{seed}}
+  \rightarrow \Pi_{\mathrm{lens}}[M_{\mathrm{seed}}]
+  \rightarrow R_{\tau}^{\kappa\kappa}(L),\\
+\texttt{ROUTE\_02\_BASE\_FIELD} &: M_{\mathrm{seed}}+B_{\tau}
+  \rightarrow \Phi_{\tau,\mathrm{eff}}
+  \rightarrow \Pi_{\mathrm{lens}}[\Phi_{\tau,\mathrm{eff}}]
+  \rightarrow R_{\tau}^{\kappa\kappa}(L),\\
+\texttt{ROUTE\_03\_HYBRID} &: \mathrm{direct\ seed\ projection}
+  + \mathrm{base\ field\ response}.
+\end{array}
+\]
+
+\[
+\begin{array}{ll}
+\texttt{routes\_declared} &= 4,\\
+\texttt{route\_selected\_now} &= \texttt{false},\\
+\texttt{seed\_only\_route\_status} &= \texttt{open\_viable\_but\_unproved},\\
+\texttt{base\_field\_route\_status} &= \texttt{open\_viable\_but\_unproved},\\
+\texttt{hybrid\_route\_status} &= \texttt{open\_high\_burden\_route},\\
+\texttt{requirements\_open} &= 4.
+\end{array}
+\]
+
+This converts the next step into a focused derivation target. A successful
+origin route must produce \(L_c=120\), \(p=0.5\), \(q=1.0\), and \(A=10^{-7}\)
+from Tau-side morphology, base-field response, or a controlled hybrid, without
+using the ACT or Planck endpoints to select those values. The seed-only route
+is simpler but must explain the broad scale and normalization directly from the
+seed. The base-field route has a clearer mechanism for broad response, but it
+requires an explicit Tau response equation and normalization rule.
+
+\section{Base-Field Route Prederivation Target}
+
+For the next work step, the package selects \(\texttt{ROUTE\_02\_BASE\_FIELD}\)
+as a derivation target, not as an established physical route. The reason is
+methodological: the broad low-\(L\) activation, high-\(L\) suppression, and
+amplitude normalization can be stated as an explicit response-operator problem:
+\[
+M_{\mathrm{seed}}+B_{\tau}
+\rightarrow
+\Phi_{\tau,\mathrm{eff}}=D_{\tau}[M_{\mathrm{seed}}]
+\rightarrow
+R_{\tau}^{\kappa\kappa}(L)
+=\Pi_{\mathrm{lens}}[\Phi_{\tau,\mathrm{eff}}](L).
+\]
+The target kernel remains the diagnostic candidate
+\[
+K_{\mathrm{lens}}(L)=
+\frac{(L/120)^{0.5}}{1+(L/120)^{1.5}}\bigg/
+\max_L\frac{(L/120)^{0.5}}{1+(L/120)^{1.5}},
+\qquad A=10^{-7}.
+\]
+
+\[
+\begin{array}{ll}
+\texttt{selected\_next\_work\_route} &= \texttt{ROUTE\_02\_BASE\_FIELD},\\
+\texttt{route\_selected\_as\_physical} &= \texttt{false},\\
+\texttt{operator\_targets\_total} &= 5,\\
+\texttt{acceptance\_tests\_total} &= 5,\\
+\texttt{acceptance\_tests\_open} &= 5,\\
+\texttt{physical\_tau\_response\_claim\_allowed} &= \texttt{false}.
+\end{array}
+\]
+
+The required next proof object is therefore no longer vague: either derive or
+reject \(D_{\tau}\), \(\Pi_{\mathrm{lens}}\), the kernel parameters, and the
+amplitude normalization without endpoint selection. The seed-only and hybrid
+routes remain available but are deferred; they are not rejected by this work
+route selection.
+
+\section{Base-Field Operator Ansatz}
+
+The prederivation route is made explicit as a minimal operator ansatz. Define
+\[
+\Phi_{\tau,\mathrm{eff}}=D_{\tau}[M_{\mathrm{seed}}],
+\qquad
+R_{\tau}^{\kappa\kappa}(L)=A K_{\mathrm{lens}}(L),
+\]
+with
+\[
+x=\frac{L}{L_c},\qquad
+K_{\mathrm{lens}}(L)=
+\frac{x^p}{1+x^{p+q}}\bigg/
+\max_x\frac{x^p}{1+x^{p+q}}.
+\]
+For the current candidate, \(L_c=120\), \(p=0.5\), \(q=1.0\), and
+\(A=10^{-7}\). This ansatz has the desired formula-level behavior: it is
+dimensionless after \(x=L/L_c\), normalized by construction, rises as
+\(L^{0.5}\) at low \(L\), falls as \(L^{-1}\) at high \(L\), and recovers the
+zero-response vector when \(A=0\).
+
+\[
+\begin{array}{ll}
+\texttt{shape\_ansatz\_materialized} &= \texttt{true},\\
+\texttt{properties\_total} &= 6,\\
+\texttt{properties\_pass\_formula\_level} &= 5,\\
+\texttt{open\_physical\_derivation\_gaps} &= 4,\\
+\texttt{D\_tau\_derived} &= \texttt{false},\\
+\texttt{Pi\_lens\_derived} &= \texttt{false},\\
+\texttt{shape\_parameters\_derived} &= \texttt{false},\\
+\texttt{amplitude\_derived} &= \texttt{false}.
+\end{array}
+\]
+
+Thus the mathematical target is now concrete, but the physics remains open.
+The ansatz is compatible with the current diagnostic kernel; it is not a
+Tau-side derivation of that kernel.
+
+\section{Factorized Lensing Response Attempt}
+
+The ansatz can be factored into smaller derivation targets:
+\[
+R_{\tau}^{\kappa\kappa}(L)
+= A\,
+\underbrace{x^p}_{\mathrm{seed\ activation}}\,
+\underbrace{\frac{1}{1+x^{p+q}}}_{\mathrm{base\ field\ screening}}\,
+\underbrace{\frac{1}{N}}_{\mathrm{readout\ normalization}},
+\qquad
+x=\frac{L}{L_c}.
+\]
+For the current candidate \(p=0.5\), \(q=1.0\), \(p+q=1.5\),
+\(L_c=120\), and \(A=10^{-7}\). The factorization exactly reconstructs the
+diagnostic kernel, but each factor still needs a Tau-side origin.
+
+\[
+\begin{array}{ll}
+\texttt{factors\_total} &= 5,\\
+\texttt{formula\_factorization\_exact} &= \texttt{true},\\
+\texttt{formula\_level\_assessments\_pass} &= 4,\\
+\texttt{open\_tau\_side\_factor\_derivations} &= 4,\\
+\texttt{seed\_activation\_derived} &= \texttt{false},\\
+\texttt{base\_field\_screening\_derived} &= \texttt{false},\\
+\texttt{transition\_scale\_derived} &= \texttt{false},\\
+\texttt{amplitude\_derived} &= \texttt{false}.
+\end{array}
+\]
+
+This is useful because the remaining proof task is now modular: derive or
+reject the seed activation \(x^{0.5}\), the base-field screening
+\((1+x^{1.5})^{-1}\), the transition scale \(L_c=120\), and the amplitude
+\(A=10^{-7}\), each without selecting values from the ACT or Planck lensing
+endpoints.
+
+\section{Seed-Screening Minimal Closure Attempt}
+
+The next lensing artifact asks whether the two central shape factors can be
+treated as a minimal interaction between an initial morphological seed
+condition and the Tau base-field response medium. The seed is not a standalone
+source formula; it is the initial morphology/constraint state. The stabilized
+morphology is instead co-determined by the seed, the properties of
+\(B_\tau\), and the relevant constraints:
+\[
+M_\tau = F_\tau(M_{\mathrm{seed}},B_\tau,\mathrm{constraints}).
+\]
+Under the conditional response assumptions
+\[
+\alpha(M_\tau,B_\tau;x)=x^{0.5},
+\qquad
+S_B(M_\tau,B_\tau;x)=\frac{1}{1+x^{1.5}},
+\]
+the unnormalized candidate shape is reconstructed as
+\[
+\alpha(M_\tau,B_\tau;x)S_B(M_\tau,B_\tau;x)
+=\frac{x^{0.5}}{1+x^{1.5}}.
+\]
+This is a useful formula-level closure because it assigns the low-\(L\)
+rise to a seed-conditioned activation role and the high-\(L\) suppression to
+a saturating base-field transfer role. It therefore states a co-determination
+schema, not a direct seed-to-kernel derivation.
+
+\[
+\begin{array}{ll}
+\texttt{assumptions\_total} &= 4,\\
+\texttt{conditional\_factor\_closures} &= 2,\\
+\texttt{unconditional\_tau\_derivations} &= 0,\\
+\texttt{reconstructs\_factorized\_kernel} &= \texttt{true},\\
+\texttt{base\_field\_codetermines\_stabilized\_morphology} &= \texttt{true},\\
+\texttt{score\_readiness\_unlocked} &= \texttt{false},\\
+\texttt{physical\_tau\_response\_claim\_allowed} &= \texttt{false}.
+\end{array}
+\]
+
+Thus the lensing route has advanced from a purely diagnostic shape to a
+conditional seed-screening formula model. The physical burden remains: derive
+or reject \(p=0.5\), \(p+q=1.5\), \(L_c=120\), and \(A=10^{-7}\) from
+endpoint-blind Tau-side structure, or explicitly label any score as
+conditional rather than physical validation.
+
+\section{Morphology as a Base-Field Constraint}
+
+The same route also clarifies what can and cannot be inferred about the Tau
+base field. A morphology by itself does not determine \(B_\tau\). Instead, a
+source-frozen morphology, together with a 4D readout behavior and null, gauge,
+wrong-family, and holdout controls, can restrict the viable response-family
+space:
+\[
+\{M_{\mathrm{seed}},M_\tau,R_{4D},\mathrm{controls}\}
+\;\Longrightarrow\;
+\mathcal{C}(B_\tau),
+\]
+where \(\mathcal{C}(B_\tau)\) denotes compatible Tau base-field response-family
+candidates, not an identified physical field. In the galaxy-rotation setting
+this was the logic behind morphology-conditioned effective 4D readout shells.
+In the present CMB lensing setting it becomes a stricter target: the observed
+or source-frozen morphology/readout information may constrain whether a
+seed-only, base-field-response, hybrid, or undecidable route remains viable.
+It does not by itself prove the base-field properties, select a unique
+response equation, or decide dark-sector necessity.
+
+\section{Real Score-Ready Input Supply Contract}
+
+The supply contract states what would be required to reopen the scoring route.
+Each route row requires seven material classes: a \(\Phi_{\tau,\mathrm{eff}}\)
+source, dimension replay, normalization binding, endpoint-blind provenance,
+CMB readout mapping, likelihood adapter, and acceptance replay. None of these
+materials is supplied by this paper package.
+
+\[
+\begin{array}{ll}
+\texttt{route\_completed\_rows} &= 7,\\
+\texttt{null\_response\_locked\_rows} &= 7,\\
+\texttt{required\_materials\_total} &= 49,\\
+\texttt{supplied\_materials\_total} &= 0,\\
+\texttt{real\_score\_ready\_input\_supplied\_rows} &= 0,\\
+\texttt{scoring\_input\_accepted\_rows} &= 0,\\
+\texttt{reopen\_scoring\_route\_allowed\_now\_rows} &= 0.
+\end{array}
+\]
+
+\section{Real Score-Ready Payload Slot Specification}
+
+The payload slot specification expands the supply contract into concrete
+expected artifact paths and schemas. It does not provide the payloads. Rather,
+it fixes the import shape for a later score-ready submission: each of the
+seven locked route rows receives seven material slots, namely
+\(\Phi_{\tau,\mathrm{eff}}\) source, dimension replay, normalization binding,
+endpoint-blind provenance, CMB readout mapping, likelihood adapter, and
+acceptance replay.
+
+\[
+\begin{array}{ll}
+\texttt{contract\_rows} &= 7,\\
+\texttt{payload\_slot\_rows\_declared} &= 49,\\
+\texttt{expected\_artifact\_paths\_declared} &= 49,\\
+\texttt{payload\_materialized\_rows} &= 0,\\
+\texttt{slot\_accepted\_rows} &= 0,\\
+\texttt{scoring\_input\_accepted\_rows} &= 0,\\
+\texttt{score\_attempt\_blocked\_now\_rows} &= 49.
+\end{array}
+\]
+
+\section{Real Score-Ready Payload Template Manifest}
+
+The template manifest binds the 49 declared payload slots to seven reusable
+template files. These files are import shapes only. They contain no real
+Tau-side CMB source values, no hash receipts, no accepted slots, and no scoring
+input. Their role is to make the next submission step concrete without
+promoting a template into evidence.
+
+\[
+\begin{array}{ll}
+\texttt{slot\_rows\_consumed} &= 49,\\
+\texttt{template\_bindings\_declared} &= 49,\\
+\texttt{template\_files\_declared} &= 7,\\
+\texttt{template\_files\_written} &= 7,\\
+\texttt{real\_payload\_materialized\_rows} &= 0,\\
+\texttt{slot\_accepted\_rows} &= 0,\\
+\texttt{scoring\_input\_accepted\_rows} &= 0,\\
+\texttt{score\_attempt\_blocked\_now\_rows} &= 49.
+\end{array}
+\]
+
+\section{Real Payload Import Precheck}
+
+The import precheck is the first executable check after the template layer. It
+looks for the expected real payload files under \texttt{data/score\_ready\_input/},
+checks readability and non-emptiness, attempts to bind a hash, and checks the
+declared schema. In the present package, all expected real payload paths are
+absent. Therefore the import precheck records a controlled fail state rather
+than a score-ready input.
+
+\[
+\begin{array}{ll}
+\texttt{template\_bindings\_consumed} &= 49,\\
+\texttt{import\_precheck\_rows\_declared} &= 49,\\
+\texttt{real\_payload\_paths\_expected} &= 49,\\
+\texttt{real\_payload\_paths\_present} &= 0,\\
+\texttt{real\_payload\_paths\_missing} &= 49,\\
+\texttt{payload\_hash\_bound\_rows} &= 0,\\
+\texttt{payload\_import\_accepted\_rows} &= 0,\\
+\texttt{scoring\_input\_accepted\_rows} &= 0.
+\end{array}
 \]
 
 \section{Reproducibility}

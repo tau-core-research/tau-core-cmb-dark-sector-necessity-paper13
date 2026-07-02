@@ -1,0 +1,30 @@
+{
+  "allowed_value_forms": [
+    "operator-implied exact finite value",
+    "endpoint-blind finite diagnostic prior/range",
+    "explicit failure if no lawful normalization exists"
+  ],
+  "claim_boundary": "projection_normalization_spec_scaffold_only_no_numeric_normalization_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "forbidden_sources": [
+    "post-score alpha_star",
+    "ACT/Planck residual minimization",
+    "reduced chi2 tuning",
+    "dark-sector verdict preference"
+  ],
+  "missing_or_unproved_rows": [
+    "TCMBPNSS01_001",
+    "TCMBPNSS01_002",
+    "TCMBPNSS01_003",
+    "TCMBPNSS01_004",
+    "TCMBPNSS01_005",
+    "TCMBPNSS01_006"
+  ],
+  "physical_tau_score_run": false,
+  "report_id": "cmb_tau_lensing_projection_normalization_spec_scaffold_summary_v01",
+  "rows": 6,
+  "score_run": false,
+  "status": "NORMALIZATION_SPEC_DECLARED_NOT_FILLED",
+  "table": "data/derived/cmb_tau_lensing_projection_normalization_spec_scaffold_v01.csv",
+  "target": "N_projection_physical"
+}

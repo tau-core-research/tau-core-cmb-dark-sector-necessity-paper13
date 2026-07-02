@@ -1,0 +1,15 @@
+{
+  "A_tau_value_allowed": false,
+  "blocked_or_required_rows": 5,
+  "claim_boundary": "tau_cmb_morphological_seed_quotient_survival_test_v01_test_schema_only_no_survival_proof_no_seed_acceptance_no_A_tau_value_no_source_acceptance_no_score_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "next_minimal_unblock": "build_tau_cmb_seed_readout_interface_candidate_v01",
+  "report_id": "tau_cmb_morphological_seed_quotient_survival_test_summary_v01",
+  "score_entry_allowed": false,
+  "seed_acceptance_allowed": false,
+  "source_acceptance_allowed": false,
+  "status": "MORPHOLOGICAL_SEED_QUOTIENT_SURVIVAL_TEST_DECLARED_BLOCKED",
+  "survival_claim_allowed": false,
+  "table": "data/derived/tau_cmb_morphological_seed_quotient_survival_test_v01.csv",
+  "test_rows": 6
+}

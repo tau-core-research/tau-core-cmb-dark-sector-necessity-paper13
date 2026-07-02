@@ -1,0 +1,23 @@
+{
+  "accepted_domain_objects": 0,
+  "blocked_by_concrete_R_CMB_candidate_rows": 1,
+  "can_execute_after_refresh_rows": 7,
+  "certificate_passed_rows": 0,
+  "checker_output_supplied_rows": 0,
+  "claim_boundary": "tau_cmb_carrier_domain_checker_execution_packet_refresh_v01_execution_readiness_refresh_only_no_checker_attempt_no_certificate_pass_no_domain_acceptance_no_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "execution_attempted_rows": 0,
+  "execution_succeeded_rows": 0,
+  "input_chain_clean": true,
+  "input_payload_acceptance_summary": "data/derived/tau_cmb_carrier_domain_checker_input_payload_acceptance_audit_summary_v01.json",
+  "input_payload_acceptance_table": "data/derived/tau_cmb_carrier_domain_checker_input_payload_acceptance_audit_v01.csv",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_carrier_domain_checker_execution_attempt_packet_v01_or_concrete_R_CMB_candidate_gate_v01",
+  "payload_ready_rows": 8,
+  "refresh_rows": 8,
+  "report_id": "tau_cmb_carrier_domain_checker_execution_packet_refresh_summary_v01",
+  "score_entry_allowed": false,
+  "status": "CARRIER_DOMAIN_CHECKER_EXECUTION_PACKET_REFRESHED_PARTIAL_EXECUTION_READY_NOT_ATTEMPTED",
+  "table": "data/derived/tau_cmb_carrier_domain_checker_execution_packet_refresh_v01.csv"
+}

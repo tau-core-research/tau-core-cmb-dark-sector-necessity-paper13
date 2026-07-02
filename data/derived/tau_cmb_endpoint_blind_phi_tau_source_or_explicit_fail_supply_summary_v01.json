@@ -1,0 +1,23 @@
+{
+  "affected_frontier_rows": 5,
+  "claim_boundary": "tau_cmb_endpoint_blind_phi_tau_source_or_explicit_fail_supply_v01_shared_phi_explicit_fail_no_phi_source_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "explicit_fail_supplied": true,
+  "formal_slot": "Phi_tau_eff(a,k)",
+  "input_chain_clean": true,
+  "input_effective_potential_handoff": "data/derived/tau_cmb_effective_potential_source_handoff_summary_v01.csv",
+  "input_parent_payload_candidate": "data/derived/tau_cmb_phi_tau_parent_input_concrete_payload_candidate_summary_v01.csv",
+  "input_phi_derivation_contract": "data/derived/tau_cmb_endpoint_blind_phi_tau_derivation_contract_summary_v01.csv",
+  "input_unblock_plan": "data/derived/tau_cmb_physical_source_dependency_unblock_plan_summary_v01.json",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_endpoint_blind_phi_tau_source_explicit_fail_acceptance_audit_v01",
+  "numeric_value_supplied": false,
+  "physical_value_source_accepted": false,
+  "report_id": "tau_cmb_endpoint_blind_phi_tau_source_or_explicit_fail_supply_summary_v01",
+  "score_entry_allowed": false,
+  "status": "CMB_ENDPOINT_BLIND_PHI_TAU_SOURCE_EXPLICIT_FAIL_SUPPLIED_NO_SCORE",
+  "supply_artifact": "physical_value_source_supplies/e_shared/phi_tau_eff_explicit_fail_supply_v01.json",
+  "supply_hash_artifact": "physical_value_source_supplies/e_shared/phi_tau_eff_explicit_fail_supply_v01.hashes.json",
+  "supply_hash_matches": true,
+  "target_role": "shared_potential_source"
+}

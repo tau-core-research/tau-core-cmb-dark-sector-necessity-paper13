@@ -1,0 +1,61 @@
+{
+  "artifact_status": "GROWTH_TRANSFER_OPERATOR_EXPLICIT_FAIL_SUPPLIED_NO_ENDPOINT_BLIND_OPERATOR",
+  "claim_boundary": "tau_cmb_growth_transfer_operator_or_explicit_fail_supply_v01_growth_operator_explicit_fail_no_transfer_operator_no_score_no_likelihood_no_verdict",
+  "coordinate_components_affected": [
+    "operator_rule"
+  ],
+  "coordinate_symbol": "e_growth",
+  "dark_sector_verdict_allowed": false,
+  "endpoint_blind_attestation": true,
+  "explicit_fail_supplied": true,
+  "failure_statement": "No endpoint-blind Tau-side CMB input state, evolution rule, transfer mapping, initial condition, normalization rule, and gauge/convention packet is accepted from which Transfer_tau[X_tau_CMB](k,a) can be derived.",
+  "forbidden_input_attestation": true,
+  "forbidden_inputs": [
+    "CMB endpoint residuals",
+    "ACT/Planck likelihood errors",
+    "score outputs",
+    "post-endpoint tuning fields",
+    "dark-sector verdict labels"
+  ],
+  "formal_required_shape": "Transfer_tau = M_CMB o E_tau o I_tau",
+  "formal_slots": [
+    "Transfer_tau[X_tau_CMB](k,a)"
+  ],
+  "likelihood_allowed": false,
+  "nonclaims": [
+    "This is not a numerical growth constraint.",
+    "This is not a structure-growth data comparison.",
+    "This is not a statement that Tau Core has no growth response.",
+    "This is not an empirical validation or exclusion.",
+    "This is not a dark-sector verdict."
+  ],
+  "numeric_value_supplied": false,
+  "physical_value_source_accepted": false,
+  "physical_value_source_supplied": false,
+  "prior_explicit_fail_interactions": [
+    "T_tau_CMB(k,a) explicit fail",
+    "rho_tau_eff(a,k) explicit fail",
+    "Phi_tau_eff(a,k) explicit fail",
+    "endpoint_blind(A_tau) explicit fail"
+  ],
+  "provenance": {
+    "frontier_v06": "data/derived/tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_summary_v06.json",
+    "growth_closure": "data/derived/tau_cmb_growth_transfer_kernel_closure_summary_v01.csv",
+    "growth_coordinate": "data/derived/tau_cmb_readout_role_coordinate_growth_v01.csv",
+    "growth_kernel": "data/derived/tau_cmb_growth_transfer_kernel_summary_v01.csv"
+  },
+  "replay": "make tau-cmb-endpoint-blind-physical-value-source-frontier-recompute-v06 && make tau-cmb-growth-transfer-operator-or-explicit-fail-supply",
+  "required_missing_objects": [
+    "endpoint-blind Tau CMB input state X_tau_CMB(k,a)",
+    "initial condition map I_tau",
+    "Tau evolution rule E_tau",
+    "CMB-source output map M_CMB",
+    "domain/codomain selection",
+    "gauge, time-scale, and normalization conventions"
+  ],
+  "score_entry_allowed": false,
+  "source_strategy": "local_source_first_common_parent_later",
+  "supply_type": "explicit_fail_evidence",
+  "target_role": "growth",
+  "unit_or_convention": "not_applicable_explicit_fail"
+}

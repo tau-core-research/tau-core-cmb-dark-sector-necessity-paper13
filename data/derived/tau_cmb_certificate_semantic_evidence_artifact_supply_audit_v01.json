@@ -1,0 +1,66 @@
+{
+  "accepted_domain_objects": 0,
+  "artifact_materialized_rows": 28,
+  "artifact_supply_audited": true,
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_28_SUPPLY_ROWS_PRESENT",
+      "blocking_reason": "semantic evidence supply must cover all 28 matrix rows",
+      "component": "supply_row_shape",
+      "finding": "rows=28"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_CANDIDATE_ARTIFACTS_HASH_BOUND",
+      "blocking_reason": "each candidate evidence artifact must exist and match its hash",
+      "component": "candidate_artifacts",
+      "finding": "materialized=28, hash_matched=28"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_CANDIDATES_NOT_ACCEPTED_NOT_PROOF",
+      "blocking_reason": "candidate supply must not promote placeholder artifacts into proof",
+      "component": "not_proof_boundary",
+      "finding": "candidate artifacts do not claim evidence acceptance, proof, executability, or certificate pass"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_SUPPLY_FIREWALL_CLOSED",
+      "blocking_reason": "semantic evidence supply must preserve scoring firewall",
+      "component": "promotion_firewall",
+      "finding": "candidate supply does not open score, likelihood, or verdict"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_EVIDENCE_ACCEPTANCE_NOT_PERFORMED",
+      "blocking_reason": "requires tau_cmb_certificate_semantic_evidence_acceptance_audit_v01",
+      "component": "evidence_acceptance",
+      "finding": "candidate artifacts are supplied but not accepted as semantic evidence"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_CERTIFICATE_EXECUTION_NOT_ALLOWED",
+      "blocking_reason": "requires accepted semantic evidence before certificate execution",
+      "component": "certificate_execution",
+      "finding": "certificate rules remain non-executable until evidence is accepted"
+    }
+  ],
+  "audited_table": "data/derived/tau_cmb_certificate_semantic_evidence_artifact_supply_v01.csv",
+  "blocked_rows": 2,
+  "certificate_passed_rows": 0,
+  "certificate_rule_executable_rows": 0,
+  "claim_boundary": "tau_cmb_certificate_semantic_evidence_artifact_supply_audit_v01_audit_only_candidate_artifacts_supplied_not_accepted_not_proof_no_certificate_pass_no_domain_acceptance_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "evidence_accepted_rows": 0,
+  "failed_rows": 0,
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_certificate_semantic_evidence_acceptance_audit_v01",
+  "passed_rows": 4,
+  "physical_R_CMB_materialized": false,
+  "report_id": "tau_cmb_certificate_semantic_evidence_artifact_supply_audit_v01",
+  "score_entry_allowed": false,
+  "status": "CMB_CERTIFICATE_SEMANTIC_EVIDENCE_ARTIFACT_SUPPLY_AUDITED_CANDIDATES_NOT_ACCEPTED",
+  "supply_rows": 28
+}

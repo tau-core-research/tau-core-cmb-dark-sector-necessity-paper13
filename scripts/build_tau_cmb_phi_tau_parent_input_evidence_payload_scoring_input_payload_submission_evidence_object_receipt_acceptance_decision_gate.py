@@ -1,0 +1,286 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import csv
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+DERIVED = ROOT / "data/derived"
+DOCS = ROOT / "docs"
+
+CLAIM_BOUNDARY = (
+    "tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_decision_gate_v01_"
+    "decision_gate_only_no_acceptance_allowed_no_evidence_materialized_no_receipt_validated_no_receipt_accepted_"
+    "no_execution_allowed_no_scoring_input_accepted_no_payload_accepted_no_package_pass_no_certificate_pass_"
+    "no_phi_derivation_no_score_no_likelihood_no_verdict"
+)
+
+FIELDS = [
+    "decision_row_id",
+    "evidence_object",
+    "target_gate",
+    "decision_source",
+    "decision_gate_status",
+    "required_prior_pass",
+    "decision_rule",
+    "decision_reason",
+    "decision_output",
+    "packet_declared",
+    "unblock_plan_audited",
+    "unblock_plan_audit_passed",
+    "unblock_completed",
+    "evidence_materialized",
+    "receipt_validated",
+    "receipt_accepted",
+    "provenance_bound",
+    "replay_bound",
+    "firewall_passed",
+    "evidence_audited",
+    "evidence_accepted",
+    "acceptance_precheck_passed",
+    "acceptance_allowed",
+    "payload_accepted",
+    "scoring_input_accepted",
+    "can_execute",
+    "execution_attempted",
+    "execution_succeeded",
+    "evidence_package_passed",
+    "certificate_passed",
+    "phi_tau_eff_derived",
+    "scores_computed",
+    "cmb_likelihood_available",
+    "hard_failure_triggered",
+    "blocks_no_dark_claim",
+    "allows_tau_response_claim",
+    "allows_dark_sector_verdict",
+    "claim_boundary",
+]
+
+SUMMARY_FIELDS = [
+    "summary_id",
+    "evidence_object_receipt_acceptance_decision_gate_rows_declared",
+    "packet_declared_rows",
+    "unblock_plan_audited_rows",
+    "unblock_plan_audit_passed_rows",
+    "acceptance_allowed_rows",
+    "unblock_completed_rows",
+    "evidence_materialized_rows",
+    "receipt_validated_rows",
+    "receipt_accepted_rows",
+    "provenance_bound_rows",
+    "replay_bound_rows",
+    "firewall_passed_rows",
+    "evidence_audited_rows",
+    "evidence_accepted_rows",
+    "acceptance_precheck_passed_rows",
+    "payload_accepted_rows",
+    "scoring_input_accepted_rows",
+    "can_execute_rows",
+    "execution_attempted_rows",
+    "execution_succeeded_rows",
+    "evidence_package_passed_rows",
+    "certificate_passed_rows",
+    "phi_tau_eff_derived_rows",
+    "scores_computed_rows",
+    "cmb_likelihood_available_rows",
+    "hard_failures_triggered",
+    "evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_decision_gate_satisfied",
+    "scores_computed",
+    "cmb_likelihood_available",
+    "no_dark_blockers",
+    "no_dark_cmb_verdict_allowed",
+    "tau_response_claim_allowed",
+    "dark_sector_verdict_allowed",
+    "overall_status",
+    "next_required_artifact",
+    "claim_boundary",
+]
+
+
+def write_csv(path: Path, rows: list[dict[str, object]], fieldnames: list[str]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def decision_rows() -> list[dict[str, str]]:
+    rows = [
+        ("submission_payload_bundle", "payload_supply_gate", "submission payload evidence-object acceptance"),
+        ("completion_evidence_bundle", "completion_evidence_gate", "completion evidence acceptance"),
+        ("provenance_bundle", "provenance_gate", "provenance evidence acceptance"),
+        ("replay_bundle", "replay_gate", "replay evidence acceptance"),
+        ("hash_manifest_bundle", "hash_manifest_gate", "hash manifest evidence acceptance"),
+        ("endpoint_firewall_bundle", "endpoint_firewall_gate", "endpoint firewall evidence acceptance"),
+        ("acceptance_record_bundle", "payload_and_scoring_input_acceptance_gate", "acceptance record evidence acceptance"),
+    ]
+    return [
+        {
+            "decision_row_id": f"TCMBPTPIPEPSIPSEORAD01_{index:03d}",
+            "evidence_object": evidence_object,
+            "target_gate": gate,
+            "decision_source": (
+                "tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_"
+                "receipt_acceptance_unblock_plan_audit_v01"
+            ),
+            "decision_gate_status": "ACCEPTANCE_DECISION_CLOSED_UNBLOCK_AUDIT_NOT_PASSED",
+            "required_prior_pass": required_prior_pass,
+            "decision_rule": "acceptance may open only if receipt unblock plan audit passes and all upstream evidence gates are completed",
+            "decision_reason": "receipt acceptance unblock plan audit is not satisfied",
+            "decision_output": "acceptance_closed",
+            "packet_declared": "true",
+            "unblock_plan_audited": "true",
+            "unblock_plan_audit_passed": "false",
+            "unblock_completed": "false",
+            "evidence_materialized": "false",
+            "receipt_validated": "false",
+            "receipt_accepted": "false",
+            "provenance_bound": "false",
+            "replay_bound": "false",
+            "firewall_passed": "false",
+            "evidence_audited": "false",
+            "evidence_accepted": "false",
+            "acceptance_precheck_passed": "false",
+            "acceptance_allowed": "false",
+            "payload_accepted": "false",
+            "scoring_input_accepted": "false",
+            "can_execute": "false",
+            "execution_attempted": "false",
+            "execution_succeeded": "false",
+            "evidence_package_passed": "false",
+            "certificate_passed": "false",
+            "phi_tau_eff_derived": "false",
+            "scores_computed": "false",
+            "cmb_likelihood_available": "false",
+            "hard_failure_triggered": "false",
+            "blocks_no_dark_claim": "true",
+            "allows_tau_response_claim": "false",
+            "allows_dark_sector_verdict": "false",
+            "claim_boundary": CLAIM_BOUNDARY,
+        }
+        for index, (evidence_object, gate, required_prior_pass) in enumerate(rows, start=1)
+    ]
+
+
+def summary(rows: list[dict[str, str]]) -> list[dict[str, object]]:
+    return [
+        {
+            "summary_id": "TAU_CMB_PHI_TAU_PARENT_INPUT_EVIDENCE_PAYLOAD_SCORING_INPUT_PAYLOAD_SUBMISSION_EVIDENCE_OBJECT_RECEIPT_ACCEPTANCE_DECISION_GATE_V01",
+            "evidence_object_receipt_acceptance_decision_gate_rows_declared": len(rows),
+            "packet_declared_rows": sum(row["packet_declared"] == "true" for row in rows),
+            "unblock_plan_audited_rows": sum(row["unblock_plan_audited"] == "true" for row in rows),
+            "unblock_plan_audit_passed_rows": sum(row["unblock_plan_audit_passed"] == "true" for row in rows),
+            "acceptance_allowed_rows": sum(row["acceptance_allowed"] == "true" for row in rows),
+            "unblock_completed_rows": sum(row["unblock_completed"] == "true" for row in rows),
+            "evidence_materialized_rows": sum(row["evidence_materialized"] == "true" for row in rows),
+            "receipt_validated_rows": sum(row["receipt_validated"] == "true" for row in rows),
+            "receipt_accepted_rows": sum(row["receipt_accepted"] == "true" for row in rows),
+            "provenance_bound_rows": sum(row["provenance_bound"] == "true" for row in rows),
+            "replay_bound_rows": sum(row["replay_bound"] == "true" for row in rows),
+            "firewall_passed_rows": sum(row["firewall_passed"] == "true" for row in rows),
+            "evidence_audited_rows": sum(row["evidence_audited"] == "true" for row in rows),
+            "evidence_accepted_rows": sum(row["evidence_accepted"] == "true" for row in rows),
+            "acceptance_precheck_passed_rows": sum(row["acceptance_precheck_passed"] == "true" for row in rows),
+            "payload_accepted_rows": sum(row["payload_accepted"] == "true" for row in rows),
+            "scoring_input_accepted_rows": sum(row["scoring_input_accepted"] == "true" for row in rows),
+            "can_execute_rows": sum(row["can_execute"] == "true" for row in rows),
+            "execution_attempted_rows": sum(row["execution_attempted"] == "true" for row in rows),
+            "execution_succeeded_rows": sum(row["execution_succeeded"] == "true" for row in rows),
+            "evidence_package_passed_rows": sum(row["evidence_package_passed"] == "true" for row in rows),
+            "certificate_passed_rows": sum(row["certificate_passed"] == "true" for row in rows),
+            "phi_tau_eff_derived_rows": sum(row["phi_tau_eff_derived"] == "true" for row in rows),
+            "scores_computed_rows": sum(row["scores_computed"] == "true" for row in rows),
+            "cmb_likelihood_available_rows": sum(row["cmb_likelihood_available"] == "true" for row in rows),
+            "hard_failures_triggered": sum(row["hard_failure_triggered"] == "true" for row in rows),
+            "evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_decision_gate_satisfied": "false",
+            "scores_computed": "false",
+            "cmb_likelihood_available": "false",
+            "no_dark_blockers": sum(row["blocks_no_dark_claim"] == "true" for row in rows),
+            "no_dark_cmb_verdict_allowed": "false",
+            "tau_response_claim_allowed": "false",
+            "dark_sector_verdict_allowed": "false",
+            "overall_status": "PHI_TAU_PARENT_INPUT_EVIDENCE_PAYLOAD_SCORING_INPUT_PAYLOAD_SUBMISSION_EVIDENCE_OBJECT_RECEIPT_ACCEPTANCE_DECISION_GATE_CLOSED_UNBLOCK_AUDIT_NOT_PASSED",
+            "next_required_artifact": "tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_decision_gate_audit_v01",
+            "claim_boundary": CLAIM_BOUNDARY,
+        }
+    ]
+
+
+def write_doc() -> None:
+    DOCS.mkdir(parents=True, exist_ok=True)
+    (
+        DOCS
+        / "tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_decision_gate_v01.md"
+    ).write_text(
+        """# Tau CMB Phi Tau Parent Input Evidence Payload Scoring Input Payload Submission Evidence Object Receipt Acceptance Decision Gate v01
+
+**Doc class:** parent-input evidence payload scoring input payload submission evidence object receipt acceptance decision gate
+**Status:** acceptance decision gate closed because unblock plan audit is not passed; no evidence accepted, no receipt accepted, no execution allowed, no scoring input accepted, no Phi derivation, no score, no likelihood, no verdict
+
+Script:
+
+```text
+scripts/build_tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_decision_gate.py
+```
+
+Derived outputs:
+
+```text
+data/derived/tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_decision_gate_v01.csv
+data/derived/tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_decision_gate_summary_v01.csv
+```
+
+This artifact applies the evidence-object receipt acceptance decision rule after
+the acceptance unblock plan audit. The unblock plan audit is not passed, so
+acceptance remains closed.
+
+The evidence payload scoring input payload submission evidence object receipt
+acceptance decision gate is not satisfied:
+
+```text
+evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_decision_gate_satisfied=false
+```
+
+The next focused artifact is:
+
+```text
+tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_decision_gate_audit_v01
+```
+
+## Claim Boundary
+
+This artifact applies an acceptance decision gate only. It materializes no
+evidence object, validates no receipt, accepts no evidence object or receipt,
+executes nothing, accepts no parent-side payload, provides no evidence-package
+pass, provides no certificate pass, accepts no scoring input, derives no
+`Phi_tau_eff`, computes no score, supplies no CMB likelihood, validates no
+Tau-response source, and permits no no-dark or dark-sector verdict.
+""",
+        encoding="utf-8",
+    )
+
+
+def main() -> None:
+    rows = decision_rows()
+    write_csv(
+        DERIVED
+        / "tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_decision_gate_v01.csv",
+        rows,
+        FIELDS,
+    )
+    write_csv(
+        DERIVED
+        / "tau_cmb_phi_tau_parent_input_evidence_payload_scoring_input_payload_submission_evidence_object_receipt_acceptance_decision_gate_summary_v01.csv",
+        summary(rows),
+        SUMMARY_FIELDS,
+    )
+    write_doc()
+    print(
+        "PAPER13_TAU_CMB_PHI_TAU_PARENT_INPUT_EVIDENCE_PAYLOAD_SCORING_INPUT_PAYLOAD_SUBMISSION_EVIDENCE_OBJECT_RECEIPT_ACCEPTANCE_DECISION_GATE_V01_BUILT"
+    )
+
+
+if __name__ == "__main__":
+    main()

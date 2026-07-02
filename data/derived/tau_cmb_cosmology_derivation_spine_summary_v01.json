@@ -1,0 +1,26 @@
+{
+  "blocked_rows": [
+    "TCMBCDS01_004",
+    "TCMBCDS01_005",
+    "TCMBCDS01_006",
+    "TCMBCDS01_008"
+  ],
+  "claim_boundary": "tau_cmb_cosmology_derivation_spine_only_minimal_derivation_scaffold_no_boltzmann_solver_no_likelihood_no_dark_sector_verdict",
+  "closed_rows": [
+    "TCMBCDS01_001"
+  ],
+  "conditional_rows": [
+    "TCMBCDS01_002",
+    "TCMBCDS01_003",
+    "TCMBCDS01_007"
+  ],
+  "dark_sector_verdict": false,
+  "next_minimal_unblock": "derive_endpoint_blind_T_tau_CMB_and_K_tau_PP_with_N_projection_physical",
+  "physical_tau_score_run": false,
+  "report_id": "tau_cmb_cosmology_derivation_spine_summary_v01",
+  "rows": 8,
+  "score_run": false,
+  "source_grounding_gate": "docs/tau_cmb_source_grounding_gate_v01.md",
+  "status": "DERIVATION_SPINE_DECLARED_PARTIAL_NOT_SCORE_ELIGIBLE",
+  "table": "data/derived/tau_cmb_cosmology_derivation_spine_v01.csv"
+}

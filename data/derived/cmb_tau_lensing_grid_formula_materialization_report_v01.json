@@ -1,0 +1,52 @@
+{
+  "claim_boundary": "formula_to_grid_materialization_only_no_score_no_dark_sector_verdict",
+  "created_utc": "2026-06-15T08:29:24.872096Z",
+  "dark_sector_verdict": false,
+  "derivation_script_or_formula": "delta_PP_tau(L) = F_tau_L(parent_tau_source, readout_profile, scale_profile; L); for response_rule=linear_parent_source_v01, delta_PP_tau(L)=normalization*parent_tau_source_value(L)",
+  "endpoint_blind_statement": "endpoint-blind protocol candidate fixed before endpoint score readout; the shape is selected from the predeclared Route B power-law cutoff family and not from ACT/Planck residuals or score outputs",
+  "finite_values": true,
+  "formula_family": "tabulated_l_response_v01",
+  "formula_metadata": {
+    "l_column": "L",
+    "source_table": "payload_staging/tau_lensing_upstream_l_response_v01.csv",
+    "source_table_sha256": "1208b9b956f1b03b1a3418f4036529acad63ac4192f493b09bbb7822e8625a98",
+    "value_column": "tau_response_value"
+  },
+  "formula_role": "endpoint_blind_tau_derived_lensing_l_response_physical_candidate",
+  "grid_shape": [
+    3000
+  ],
+  "grid_value_sha256_le_float64": "5f056a9525ea10481d150641d6591e53aa4ac20fc7f7379e563e46436bfa1add",
+  "index_alignment": {
+    "L": "10+i",
+    "explicit_L_column_written": true,
+    "grid_index": "0..2999"
+  },
+  "known_limit_statement": "when parent_tau_source_value -> 0, delta_PP_tau -> 0 under the linear_parent_source_v01 adapter",
+  "max_value": 0.9435402214942241,
+  "mean_value": 0.6824866988027103,
+  "min_value": 0.009999793390564156,
+  "next_required_action": "review_formula_provenance_then_run_guarded_staging_promotion",
+  "normalization_statement": "dimensionless Route B parent-source convention; downstream delta_PP_tau = normalization * parent_tau_source_value",
+  "parameter_policy": "parameters are convention-fixed for a first Tau-side Route B parent-source candidate; no residual tuning, no reduced chi2 tuning, no score tuning, and no verdict tuning are permitted",
+  "report_id": "cmb_tau_lensing_grid_formula_materialization_report_v01",
+  "score_run": false,
+  "selected_route": "delta_PP_tau_against_named_fiducial_PP",
+  "source_chain": [
+    "docs/cmb_tau_lensing_route_b_parent_source_request_v01.md",
+    "docs/cmb_tau_lensing_grid_equation_packet_v01.md",
+    "docs/tau_cmb_minimal_source_term_candidate_v01.md",
+    "docs/tau_cmb_known_limit_and_dimension_audit_v01.md",
+    "payload_templates/tau_lensing_route_b_parent_source_formula_spec_TEMPLATE_v01.json",
+    "scripts/materialize_tau_lensing_route_b_parent_source_from_formula_spec.py",
+    "payload_staging/tau_lensing_route_b_parent_source_formula_spec_v01.json",
+    "payload_staging/tau_lensing_route_b_parent_source_config_v01.json",
+    "payload_staging/tau_lensing_route_b_parent_source_v01.csv",
+    "payload_staging/tau_lensing_upstream_l_response_v01.csv"
+  ],
+  "spec_file": "payload_staging/tau_lensing_grid_formula_spec_v01.json",
+  "spec_sha256": "3dd80256fcb6dc95590e8b42d7e48af4c0d575150e0190c00d7ffcdc12a644aa",
+  "staging_grid_file": "payload_staging/delta_PP_tau_against_named_fiducial_PP/tau_lensing_response_delta_pp_v01.csv",
+  "staging_grid_sha256": "58e1d3616b4911165fc2b6de7511d43218f87267d427340e824539743f2e4214",
+  "staging_grid_written": true
+}

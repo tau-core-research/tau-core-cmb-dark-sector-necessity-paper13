@@ -1,0 +1,11 @@
+{
+  "claim_boundary": "route_b_metadata_template_only_no_grid_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "next_required_action": "replace FILL fields and template_status with Tau-derived endpoint-blind Route B derivation metadata",
+  "physical_tau_score_run": false,
+  "report_id": "cmb_tau_lensing_route_b_metadata_template_v01",
+  "route_family": "route_B_direct_L_space",
+  "score_run": false,
+  "template": "payload_templates/tau_lensing_route_b_direct_l_space_METADATA_TEMPLATE_v01.json",
+  "template_status": "TEMPLATE_NOT_PAYLOAD"
+}

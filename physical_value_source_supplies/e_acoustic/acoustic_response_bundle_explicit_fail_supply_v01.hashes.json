@@ -1,0 +1,8 @@
+{
+  "claim_boundary": "tau_cmb_acoustic_response_bundle_or_explicit_fail_supply_v01_acoustic_direct_rows_explicit_fail_no_acoustic_source_no_score_no_likelihood_no_verdict",
+  "explicit_fail_supplied": true,
+  "physical_value_source_accepted": false,
+  "score_entry_allowed": false,
+  "sha256": "90cd01a3f72d50638f2a7f7b967b5f292dec1545df79f74882b57a410bc168a3",
+  "target": "physical_value_source_supplies/e_acoustic/acoustic_response_bundle_explicit_fail_supply_v01.json"
+}

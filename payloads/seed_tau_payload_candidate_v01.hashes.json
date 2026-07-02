@@ -1,0 +1,12 @@
+{
+  "artifact_id": "seed_tau_payload_candidate_v01.hashes",
+  "claim_boundary": "tau_cmb_seed_tau_payload_candidate_v01_concrete_candidate_only_not_accepted_no_domain_certificate_no_readout_evaluation_no_survival_no_A_tau_value_no_score_no_verdict",
+  "hash_manifest_accepted": false,
+  "hashes": {
+    "payloads/seed_tau_payload_candidate_v01.csv": "512c2f923cb1c85eeee80baf4efd12bb3f1814453fff99bfbdd12166bc8c5fb6",
+    "payloads/seed_tau_payload_candidate_v01.firewall.json": "635a7b0dc25c577a391b2b2b78a8d038d2510c68c8ea0a0a39738444b34e58da",
+    "payloads/seed_tau_payload_candidate_v01.provenance.json": "7caef7a0d945a7bf2e8cc61ce51dfba3a2acfac50e5697185d8b6a63527528ea",
+    "payloads/seed_tau_payload_candidate_v01.replay.txt": "71e3530f66ae4c995399415e0b10f7e999d09b727195638c519b0f41108929a8"
+  },
+  "score_entry_allowed": false
+}

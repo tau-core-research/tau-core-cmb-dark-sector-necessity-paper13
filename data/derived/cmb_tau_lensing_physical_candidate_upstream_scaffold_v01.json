@@ -1,0 +1,12 @@
+{
+  "claim_boundary": "physical_candidate_upstream_scaffold_only_templates_no_grid_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "metadata_template": "payload_templates/tau_lensing_physical_candidate_upstream_l_response_METADATA_TEMPLATE_v01.json",
+  "next_required_action": "copy templates into payload_staging only after replacing all FILL fields with Tau-derived endpoint-blind content, then run make tau-grid-physical-candidate-precheck",
+  "physical_tau_score_run": false,
+  "report_id": "cmb_tau_lensing_physical_candidate_upstream_scaffold_v01",
+  "scaffold_status": "PHYSICAL_CANDIDATE_UPSTREAM_TEMPLATE_WRITTEN",
+  "score_run": false,
+  "table_template": "payload_templates/tau_lensing_physical_candidate_upstream_l_response_TABLE_TEMPLATE_v01.csv",
+  "template_status": "TEMPLATE_NOT_PAYLOAD"
+}

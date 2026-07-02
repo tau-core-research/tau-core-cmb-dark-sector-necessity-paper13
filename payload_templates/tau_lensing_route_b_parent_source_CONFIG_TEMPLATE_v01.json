@@ -1,0 +1,20 @@
+{
+  "claim_boundary": "route_b_parent_source_config_template_not_payload_no_grid_no_score_no_dark_sector_verdict",
+  "config_id": "tau_lensing_route_b_parent_source_config_v01",
+  "endpoint_blind_statement": "FILL: explain pre-score fixation of parent_tau_source and normalization",
+  "known_limit_statement": "FILL: delta_PP_tau -> 0 when parent_tau_source_value -> 0",
+  "normalization": "FILL: finite numeric multiplier fixed before endpoint score readout",
+  "normalization_statement": "FILL: dimensionless delta_PP_tau = normalization * parent_tau_source_value",
+  "parameter_policy": "FILL: no endpoint/score tuning; parameters fixed from Tau-side evidence",
+  "parent_l_column": "L",
+  "parent_source_table": "FILL: endpoint-blind Tau parent source L-table path",
+  "parent_value_column": "parent_tau_source_value",
+  "response_rule": "linear_parent_source_v01",
+  "selected_route": "delta_PP_tau_against_named_fiducial_PP",
+  "source_chain": [
+    "FILL: Tau parent source evidence artifact",
+    "FILL: parent_source_table generator",
+    "FILL: normalization/known-limit audit"
+  ],
+  "template_status": "TEMPLATE_NOT_PAYLOAD"
+}

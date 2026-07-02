@@ -1,0 +1,22 @@
+{
+  "claim_boundary": "tau_cmb_certificate_semantic_evidence_physical_R_CMB_materialization_acceptance_audit_v01_acceptance_audit_candidates_rejected_role_coordinate_numeric_materialization_required_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "codomain_checker_passed_rows": 0,
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "input_chain_clean": true,
+  "input_physical_R_CMB_materialization_supply_summary": "data/derived/tau_cmb_certificate_semantic_evidence_physical_R_CMB_materialization_supply_summary_v01.json",
+  "input_physical_R_CMB_materialization_supply_table": "data/derived/tau_cmb_certificate_semantic_evidence_physical_R_CMB_materialization_supply_v01.csv",
+  "likelihood_allowed": false,
+  "materialization_accepted_rows": 0,
+  "materialization_rejected_rows": 7,
+  "next_minimal_unblock": "tau_cmb_readout_role_coordinate_numeric_materialization_supply_v01",
+  "numeric_values_materialized_rows": 0,
+  "physical_R_CMB_materialization_acceptance_rows": 7,
+  "physical_R_CMB_materialized": false,
+  "physical_R_CMB_materialized_rows": 0,
+  "report_id": "tau_cmb_certificate_semantic_evidence_physical_R_CMB_materialization_acceptance_audit_summary_v01",
+  "role_coordinates_accepted_rows": 0,
+  "score_entry_allowed": false,
+  "status": "CMB_CERTIFICATE_SEMANTIC_EVIDENCE_PHYSICAL_R_CMB_MATERIALIZATION_ACCEPTANCE_AUDITED_REJECTED_ROLE_COORDINATE_NUMERIC_MATERIALIZATION_REQUIRED",
+  "table": "data/derived/tau_cmb_certificate_semantic_evidence_physical_R_CMB_materialization_acceptance_audit_v01.csv"
+}

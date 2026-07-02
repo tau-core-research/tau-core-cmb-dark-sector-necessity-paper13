@@ -1,0 +1,16 @@
+{
+  "claim_boundary": "tau_cmb_seed_normalization_replay_candidate_v01_replay_candidate_only_normalization_not_accepted_no_support_certification_no_domain_certificate_no_readout_no_score_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "domain_certificate_allowed": false,
+  "next_minimal_unblock": "tau_cmb_seed_normalization_replay_candidate_audit_v01",
+  "normalization_acceptance_allowed": false,
+  "normalization_replay_declared": true,
+  "normalization_rows": 5,
+  "readout_evaluation_allowed": false,
+  "replay": "payloads/seed_tau_normalization_replay_candidate_v01.txt",
+  "report_id": "tau_cmb_seed_normalization_replay_candidate_summary_v01",
+  "score_entry_allowed": false,
+  "status": "SEED_NORMALIZATION_REPLAY_CANDIDATE_DECLARED_NOT_ACCEPTED",
+  "support_certification_allowed": false,
+  "table": "data/derived/tau_cmb_seed_normalization_replay_candidate_v01.csv"
+}

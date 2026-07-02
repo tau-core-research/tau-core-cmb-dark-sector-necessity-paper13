@@ -1,0 +1,6 @@
+{
+  "artifact_id": "TCMBCDIEBSAR01_007",
+  "claim_boundary": "tau_cmb_carrier_domain_checker_input_payload_endpoint_blind_source_artifact_materialization_packet_v01_source_artifact_candidates_materialized_not_accepted_no_staging_write_no_payload_acceptance_no_checker_execution_no_certificate_pass_no_domain_acceptance_no_R_CMB_no_score_no_likelihood_no_verdict",
+  "replay_command": "make tau-cmb-carrier-domain-checker-input-payload-endpoint-blind-source-artifact-materialization-packet",
+  "replay_scope": "rebuild source artifact, provenance, replay, firewall, and hash files from local endpoint-blind sources"
+}

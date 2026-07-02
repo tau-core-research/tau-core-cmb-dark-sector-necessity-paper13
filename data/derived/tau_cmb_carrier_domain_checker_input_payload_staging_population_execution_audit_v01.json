@@ -1,0 +1,79 @@
+{
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_EXPECTED_EXECUTION_ROWS_PRESENT",
+      "blocking_reason": "staging population execution requires the 66 declared rows",
+      "component": "execution_row_shape",
+      "finding": "rows=66"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_EXECUTION_INPUT_CHAIN",
+      "blocking_reason": "execution audit must be downstream of accepted source artifacts",
+      "component": "input_source_acceptance_chain",
+      "finding": "staging execution follows accepted endpoint-blind source artifacts"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_STAGING_FILES_PRESENT_AND_HASH_BOUND",
+      "blocking_reason": "populated staging files must exist and match recorded hashes",
+      "component": "staging_files_present_and_hash_bound",
+      "finding": "all populated staging files exist and match recorded hashes"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_STAGING_CLAIM_BOUNDARY",
+      "blocking_reason": "staging files must not promote themselves to accepted payloads or downstream claims",
+      "component": "staging_claim_boundary",
+      "finding": "all staging files remain not accepted and forbid execution/R_CMB/score/likelihood/verdict"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_EXECUTION_ACCOUNTING",
+      "blocking_reason": "execution should populate 66 staging files but accept zero payloads",
+      "component": "execution_accounting",
+      "finding": "rows=66, attempted=66, succeeded=66, staging_written=66, accepted=0"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_EXECUTION_FIREWALL_CLOSED",
+      "blocking_reason": "staging execution must not promote populated files to accepted payloads",
+      "component": "promotion_firewall",
+      "finding": "staging execution does not open payload acceptance, checker execution, R_CMB, score, likelihood, or verdict"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_ACCEPTANCE_AUDIT_NOT_AVAILABLE",
+      "blocking_reason": "requires payload acceptance audit before checker execution",
+      "component": "payload_acceptance",
+      "finding": "payloads are populated but not accepted"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_CHECKERS_AND_R_CMB",
+      "blocking_reason": "requires accepted payloads before checker execution and downstream certificates",
+      "component": "checker_execution_and_R_CMB",
+      "finding": "checker execution, certificate pass, domain acceptance, and concrete R_CMB remain downstream"
+    }
+  ],
+  "audited_table": "data/derived/tau_cmb_carrier_domain_checker_input_payload_staging_population_execution_v01.csv",
+  "blocked_rows": 2,
+  "carrier_certificate_allowed": false,
+  "checker_execution_allowed": false,
+  "claim_boundary": "tau_cmb_carrier_domain_checker_input_payload_staging_population_execution_audit_v01_audit_only_staging_files_populated_not_payload_accepted_no_checker_execution_no_certificate_pass_no_domain_acceptance_no_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "domain_certificate_allowed": false,
+  "domain_object_acceptance_allowed": false,
+  "failed_rows": 0,
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_carrier_domain_checker_input_payload_acceptance_audit_v01",
+  "passed_rows": 6,
+  "payload_acceptance_allowed": false,
+  "report_id": "tau_cmb_carrier_domain_checker_input_payload_staging_population_execution_audit_v01",
+  "score_entry_allowed": false,
+  "staging_population_execution_audited": true,
+  "staging_population_execution_succeeded": true,
+  "status": "CARRIER_DOMAIN_CHECKER_INPUT_PAYLOAD_STAGING_POPULATION_EXECUTION_AUDITED_PAYLOADS_POPULATED_NOT_ACCEPTED"
+}

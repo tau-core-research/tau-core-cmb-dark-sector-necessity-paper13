@@ -1,0 +1,51 @@
+{
+  "artifact_id": "TCMBCDSEMPCREQ01_113",
+  "artifact_status": "TRACE_COMPONENT_PROOF_CONTENT_CANDIDATE_SUPPLIED_NOT_ACCEPTED",
+  "certificate_area": "endpoint_firewall_replay",
+  "certificate_passed": false,
+  "certificate_rule_executable_after_component": false,
+  "checker_name": "run_endpoint_firewall_checker",
+  "claim_boundary": "tau_cmb_certificate_semantic_evidence_substantive_trace_component_proof_content_supply_v01_proof_content_candidate_supplied_not_accepted_no_component_acceptance_no_certificate_pass_no_domain_acceptance_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "component_accepted_after_supply": false,
+  "component_substantively_proven_after_supply": false,
+  "dark_sector_verdict_allowed": false,
+  "domain_object_accepted": false,
+  "endpoint_blind_firewall": {
+    "act_planck_likelihood_used": false,
+    "cmb_endpoint_residuals_used": false,
+    "dark_sector_verdict_used": false,
+    "post_endpoint_tuning_used": false,
+    "score_output_used": false
+  },
+  "likelihood_allowed": false,
+  "next_required_step": "audit supplied proof-content candidates for substantive component acceptance",
+  "physical_R_CMB_materialized": false,
+  "proof_content_candidate_nonempty": true,
+  "proof_content_role": "Endpoint-blind candidate proof content for a previously rejected trace component. It is supplied so that a later acceptance audit has concrete material to inspect.",
+  "proof_content_supplied": true,
+  "rejected_component_artifact": "semantic_evidence_trace_components/endpoint_firewall_replay/no_endpoint_data_access/endpoint_access_log_component_draft_v01.json",
+  "score_entry_allowed": false,
+  "semantic_assertion_acceptance_allowed": false,
+  "semantic_evidence_field": "no_endpoint_data_access",
+  "substantive_content_candidate": {
+    "acceptance_flags_required": "component_substantively_proven=true; component_accepted=true only after proof-content audit",
+    "local_verification_standard": "endpoint-blind substantive proof content that verifies this trace component without endpoint residuals, score outputs, likelihood deltas, or dark-sector verdicts",
+    "minimal_checks_expected": [
+      "the referenced component artifact exists and is the component named by this row",
+      "the component claim is checked using only upstream/domain material",
+      "endpoint residuals, score outputs, likelihood deltas, and dark-sector verdicts are absent",
+      "the component can be replayed as a local premise for the named checker",
+      "the proof content states its dependency boundary and known non-claims"
+    ],
+    "non_claims": [
+      "this candidate does not prove the component",
+      "this candidate does not accept the component",
+      "this candidate does not accept the trace",
+      "this candidate does not execute or pass a certificate",
+      "this candidate does not open physical R_CMB, score, likelihood, or verdict"
+    ],
+    "object_to_verify": "endpoint access log"
+  },
+  "trace_accepted_after_component": false,
+  "trace_component_name": "endpoint access log"
+}

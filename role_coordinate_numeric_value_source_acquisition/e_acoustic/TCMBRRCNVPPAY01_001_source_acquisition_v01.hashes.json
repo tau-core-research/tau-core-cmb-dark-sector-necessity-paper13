@@ -1,0 +1,10 @@
+{
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_payload_value_source_acquisition_v01_source_acquisition_requests_declared_no_sources_acquired_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "likelihood_allowed": false,
+  "score_entry_allowed": false,
+  "sha256": "48a2e366c05be5d0ce2007124bb267dc94213b90a65dcd733075153a7d0dfdf2",
+  "target": "role_coordinate_numeric_value_source_acquisition/e_acoustic/TCMBRRCNVPPAY01_001_source_acquisition_v01.json",
+  "value_source_accepted": false,
+  "value_source_acquired": false
+}

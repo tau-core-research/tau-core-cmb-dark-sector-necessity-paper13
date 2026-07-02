@@ -1,0 +1,124 @@
+{
+  "acceptance_permissions": {
+    "checker_execution_allowed": false,
+    "concrete_R_CMB_allowed": false,
+    "dark_sector_verdict_allowed": false,
+    "likelihood_allowed": false,
+    "payload_accepted": false,
+    "score_entry_allowed": false,
+    "source_artifact_accepted": false,
+    "staging_population_allowed": false
+  },
+  "artifact_id": "TCMBCDIEBSAR01_033",
+  "artifact_status": "SOURCE_ARTIFACT_CANDIDATE_MATERIALIZED_NOT_ACCEPTED",
+  "certificate_area": "source_object_admissibility",
+  "checker_name": "run_source_object_checker",
+  "claim_boundary": "tau_cmb_carrier_domain_checker_input_payload_endpoint_blind_source_artifact_materialization_packet_v01_source_artifact_candidates_materialized_not_accepted_no_staging_write_no_payload_acceptance_no_checker_execution_no_certificate_pass_no_domain_acceptance_no_R_CMB_no_score_no_likelihood_no_verdict",
+  "endpoint_blind_rule": "constructed only from Tau Core theory/protocol artifacts; no CMB endpoint residual, likelihood error, score output, or post-endpoint tuning input is used",
+  "file_category": "payload",
+  "source_inventory": [
+    {
+      "exists": true,
+      "path": "/Users/jolcsak/Projects/tau-core-cmb-dark-sector-necessity-paper13/docs/tau_cmb_source_grounding_gate_v01.md",
+      "role": "endpoint_blind_tau_side_source_reference",
+      "sha256": "1c26460db0ebcffcd20bcedcfa6423408122effb9defe6cbf80b7eedc4d5afb3"
+    },
+    {
+      "exists": true,
+      "path": "/Users/jolcsak/Projects/tau-core-cmb-dark-sector-necessity-paper13/docs/tau_cmb_cosmology_derivation_spine_v01.md",
+      "role": "endpoint_blind_tau_side_source_reference",
+      "sha256": "182bcbd9548b1bb5e3597e80a2ae35f1d05b45f6eef9cf28311db6b055a14ca1"
+    },
+    {
+      "exists": true,
+      "path": "/Users/jolcsak/Projects/tau-core-cmb-dark-sector-necessity-paper13/docs/tau_cmb_endpoint_blind_phi_tau_derivation_contract_v01.md",
+      "role": "endpoint_blind_tau_side_source_reference",
+      "sha256": "19b6e360e1d31f86f3ad9aae94946c5ac5fcdf4ee17fe8ba468651935ec6800d"
+    },
+    {
+      "exists": true,
+      "path": "/Users/jolcsak/Projects/tau-core-cmb-dark-sector-necessity-paper13/docs/tau_cmb_known_limit_and_dimension_audit_v01.md",
+      "role": "endpoint_blind_tau_side_source_reference",
+      "sha256": "bf48063bf0ed5a918c72b776323a63a3a33886a79ad977c55e6774d0793a16ea"
+    },
+    {
+      "exists": true,
+      "path": "/Users/jolcsak/Projects/tau-core-cmb-dark-sector-necessity-paper13/docs/tau_cmb_readout_role_space_basis_v01.md",
+      "role": "endpoint_blind_tau_side_source_reference",
+      "sha256": "0395d1178887ec93757031aed1441c585af250cd38643bb3d09059d3880b5239"
+    },
+    {
+      "exists": true,
+      "path": "/Users/jolcsak/Projects/tau-core-cmb-dark-sector-necessity-paper13/docs/tau_cmb_readout_role_space_basis_audit_v01.md",
+      "role": "endpoint_blind_tau_side_source_reference",
+      "sha256": "7c63eba6cbdfb5333e4e8de1789bc6f3faac0013261af969677319eac1fee249"
+    },
+    {
+      "exists": true,
+      "path": "/Users/jolcsak/Projects/tau-core-theory/docs/tau_core_projection_induction_principle.md",
+      "role": "endpoint_blind_tau_side_source_reference",
+      "sha256": "fc4d3ddbec798b9f982cc5edc0a0d87e07ed4d35892a055d0ac4d10d590ae561"
+    },
+    {
+      "exists": true,
+      "path": "/Users/jolcsak/Projects/tau-core-theory/docs/tau_core_morphology_theory.md",
+      "role": "endpoint_blind_tau_side_source_reference",
+      "sha256": "94a05805471a35f3168b6a5a6608402b910590236d316414e60dd944283e6f8a"
+    },
+    {
+      "exists": true,
+      "path": "/Users/jolcsak/Projects/tau-core-theory/docs/tau_core_protected_readout_formalism.md",
+      "role": "endpoint_blind_tau_side_source_reference",
+      "sha256": "1a24c554753b97afad36642310680d2e40925f6259e0efa0f18d5238784f50cb"
+    },
+    {
+      "exists": true,
+      "path": "/Users/jolcsak/Projects/tau-core-theory/docs/tau_core_readout_stable_domain_selection_principle_001.md",
+      "role": "endpoint_blind_tau_side_source_reference",
+      "sha256": "7738cd3dc59480ba5f44ae3d3af922802b60c87c30eb6690fcd74a427ffee821"
+    },
+    {
+      "exists": true,
+      "path": "/Users/jolcsak/Projects/tau-core-cmb-dark-sector-necessity-paper13/docs/tau_cmb_effective_source_equation_v01.md",
+      "role": "endpoint_blind_tau_side_source_reference",
+      "sha256": "261fbf65c9ec0032b043b5a1f79155aa0cec2adc74744e093ee0c12bc9187fbe"
+    },
+    {
+      "exists": true,
+      "path": "/Users/jolcsak/Projects/tau-core-cmb-dark-sector-necessity-paper13/docs/tau_cmb_minimal_source_term_candidate_v01.md",
+      "role": "endpoint_blind_tau_side_source_reference",
+      "sha256": "d849619604fa0bc9aa62852200429c5b28f0a2208b5d148a48aae2d4d395f1c4"
+    },
+    {
+      "exists": true,
+      "path": "/Users/jolcsak/Projects/tau-core-cmb-dark-sector-necessity-paper13/docs/tau_cmb_source_term_dimensional_precheck_v01.md",
+      "role": "endpoint_blind_tau_side_source_reference",
+      "sha256": "fcf78656bee6e7fa87bb284b580e3055f79242dccc168b695baa460173aac4c8"
+    },
+    {
+      "exists": true,
+      "path": "/Users/jolcsak/Projects/tau-core-cmb-dark-sector-necessity-paper13/docs/tau_cmb_density_amplitude_derivation_v01.md",
+      "role": "endpoint_blind_tau_side_source_reference",
+      "sha256": "51e84b860a96d73a5ded026c44b204f8085ac646a9ddee17d167a9b5622ff572"
+    },
+    {
+      "exists": true,
+      "path": "/Users/jolcsak/Projects/tau-core-cmb-dark-sector-necessity-paper13/docs/tau_cmb_density_amplitude_closure_v01.md",
+      "role": "endpoint_blind_tau_side_source_reference",
+      "sha256": "f671b4d2b275c46357d3d91d79a7ce0480c6398f4e964ad09f81b6bcce5e3786"
+    },
+    {
+      "exists": true,
+      "path": "/Users/jolcsak/Projects/tau-core-theory/docs/tau_core_tau_dark_sector_b_tau_base_carrier_target_001.md",
+      "role": "endpoint_blind_tau_side_source_reference",
+      "sha256": "df02248bd8b28048b9d2b85c7bc724523b2bf4b0b9e5622adf5febb03239e20c"
+    },
+    {
+      "exists": true,
+      "path": "/Users/jolcsak/Projects/tau-core-theory/docs/tau_core_tau_dark_sector_response_rule_candidate_families_001.md",
+      "role": "endpoint_blind_tau_side_source_reference",
+      "sha256": "9a2b669b61552d866c9d844a45bec703e82045c0a6a56372bf147b515a4f26f0"
+    }
+  ],
+  "target_payload_staging_path": "payload_staging/tau_cmb_carrier_domain_checker_input_payloads/source_object_admissibility/source_derivation_transcript.json"
+}

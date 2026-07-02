@@ -1,0 +1,28 @@
+{
+  "claim_boundary": "tau_cmb_endpoint_blind_physical_value_source_packet_v01_physical_source_packet_declared_sources_not_supplied_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "frontier_class_counts": {
+    "benchmark_comparison_required": 1,
+    "cross_role_evidence_required": 3,
+    "inequality_evaluation_required": 1,
+    "operator_required": 2,
+    "physical_convention_and_sign_required": 1,
+    "physical_response_required": 3,
+    "physical_source_required": 4,
+    "provenance_and_amplitude_required": 1
+  },
+  "input_chain_clean": true,
+  "input_protocol_saturation_summary": "data/derived/tau_cmb_readout_role_coordinate_numeric_value_protocol_saturation_audit_summary_v01.json",
+  "input_protocol_saturation_table": "data/derived/tau_cmb_readout_role_coordinate_numeric_value_protocol_saturation_audit_v01.csv",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_endpoint_blind_physical_value_source_supply_v01",
+  "packet_declared_rows": 16,
+  "packet_hash_matched_rows": 16,
+  "physical_CMB_score_allowed": false,
+  "physical_value_source_accepted_rows": 0,
+  "physical_value_source_packet_rows": 16,
+  "physical_value_source_supplied_rows": 0,
+  "report_id": "tau_cmb_endpoint_blind_physical_value_source_packet_summary_v01",
+  "status": "CMB_ENDPOINT_BLIND_PHYSICAL_VALUE_SOURCE_PACKET_DECLARED_SOURCES_NOT_SUPPLIED",
+  "table": "data/derived/tau_cmb_endpoint_blind_physical_value_source_packet_v01.csv"
+}

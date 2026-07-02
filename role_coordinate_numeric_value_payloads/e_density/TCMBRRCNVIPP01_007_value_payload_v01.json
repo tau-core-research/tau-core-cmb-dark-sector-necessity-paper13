@@ -1,0 +1,27 @@
+{
+  "artifact_status": "POPULATION_VALUE_PAYLOAD_TARGET_SUPPLIED_VALUES_ABSENT",
+  "blocking_reason": "payload target exists, but numeric value, unit/convention, provenance, and replay are absent",
+  "cell_artifact": "role_coordinate_numeric_value_cells/e_density/TCMBRRCNVP01_007_cell_v01.json",
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_population_value_payload_v01_payload_targets_supplied_values_absent_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "coordinate_component": "density_ratio_guard",
+  "coordinate_symbol": "e_density",
+  "dark_sector_verdict_allowed": false,
+  "endpoint_blind_attestation": true,
+  "formal_slot": "A_tau(a,k) := rho_tau_eff(a,k) / rho_cdm_ref(a)",
+  "likelihood_allowed": false,
+  "numeric_value_supplied": false,
+  "payload_accepted_for_score": false,
+  "provenance_supplied": false,
+  "replay_supplied": false,
+  "required_payload": {
+    "endpoint_blind_attestation": true,
+    "numeric_value": null,
+    "provenance": null,
+    "replay": null,
+    "unit_or_convention": null
+  },
+  "role_name": "density",
+  "score_entry_allowed": false,
+  "source_population_packet_row_id": "TCMBRRCNVIPP01_007",
+  "unit_or_convention_supplied": false
+}

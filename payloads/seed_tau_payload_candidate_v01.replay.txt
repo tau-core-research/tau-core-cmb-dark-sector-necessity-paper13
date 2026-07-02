@@ -1,0 +1,12 @@
+# seed_tau_payload_candidate_v01 replay
+
+Rebuild command:
+
+python3 scripts/build_tau_cmb_seed_tau_payload_candidate.py --write-all
+
+Replay boundary:
+
+- Reads only data/derived/tau_cmb_morphological_seed_descriptor_candidate_v01.csv.
+- Does not read ACT/Planck residuals, endpoint score tables, likelihood deltas,
+  peak residual shapes, or post-endpoint tuning artifacts.
+- Produces a concrete candidate payload but does not accept it.

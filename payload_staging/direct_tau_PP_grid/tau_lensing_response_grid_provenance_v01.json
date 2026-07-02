@@ -1,0 +1,13 @@
+{
+  "author_or_agent": "",
+  "created_utc": "",
+  "derivation_script_or_formula": "",
+  "input_artifacts": [],
+  "no_endpoint_fit_statement": "",
+  "notes": "Staging skeleton only. Remove template_status only after real endpoint-blind payload is filled.",
+  "numeric_grid_file": "payloads/tau_lensing_response_pp_grid_v01.csv",
+  "numeric_grid_sha256": "",
+  "selected_route": "direct_tau_PP_grid",
+  "source_chain": "",
+  "template_status": "TEMPLATE_NOT_PAYLOAD"
+}

@@ -1,0 +1,20 @@
+{
+  "accepted_domain_objects": 0,
+  "certificate_passed_rows": 0,
+  "certificate_rule_executable_rows": 7,
+  "certificate_rule_rows": 7,
+  "checker_execution_replay_present_rows": 0,
+  "claim_boundary": "tau_cmb_certificate_semantic_evidence_certificate_rule_execution_refresh_v01_certificate_rule_executable_from_trace_acceptance_only_no_certificate_pass_no_domain_acceptance_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "input_chain_clean": true,
+  "input_trace_acceptance_summary": "data/derived/tau_cmb_certificate_semantic_evidence_trace_acceptance_refresh_summary_v01.json",
+  "input_trace_acceptance_table": "data/derived/tau_cmb_certificate_semantic_evidence_trace_acceptance_refresh_v01.csv",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_certificate_semantic_evidence_checker_execution_replay_supply_v01",
+  "physical_R_CMB_materialized": false,
+  "report_id": "tau_cmb_certificate_semantic_evidence_certificate_rule_execution_refresh_summary_v01",
+  "score_entry_allowed": false,
+  "status": "CMB_CERTIFICATE_SEMANTIC_EVIDENCE_CERTIFICATE_RULES_EXECUTABLE_CHECKER_REPLAY_REQUIRED",
+  "table": "data/derived/tau_cmb_certificate_semantic_evidence_certificate_rule_execution_refresh_v01.csv"
+}

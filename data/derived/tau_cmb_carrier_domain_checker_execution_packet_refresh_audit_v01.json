@@ -1,0 +1,61 @@
+{
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_REFRESH_ROWS_PRESENT",
+      "blocking_reason": "refresh requires eight checker rows",
+      "component": "refresh_row_shape",
+      "finding": "rows=8"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_REFRESH_INPUT_CHAIN",
+      "blocking_reason": "refresh requires accepted checker-input payloads",
+      "component": "input_payload_acceptance_chain",
+      "finding": "refresh follows accepted checker-input payloads"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_REFRESH_READINESS_ACCOUNTING",
+      "blocking_reason": "refresh should mark seven executable rows and one codomain R_CMB block",
+      "component": "readiness_accounting",
+      "finding": "ready=7, blocked_R_CMB=1"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_REFRESH_FIREWALL_CLOSED",
+      "blocking_reason": "refresh must not promote readiness into execution or downstream claims",
+      "component": "promotion_firewall",
+      "finding": "refresh does not execute checkers or open R_CMB/score/likelihood/verdict"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_CHECKER_EXECUTION_NOT_ATTEMPTED",
+      "blocking_reason": "requires explicit checker execution attempt packet",
+      "component": "checker_execution_attempt",
+      "finding": "seven checker rows are ready but not attempted"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_CONCRETE_R_CMB_CANDIDATE_ABSENT",
+      "blocking_reason": "requires concrete R_CMB candidate gate before codomain execution",
+      "component": "codomain_R_CMB_candidate",
+      "finding": "codomain compatibility remains blocked by missing concrete R_CMB candidate"
+    }
+  ],
+  "audited_table": "data/derived/tau_cmb_carrier_domain_checker_execution_packet_refresh_v01.csv",
+  "blocked_rows": 2,
+  "checker_execution_attempt_allowed_rows": 7,
+  "claim_boundary": "tau_cmb_carrier_domain_checker_execution_packet_refresh_audit_v01_audit_only_execution_readiness_refresh_no_checker_attempt_no_certificate_pass_no_domain_acceptance_no_R_CMB_no_score_no_likelihood_no_verdict",
+  "codomain_execution_allowed": false,
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "execution_packet_refresh_audited": true,
+  "failed_rows": 0,
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_carrier_domain_checker_execution_attempt_packet_v01_or_concrete_R_CMB_candidate_gate_v01",
+  "passed_rows": 4,
+  "report_id": "tau_cmb_carrier_domain_checker_execution_packet_refresh_audit_v01",
+  "score_entry_allowed": false,
+  "status": "CARRIER_DOMAIN_CHECKER_EXECUTION_PACKET_REFRESH_AUDITED_PARTIAL_EXECUTION_READY_NOT_ATTEMPTED"
+}

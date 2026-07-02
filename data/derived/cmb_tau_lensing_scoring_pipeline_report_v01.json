@@ -1,0 +1,188 @@
+{
+  "blocking_intake": {
+    "accepted_for_tau_score": false,
+    "claim_boundary": "route_evidence_intake_only_no_grid_validation_no_score_no_dark_sector_verdict",
+    "dark_sector_verdict": false,
+    "intake_decision": "ONE_ROUTE_ACCEPTED_FOR_NEXT_VALIDATION",
+    "next_required_action": "run_validate_delta_grid_then_projection_replay",
+    "report_id": "tau_lensing_route_evidence_intake_v01",
+    "route_status": {
+      "delta_PP_tau_against_named_fiducial_PP": {
+        "complete": true,
+        "missing_count": 0,
+        "missing_files": [],
+        "present_count": 4,
+        "present_files": [
+          "payloads/tau_lensing_response_delta_pp_v01.csv",
+          "payloads/tau_lensing_response_fiducial_pp_reference_v01.json",
+          "payloads/tau_lensing_response_grid_route_declaration_v01.md",
+          "payloads/tau_lensing_response_grid_provenance_v01.json"
+        ]
+      },
+      "direct_tau_PP_grid": {
+        "complete": false,
+        "missing_count": 1,
+        "missing_files": [
+          "payloads/tau_lensing_response_pp_grid_v01.csv"
+        ],
+        "present_count": 2,
+        "present_files": [
+          "payloads/tau_lensing_response_grid_route_declaration_v01.md",
+          "payloads/tau_lensing_response_grid_provenance_v01.json"
+        ]
+      },
+      "explicit_failure_no_endpoint_blind_grid": {
+        "complete": false,
+        "missing_count": 1,
+        "missing_files": [
+          "payloads/tau_lensing_response_grid_failure_statement_v01.md"
+        ],
+        "present_count": 0,
+        "present_files": []
+      }
+    },
+    "score_run": false,
+    "selected_route_count": 1,
+    "selected_routes": [
+      "delta_PP_tau_against_named_fiducial_PP"
+    ]
+  },
+  "blocking_materializer": {
+    "claim_boundary": "projection_replay_materialization_only_no_score_no_dark_sector_verdict",
+    "dark_sector_verdict": false,
+    "grid_file": "payloads/tau_lensing_response_delta_pp_v01.csv",
+    "next_required_action": "run_preflight_then_score_pipeline",
+    "projection_replay_valid_shape": true,
+    "projection_replay_written": true,
+    "replay_file": "payloads/tau_lensing_pp_grid_projection_replay_v01.json",
+    "report_id": "tau_lensing_projection_replay_materialization_completed_v01",
+    "score_run": false,
+    "selected_route": "delta_PP_tau_against_named_fiducial_PP",
+    "validation_report": {
+      "claim_boundary": "grid_payload_validation_only_no_tau_score_no_dark_sector_verdict",
+      "dark_sector_verdict": false,
+      "finite_values": true,
+      "grid_file": "/Users/jolcsak/Projects/tau-core-cmb-dark-sector-necessity-paper13/payloads/tau_lensing_response_delta_pp_v01.csv",
+      "grid_sha256": "58e1d3616b4911165fc2b6de7511d43218f87267d427340e824539743f2e4214",
+      "grid_shape": [
+        3000
+      ],
+      "grid_value_sha256_le_float64": "5f056a9525ea10481d150641d6591e53aa4ac20fc7f7379e563e46436bfa1add",
+      "index_alignment": {
+        "L": "10+i",
+        "explicit_L_column_verified": true,
+        "grid_index": "0..2999"
+      },
+      "projection_replay": {
+        "act_binning_file": "/Users/jolcsak/Projects/tau-core-cmb-dark-sector-necessity-paper13/data/external/act_dr6_lensing/extracted/v1.2/binning_matrix_act.txt",
+        "act_binning_sha256": "a88fa3dc1ac5289e0580d8d0c1c3e9ee149f06cf62dad328cb5a248fd9985084",
+        "adapter": "schema_locked_ACT_binning_matrix",
+        "operation": "B_ACT @ grid",
+        "projected_shape": [
+          18
+        ],
+        "projected_vector_sha256_le_float64": "d6562a2d601a292c3ee9db139278950a3ca1290bcc4feedafd71d1baf64ee724"
+      },
+      "report_id": "tau_lensing_grid_payload_validation_v01",
+      "route_id": "delta_PP_tau",
+      "score_computed": false
+    },
+    "validator_route": "delta_PP_tau"
+  },
+  "blocking_preflight": {
+    "claim_boundary": "score_preflight_only_no_score_run_no_dark_sector_verdict",
+    "dark_sector_verdict": false,
+    "firewall_status": {
+      "firewall_passed": true,
+      "next_required_action": "run_materialize_replay",
+      "selected_route": "delta_PP_tau_against_named_fiducial_PP"
+    },
+    "next_required_action": "run_make_score_attempt_guard_then_make_score_report_if_allowed",
+    "output_validator_exists": true,
+    "projection_replay_status": {
+      "projection_replay_dark_sector_verdict_false": true,
+      "projection_replay_exists": true,
+      "projection_replay_score_computed_false": true,
+      "projection_replay_valid_shape": true
+    },
+    "ready_for_reduced_score_execution": true,
+    "report_id": "tau_lensing_reduced_score_preflight_v01",
+    "route_status": {
+      "delta_route_complete": true,
+      "direct_route_complete": false,
+      "exactly_one_route_complete": true,
+      "failure_route_complete": false,
+      "missing_delta_files": [],
+      "missing_direct_files": [
+        "payloads/tau_lensing_response_pp_grid_v01.csv"
+      ],
+      "missing_failure_files": [
+        "payloads/tau_lensing_response_grid_failure_statement_v01.md"
+      ],
+      "selected_route_count": 1
+    },
+    "runner_exists": true,
+    "score_run": false
+  },
+  "claim_boundary": "scoring_pipeline_readiness_dry_run_only_no_score_run_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "next_required_action": "run_score_attempt_guard_then_make_score_report",
+  "physical_tau_score_run": false,
+  "pipeline_ready": true,
+  "report_id": "tau_lensing_scoring_pipeline_ready_dry_run_v01",
+  "score_output": null,
+  "score_run": false,
+  "scoring_environment": {
+    "checks": {
+      "act_bandpowers": {
+        "exists": true,
+        "expected_shape": [
+          18
+        ],
+        "file": "data/external/act_dr6_lensing/extracted/v1.2/clkk_bandpowers_act.txt",
+        "finite": true,
+        "passes": true,
+        "shape": [
+          18
+        ]
+      },
+      "act_binning_matrix": {
+        "exists": true,
+        "expected_shape": [
+          18,
+          3000
+        ],
+        "file": "data/external/act_dr6_lensing/extracted/v1.2/binning_matrix_act.txt",
+        "finite": true,
+        "passes": true,
+        "shape": [
+          18,
+          3000
+        ]
+      },
+      "act_covariance": {
+        "exists": true,
+        "expected_shape": [
+          18,
+          18
+        ],
+        "file": "data/external/act_dr6_lensing/extracted/v1.2/covmat_act.txt",
+        "finite": true,
+        "min_eigenvalue": 2.3178376742959007e-18,
+        "passes": true,
+        "positive_eigenvalues": true,
+        "shape": [
+          18,
+          18
+        ],
+        "symmetric": true
+      }
+    },
+    "claim_boundary": "scoring_environment_check_only_no_tau_grid_no_score_no_dark_sector_verdict",
+    "dark_sector_verdict": false,
+    "environment_ready_for_reduced_score_once_tau_replay_exists": true,
+    "next_required_action": "fill_exactly_one_staging_route_evidence_set_then_run_guarded_staging_promotion",
+    "report_id": "tau_lensing_scoring_environment_v01",
+    "score_run": false
+  }
+}

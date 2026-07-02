@@ -1,0 +1,66 @@
+{
+  "artifact_status": "ACOUSTIC_RESPONSE_BUNDLE_EXPLICIT_FAIL_SUPPLIED_NO_ENDPOINT_BLIND_ACOUSTIC_SOURCE",
+  "claim_boundary": "tau_cmb_acoustic_response_bundle_or_explicit_fail_supply_v01_acoustic_direct_rows_explicit_fail_no_acoustic_source_no_score_no_likelihood_no_verdict",
+  "coordinate_components_affected": [
+    "phase_support",
+    "relative_peak_height",
+    "baryon_loading_coupling"
+  ],
+  "coordinate_symbol": "e_acoustic",
+  "dark_sector_verdict_allowed": false,
+  "endpoint_blind_attestation": true,
+  "explicit_fail_supplied": true,
+  "failure_statements": {
+    "baryon_loading_coupling": "No endpoint-blind Tau-source baryon-loading coupling law and associated sign convention is supplied; a sign label alone is not a physical value-source.",
+    "phase_support": "No endpoint-blind Tau-side acoustic source, accepted recombination-era driving source, or oscillator response equation / Green function is supplied from which phase_tau_acoustic can be derived.",
+    "relative_peak_height": "No endpoint-blind Tau-side amplitude normalization, accepted acoustic source response, or photon-baryon oscillator coupling is supplied from which height_ratio_tau_acoustic can be formed."
+  },
+  "forbidden_input_attestation": true,
+  "forbidden_inputs": [
+    "CMB endpoint residuals",
+    "ACT/Planck likelihood errors",
+    "score outputs",
+    "post-endpoint tuning fields",
+    "dark-sector verdict labels"
+  ],
+  "formal_slots": [
+    "phase_tau_acoustic",
+    "height_ratio_tau_acoustic",
+    "coupling_sign_tau_baryon"
+  ],
+  "likelihood_allowed": false,
+  "nonclaims": [
+    "This is not a claim that Tau Core has no acoustic effect.",
+    "This is not a CMB peak phase fit or mismatch.",
+    "This is not a peak-height likelihood result.",
+    "This is not an empirical validation or exclusion.",
+    "This is not a dark-sector verdict."
+  ],
+  "numeric_value_supplied": false,
+  "physical_value_source_accepted": false,
+  "physical_value_source_supplied": false,
+  "prior_explicit_fail_interactions": [
+    "Phi_tau_eff(a,k)|recombination explicit fail",
+    "Phi_tau_eff(a,k) lensing source explicit fail",
+    "endpoint_blind(A_tau) explicit fail"
+  ],
+  "provenance": {
+    "acoustic_benchmark": "data/derived/tau_cmb_acoustic_role_reduced_benchmark_summary_v01.csv",
+    "acoustic_coordinate": "data/derived/tau_cmb_readout_role_coordinate_acoustic_v01.csv",
+    "acoustic_evaluation": "data/derived/tau_cmb_acoustic_reduced_evaluation_summary_v01.csv",
+    "frontier_v05": "data/derived/tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_summary_v05.json"
+  },
+  "replay": "make tau-cmb-endpoint-blind-physical-value-source-frontier-recompute-v05 && make tau-cmb-acoustic-response-bundle-or-explicit-fail-supply",
+  "required_missing_objects": [
+    "endpoint-blind Tau acoustic source S_tau_ac(k,a)",
+    "accepted recombination-era driving source or equivalent",
+    "endpoint-blind amplitude normalization A_tau or equivalent",
+    "photon-baryon oscillator response equation or Green function",
+    "baryon-loading coupling law and sign convention",
+    "shared gauge/domain/convention"
+  ],
+  "score_entry_allowed": false,
+  "supply_type": "explicit_fail_evidence",
+  "target_role": "acoustic",
+  "unit_or_convention": "not_applicable_explicit_fail"
+}

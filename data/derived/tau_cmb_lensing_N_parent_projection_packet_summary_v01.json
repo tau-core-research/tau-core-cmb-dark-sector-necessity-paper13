@@ -1,0 +1,24 @@
+{
+  "blocked_components": [
+    "N_parent_source",
+    "N_tau_remaining"
+  ],
+  "claim_boundary": "parent_projection_packet_skeleton_only_no_numeric_normalization_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "failed_components": [
+    "N_projection"
+  ],
+  "non_admissible_action": "do not populate current_value from post-score alpha_star or endpoint residuals",
+  "packet": "data/derived/tau_cmb_lensing_N_parent_projection_packet_v01.csv",
+  "packet_status": "N_PROJECTION_EXPLICIT_NON_SCORE_FAILURE_N_PARENT_SOURCE_STILL_BLOCKED",
+  "physical_tau_score_run": false,
+  "report_id": "tau_cmb_lensing_N_parent_projection_packet_summary_v01",
+  "rows": 3,
+  "score_run": false,
+  "unblocks_when": [
+    "N_parent_source has a source-side derivation and dimension/gauge/firewall certificate",
+    "N_projection has a projection operator derivation and replay certificate",
+    "N_tau_remaining is computed from accepted factors before formula materialization",
+    "formula spec is updated before any new score attempt"
+  ]
+}

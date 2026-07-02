@@ -1,0 +1,18 @@
+{
+  "acoustic_score_allowed": false,
+  "blocked_rows": 4,
+  "carrier_certification_allowed": false,
+  "claim_boundary": "tau_cmb_readout_role_coordinate_acoustic_v01_coordinate_candidate_only_not_materialized_no_acoustic_score_no_likelihood_no_concrete_R_CMB_no_carrier_certification_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "coordinate_acceptance_allowed": false,
+  "coordinate_rows": 6,
+  "coordinate_symbol": "e_acoustic",
+  "dark_sector_verdict_allowed": false,
+  "guard_rows": 2,
+  "input_basis_audit": "data/derived/tau_cmb_readout_role_space_basis_audit_v01.json",
+  "input_basis_audit_clean": true,
+  "next_minimal_unblock": "tau_cmb_readout_role_coordinate_acoustic_audit_v01",
+  "report_id": "tau_cmb_readout_role_coordinate_acoustic_summary_v01",
+  "status": "ACOUSTIC_ROLE_COORDINATE_CANDIDATE_DECLARED_BLOCKED_NOT_MATERIALIZED",
+  "table": "data/derived/tau_cmb_readout_role_coordinate_acoustic_v01.csv"
+}

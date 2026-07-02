@@ -1,0 +1,9 @@
+row_id,packet_slot,content_audit,acceptance_question,routes_to
+TCMBEBOPCAR01_001,source_domain,source_domain_endpoint_blindness_and_dimension_check,"Does Phi_lens_tau(a,k) come from endpoint-blind Tau-side artifacts with declared domain, support, units, and hash?",projection_equation;kernel_measure;dimension_sign_audit
+TCMBEBOPCAR01_002,projection_equation,operator_equation_and_zero_preservation_check,Does the equation map Phi_lens_tau to PP/delta_PP_tau with fixed baseline policy and zero-preserving behavior?,zero_source_limit;dimension_sign_audit;operator_decision_gate
+TCMBEBOPCAR01_003,kernel_measure,kernel_measure_integrability_and_L_mapping_check,"Are support, measure, L mapping, units/sign, and integrability sufficient for finite L=10..3009 replay?",output_replay;dimension_sign_audit
+TCMBEBOPCAR01_004,normalization,physical_normalization_independence_check,Is N_projection_physical finite and derived from pre-score operator convention rather than endpoint residuals?,dimension_sign_audit;operator_decision_gate
+TCMBEBOPCAR01_005,output_replay,grid_replay_and_hash_binding_check,"Can the 3000-row output grid be reproduced from source, equation, kernel, normalization, and route hashes?",post_population_firewall;score_guard
+TCMBEBOPCAR01_006,zero_source_limit,zero_source_limit_discharge_check,Does the supplied operator prove or replay Phi_lens_tau=0 -> zero Tau PP contribution?,known_limit_audit;operator_decision_gate
+TCMBEBOPCAR01_007,dimension_sign_audit,dimension_sign_consistency_check,"Do source, kernel-measure, normalization, and PP/delta_PP_tau codomain dimensions and signs close?",operator_decision_gate
+TCMBEBOPCAR01_008,post_population_firewall,post_population_endpoint_firewall_check,"After values are populated, is there evidence that no endpoint residual, score, or verdict preference shaped them?",score_guard;operator_decision_gate

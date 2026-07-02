@@ -1,0 +1,69 @@
+{
+  "audit_passed": true,
+  "checks": [
+    {
+      "detail": "payload_staging/tau_lensing_upstream_l_response_metadata_v01.json",
+      "name": "metadata_exists_and_json_object",
+      "passes": true
+    },
+    {
+      "detail": [],
+      "name": "forbidden_endpoint_or_placeholder_markers_absent",
+      "passes": true
+    },
+    {
+      "detail": [],
+      "name": "required_derivation_metadata_fields_nonempty",
+      "passes": true
+    },
+    {
+      "name": "source_chain_is_list",
+      "passes": true
+    },
+    {
+      "name": "source_chain_names_tau_parent_source",
+      "passes": true
+    },
+    {
+      "name": "endpoint_blind_statement_declares_pre_score_fixation",
+      "passes": true
+    },
+    {
+      "name": "parameter_policy_excludes_endpoint_tuning",
+      "passes": true
+    },
+    {
+      "detail": {
+        "route_A_complete": false,
+        "route_B_complete": true
+      },
+      "name": "route_marker_status_recorded",
+      "passes": true
+    },
+    {
+      "name": "exactly_one_physical_route_declared",
+      "passes": true
+    }
+  ],
+  "claim_boundary": "physical_derivation_intake_audit_only_no_grid_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "marker_status": {
+    "route_A": {
+      "phi_tau_eff": false,
+      "projection_pp": false,
+      "rho_tau_eff": false,
+      "t_tau_cmb": false
+    },
+    "route_B": {
+      "delta_pp_tau": true,
+      "f_tau_l": true,
+      "parent_tau_source": true
+    }
+  },
+  "next_required_action": "run_make_tau-grid-physical-candidate-precheck",
+  "physical_tau_score_run": false,
+  "report_id": "cmb_tau_lensing_physical_derivation_intake_audit_v01",
+  "score_run": false,
+  "selected_route": "delta_PP_tau_against_named_fiducial_PP",
+  "selected_route_family": "route_B_direct_L_space"
+}

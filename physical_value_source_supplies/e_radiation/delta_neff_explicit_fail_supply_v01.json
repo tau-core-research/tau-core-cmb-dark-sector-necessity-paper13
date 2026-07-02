@@ -1,0 +1,47 @@
+{
+  "artifact_status": "DELTA_NEFF_EXPLICIT_FAIL_SUPPLIED_NO_ENDPOINT_BLIND_RADIATION_SOURCE",
+  "claim_boundary": "tau_cmb_delta_neff_or_explicit_fail_supply_v01_radiation_direct_rows_explicit_fail_no_delta_neff_no_bound_eval_no_score_no_likelihood_no_verdict",
+  "coordinate_components_affected": [
+    "tau_radiation_like_contribution",
+    "damping_tail_inequality"
+  ],
+  "coordinate_symbol": "e_radiation",
+  "dark_sector_verdict_allowed": false,
+  "endpoint_blind_attestation": true,
+  "explicit_fail_supplied": true,
+  "failure_statement": "No endpoint-blind Tau-side radiation-like stress-energy or energy-density mapping is accepted, so Delta_N_eff_tau is not derived. The damping-tail inequality is therefore non-evaluable because the left-hand side and shared bound convention are not accepted.",
+  "forbidden_input_attestation": true,
+  "forbidden_inputs": [
+    "CMB endpoint residuals",
+    "ACT/Planck likelihood errors",
+    "score outputs",
+    "post-endpoint tuning fields",
+    "dark-sector verdict labels"
+  ],
+  "formal_slots": [
+    "Delta_N_eff_tau",
+    "Delta_N_eff_tau <= Delta_N_eff_bound"
+  ],
+  "likelihood_allowed": false,
+  "nonclaims": [
+    "This is not a numerical Delta_N_eff_tau = 0 statement.",
+    "This is not bound satisfaction.",
+    "This is not bound violation.",
+    "This is not a CMB likelihood result.",
+    "This is not a dark-sector verdict."
+  ],
+  "numeric_value_supplied": false,
+  "physical_value_source_accepted": false,
+  "physical_value_source_supplied": false,
+  "provenance": {
+    "frontier_v04": "data/derived/tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_summary_v04.json",
+    "radiation_bound_check": "data/derived/tau_cmb_radiation_guard_bound_check_summary_v01.csv",
+    "radiation_coordinate": "data/derived/tau_cmb_readout_role_coordinate_radiation_v01.csv",
+    "radiation_evaluation": "data/derived/tau_cmb_radiation_guard_evaluation_summary_v01.csv"
+  },
+  "replay": "make tau-cmb-endpoint-blind-physical-value-source-frontier-recompute-v04 && make tau-cmb-delta-neff-or-explicit-fail-supply",
+  "score_entry_allowed": false,
+  "supply_type": "explicit_fail_evidence",
+  "target_role": "radiation",
+  "unit_or_convention": "not_applicable_explicit_fail"
+}

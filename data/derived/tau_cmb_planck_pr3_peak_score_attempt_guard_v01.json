@@ -1,0 +1,65 @@
+{
+  "packet_id": "TAU_CMB_PLANCK_PR3_PEAK_SCORE_ATTEMPT_GUARD_V01",
+  "doc_class": "score_attempt_guard",
+  "status": "PLANCK_PR3_PEAK_SCORE_ATTEMPT_BLOCKED_TAU_SIDE_RESPONSE_MISSING",
+  "claim_boundary": "tau_cmb_planck_pr3_peak_score_attempt_guard_v01_guard_only_score_blocked_no_likelihood_no_tau_response_claim_no_dark_sector_verdict",
+  "guard_rows": [
+    {
+      "guard_row_id": "TCMBP3PSAG01_001",
+      "guard_decision": "GUARD_PASSED",
+      "blocks_score": "false",
+      "hard_failure_triggered": "false",
+      "allows_tau_response_claim": "false",
+      "allows_dark_sector_verdict": "false",
+      "claim_boundary": "tau_cmb_planck_pr3_peak_score_attempt_guard_v01_guard_only_score_blocked_no_likelihood_no_tau_response_claim_no_dark_sector_verdict",
+      "guard_component": "observed_peak_candidate_table",
+      "input_artifact": "tau_cmb_planck_pr3_peak_scoring_input_candidate_v01",
+      "required_condition": "observed_side_ready_rows equals candidate_rows_declared",
+      "observed_status": "PASS_OBSERVED_SIDE_READY"
+    },
+    {
+      "guard_row_id": "TCMBP3PSAG01_002",
+      "guard_decision": "SCORE_ATTEMPT_BLOCKED",
+      "blocks_score": "true",
+      "hard_failure_triggered": "false",
+      "allows_tau_response_claim": "false",
+      "allows_dark_sector_verdict": "false",
+      "claim_boundary": "tau_cmb_planck_pr3_peak_score_attempt_guard_v01_guard_only_score_blocked_no_likelihood_no_tau_response_claim_no_dark_sector_verdict",
+      "guard_component": "tau_side_prediction_or_null_response",
+      "input_artifact": "tau_cmb_planck_pr3_peak_tau_prediction_or_null_response_v01",
+      "required_condition": "admissible_response_rows equals response_rows_declared",
+      "observed_status": "BLOCKED_TAU_SIDE_RESPONSE_MISSING"
+    },
+    {
+      "guard_row_id": "TCMBP3PSAG01_003",
+      "guard_decision": "SCORE_ATTEMPT_BLOCKED",
+      "blocks_score": "true",
+      "hard_failure_triggered": "false",
+      "allows_tau_response_claim": "false",
+      "allows_dark_sector_verdict": "false",
+      "claim_boundary": "tau_cmb_planck_pr3_peak_score_attempt_guard_v01_guard_only_score_blocked_no_likelihood_no_tau_response_claim_no_dark_sector_verdict",
+      "guard_component": "score_entry_integrity",
+      "input_artifact": "tau_cmb_planck_pr3_peak_scoring_input_candidate_v01 + tau_cmb_planck_pr3_peak_tau_prediction_or_null_response_v01",
+      "required_condition": "score_ready_rows equals candidate_rows_declared and no likelihood is read before score entry",
+      "observed_status": "BLOCKED_SCORE_READY_ROWS_ZERO"
+    }
+  ],
+  "summary": {
+    "summary_id": "TAU_CMB_PLANCK_PR3_PEAK_SCORE_ATTEMPT_GUARD_V01",
+    "guard_rows_declared": "3",
+    "guard_pass_rows": "1",
+    "guard_block_rows": "2",
+    "observed_side_ready": "true",
+    "tau_side_response_ready": "false",
+    "score_attempt_allowed": "false",
+    "scores_computed": "false",
+    "cmb_likelihood_available": "false",
+    "hard_failures_triggered": "0",
+    "no_dark_cmb_verdict_allowed": "false",
+    "tau_response_claim_allowed": "false",
+    "dark_sector_verdict_allowed": "false",
+    "overall_status": "PLANCK_PR3_PEAK_SCORE_ATTEMPT_BLOCKED_TAU_SIDE_RESPONSE_MISSING",
+    "next_required_artifact": "tau_cmb_planck_pr3_peak_tau_prediction_materialization_v01",
+    "claim_boundary": "tau_cmb_planck_pr3_peak_score_attempt_guard_v01_guard_only_score_blocked_no_likelihood_no_tau_response_claim_no_dark_sector_verdict"
+  }
+}

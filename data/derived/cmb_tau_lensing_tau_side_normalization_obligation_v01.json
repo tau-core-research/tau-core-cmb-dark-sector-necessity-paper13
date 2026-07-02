@@ -1,0 +1,82 @@
+{
+  "admissible_next_action": "build a concrete N_parent_projection packet or revise the Route B shape kernel before another physical score",
+  "claim_boundary": "tau_side_normalization_obligation_only_no_numeric_tau_normalization_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "decision": "The current evidence is sufficient to define the missing Tau-side objects. N_projection is explicitly failed for the current physical projection packet; N_parent_source remains blocked by missing endpoint-blind Phi_tau_eff derivation.",
+  "input_chain": [
+    {
+      "component": "normalization_gap",
+      "exists": true,
+      "path": "docs/cmb_tau_lensing_route_b_normalization_gap_derivation_v01.md"
+    },
+    {
+      "component": "normalization_gate",
+      "exists": true,
+      "path": "docs/cmb_tau_lensing_endpoint_blind_normalization_gate_v01.md"
+    },
+    {
+      "component": "adapter_lock",
+      "exists": true,
+      "path": "docs/cmb_tau_lensing_adapter_convention_normalization_lock_v01.md"
+    },
+    {
+      "component": "phi_contract",
+      "exists": true,
+      "path": "docs/tau_cmb_endpoint_blind_phi_tau_derivation_contract_v01.md"
+    },
+    {
+      "component": "potential_handoff",
+      "exists": true,
+      "path": "docs/tau_cmb_effective_potential_source_handoff_v01.md"
+    },
+    {
+      "component": "minimal_source_candidate",
+      "exists": true,
+      "path": "docs/tau_cmb_minimal_source_term_candidate_v01.md"
+    }
+  ],
+  "input_chain_complete": true,
+  "minimum_pre_score_payload_to_unblock": {
+    "object_id": "tau_cmb_lensing_N_parent_projection_packet_v01",
+    "required_files_or_fields": [
+      "parent_source_normalization row/table for N_parent_source",
+      "projection_operator_normalization row/table for N_projection",
+      "dimension and unit audit",
+      "gauge/sign convention audit",
+      "endpoint firewall certificate",
+      "materialization replay from source packet to tau_lensing_response_delta_pp_v01.csv",
+      "formula-spec update that freezes N_tau before scoring"
+    ]
+  },
+  "obligation_rows": [
+    {
+      "current_status": "BLOCKED_PHI_TAU_EFF_NOT_DERIVED",
+      "depends_on": [
+        "endpoint-blind Phi_tau_eff(a,k) derivation",
+        "dimensionless or dimensionful A_tau(a,k) normalization",
+        "source sign and gauge convention",
+        "known-limit rule: parent response -> 0 implies delta_PP_tau -> 0"
+      ],
+      "factor": "N_parent_source",
+      "meaning": "amplitude/units carried by the endpoint-blind Tau CMB source before lensing projection",
+      "not_allowed": "cannot be set from ACT/Planck bandpower residuals or post-score alpha"
+    },
+    {
+      "current_status": "EXPLICIT_NON_SCORE_FAILURE_PHYSICAL_PROJECTION_OPERATOR_NOT_SUPPLIED",
+      "depends_on": [
+        "resume from failure by supplying endpoint-blind Projection_PP operator",
+        "operator-implied N_projection_physical normalization",
+        "source-to-3000-grid physical replay certificate",
+        "post-population endpoint firewall certificate"
+      ],
+      "factor": "N_projection",
+      "meaning": "normalization of the map from Tau effective potential/readout source to L-space PP or delta_PP_tau grid",
+      "not_allowed": "cannot be inferred from the observed ACT amplitude after scoring"
+    }
+  ],
+  "obligation_status": "BLOCKED_PENDING_TAU_SIDE_SOURCE_AND_PROJECTION_DERIVATION",
+  "physical_tau_score_run": false,
+  "remaining_formula_after_adapter_lock": "N_tau_remaining = N_parent_source * N_projection",
+  "report_id": "cmb_tau_lensing_tau_side_normalization_obligation_v01",
+  "score_run": false
+}

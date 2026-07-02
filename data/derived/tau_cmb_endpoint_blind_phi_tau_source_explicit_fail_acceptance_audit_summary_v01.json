@@ -1,0 +1,18 @@
+{
+  "affected_frontier_rows": 5,
+  "claim_boundary": "tau_cmb_endpoint_blind_phi_tau_source_explicit_fail_acceptance_audit_v01_explicit_fail_accepted_no_phi_source_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "explicit_fail_accepted": true,
+  "formal_slot": "Phi_tau_eff(a,k)",
+  "input_chain_clean": true,
+  "input_supply_artifact": "physical_value_source_supplies/e_shared/phi_tau_eff_explicit_fail_supply_v01.json",
+  "input_supply_summary": "data/derived/tau_cmb_endpoint_blind_phi_tau_source_or_explicit_fail_supply_summary_v01.json",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_endpoint_blind_physical_value_source_frontier_recompute_v03",
+  "numeric_value_accepted": false,
+  "physical_CMB_score_allowed": false,
+  "physical_value_source_accepted": false,
+  "report_id": "tau_cmb_endpoint_blind_phi_tau_source_explicit_fail_acceptance_audit_summary_v01",
+  "status": "CMB_ENDPOINT_BLIND_PHI_TAU_SOURCE_EXPLICIT_FAIL_ACCEPTED_PHYSICAL_SCORE_BLOCKED",
+  "target_role": "shared_potential_source"
+}

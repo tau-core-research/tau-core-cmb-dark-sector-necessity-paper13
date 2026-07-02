@@ -1,0 +1,62 @@
+{
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_REFRESH_V02_ROWS_PRESENT",
+      "blocking_reason": "refresh v02 requires eight checker rows",
+      "component": "refresh_row_shape",
+      "finding": "rows=8"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_STRUCTURAL_R_CMB_INPUT_CHAIN",
+      "blocking_reason": "refresh v02 requires clean structural R_CMB candidate gate",
+      "component": "structural_R_CMB_input_chain",
+      "finding": "refresh v02 follows audited structural R_CMB candidate gate"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_REFRESH_V02_READINESS_ACCOUNTING",
+      "blocking_reason": "refresh v02 should expose 8 structural prechecks, 7 full execution-ready rows, and 1 physical R_CMB block",
+      "component": "readiness_accounting",
+      "finding": "structural=8, full=7, physical_R_CMB_blocked=1"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_REFRESH_V02_FIREWALL_CLOSED",
+      "blocking_reason": "refresh v02 must not promote structural precheck into physical readout or scoring",
+      "component": "promotion_firewall",
+      "finding": "refresh v02 does not execute checkers or open physical R_CMB/score/likelihood/verdict"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_CHECKER_EXECUTION_NOT_ATTEMPTED",
+      "blocking_reason": "requires explicit execution-attempt packet",
+      "component": "checker_execution_attempt",
+      "finding": "seven full checker rows are ready but not attempted"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_PHYSICAL_R_CMB_NOT_MATERIALIZED",
+      "blocking_reason": "requires physical R_CMB materialization gate",
+      "component": "physical_R_CMB_materialization",
+      "finding": "codomain row has structural shell only, not physical R_CMB"
+    }
+  ],
+  "audited_table": "data/derived/tau_cmb_carrier_domain_checker_execution_packet_refresh_v02.csv",
+  "blocked_rows": 2,
+  "claim_boundary": "tau_cmb_carrier_domain_checker_execution_packet_refresh_audit_v02_audit_only_structural_R_CMB_visible_for_codomain_precheck_no_checker_attempt_no_certificate_pass_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "execution_packet_refresh_v02_audited": true,
+  "failed_rows": 0,
+  "full_checker_execution_ready_rows": 7,
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_carrier_domain_checker_execution_attempt_packet_v01_for_7_ready_rows_or_physical_R_CMB_materialization_gate_v01",
+  "passed_rows": 4,
+  "physical_R_CMB_materialized": false,
+  "report_id": "tau_cmb_carrier_domain_checker_execution_packet_refresh_audit_v02",
+  "score_entry_allowed": false,
+  "status": "CARRIER_DOMAIN_CHECKER_EXECUTION_PACKET_REFRESH_V02_AUDITED_STRUCTURAL_PRECHECK_READY",
+  "structural_precheck_ready_rows": 8
+}

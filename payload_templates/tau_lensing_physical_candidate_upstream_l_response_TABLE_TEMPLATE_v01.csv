@@ -1,0 +1,5 @@
+L,tau_response_value
+# TEMPLATE_NOT_PAYLOAD,replace with exact integer L=10..3009 and finite values
+# REQUIRED_ROWS,3000
+# ALLOWED_ROUTE_A,tau_PP(L) from Phi_tau_eff -> T_tau_CMB -> Projection_PP
+# ALLOWED_ROUTE_B,delta_PP_tau(L) from endpoint-blind Tau-derived direct L-space rule

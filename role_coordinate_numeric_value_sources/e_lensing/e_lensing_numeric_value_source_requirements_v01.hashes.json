@@ -1,0 +1,11 @@
+{
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_source_supply_v01_source_requirement_worklist_supplied_no_numeric_values_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "likelihood_allowed": false,
+  "numeric_value_source_supplied": false,
+  "numeric_values_materialized": false,
+  "score_entry_allowed": false,
+  "sha256": "868f41dcc6fa31aafc32ef7dea6c74f3c179322919e647ac79ea194c7ceb76f7",
+  "target": "role_coordinate_numeric_value_sources/e_lensing/e_lensing_numeric_value_source_requirements_v01.json"
+}

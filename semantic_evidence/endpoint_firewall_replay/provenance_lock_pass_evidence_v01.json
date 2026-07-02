@@ -1,0 +1,29 @@
+{
+  "artifact_id": "TCMBCDSEM01_028",
+  "artifact_status": "SEMANTIC_EVIDENCE_CANDIDATE_MATERIALIZED_NOT_ACCEPTED_NOT_PROOF",
+  "certificate_area": "endpoint_firewall_replay",
+  "certificate_passed": false,
+  "certificate_rule_executable": false,
+  "checker_name": "run_endpoint_firewall_checker",
+  "claim_boundary": "tau_cmb_certificate_semantic_evidence_artifact_supply_v01_candidate_artifacts_materialized_not_accepted_not_proof_no_certificate_pass_no_domain_acceptance_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "domain_object_accepted": false,
+  "endpoint_blind_firewall": {
+    "act_planck_likelihood_used": false,
+    "cmb_endpoint_residuals_used": false,
+    "dark_sector_verdict_used": false,
+    "post_endpoint_tuning_used": false,
+    "score_output_used": false
+  },
+  "evidence_role": "candidate carrier for future semantic proof/evidence acceptance",
+  "likelihood_allowed": false,
+  "next_required_step": "audit and replace candidate with accepted endpoint-blind semantic proof/evidence",
+  "physical_R_CMB_materialized": false,
+  "proof_claim_allowed": false,
+  "required_for_predicate": "EndpointFirewallOK := no_endpoint_data_access and no_score_access and no_post_endpoint_tuning and provenance_lock_pass",
+  "score_entry_allowed": false,
+  "semantic_assertion_accepted": false,
+  "semantic_assertion_value": null,
+  "semantic_evidence_field": "provenance_lock_pass",
+  "source_materialization_row": "TCMBCDSEM01_028"
+}

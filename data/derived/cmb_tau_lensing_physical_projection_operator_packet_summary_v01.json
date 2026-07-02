@@ -1,0 +1,31 @@
+{
+  "blocked_components": [
+    "projection_normalization",
+    "projection_replay"
+  ],
+  "claim_boundary": "physical_projection_operator_packet_skeleton_only_no_operator_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "failed_components": [
+    "projection_operator_rule"
+  ],
+  "locked_components": [
+    "projection_domain",
+    "projection_codomain",
+    "endpoint_firewall"
+  ],
+  "normalization_target": "N_projection_physical",
+  "operator_target": "Projection_PP[Phi_lens_tau](L)",
+  "packet": "data/derived/cmb_tau_lensing_physical_projection_operator_packet_v01.csv",
+  "packet_status": "PHYSICAL_PROJECTION_ROUTE_EXPLICIT_FAILURE_NO_SCORE",
+  "physical_tau_score_run": false,
+  "report_id": "cmb_tau_lensing_physical_projection_operator_packet_summary_v01",
+  "rows": 6,
+  "score_run": false,
+  "unblocks_N_projection_when": [
+    "domain and codomain conventions are accepted",
+    "an endpoint-blind operator rule is supplied; explicit failure documents non-score closure but does not unblock",
+    "N_projection_physical is derived before endpoint comparison",
+    "source-to-grid replay certificate exists",
+    "endpoint firewall certificate passes"
+  ]
+}

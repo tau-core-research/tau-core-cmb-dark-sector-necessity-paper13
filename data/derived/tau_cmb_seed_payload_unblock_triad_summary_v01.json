@@ -1,0 +1,14 @@
+{
+  "blocked_rows": 3,
+  "claim_boundary": "tau_cmb_seed_payload_unblock_triad_v01_unblock_plan_only_no_payload_acceptance_no_domain_certificate_no_readout_no_survival_no_A_tau_value_no_score_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "domain_certificate_allowed": false,
+  "next_minimal_unblock": "tau_cmb_seed_support_domain_rule_candidate_v01",
+  "payload_acceptance_allowed": false,
+  "readout_evaluation_allowed": false,
+  "report_id": "tau_cmb_seed_payload_unblock_triad_summary_v01",
+  "score_entry_allowed": false,
+  "status": "SEED_PAYLOAD_UNBLOCK_TRIAD_DECLARED_BLOCKED",
+  "table": "data/derived/tau_cmb_seed_payload_unblock_triad_v01.csv",
+  "triad_rows": 3
+}

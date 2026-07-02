@@ -1,0 +1,8 @@
+# TEMPLATE_NOT_PAYLOAD
+# Staging skeleton only. Fill with exactly 3000 data rows before guarded promotion to payloads/.
+# Required submitted form: two numeric columns, comma separated.
+# column 1: L, exactly 10..3009
+# column 2: tau_PP_value
+# Example rows:
+# 10,0.0
+# 11,0.0

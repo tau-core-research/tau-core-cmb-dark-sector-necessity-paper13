@@ -1,0 +1,10 @@
+# TEMPLATE_NOT_PAYLOAD
+# Fill exactly 3000 numeric data rows before submission.
+# Do not use this template as scoring input.
+# Validator-compatible format:
+#   two numeric columns, comma separated
+#   column 1: L, exactly 10..3009
+#   column 2: tau_PP_value
+# Example data rows:
+# 10,0.0
+# 11,0.0

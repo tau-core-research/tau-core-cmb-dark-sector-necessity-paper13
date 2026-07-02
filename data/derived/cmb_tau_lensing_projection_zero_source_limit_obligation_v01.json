@@ -1,0 +1,53 @@
+{
+  "algebraic_discharge_rule": "If the supplied operator is zero-preserving and the kernel measure and normalization are finite, then substituting Phi_lens_tau=0 gives tau_PP_tau_contribution(L)=0 for every L.",
+  "blocked_shortcuts": [
+    "do not use the synthetic zero-control route as proof of the physical projection operator",
+    "do not infer zero-source behavior from a scored residual",
+    "do not hide a nonzero additive Tau term inside the fiducial PP baseline"
+  ],
+  "claim_boundary": "projection_zero_source_limit_obligation_only_no_operator_acceptance_no_grid_no_score_no_dark_sector_verdict",
+  "current_result": "NOT_DISCHARGED_BECAUSE_OPERATOR_KERNEL_AND_NORMALIZATION_NOT_SUPPLIED",
+  "dark_sector_verdict": false,
+  "physical_tau_score_run": false,
+  "report_id": "cmb_tau_lensing_projection_zero_source_limit_obligation_v01",
+  "scaffold_equation": "tau_PP(L) = N_projection_physical * Integral[K_tau_PP(L; a,k) Phi_lens_tau(a,k) dmu(a,k)]",
+  "score_run": false,
+  "source_links": [
+    "docs/cmb_tau_lensing_projection_operator_formula_spec_scaffold_v01.md",
+    "docs/cmb_tau_lensing_projection_equation_spec_scaffold_v01.md",
+    "docs/cmb_tau_lensing_projection_kernel_measure_spec_scaffold_v01.md",
+    "docs/cmb_tau_lensing_projection_normalization_spec_scaffold_v01.md",
+    "docs/cmb_tau_lensing_projection_dimension_sign_audit_scaffold_v01.md",
+    "docs/cmb_tau_lensing_projection_normalization_requirement_v01.md",
+    "docs/cmb_tau_lensing_zero_response_control_v01.md"
+  ],
+  "status": "PROOF_OBLIGATION_DECLARED_NOT_DISCHARGED",
+  "sufficient_conditions": [
+    {
+      "condition": "linearity_or_declared_zero-preserving_nonlinearity",
+      "requirement": "Projection_PP[0](L)=0, or every nonlinear term contains at least one Phi_lens_tau factor and no source-independent additive term.",
+      "status": "PROJECTION_EQUATION_SPEC_DECLARED_NOT_FILLED"
+    },
+    {
+      "condition": "finite_kernel_measure",
+      "requirement": "K_tau_PP(L; a,k)dmu(a,k) is finite/integrable on the declared support for each L=10..3009.",
+      "status": "KERNEL_MEASURE_SPEC_DECLARED_NOT_FILLED"
+    },
+    {
+      "condition": "finite_normalization",
+      "requirement": "N_projection_physical is finite and fixed before endpoint comparison.",
+      "status": "NORMALIZATION_SPEC_DECLARED_NOT_FILLED"
+    },
+    {
+      "condition": "no_hidden_baseline",
+      "requirement": "Any fiducial PP baseline is outside the Tau contribution and is not counted as nonzero Tau response.",
+      "status": "DECLARED_REQUIRED"
+    },
+    {
+      "condition": "delta_route_consistency",
+      "requirement": "If using delta_PP_tau, the zero-source limit applies to delta_PP_tau(L), not to the fiducial PP baseline.",
+      "status": "DECLARED_REQUIRED"
+    }
+  ],
+  "target_statement": "Phi_lens_tau(a,k) -> 0 implies projected Tau contribution -> 0"
+}

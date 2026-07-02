@@ -1,0 +1,132 @@
+{
+  "accepted_route_count_required": "exactly_one",
+  "claim_boundary": "payload_acceptance_checklist_only_no_payload_validation_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "next_required_action": "fill_exactly_one_route_evidence_set_then_run_make_route_submission_audit",
+  "purpose": "pre_submission_checklist_for_exactly_one_tau_lensing_route_payload",
+  "report_id": "tau_lensing_payload_acceptance_checklist_v01",
+  "route_checklist": {
+    "delta_PP_tau_against_named_fiducial_PP": {
+      "fiducial_required_keys": [
+        "fiducial_reference_file",
+        "fiducial_reference_sha256"
+      ],
+      "hash_command": "make prepare-delta-hash",
+      "numeric_grid_requirements": [
+        "exactly_3000_numeric_rows",
+        "two_columns_preferred_L_value",
+        "L_column_exactly_10_to_3009_if_present",
+        "all_values_finite",
+        "no_TEMPLATE_NOT_PAYLOAD_marker",
+        "numeric_grid_sha256_recorded_in_provenance"
+      ],
+      "post_submission_commands": [
+        "make staging-promote-delta-dry-run",
+        "make staging-promote-delta",
+        "make prepare-delta-hash",
+        "make intake",
+        "make evidence-check",
+        "make route-submission-audit",
+        "make materialize-replay",
+        "make preflight",
+        "make score-report"
+      ],
+      "provenance_required_keys": [
+        "selected_route",
+        "numeric_grid_file",
+        "numeric_grid_sha256",
+        "source_chain",
+        "derivation_script_or_formula",
+        "no_endpoint_fit_statement"
+      ],
+      "required_files": [
+        "payloads/tau_lensing_response_delta_pp_v01.csv",
+        "payloads/tau_lensing_response_fiducial_pp_reference_v01.json",
+        "payloads/tau_lensing_response_grid_route_declaration_v01.md",
+        "payloads/tau_lensing_response_grid_provenance_v01.json"
+      ],
+      "route_declaration_required_fragments": [
+        "selected_route: delta_PP_tau_against_named_fiducial_PP",
+        "numeric_grid_file: payloads/tau_lensing_response_delta_pp_v01.csv",
+        "fiducial_reference_file: payloads/tau_lensing_response_fiducial_pp_reference_v01.json",
+        "provenance_file: payloads/tau_lensing_response_grid_provenance_v01.json",
+        "index_alignment: L = 10 + i"
+      ],
+      "validation_command": "make validate-delta-grid"
+    },
+    "direct_tau_PP_grid": {
+      "hash_command": "make prepare-direct-hash",
+      "numeric_grid_requirements": [
+        "exactly_3000_numeric_rows",
+        "two_columns_preferred_L_value",
+        "L_column_exactly_10_to_3009_if_present",
+        "all_values_finite",
+        "no_TEMPLATE_NOT_PAYLOAD_marker",
+        "numeric_grid_sha256_recorded_in_provenance"
+      ],
+      "post_submission_commands": [
+        "make staging-promote-direct-dry-run",
+        "make staging-promote-direct",
+        "make prepare-direct-hash",
+        "make intake",
+        "make evidence-check",
+        "make route-submission-audit",
+        "make materialize-replay",
+        "make preflight",
+        "make score-report"
+      ],
+      "provenance_required_keys": [
+        "selected_route",
+        "numeric_grid_file",
+        "numeric_grid_sha256",
+        "source_chain",
+        "derivation_script_or_formula",
+        "no_endpoint_fit_statement"
+      ],
+      "required_files": [
+        "payloads/tau_lensing_response_pp_grid_v01.csv",
+        "payloads/tau_lensing_response_grid_route_declaration_v01.md",
+        "payloads/tau_lensing_response_grid_provenance_v01.json"
+      ],
+      "route_declaration_required_fragments": [
+        "selected_route: direct_tau_PP_grid",
+        "numeric_grid_file: payloads/tau_lensing_response_pp_grid_v01.csv",
+        "fiducial_reference_file: not_used",
+        "provenance_file: payloads/tau_lensing_response_grid_provenance_v01.json",
+        "index_alignment: L = 10 + i"
+      ],
+      "validation_command": "make validate-direct-grid"
+    },
+    "explicit_failure_no_endpoint_blind_grid": {
+      "failure_statement_required_keys": [
+        "selected_route",
+        "failed_required_object",
+        "reason",
+        "missing_parent_input",
+        "missing_derivation_rule",
+        "missing_numeric_kernel",
+        "missing_normalization",
+        "next_theoretical_blocker"
+      ],
+      "post_submission_commands": [
+        "make staging-promote-failure-dry-run",
+        "make staging-promote-failure",
+        "make intake",
+        "make evidence-check",
+        "make route-submission-audit",
+        "make score-report"
+      ],
+      "required_files": [
+        "payloads/tau_lensing_response_grid_failure_statement_v01.md"
+      ]
+    },
+    "forbidden_shortcuts": [
+      "do_not_copy_TEMPLATE_NOT_PAYLOAD_files_to_payloads_as_real_inputs",
+      "do_not_select_route_from_ACT_or_Planck_residuals",
+      "do_not_select_route_from_reduced_chi2",
+      "do_not_select_route_from_dark_sector_verdict_preference",
+      "do_not_submit_endpoint-fit_or_posterior-tuned_grid"
+    ]
+  },
+  "score_run": false
+}

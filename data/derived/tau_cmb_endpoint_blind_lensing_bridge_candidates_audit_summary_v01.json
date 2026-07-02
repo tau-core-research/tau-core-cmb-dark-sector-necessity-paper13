@@ -1,0 +1,18 @@
+{
+  "automatic_bridge_acceptance_rows": 0,
+  "bridge_candidate_rows": 2,
+  "claim_boundary": "tau_cmb_endpoint_blind_lensing_bridge_candidates_audit_v01_bridge_audit_only_no_physical_source_acceptance_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "explicit_fail_supply_allowed_rows": 1,
+  "input_chain_clean": true,
+  "input_frontier_collapse_summary": "data/derived/tau_cmb_endpoint_blind_physical_value_source_frontier_collapse_summary_v01.json",
+  "input_frontier_collapse_table": "data/derived/tau_cmb_endpoint_blind_physical_value_source_frontier_collapse_v01.csv",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_lensing_transfer_kernel_row_specific_explicit_fail_supply_v01",
+  "physical_CMB_score_allowed": false,
+  "physical_value_source_accepted_rows": 0,
+  "physical_value_source_supplied_rows": 0,
+  "report_id": "tau_cmb_endpoint_blind_lensing_bridge_candidates_audit_summary_v01",
+  "status": "CMB_ENDPOINT_BLIND_LENSING_BRIDGE_CANDIDATES_AUDITED_NO_AUTOMATIC_SOURCE_ACCEPTANCE",
+  "table": "data/derived/tau_cmb_endpoint_blind_lensing_bridge_candidates_audit_v01.csv"
+}

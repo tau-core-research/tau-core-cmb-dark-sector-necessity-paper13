@@ -1,0 +1,13 @@
+{
+  "fiducial_reference_file": "payloads/tau_lensing_response_fiducial_pp_reference_v01.json",
+  "fiducial_reference_sha256": "53d01931defba4cadda8781f9d6049cc56fea075295f58405812096abc2da9ae",
+  "files": [
+    {
+      "path": "data/external/act_dr6_lensing/extracted/v1.2/like_corrs/cosmo2017_10K_acc3_lenspotentialCls.dat",
+      "role": "named_fiducial_lenspotential_PP_reference_for_physical_candidate_delta_route",
+      "sha256": "53d01931defba4cadda8781f9d6049cc56fea075295f58405812096abc2da9ae"
+    }
+  ],
+  "generated_utc": "2026-06-15T08:30:14.186005Z",
+  "notes": "Fiducial reference metadata for the physical-candidate delta grid route; no score is computed here."
+}

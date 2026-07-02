@@ -1,0 +1,22 @@
+{
+  "blocked_rows": 3,
+  "carrier_certification_allowed": false,
+  "claim_boundary": "tau_cmb_readout_role_coordinate_null_v01_control_candidate_only_null_not_accepted_no_physical_response_no_quotient_proof_no_concrete_R_CMB_no_carrier_certification_no_score_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "coordinate_acceptance_allowed": false,
+  "coordinate_rows": 5,
+  "coordinate_symbol": "e_null",
+  "dark_sector_verdict_allowed": false,
+  "guard_rows": 2,
+  "input_control_chain_clean": true,
+  "input_quotient_relation_candidate_audit": "data/derived/tau_cmb_seed_readout_quotient_relation_candidate_audit_v01.json",
+  "input_radiation_coordinate_audit": "data/derived/tau_cmb_readout_role_coordinate_radiation_audit_v01.json",
+  "input_zero_control_audit": "data/derived/tau_cmb_seed_zero_control_audit_v01.json",
+  "next_minimal_unblock": "tau_cmb_readout_role_coordinate_null_audit_v01",
+  "physical_response_allowed": false,
+  "quotient_proof_allowed": false,
+  "report_id": "tau_cmb_readout_role_coordinate_null_summary_v01",
+  "score_entry_allowed": false,
+  "status": "NULL_ROLE_COORDINATE_CONTROL_CANDIDATE_DECLARED_BLOCKED_NOT_ACCEPTED",
+  "table": "data/derived/tau_cmb_readout_role_coordinate_null_v01.csv"
+}

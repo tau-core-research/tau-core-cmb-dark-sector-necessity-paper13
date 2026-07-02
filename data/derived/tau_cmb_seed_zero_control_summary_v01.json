@@ -1,0 +1,17 @@
+{
+  "claim_boundary": "tau_cmb_seed_zero_control_v01_control_candidate_only_zero_control_not_accepted_no_physical_response_no_domain_certificate_no_readout_no_score_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "domain_certificate_allowed": false,
+  "next_minimal_unblock": "tau_cmb_seed_zero_control_audit_v01",
+  "normalization_audit_status": "SEED_NORMALIZATION_REPLAY_CANDIDATE_AUDITED_BLOCKED_NOT_ACCEPTED",
+  "physical_response_claim_allowed": false,
+  "readout_evaluation_allowed": false,
+  "replay": "payloads/seed_tau_zero_control_v01.replay.txt",
+  "report_id": "tau_cmb_seed_zero_control_summary_v01",
+  "score_entry_allowed": false,
+  "status": "SEED_ZERO_CONTROL_DECLARED_NOT_ACCEPTED",
+  "table": "data/derived/tau_cmb_seed_zero_control_v01.csv",
+  "zero_control_acceptance_allowed": false,
+  "zero_control_declared": true,
+  "zero_rows": 6
+}

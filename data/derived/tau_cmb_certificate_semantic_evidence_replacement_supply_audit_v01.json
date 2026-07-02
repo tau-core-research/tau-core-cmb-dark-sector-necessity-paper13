@@ -1,0 +1,66 @@
+{
+  "accepted_domain_objects": 0,
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_28_REPLACEMENT_ROWS_PRESENT",
+      "blocking_reason": "replacement supply must cover all 28 requested replacements",
+      "component": "replacement_row_shape",
+      "finding": "rows=28"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_DRAFT_REPLACEMENTS_HASH_BOUND",
+      "blocking_reason": "all draft replacement files must exist and be hash-bound",
+      "component": "draft_replacements",
+      "finding": "supplied=28, hash_matched=28"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_REPLACEMENTS_NOT_ACCEPTED_NOT_PROOF",
+      "blocking_reason": "replacement supply must not promote draft shells into accepted evidence",
+      "component": "not_accepted_boundary",
+      "finding": "draft replacements contain no accepted semantic assertions or proof claims"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_REPLACEMENT_FIREWALL_CLOSED",
+      "blocking_reason": "replacement supply must preserve scoring firewall",
+      "component": "promotion_firewall",
+      "finding": "replacement supply does not open score, likelihood, or verdict"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_SUBSTANTIVE_SEMANTIC_ASSERTIONS_ABSENT",
+      "blocking_reason": "requires substantive endpoint-blind proof traces and non-null accepted assertions",
+      "component": "semantic_assertions",
+      "finding": "draft replacements are present but semantic assertions remain null"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_CERTIFICATE_EXECUTION_NOT_ALLOWED",
+      "blocking_reason": "requires replacement acceptance audit after substantive assertions are supplied",
+      "component": "certificate_execution",
+      "finding": "certificate rules remain non-executable until replacements are accepted"
+    }
+  ],
+  "audited_table": "data/derived/tau_cmb_certificate_semantic_evidence_replacement_supply_v01.csv",
+  "blocked_rows": 2,
+  "certificate_passed_rows": 0,
+  "certificate_rule_executable_after_replacement_rows": 0,
+  "claim_boundary": "tau_cmb_certificate_semantic_evidence_replacement_supply_audit_v01_audit_only_draft_replacements_supplied_not_accepted_no_proof_no_certificate_pass_no_domain_acceptance_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "failed_rows": 0,
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_certificate_semantic_evidence_substantive_assertion_supply_v01",
+  "passed_rows": 4,
+  "physical_R_CMB_materialized": false,
+  "replacement_accepted_rows": 0,
+  "replacement_supplied_rows": 28,
+  "replacement_supply_audited": true,
+  "replacement_supply_rows": 28,
+  "report_id": "tau_cmb_certificate_semantic_evidence_replacement_supply_audit_v01",
+  "score_entry_allowed": false,
+  "status": "CMB_CERTIFICATE_SEMANTIC_EVIDENCE_REPLACEMENT_SUPPLY_AUDITED_DRAFTS_NOT_ACCEPTED"
+}

@@ -1,0 +1,19 @@
+# seed_tau zero-control candidate replay v01
+
+Control tuple:
+
+null_seed_tau_CMB = (
+  morphology_class = null_morphology_control,
+  readout_sector = CMB_readout_sector,
+  scale_label = CMB_readout_sector_scale_label_canonical_v01
+)
+
+Control rule:
+
+Act_tau_CMB[null_seed_tau_CMB](a,k) := 0 or inactive.
+R_CMB(null_seed_tau_CMB) := null_readout.
+
+Boundary:
+
+This is a control object only. It is not a physical Tau response, not a dark
+sector source, not a CMB fit, and not a score input.

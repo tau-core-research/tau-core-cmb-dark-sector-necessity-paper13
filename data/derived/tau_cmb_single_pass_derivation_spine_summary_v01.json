@@ -1,0 +1,24 @@
+{
+  "claim_boundary": "tau_cmb_single_pass_derivation_spine_v01_route_spine_only_not_a_proof_no_concrete_R_CMB_no_score_no_likelihood_no_dark_sector_verdict",
+  "dark_sector_verdict_allowed": false,
+  "definition_or_candidate_steps": 4,
+  "input_chain_consistent_with_blocked_route": true,
+  "input_statuses": {
+    "bundle_closure_audit": "READOUT_ROLE_COORDINATE_BUNDLE_CLOSURE_AUDITED_BLOCKED_NOT_SCORE_READY",
+    "carrier_certificate_audit": "CONCRETE_R_CMB_CARRIER_CERTIFICATE_REQUIREMENTS_AUDITED_BLOCKED",
+    "carrier_domain_predicate_audit": "CARRIER_DOMAIN_PREDICATE_CANDIDATE_AUDITED_BLOCKED_NOT_SCORE_READY",
+    "cosmology_spine": "DERIVATION_SPINE_DECLARED_PARTIAL_NOT_SCORE_ELIGIBLE",
+    "scoring_gap_matrix": "SCORING_INPUT_GAP_MATRIX_DECLARED_ALL_ROWS_BLOCKED_NO_SCORE",
+    "source_grounding": "SOURCE_GROUNDING_GATE_DECLARED_BLOCKED"
+  },
+  "inputs_present": true,
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_carrier_domain_certificate_requirements_v01",
+  "report_id": "tau_cmb_single_pass_derivation_spine_summary_v01",
+  "required_object_steps": 2,
+  "route_steps": 12,
+  "score_entry_allowed": false,
+  "scoring_or_verdict_steps_closed": 2,
+  "status": "SINGLE_PASS_DERIVATION_SPINE_DECLARED_ROUTE_BLOCKED_NOT_SCORE_READY",
+  "table": "data/derived/tau_cmb_single_pass_derivation_spine_v01.csv"
+}

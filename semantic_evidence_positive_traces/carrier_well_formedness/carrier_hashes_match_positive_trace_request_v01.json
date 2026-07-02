@@ -1,0 +1,61 @@
+{
+  "artifact_id": "TCMBCDSEMPTR01_003",
+  "artifact_status": "POSITIVE_PROOF_TRACE_DRAFT_SUPPLIED_NOT_ACCEPTED_NOT_PROOF",
+  "certificate_area": "carrier_well_formedness",
+  "certificate_passed": false,
+  "certificate_rule_executable": false,
+  "checker_name": "run_carrier_ok_checker",
+  "claim_boundary": "tau_cmb_certificate_semantic_evidence_positive_proof_trace_supply_v01_draft_positive_traces_supplied_not_accepted_no_evidence_acceptance_no_certificate_pass_no_domain_acceptance_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "domain_object_accepted": false,
+  "endpoint_blind_firewall": {
+    "act_planck_likelihood_used": false,
+    "cmb_endpoint_residuals_used": false,
+    "dark_sector_verdict_used": false,
+    "post_endpoint_tuning_used": false,
+    "score_output_used": false
+  },
+  "likelihood_allowed": false,
+  "next_required_step": "audit and replace draft component declarations with substantive endpoint-blind proof trace content",
+  "physical_R_CMB_materialized": false,
+  "proof_claim_allowed": false,
+  "replacement_artifact": "semantic_evidence_replacements/carrier_well_formedness/carrier_hashes_match_accepted_evidence_v01.json",
+  "required_trace_components": [
+    "source files",
+    "role-basis replay",
+    "role-bundle closure trace",
+    "hash comparison",
+    "endpoint-blind provenance"
+  ],
+  "score_entry_allowed": false,
+  "semantic_assertion_acceptance_allowed": false,
+  "semantic_evidence_field": "carrier_hashes_match",
+  "trace_accepted": false,
+  "trace_component_status": [
+    {
+      "component": "source files",
+      "endpoint_blind": true,
+      "status": "DECLARED_NOT_SUBSTANTIVELY_PROVEN"
+    },
+    {
+      "component": "role-basis replay",
+      "endpoint_blind": true,
+      "status": "DECLARED_NOT_SUBSTANTIVELY_PROVEN"
+    },
+    {
+      "component": "role-bundle closure trace",
+      "endpoint_blind": true,
+      "status": "DECLARED_NOT_SUBSTANTIVELY_PROVEN"
+    },
+    {
+      "component": "hash comparison",
+      "endpoint_blind": true,
+      "status": "DECLARED_NOT_SUBSTANTIVELY_PROVEN"
+    },
+    {
+      "component": "endpoint-blind provenance",
+      "endpoint_blind": true,
+      "status": "DECLARED_NOT_SUBSTANTIVELY_PROVEN"
+    }
+  ]
+}

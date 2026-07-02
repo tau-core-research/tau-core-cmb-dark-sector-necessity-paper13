@@ -1,0 +1,15 @@
+{
+  "A_tau_value_allowed": false,
+  "blocked_or_required_rows": 6,
+  "claim_boundary": "tau_cmb_seed_readout_interface_candidate_v01_interface_schema_only_no_readout_evaluation_no_quotient_survival_no_seed_acceptance_no_A_tau_value_no_score_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "interface_rows": 6,
+  "next_minimal_unblock": "tau_cmb_seed_readout_domain_certificate_v01",
+  "quotient_survival_claim_allowed": false,
+  "readout_evaluation_allowed": false,
+  "report_id": "tau_cmb_seed_readout_interface_candidate_summary_v01",
+  "score_entry_allowed": false,
+  "seed_acceptance_allowed": false,
+  "status": "SEED_READOUT_INTERFACE_CANDIDATE_DECLARED_NOT_ACCEPTED",
+  "table": "data/derived/tau_cmb_seed_readout_interface_candidate_v01.csv"
+}

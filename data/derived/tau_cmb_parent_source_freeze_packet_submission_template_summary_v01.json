@@ -1,0 +1,15 @@
+{
+  "accepted_rows": 0,
+  "claim_boundary": "tau_cmb_parent_source_freeze_packet_submission_template_v01_template_only_no_payload_submitted_no_source_acceptance_no_phi_derivation_no_score_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "negative_candidate": "payloads/tau_cmb_parent_source_freeze_packet_submission_candidate_v01.csv",
+  "next_minimal_unblock": "submit_populated_endpoint_blind_parent_source_freeze_packet_candidate",
+  "payload_submitted": false,
+  "populated_rows": 0,
+  "report_id": "tau_cmb_parent_source_freeze_packet_submission_template_summary_v01",
+  "score_entry_allowed": false,
+  "source_acceptance_allowed": false,
+  "status": "PARENT_SOURCE_FREEZE_PACKET_SUBMISSION_TEMPLATE_DECLARED_UNPOPULATED",
+  "template": "payload_templates/tau_cmb_parent_source_freeze_packet_submission_TEMPLATE_v01.csv",
+  "template_rows": 7
+}

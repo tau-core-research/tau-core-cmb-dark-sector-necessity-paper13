@@ -1,0 +1,89 @@
+{
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_RADIATION_COORDINATE_ROWS_PRESENT",
+      "blocking_reason": "radiation coordinate audit requires the five declared components",
+      "component": "coordinate_row_shape",
+      "finding": "coordinate_components=['tau_radiation_like_contribution', 'external_bound_convention', 'damping_tail_inequality', 'cross_role_consistency', 'radiation_stop_rule']"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_GROWTH_AUDIT_CHAIN",
+      "blocking_reason": "radiation coordinate audit must be downstream of the audited growth coordinate and clean candidate summary",
+      "component": "input_growth_chain",
+      "finding": "radiation coordinate follows a clean growth coordinate audit and radiation candidate summary"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_FORMAL_SLOTS_DECLARED",
+      "blocking_reason": "coordinate components need formal slots before materialization",
+      "component": "formal_slots_declared",
+      "finding": "each radiation coordinate component has a formal slot"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_DIMENSION_ROLES_DECLARED",
+      "blocking_reason": "coordinate typing requires dimension or convention roles",
+      "component": "dimension_roles_declared",
+      "finding": "each radiation coordinate component has a dimension/convention role"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_SOURCE_DEPENDENCIES_DECLARED",
+      "blocking_reason": "coordinate candidate must remain traceable to existing protocol artifacts",
+      "component": "source_dependencies_declared",
+      "finding": "each radiation coordinate component is tied to an existing blocker/evidence artifact"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_BLOCK_GUARD_ACCOUNTING",
+      "blocking_reason": "radiation coordinate should have three physics blocks and two guard rows",
+      "component": "block_guard_accounting",
+      "finding": "blocked_count=3, guard_count=2"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_RADIATION_COORDINATE_FIREWALL_CLOSED",
+      "blocking_reason": "radiation coordinate candidate must not enter scoring or carrier certification",
+      "component": "promotion_firewall",
+      "finding": "coordinate acceptance, radiation score, Neff bound evaluation, concrete R_CMB, carrier certification, and verdict permissions remain closed"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_TAU_DELTA_NEFF_NOT_DERIVED",
+      "blocking_reason": "requires endpoint-blind derivation of Delta_N_eff_tau under the adopted convention",
+      "component": "tau_radiation_like_contribution",
+      "finding": "Delta_N_eff_tau is declared only as a dimensionless contribution slot"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_BOUND_INEQUALITY_NOT_EVALUATED",
+      "blocking_reason": "requires Tau contribution and selected external bound under shared convention",
+      "component": "damping_tail_inequality",
+      "finding": "Delta_N_eff_tau <= Delta_N_eff_bound is declared but not numerically evaluated"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_DEPENDENT_ROLES_STILL_OPEN",
+      "blocking_reason": "requires compatible density, acoustic, lensing, growth, and radiation role-coordinate materialization",
+      "component": "cross_role_consistency",
+      "finding": "density, acoustic, lensing, and growth role coordinates remain blocked and unmaterialized"
+    }
+  ],
+  "audited_coordinate_table": "data/derived/tau_cmb_readout_role_coordinate_radiation_v01.csv",
+  "blocked_rows": 3,
+  "carrier_certification_allowed": false,
+  "claim_boundary": "tau_cmb_readout_role_coordinate_radiation_audit_v01_audit_only_coordinate_not_accepted_no_radiation_score_no_neff_bound_eval_no_concrete_R_CMB_no_carrier_certification_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "coordinate_acceptance_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "failed_rows": 0,
+  "neff_bound_eval_allowed": false,
+  "next_minimal_unblock": "tau_cmb_readout_role_coordinate_null_v01",
+  "passed_rows": 7,
+  "radiation_coordinate_audited": true,
+  "radiation_score_allowed": false,
+  "report_id": "tau_cmb_readout_role_coordinate_radiation_audit_v01",
+  "status": "RADIATION_ROLE_COORDINATE_AUDITED_BLOCKED_NOT_MATERIALIZED"
+}

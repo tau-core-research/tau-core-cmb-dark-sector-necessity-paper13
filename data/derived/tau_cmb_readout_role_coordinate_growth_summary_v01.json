@@ -1,0 +1,20 @@
+{
+  "blocked_rows": 2,
+  "carrier_certification_allowed": false,
+  "claim_boundary": "tau_cmb_readout_role_coordinate_growth_v01_coordinate_candidate_only_not_materialized_no_growth_score_no_structure_match_no_concrete_R_CMB_no_carrier_certification_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "coordinate_acceptance_allowed": false,
+  "coordinate_rows": 6,
+  "coordinate_symbol": "e_growth",
+  "dark_sector_verdict_allowed": false,
+  "growth_score_allowed": false,
+  "guard_rows": 4,
+  "input_growth_transfer_closure": "data/derived/tau_cmb_growth_transfer_kernel_closure_v01.csv",
+  "input_lensing_coordinate_audit": "data/derived/tau_cmb_readout_role_coordinate_lensing_audit_v01.json",
+  "input_lensing_coordinate_audit_clean": true,
+  "next_minimal_unblock": "tau_cmb_readout_role_coordinate_growth_audit_v01",
+  "report_id": "tau_cmb_readout_role_coordinate_growth_summary_v01",
+  "status": "GROWTH_ROLE_COORDINATE_CANDIDATE_DECLARED_BLOCKED_NOT_MATERIALIZED",
+  "structure_match_allowed": false,
+  "table": "data/derived/tau_cmb_readout_role_coordinate_growth_v01.csv"
+}

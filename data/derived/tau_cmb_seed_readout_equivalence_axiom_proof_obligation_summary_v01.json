@@ -1,0 +1,18 @@
+{
+  "blocked_rows": 4,
+  "claim_boundary": "tau_cmb_seed_readout_equivalence_axiom_proof_obligation_v01_obligation_only_no_equivalence_proof_no_quotient_map_no_readout_evaluation_no_survival_claim_no_score_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "equivalence_proof_allowed": false,
+  "input_equivalence_audit": "data/derived/tau_cmb_seed_readout_equivalence_relation_audit_v01.json",
+  "input_equivalence_audit_clean": true,
+  "next_minimal_unblock": "tau_cmb_readout_role_space_basis_v01",
+  "obligation_rows": 6,
+  "quotient_map_allowed": false,
+  "quotient_survival_claim_allowed": false,
+  "readout_evaluation_allowed": false,
+  "report_id": "tau_cmb_seed_readout_equivalence_axiom_proof_obligation_summary_v01",
+  "required_rows": 2,
+  "score_entry_allowed": false,
+  "status": "SEED_READOUT_EQUIVALENCE_AXIOM_PROOF_OBLIGATION_DECLARED_BLOCKED",
+  "table": "data/derived/tau_cmb_seed_readout_equivalence_axiom_proof_obligation_v01.csv"
+}

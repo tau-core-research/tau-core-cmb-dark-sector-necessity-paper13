@@ -1,0 +1,32 @@
+{
+  "artifact_id": "TCMBCDSEMPTRACC01_001",
+  "artifact_status": "TRACE_COMPONENT_DRAFT_CONTENT_SUPPLIED_NOT_ACCEPTED_NOT_PROOF",
+  "certificate_area": "carrier_well_formedness",
+  "certificate_passed": false,
+  "certificate_rule_executable": false,
+  "checker_name": "run_carrier_ok_checker",
+  "claim_boundary": "tau_cmb_certificate_semantic_evidence_substantive_trace_component_supply_v01_component_draft_content_supplied_not_accepted_not_proof_no_certificate_pass_no_domain_acceptance_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "component_accepted": false,
+  "component_content_supplied": true,
+  "component_statement": "This component is required by the positive proof trace and is represented as endpoint-blind draft content. It is not yet a substantive proof and must not be promoted to certificate evidence.",
+  "component_substantively_proven": false,
+  "dark_sector_verdict_allowed": false,
+  "domain_object_accepted": false,
+  "endpoint_blind_firewall": {
+    "act_planck_likelihood_used": false,
+    "cmb_endpoint_residuals_used": false,
+    "dark_sector_verdict_used": false,
+    "post_endpoint_tuning_used": false,
+    "score_output_used": false
+  },
+  "likelihood_allowed": false,
+  "next_required_step": "replace draft component content with accepted endpoint-blind substantive proof content",
+  "physical_R_CMB_materialized": false,
+  "positive_trace_artifact": "semantic_evidence_positive_traces/carrier_well_formedness/role_basis_valid_positive_trace_request_v01.json",
+  "proof_claim_allowed": false,
+  "score_entry_allowed": false,
+  "semantic_assertion_acceptance_allowed": false,
+  "semantic_evidence_field": "role_basis_valid",
+  "trace_accepted_after_component": false,
+  "trace_component_name": "role-basis replay"
+}

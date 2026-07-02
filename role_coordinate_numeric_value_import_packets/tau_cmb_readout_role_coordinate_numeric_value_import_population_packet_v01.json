@@ -1,0 +1,26 @@
+{
+  "artifact_status": "NUMERIC_VALUE_IMPORT_POPULATION_CONTRACT_DECLARED_VALUES_ABSENT",
+  "blocking_reason": "population contract is declared, but no numeric population values are supplied",
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_import_population_packet_v01_population_contract_declared_no_values_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "endpoint_blind_firewall": {
+    "act_planck_likelihood_used": false,
+    "cmb_endpoint_residuals_used": false,
+    "dark_sector_verdict_used": false,
+    "post_endpoint_tuning_used": false,
+    "score_output_used": false
+  },
+  "input_import_template": "role_coordinate_numeric_value_import_packets/tau_cmb_readout_role_coordinate_numeric_value_import_template_v01.csv",
+  "input_numeric_value_import_execution_acceptance_audit_summary": "data/derived/tau_cmb_readout_role_coordinate_numeric_value_import_execution_acceptance_audit_summary_v01.json",
+  "likelihood_allowed": false,
+  "population_row_count": 33,
+  "population_values_supplied": false,
+  "required_fields_per_row": [
+    "import_numeric_value",
+    "import_unit_or_convention",
+    "import_provenance",
+    "import_replay",
+    "endpoint_blind_attestation"
+  ],
+  "score_entry_allowed": false
+}

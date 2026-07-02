@@ -1,0 +1,23 @@
+{
+  "accepted_domain_objects": 0,
+  "certificate_passed_rows": 0,
+  "certificate_rule_executable_after_trace_rows": 0,
+  "claim_boundary": "tau_cmb_certificate_semantic_evidence_positive_proof_trace_request_v01_positive_trace_request_only_no_trace_supplied_no_evidence_acceptance_no_certificate_pass_no_domain_acceptance_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "input_assertion_summary": "data/derived/tau_cmb_certificate_semantic_evidence_substantive_assertion_supply_summary_v01.json",
+  "input_assertion_table": "data/derived/tau_cmb_certificate_semantic_evidence_substantive_assertion_supply_v01.csv",
+  "input_chain_clean": true,
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_certificate_semantic_evidence_positive_proof_trace_supply_v01",
+  "physical_R_CMB_materialized": false,
+  "positive_trace_accepted_rows": 0,
+  "positive_trace_requested_rows": 28,
+  "positive_trace_supplied_rows": 0,
+  "report_id": "tau_cmb_certificate_semantic_evidence_positive_proof_trace_request_summary_v01",
+  "score_entry_allowed": false,
+  "semantic_assertion_acceptance_allowed_rows": 0,
+  "status": "CMB_CERTIFICATE_SEMANTIC_EVIDENCE_POSITIVE_PROOF_TRACE_REQUEST_DECLARED",
+  "table": "data/derived/tau_cmb_certificate_semantic_evidence_positive_proof_trace_request_v01.csv",
+  "trace_request_rows": 28
+}

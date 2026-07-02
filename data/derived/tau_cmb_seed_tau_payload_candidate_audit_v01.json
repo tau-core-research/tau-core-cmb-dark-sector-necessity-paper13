@@ -1,0 +1,73 @@
+{
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_CANDIDATE_PRESENT",
+      "blocking_reason": "payload must have exactly one candidate row",
+      "component": "payload_presence",
+      "finding": "1 payload row(s) present"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_HASHES_MATCH",
+      "blocking_reason": "hash manifest must bind payload, provenance, replay, and firewall files",
+      "component": "hash_manifest",
+      "finding": "payloads/seed_tau_payload_candidate_v01.csv expected=512c2f923cb1c85eeee80baf4efd12bb3f1814453fff99bfbdd12166bc8c5fb6 actual=512c2f923cb1c85eeee80baf4efd12bb3f1814453fff99bfbdd12166bc8c5fb6 ok=True; payloads/seed_tau_payload_candidate_v01.provenance.json expected=7caef7a0d945a7bf2e8cc61ce51dfba3a2acfac50e5697185d8b6a63527528ea actual=7caef7a0d945a7bf2e8cc61ce51dfba3a2acfac50e5697185d8b6a63527528ea ok=True; payloads/seed_tau_payload_candidate_v01.replay.txt expected=71e3530f66ae4c995399415e0b10f7e999d09b727195638c519b0f41108929a8 actual=71e3530f66ae4c995399415e0b10f7e999d09b727195638c519b0f41108929a8 ok=True; payloads/seed_tau_payload_candidate_v01.firewall.json expected=635a7b0dc25c577a391b2b2b78a8d038d2510c68c8ea0a0a39738444b34e58da actual=635a7b0dc25c577a391b2b2b78a8d038d2510c68c8ea0a0a39738444b34e58da ok=True"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_PROVENANCE_BOUNDARY_CLOSED",
+      "blocking_reason": "provenance must bind payload while forbidding acceptance and scoring",
+      "component": "provenance_boundary",
+      "finding": "provenance links payload and keeps acceptance permissions closed"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_REPLAY_DECLARED",
+      "blocking_reason": "replay command must be explicit before later acceptance audit",
+      "component": "replay_presence",
+      "finding": "replay command declares deterministic candidate rebuild"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_CANDIDATE_FIREWALL_ATTESTED_NOT_ACCEPTED",
+      "blocking_reason": "candidate attestation can pass only as non-acceptance evidence",
+      "component": "endpoint_firewall_candidate",
+      "finding": "endpoint_inputs_used=[]; textual_token_hits=['ACT residual', 'Planck residual', 'CMB role score', 'likelihood delta', 'peak residual shape', 'lensing residual direction', 'score output', 'post-endpoint tuning']"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_NORMALIZATION_REPLAY_MISSING",
+      "blocking_reason": "normalization replay is required before domain certificate or readout evaluation",
+      "component": "dimension_and_normalization",
+      "finding": "dimension role is declared, but normalization replay remains pending"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_SUPPORT_COORDINATE_NOT_CONCRETE",
+      "blocking_reason": "concrete support coordinates and parent-domain construction are required",
+      "component": "support_convention",
+      "finding": "support is a sector label, not a concrete support coordinate system"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_NULL_LIMIT_NOT_DEFINED",
+      "blocking_reason": "null_seed and null readout role are required before quotient survival",
+      "component": "null_limit_role",
+      "finding": "null-limit role is explicitly required but not defined"
+    }
+  ],
+  "audited_payload": "payloads/seed_tau_payload_candidate_v01.csv",
+  "blocked_rows": 3,
+  "claim_boundary": "tau_cmb_seed_tau_payload_candidate_audit_v01_audit_only_payload_not_accepted_no_domain_certificate_no_readout_no_survival_no_A_tau_value_no_score_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "domain_certificate_allowed": false,
+  "failed_rows": 0,
+  "next_minimal_unblock": "define_seed_support_coordinates_normalization_replay_and_null_limit_role",
+  "passed_rows": 5,
+  "payload_acceptance_allowed": false,
+  "readout_evaluation_allowed": false,
+  "report_id": "tau_cmb_seed_tau_payload_candidate_audit_v01",
+  "score_entry_allowed": false,
+  "status": "SEED_TAU_PAYLOAD_CANDIDATE_AUDITED_BLOCKED_NOT_ACCEPTED"
+}

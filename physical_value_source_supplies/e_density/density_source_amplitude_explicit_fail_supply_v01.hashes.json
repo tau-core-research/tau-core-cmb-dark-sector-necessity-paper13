@@ -1,0 +1,8 @@
+{
+  "claim_boundary": "tau_cmb_density_source_amplitude_or_explicit_fail_supply_v01_density_direct_rows_explicit_fail_no_density_source_no_score_no_likelihood_no_verdict",
+  "explicit_fail_supplied": true,
+  "physical_value_source_accepted": false,
+  "score_entry_allowed": false,
+  "sha256": "272cede1aa215b2ba2ab2d6a222da23f7f81385fa552b69415bead02ae857910",
+  "target": "physical_value_source_supplies/e_density/density_source_amplitude_explicit_fail_supply_v01.json"
+}

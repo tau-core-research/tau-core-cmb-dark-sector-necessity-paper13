@@ -1,0 +1,31 @@
+{
+  "artifact_status": "ROLE_COORDINATE_NUMERIC_MATERIALIZATION_CANDIDATE_SUPPLIED_NOT_NUMERIC",
+  "blocking_reason": "role coordinate remains candidate-only or blocked; no numeric readout value is materialized",
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_materialization_supply_v01_candidate_payloads_supplied_role_coordinates_blocked_no_concrete_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "coordinate_acceptance_allowed": false,
+  "coordinate_symbol": "e_growth",
+  "dark_sector_verdict_allowed": false,
+  "endpoint_blind_firewall": {
+    "act_planck_likelihood_used": false,
+    "cmb_endpoint_residuals_used": false,
+    "dark_sector_verdict_used": false,
+    "post_endpoint_tuning_used": false,
+    "score_output_used": false
+  },
+  "input_physical_R_CMB_materialization_acceptance_summary": "data/derived/tau_cmb_certificate_semantic_evidence_physical_R_CMB_materialization_acceptance_audit_summary_v01.json",
+  "likelihood_allowed": false,
+  "next_required_step": "supply accepted endpoint-blind role-coordinate definitions and numeric value sources",
+  "numeric_values_materialized": false,
+  "role_audit": "data/derived/tau_cmb_readout_role_coordinate_growth_audit_v01.json",
+  "role_audit_status": "GROWTH_ROLE_COORDINATE_AUDITED_BLOCKED_NOT_MATERIALIZED",
+  "role_coordinate_accepted": false,
+  "role_coordinate_audit_present": true,
+  "role_coordinate_summary_present": true,
+  "role_coordinate_table_present": true,
+  "role_name": "growth",
+  "role_summary": "data/derived/tau_cmb_readout_role_coordinate_growth_summary_v01.json",
+  "role_summary_status": "GROWTH_ROLE_COORDINATE_CANDIDATE_DECLARED_BLOCKED_NOT_MATERIALIZED",
+  "role_table": "data/derived/tau_cmb_readout_role_coordinate_growth_v01.csv",
+  "score_entry_allowed": false
+}

@@ -1,0 +1,42 @@
+{
+  "acceptance_permissions": {
+    "certificate_pass_allowed": false,
+    "checker_execution_allowed": false,
+    "concrete_R_CMB_allowed": false,
+    "dark_sector_verdict_allowed": false,
+    "domain_acceptance_allowed": false,
+    "likelihood_allowed": false,
+    "payload_accepted": false,
+    "score_entry_allowed": false
+  },
+  "acceptance_row_id": "TCMBCDIEBSAA01_027",
+  "accepted_source_summary": {
+    "certificate_area": "null_control_admissibility",
+    "checker_name": "run_null_control_checker",
+    "endpoint_blind_rule": "constructed only from Tau Core theory/protocol artifacts; no CMB endpoint residual, likelihood error, score output, or post-endpoint tuning input is used",
+    "source_artifact_status": "SOURCE_ARTIFACT_CANDIDATE_MATERIALIZED_NOT_ACCEPTED",
+    "source_inventory_count": 16
+  },
+  "certificate_area": "null_control_admissibility",
+  "checker_name": "run_null_control_checker",
+  "claim_boundary": "tau_cmb_carrier_domain_checker_input_payload_staging_population_execution_v01_staging_files_populated_from_accepted_endpoint_blind_tau_side_sources_no_payload_acceptance_no_checker_execution_no_certificate_pass_no_domain_acceptance_no_R_CMB_no_score_no_likelihood_no_verdict",
+  "endpoint_blind_firewall": {
+    "act_planck_likelihood_used": false,
+    "cmb_endpoint_residuals_used": false,
+    "dark_sector_verdict_used": false,
+    "post_endpoint_tuning_used": false,
+    "score_output_used": false
+  },
+  "file_category": "replay",
+  "population_row_id": "TCMBCDIPOP01_027",
+  "population_rule": "populate deterministic replay trace from local construction commands without CMB endpoint target access",
+  "post_population_required_checks": "content hash, provenance, replay, and firewall binding must be rebuilt after population",
+  "source_artifact_path": "payload_sources/tau_cmb_carrier_domain_checker_input_payloads/null_control_admissibility/TCMBCDIPOP01_027_replay_source.json",
+  "source_firewall_path": "payload_sources/tau_cmb_carrier_domain_checker_input_payloads/null_control_admissibility/TCMBCDIPOP01_027_replay_source.firewall.json",
+  "source_hash_path": "payload_sources/tau_cmb_carrier_domain_checker_input_payloads/null_control_admissibility/TCMBCDIPOP01_027_replay_source.hashes.json",
+  "source_provenance_path": "payload_sources/tau_cmb_carrier_domain_checker_input_payloads/null_control_admissibility/TCMBCDIPOP01_027_replay_source.provenance.json",
+  "source_replay_path": "payload_sources/tau_cmb_carrier_domain_checker_input_payloads/null_control_admissibility/TCMBCDIPOP01_027_replay_source.replay.json",
+  "staging_status": "POPULATED_FROM_ACCEPTED_ENDPOINT_BLIND_TAU_SIDE_SOURCE_NOT_ACCEPTED",
+  "target_payload_staging_path": "payload_staging/tau_cmb_carrier_domain_checker_input_payloads/null_control_admissibility/null_coordinate_replay.json",
+  "template_artifact_path": "payload_templates/tau_cmb_carrier_domain_checker_input_payloads/null_control_admissibility/null_coordinate_replay.json"
+}

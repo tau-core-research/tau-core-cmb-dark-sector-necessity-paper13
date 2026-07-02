@@ -1,0 +1,26 @@
+{
+  "acceptance_permissions": {
+    "certificate_pass_allowed": false,
+    "checker_execution_allowed": false,
+    "concrete_R_CMB_allowed": false,
+    "dark_sector_verdict_allowed": false,
+    "domain_acceptance_allowed": false,
+    "likelihood_allowed": false,
+    "payload_accepted": false,
+    "score_entry_allowed": false
+  },
+  "certificate_area": "domain_membership_rule",
+  "checker_name": "run_dom_ok_checker",
+  "claim_boundary": "tau_cmb_carrier_domain_checker_input_payload_file_materialization_v01_template_files_materialized_only_no_payload_staging_files_no_payload_acceptance_no_checker_execution_no_certificate_pass_no_domain_acceptance_no_R_CMB_no_score_no_likelihood_no_verdict",
+  "endpoint_blind_firewall": {
+    "act_planck_likelihood_used": false,
+    "cmb_endpoint_residuals_used": false,
+    "post_endpoint_tuning_used": false,
+    "score_output_used": false
+  },
+  "file_category": "payload",
+  "materialization_requirement": "materialize endpoint-blind checker payload file with required fields and stable content hash",
+  "required_payload_staging_path": "payload_staging/tau_cmb_carrier_domain_checker_input_payloads/domain_membership_rule/support_record.json",
+  "required_population_rule": "Populate a payload_staging file from endpoint-blind Tau-side sources only; this template file is not accepted as checker input.",
+  "template_status": "UNPOPULATED_TEMPLATE_NOT_PAYLOAD"
+}

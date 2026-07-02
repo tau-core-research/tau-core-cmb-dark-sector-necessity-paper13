@@ -1,0 +1,22 @@
+{
+  "artifact_id": "seed_tau_payload_candidate_v01.firewall",
+  "claim_boundary": "tau_cmb_seed_tau_payload_candidate_v01_concrete_candidate_only_not_accepted_no_domain_certificate_no_readout_evaluation_no_survival_no_A_tau_value_no_score_no_verdict",
+  "endpoint_blind_attestation": true,
+  "endpoint_inputs_used": [],
+  "firewall_passed_for_acceptance": false,
+  "forbidden_endpoint_inputs": [
+    "ACT residuals",
+    "Planck residuals",
+    "CMB role scores",
+    "likelihood deltas",
+    "peak residual shapes",
+    "lensing residual directions",
+    "score outputs",
+    "post-endpoint tuning fields"
+  ],
+  "payload": "payloads/seed_tau_payload_candidate_v01.csv",
+  "provenance": "payloads/seed_tau_payload_candidate_v01.provenance.json",
+  "reason_not_passed": "candidate firewall attestation exists, but no independent audit has accepted it",
+  "replay": "payloads/seed_tau_payload_candidate_v01.replay.txt",
+  "score_entry_allowed": false
+}

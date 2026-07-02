@@ -1,0 +1,33 @@
+{
+  "claim_boundary": "route_b_parent_source_formula_spec_protocol_verified_candidate_no_empirical_validation_no_score_no_dark_sector_verdict",
+  "dark_sector_verdict": false,
+  "derivation_script_or_formula": "parent_tau_source_value(L)=amplitude*(L/L0)^tilt*exp(-(L/cutoff_L)^cutoff_power)",
+  "endpoint_blind_statement": "endpoint-blind protocol candidate fixed before endpoint score readout; the shape is selected from the predeclared Route B power-law cutoff family and not from ACT/Planck residuals or score outputs",
+  "formula_family": "power_law_cutoff_parent_source_v01",
+  "formula_role": "endpoint_blind_tau_parent_source_l_shape_protocol_candidate",
+  "known_limit_statement": "when parent_tau_source_value -> 0, delta_PP_tau -> 0 under the linear_parent_source_v01 adapter",
+  "normalization": 1.0,
+  "normalization_statement": "dimensionless Route B parent-source convention; downstream delta_PP_tau = normalization * parent_tau_source_value",
+  "parameter_policy": "parameters are convention-fixed for a first Tau-side Route B parent-source candidate; no residual tuning, no reduced chi2 tuning, no score tuning, and no verdict tuning are permitted",
+  "parameters": {
+    "L0": 1000.0,
+    "amplitude": 1.0,
+    "cutoff_L": 2200.0,
+    "cutoff_power": 2.0,
+    "tilt": 1.0,
+    "turnover_L": null,
+    "turnover_power": 0.0
+  },
+  "physical_tau_score_run": false,
+  "physical_validation_status": "not_empirically_validated_not_a_dark_sector_verdict",
+  "score_run": false,
+  "source_chain": [
+    "docs/cmb_tau_lensing_route_b_parent_source_request_v01.md",
+    "docs/cmb_tau_lensing_grid_equation_packet_v01.md",
+    "docs/tau_cmb_minimal_source_term_candidate_v01.md",
+    "docs/tau_cmb_known_limit_and_dimension_audit_v01.md",
+    "payload_templates/tau_lensing_route_b_parent_source_formula_spec_TEMPLATE_v01.json",
+    "scripts/materialize_tau_lensing_route_b_parent_source_from_formula_spec.py"
+  ],
+  "spec_id": "tau_lensing_route_b_parent_source_formula_spec_v01"
+}

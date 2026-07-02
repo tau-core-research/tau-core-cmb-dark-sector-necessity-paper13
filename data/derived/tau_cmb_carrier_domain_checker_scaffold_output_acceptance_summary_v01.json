@@ -1,0 +1,23 @@
+{
+  "acceptance_rows": 7,
+  "accepted_as_scaffold_output_rows": 7,
+  "accepted_domain_objects": 0,
+  "accepted_for_certificate_implementation_development_rows": 7,
+  "certificate_passed_rows": 0,
+  "checker_output_supplied_rows": 7,
+  "claim_boundary": "tau_cmb_carrier_domain_checker_scaffold_output_acceptance_v01_structural_checker_outputs_accepted_for_certificate_implementation_development_only_no_certificate_pass_no_domain_acceptance_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "execution_succeeded_rows": 7,
+  "hash_matched_rows": 7,
+  "input_chain_clean": true,
+  "input_scaffold_audit": "data/derived/tau_cmb_carrier_domain_checker_implementation_scaffold_audit_v01.json",
+  "input_scaffold_report": "data/derived/tau_cmb_carrier_domain_checker_implementation_scaffold_v01.json",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_certificate_level_checker_rule_implementation_v01",
+  "physical_R_CMB_materialized": false,
+  "report_id": "tau_cmb_carrier_domain_checker_scaffold_output_acceptance_summary_v01",
+  "score_entry_allowed": false,
+  "status": "CARRIER_DOMAIN_CHECKER_SCAFFOLD_OUTPUTS_ACCEPTED_FOR_CERTIFICATE_IMPLEMENTATION_DEVELOPMENT_ONLY",
+  "table": "data/derived/tau_cmb_carrier_domain_checker_scaffold_output_acceptance_v01.csv"
+}

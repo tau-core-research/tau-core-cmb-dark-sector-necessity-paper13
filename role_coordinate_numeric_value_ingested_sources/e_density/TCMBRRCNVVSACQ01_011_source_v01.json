@@ -1,0 +1,27 @@
+{
+  "allows_dark_sector_verdict": false,
+  "allows_likelihood": false,
+  "allows_physical_CMB_score": false,
+  "artifact_status": "DENSITY_STOP_RULE_GUARD_SOURCE_INGESTED_PROTOCOL_ONLY",
+  "claim_boundary": "tau_cmb_readout_role_coordinate_numeric_value_payload_source_ingest_v01_focused_protocol_sources_ingested_no_physical_CMB_score_no_likelihood_no_verdict",
+  "coordinate_component": "density_stop_rule",
+  "coordinate_symbol": "e_density",
+  "endpoint_blind_attestation": true,
+  "forbidden_inputs": [
+    "CMB endpoint residuals",
+    "ACT/Planck likelihood errors",
+    "score outputs",
+    "post-endpoint tuning fields",
+    "dark-sector verdict labels"
+  ],
+  "formal_slot": "density_fail_if_A_tau_missing",
+  "interpretation": "protocol/control value source only; not a physical CMB fit datum",
+  "numeric_value": "1",
+  "provenance": "local density role-coordinate stop-rule declaration; no A_tau or rho_tau_eff value is derived",
+  "replay": "replay by reading tau_cmb_readout_role_coordinate_density_v01.csv and preserving the BLOCKED density rows",
+  "role_name": "density",
+  "source_value_source_acquisition_row_id": "TCMBRRCNVVSACQ01_011",
+  "unit_or_convention": "dimensionless_boolean_guard_not_triggered",
+  "value_source_accepted": true,
+  "value_source_acquired": true
+}

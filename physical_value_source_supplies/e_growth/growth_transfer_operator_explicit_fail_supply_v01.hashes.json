@@ -1,0 +1,8 @@
+{
+  "claim_boundary": "tau_cmb_growth_transfer_operator_or_explicit_fail_supply_v01_growth_operator_explicit_fail_no_transfer_operator_no_score_no_likelihood_no_verdict",
+  "explicit_fail_supplied": true,
+  "physical_value_source_accepted": false,
+  "score_entry_allowed": false,
+  "sha256": "917dc4505c5b64d2037317be36a25c9d796c173aa6373c66b79b601001957aa8",
+  "target": "physical_value_source_supplies/e_growth/growth_transfer_operator_explicit_fail_supply_v01.json"
+}

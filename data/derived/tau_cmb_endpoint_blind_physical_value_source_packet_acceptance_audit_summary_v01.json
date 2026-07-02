@@ -1,0 +1,17 @@
+{
+  "claim_boundary": "tau_cmb_endpoint_blind_physical_value_source_packet_acceptance_audit_v01_packet_contracts_accepted_sources_absent_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "input_chain_clean": true,
+  "input_packet_summary": "data/derived/tau_cmb_endpoint_blind_physical_value_source_packet_summary_v01.json",
+  "input_packet_table": "data/derived/tau_cmb_endpoint_blind_physical_value_source_packet_v01.csv",
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_endpoint_blind_physical_value_source_supply_v01",
+  "packet_contract_accepted_rows": 16,
+  "physical_CMB_score_allowed": false,
+  "physical_value_source_accepted_rows": 0,
+  "physical_value_source_packet_acceptance_rows": 16,
+  "physical_value_source_supplied_rows": 0,
+  "report_id": "tau_cmb_endpoint_blind_physical_value_source_packet_acceptance_audit_summary_v01",
+  "status": "CMB_ENDPOINT_BLIND_PHYSICAL_VALUE_SOURCE_PACKET_CONTRACTS_ACCEPTED_SOURCES_ABSENT",
+  "table": "data/derived/tau_cmb_endpoint_blind_physical_value_source_packet_acceptance_audit_v01.csv"
+}

@@ -1,0 +1,10 @@
+{
+  "allows_physical_CMB_score": false,
+  "claim_boundary": "tau_cmb_endpoint_blind_physical_value_source_packet_v01_physical_source_packet_declared_sources_not_supplied_no_score_no_likelihood_no_verdict",
+  "dark_sector_verdict_allowed": false,
+  "likelihood_allowed": false,
+  "physical_value_source_accepted": false,
+  "physical_value_source_supplied": false,
+  "sha256": "fa1f5bf723e2e45e0024cb88d7cbe418584c3db017d8aaa25acec91b297f56b7",
+  "target": "endpoint_blind_physical_value_source_packets/e_acoustic/TCMBRRCNVPSA01_001_physical_value_source_packet_v01.json"
+}

@@ -1,0 +1,65 @@
+{
+  "accepted_domain_objects": 0,
+  "audit_rows": [
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_SEVEN_RULE_ROWS_PRESENT",
+      "blocking_reason": "rule implementation must cover seven non-codomain checker families",
+      "component": "rule_row_shape",
+      "finding": "rows=7"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_RULE_IMPLEMENTATIONS_DECLARED",
+      "blocking_reason": "each checker family must declare certificate-level predicates",
+      "component": "rule_declarations",
+      "finding": "declared=7"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_SEMANTIC_EVIDENCE_BLOCK_ACCOUNTED",
+      "blocking_reason": "certificate rules must not be executable until semantic proof/evidence fields are present",
+      "component": "semantic_evidence_accounting",
+      "finding": "semantic=0, executable=0"
+    },
+    {
+      "audit_passed": true,
+      "audit_status": "PASS_RULE_FIREWALL_CLOSED",
+      "blocking_reason": "rule implementation must not promote missing semantic evidence into certificates or scoring",
+      "component": "promotion_firewall",
+      "finding": "rules do not open certificate/domain/readout/score/likelihood/verdict claims"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_SEMANTIC_CERTIFICATE_EVIDENCE_ABSENT",
+      "blocking_reason": "requires tau_cmb_certificate_semantic_evidence_materialization_v01",
+      "component": "semantic_certificate_evidence",
+      "finding": "certificate predicates are implemented but required semantic evidence fields are absent"
+    },
+    {
+      "audit_passed": false,
+      "audit_status": "BLOCKED_PHYSICAL_R_CMB_NOT_MATERIALIZED",
+      "blocking_reason": "requires physical R_CMB materialization before codomain and scoring",
+      "component": "physical_R_CMB_materialization",
+      "finding": "codomain and physical CMB readout remain downstream"
+    }
+  ],
+  "audited_table": "data/derived/tau_cmb_certificate_level_checker_rule_implementation_v01.csv",
+  "blocked_rows": 2,
+  "certificate_passed_rows": 0,
+  "certificate_rule_executable_rows": 0,
+  "claim_boundary": "tau_cmb_certificate_level_checker_rule_implementation_audit_v01_audit_only_rules_declared_semantic_evidence_absent_no_certificate_pass_no_domain_acceptance_no_physical_R_CMB_no_score_no_likelihood_no_verdict",
+  "concrete_R_CMB_allowed": false,
+  "dark_sector_verdict_allowed": false,
+  "failed_rows": 0,
+  "likelihood_allowed": false,
+  "next_minimal_unblock": "tau_cmb_certificate_semantic_evidence_materialization_v01",
+  "passed_rows": 4,
+  "physical_R_CMB_materialized": false,
+  "report_id": "tau_cmb_certificate_level_checker_rule_implementation_audit_v01",
+  "rule_implementation_audited": true,
+  "rule_implementation_declared_rows": 7,
+  "score_entry_allowed": false,
+  "semantic_evidence_fields_present_rows": 0,
+  "status": "CMB_CERTIFICATE_LEVEL_CHECKER_RULE_IMPLEMENTATION_AUDITED_BLOCKED_BY_SEMANTIC_EVIDENCE"
+}

@@ -1,0 +1,24 @@
+{
+  "artifact_id": "seed_tau_payload_candidate_v01.provenance",
+  "claim_boundary": "tau_cmb_seed_tau_payload_candidate_v01_concrete_candidate_only_not_accepted_no_domain_certificate_no_readout_evaluation_no_survival_no_A_tau_value_no_score_no_verdict",
+  "construction_rule": "copy only Tau-side descriptor fields from the morphological seed descriptor candidate; do not use CMB endpoint measurements",
+  "construction_time_utc": "2026-06-15T12:21:30+00:00",
+  "descriptor_rows_used": [
+    "TCMBMSD01_001",
+    "TCMBMSD01_002",
+    "TCMBMSD01_003",
+    "TCMBMSD01_004",
+    "TCMBMSD01_005"
+  ],
+  "domain_certificate_allowed": false,
+  "payload": "payloads/seed_tau_payload_candidate_v01.csv",
+  "payload_accepted": false,
+  "score_entry_allowed": false,
+  "source_files": [
+    "/Users/jolcsak/Projects/tau-core-theory/source_material/tau_core_foundations/morphology_conditioned_projection_principle_v01.md",
+    "data/derived/tau_cmb_morphological_seed_descriptor_candidate_v01.csv",
+    "docs/tau_cmb_cosmology_derivation_spine_v01.md",
+    "docs/tau_cmb_parent_source_component_unblock_plan_v01.md",
+    "docs/tau_cmb_parent_source_freeze_packet_v01.md"
+  ]
+}
