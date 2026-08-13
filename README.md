@@ -71,6 +71,52 @@ next: tau_cmb_acoustic_operator_population_work_order_v01
 This is an explicit Tau-side population failure, not a physical CMB failure and
 not a dark-sector decision.
 
+Current SHR theory-import update:
+
+```text
+one common morphology/gravity observer-descent operator
+-> acoustic + lensing + growth projections
+-> Paper 13 coordinate extractor
+```
+
+The imported operator removes independent freedom in `Phi_tau_eff`, `A_tau`,
+`Theta_tau_ac`, and `T_tau_CMB`. Numerical population remains blocked by two
+source-owned inputs: the initial seed covariance and the universal
+photon/baryon/polarization coupling. See
+[`docs/tau_cmb_shr_common_operator_import_v01.md`](docs/tau_cmb_shr_common_operator_import_v01.md).
+No Planck score, likelihood, Tau validation, or dark-sector verdict follows.
+
+The two source inputs have also been reduced to explicit conditional forms:
+the initial covariance is the pushforward of the positive seed-Hessian
+vacuum covariance, while photon temperature and polarization share one
+common-metric QED/Thomson operator. Absolute seed incidence, the seed-to-CMB
+map and matter constants remain open. See
+[`docs/tau_cmb_shr_seed_covariance_and_qed_import_v01.md`](docs/tau_cmb_shr_seed_covariance_and_qed_import_v01.md).
+
+The STF body completion is now frozen as a two-branch prediction contract:
+
+```text
+IPC/SGC-minimal: b = 0
+NGBD-STF1:       b = 1/4
+```
+
+The reproducible builder computes their radial/tangent response ratios and
+finite-mode inverse diagnostics without fitting `b` or entering a CMB score:
+
+```bash
+python3 scripts/build_tau_cmb_stf_two_branch_prediction_contract.py
+```
+
+Outputs:
+
+- `data/derived/tau_cmb_stf_two_branch_prediction_contract_v01.csv`
+- `data/derived/tau_cmb_stf_two_branch_prediction_contract_v01.json`
+- `data/derived/tau_cmb_stf_two_branch_filter_discriminator_v01.csv`
+- `data/derived/tau_cmb_stf_two_branch_terminal_ordering_v01.csv`
+
+These are theory-side diagnostics, not spectra, likelihoods, fitted body
+dimensions, or evidence selecting one parent completion.
+
 ## Does Not Claim
 
 - It does not claim that Tau Core has explained the CMB.

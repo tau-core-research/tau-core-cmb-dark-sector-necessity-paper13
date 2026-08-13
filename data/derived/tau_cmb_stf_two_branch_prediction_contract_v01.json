@@ -1,0 +1,165 @@
+{
+  "packet_id": "TAU_CMB_STF_TWO_BRANCH_PREDICTION_CONTRACT_V01",
+  "doc_class": "source_frozen_two_branch_prediction_contract",
+  "status": "TWO_BRANCH_DIAGNOSTIC_READY_NUMERICAL_CMB_SCORE_BLOCKED",
+  "claim_boundary": "two_source_frozen_stf_parent_completions_only_no_continuous_b_fit_no_cmb_score_no_likelihood_no_parent_verdict",
+  "constants": {
+    "k_R": 0.7775374327025936,
+    "I_K": 0.0610078751933,
+    "planck_ns_inverse_diagnostic": 0.9649,
+    "q_inverse_target": 0.008852682287069036
+  },
+  "law": {
+    "potential": "V_b=(k_R/2)||Q||^2+b*k_R^2||Q||^4",
+    "radial_filter_ratio": "1/(1+12*b*k_R*I_K)",
+    "allowed_b_values": [
+      0.0,
+      0.25
+    ]
+  },
+  "branches": [
+    {
+      "branch_id": "STF_BRANCH_MINIMAL",
+      "completion": "IPC_SGC_MINIMAL",
+      "quartic_b": "0.000000000000",
+      "source_status": "CONDITIONAL_MINIMAL_CONTROL",
+      "radial_filter_ratio": "1.000000000000",
+      "tangent_filter_ratio": "1.000000000000",
+      "inverse_lambda_target": "0.008852682287",
+      "nearest_cycle_n": "67",
+      "nearest_cycle_lambda": "0.008788035956",
+      "nearest_cycle_ns_diagnostic": "0.965154083344",
+      "nearest_path_m": "33",
+      "nearest_path_lambda": "0.009056154854",
+      "nearest_path_ns_diagnostic": "0.964100492088",
+      "continuous_b_fit_allowed": "false",
+      "score_entry_allowed": "false",
+      "likelihood_allowed": "false",
+      "parent_selection_verdict_allowed": "false",
+      "claim_boundary": "two_source_frozen_stf_parent_completions_only_no_continuous_b_fit_no_cmb_score_no_likelihood_no_parent_verdict"
+    },
+    {
+      "branch_id": "STF_BRANCH_NGBD",
+      "completion": "NGBD_STF1",
+      "quartic_b": "0.250000000000",
+      "source_status": "CONDITIONAL_ENRICHED_BODY_COMPLETION",
+      "radial_filter_ratio": "0.875420854231",
+      "tangent_filter_ratio": "0.954712353900",
+      "inverse_lambda_target": "0.010112487319",
+      "nearest_cycle_n": "62",
+      "nearest_cycle_lambda": "0.010261353216",
+      "nearest_cycle_ns_diagnostic": "0.964387893255",
+      "nearest_path_m": "31",
+      "nearest_path_lambda": "0.010261353216",
+      "nearest_path_ns_diagnostic": "0.964387893255",
+      "continuous_b_fit_allowed": "false",
+      "score_entry_allowed": "false",
+      "likelihood_allowed": "false",
+      "parent_selection_verdict_allowed": "false",
+      "claim_boundary": "two_source_frozen_stf_parent_completions_only_no_continuous_b_fit_no_cmb_score_no_likelihood_no_parent_verdict"
+    }
+  ],
+  "amplitude_free_discriminator": {
+    "law": "S_b(lambda)=1/(1+r_b*lambda)^2",
+    "ngbd_to_minimal_ratio": "((1+lambda)/(1+0.875420854231*lambda))^2",
+    "ordering": "equal at lambda=0; NGBD greater than minimal and monotonically separating for lambda>0",
+    "diagnostic_grid": [
+      {
+        "lambda": "0.000000000000",
+        "minimal_normalized_filter": "1.000000000000",
+        "ngbd_normalized_filter": "1.000000000000",
+        "ngbd_to_minimal_ratio": "1.000000000000",
+        "ordering": "EQUAL_AT_ZERO",
+        "score_entry_allowed": "false",
+        "claim_boundary": "two_source_frozen_stf_parent_completions_only_no_continuous_b_fit_no_cmb_score_no_likelihood_no_parent_verdict"
+      },
+      {
+        "lambda": "0.001000000000",
+        "minimal_normalized_filter": "0.998002996005",
+        "ngbd_normalized_filter": "0.998251454696",
+        "ngbd_to_minimal_ratio": "1.000248955857",
+        "ordering": "NGBD_GREATER_THAN_MINIMAL",
+        "score_entry_allowed": "false",
+        "claim_boundary": "two_source_frozen_stf_parent_completions_only_no_continuous_b_fit_no_cmb_score_no_likelihood_no_parent_verdict"
+      },
+      {
+        "lambda": "0.010000000000",
+        "minimal_normalized_filter": "0.980296049407",
+        "ngbd_normalized_filter": "0.982718836921",
+        "ngbd_to_minimal_ratio": "1.002471485543",
+        "ordering": "NGBD_GREATER_THAN_MINIMAL",
+        "score_entry_allowed": "false",
+        "claim_boundary": "two_source_frozen_stf_parent_completions_only_no_continuous_b_fit_no_cmb_score_no_likelihood_no_parent_verdict"
+      },
+      {
+        "lambda": "0.100000000000",
+        "minimal_normalized_filter": "0.826446280992",
+        "ngbd_normalized_filter": "0.845488793564",
+        "ngbd_to_minimal_ratio": "1.023041440212",
+        "ordering": "NGBD_GREATER_THAN_MINIMAL",
+        "score_entry_allowed": "false",
+        "claim_boundary": "two_source_frozen_stf_parent_completions_only_no_continuous_b_fit_no_cmb_score_no_likelihood_no_parent_verdict"
+      },
+      {
+        "lambda": "1.000000000000",
+        "minimal_normalized_filter": "0.250000000000",
+        "ngbd_normalized_filter": "0.284316797132",
+        "ngbd_to_minimal_ratio": "1.137267188527",
+        "ordering": "NGBD_GREATER_THAN_MINIMAL",
+        "score_entry_allowed": "false",
+        "claim_boundary": "two_source_frozen_stf_parent_completions_only_no_continuous_b_fit_no_cmb_score_no_likelihood_no_parent_verdict"
+      }
+    ]
+  },
+  "terminal_ordering": {
+    "premise": "rank-one adiabatic source and identical common transfer functions between branches",
+    "rows": [
+      {
+        "readout": "TT",
+        "spectrum_type": "AUTO",
+        "transfer_kernel_sign": "NONNEGATIVE_SQUARED_TRANSFER",
+        "ngbd_vs_minimal_ordering": "NGBD_GEQ_MINIMAL",
+        "theorem_status": "CONDITIONAL_COMMON_TRANSFER_THEOREM",
+        "numeric_bandpower_supplied": "false",
+        "score_entry_allowed": "false",
+        "claim_boundary": "two_source_frozen_stf_parent_completions_only_no_continuous_b_fit_no_cmb_score_no_likelihood_no_parent_verdict"
+      },
+      {
+        "readout": "EE",
+        "spectrum_type": "AUTO",
+        "transfer_kernel_sign": "NONNEGATIVE_SQUARED_TRANSFER",
+        "ngbd_vs_minimal_ordering": "NGBD_GEQ_MINIMAL",
+        "theorem_status": "CONDITIONAL_COMMON_TRANSFER_THEOREM",
+        "numeric_bandpower_supplied": "false",
+        "score_entry_allowed": "false",
+        "claim_boundary": "two_source_frozen_stf_parent_completions_only_no_continuous_b_fit_no_cmb_score_no_likelihood_no_parent_verdict"
+      },
+      {
+        "readout": "LENSING_PHI_PHI",
+        "spectrum_type": "AUTO",
+        "transfer_kernel_sign": "NONNEGATIVE_SQUARED_TRANSFER",
+        "ngbd_vs_minimal_ordering": "NGBD_GEQ_MINIMAL",
+        "theorem_status": "CONDITIONAL_COMMON_TRANSFER_THEOREM",
+        "numeric_bandpower_supplied": "false",
+        "score_entry_allowed": "false",
+        "claim_boundary": "two_source_frozen_stf_parent_completions_only_no_continuous_b_fit_no_cmb_score_no_likelihood_no_parent_verdict"
+      },
+      {
+        "readout": "TE",
+        "spectrum_type": "CROSS",
+        "transfer_kernel_sign": "SIGN_INDEFINITE_PRODUCT",
+        "ngbd_vs_minimal_ordering": "NOT_ORDERED",
+        "theorem_status": "CONDITIONAL_COMMON_TRANSFER_THEOREM",
+        "numeric_bandpower_supplied": "false",
+        "score_entry_allowed": "false",
+        "claim_boundary": "two_source_frozen_stf_parent_completions_only_no_continuous_b_fit_no_cmb_score_no_likelihood_no_parent_verdict"
+      }
+    ]
+  },
+  "firewall": {
+    "continuous_b_fit_allowed": false,
+    "cmb_score_computed": false,
+    "likelihood_computed": false,
+    "parent_selection_verdict_allowed": false
+  }
+}

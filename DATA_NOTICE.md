@@ -143,6 +143,12 @@ or fitted parameters. Its purpose is to make the absent Tau-side prediction
 auditable and to route the next step to an actual Tau acoustic source
 derivation rather than to a premature score.
 
+The STF two-branch prediction contract contains only the two source-frozen
+values `b=0` and `b=1/4`, their analytic response ratios, and inverse
+finite-mode diagnostics. It does not contain CMB spectra, a Planck or ACT
+likelihood, a fitted quartic coefficient, a selected body cardinality, or a
+parent-selection verdict.
+
 The acoustic Tau-prediction source-derivation artifact declares only a formal
 source target and dependency spine. It does not store a solved acoustic source,
 peak prediction, likelihood value, fitted parameter, or accepted physical
