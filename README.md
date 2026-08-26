@@ -802,6 +802,13 @@ readout behavior can constrain compatible `B_tau` response-family candidates
 only when null/gauge, wrong-family, and holdout controls are declared. It does
 not identify the Tau base field or select a unique physical response equation.
 
+## Full-4D Score-Ready Contract
+
+The missing Tau-side CMB vector must be generated from one source-frozen
+`E_K = (K_HH - K_std) - C K_VV^-1 C^dagger`, not fitted to the observed CMB
+endpoint. Exact duplicate directions are removed and genuine terminal overlap
+is retained through the full covariance. The current adapter remains blocked.
+
 ## Reproduce
 
 ```bash

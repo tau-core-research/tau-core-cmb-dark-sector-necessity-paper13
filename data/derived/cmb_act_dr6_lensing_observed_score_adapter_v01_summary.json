@@ -14,7 +14,7 @@
   "covariance_symmetric_residual_max_abs": "0.000000000000000000e+00",
   "dark_sector_verdict_allowed": false,
   "inverse_covariance_path": "data/derived/cmb_act_dr6_lensing_observed_score_adapter_v01_inverse_covariance.csv",
-  "inverse_covariance_sha256": "b3b4d37cb8dd0b6c890a7e0335f34f829e8c7c7f85900f988e144a6df133fbec",
+  "inverse_covariance_sha256": "ef9febd85126bdfbc439587c5b0cb48549a0cd05c2902aff66fe5368c85d755c",
   "inverse_covariance_shape": [
     18,
     18

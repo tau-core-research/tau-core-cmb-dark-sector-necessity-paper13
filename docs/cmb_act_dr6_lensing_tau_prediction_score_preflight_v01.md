@@ -29,8 +29,8 @@ prediction_rows=18
 accepted_prediction_rows=18
 score_executable_now=True
 score_computed=True
-chi2_tau=2129.1187283145146
-chi2_per_naive_dof=118.28437379525081
+chi2_tau=2129.1187283145136
+chi2_per_naive_dof=118.28437379525076
 next_required_artifact=none_score_computed_review_claim_boundary
 ```
 

@@ -21,10 +21,10 @@ Summary:
 ```text
 candidate_id=tau_shape_control_morph_lensing_broad_lowL_A1e-07
 candidate_rows=18
-chi2_tau=401.4430238676094
-chi2_per_naive_dof=22.302390214867188
-delta_chi2_vs_null=1727.6757044469052
-fractional_chi2_improvement_vs_null=0.8114510860625392
+chi2_tau=401.44302386760944
+chi2_per_naive_dof=22.30239021486719
+delta_chi2_vs_null=1727.675704446904
+fractional_chi2_improvement_vs_null=0.811451086062539
 obligations_total=4
 obligations_open=4
 ```

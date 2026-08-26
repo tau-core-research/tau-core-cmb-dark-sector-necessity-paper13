@@ -5,7 +5,7 @@
   "ansatz_properties_path": "data/derived/cmb_tau_lensing_base_field_operator_ansatz_packet_v01_properties.csv",
   "ansatz_properties_sha256": "891a6849d3e61ec92eda4dcaab04eaf358a13f5e32a86f5206f6eb268ecaffab",
   "ansatz_summary_path": "data/derived/cmb_tau_lensing_base_field_operator_ansatz_packet_v01_summary.json",
-  "ansatz_summary_sha256": "362118e7dd7eeebbbc0cf389506a89b46143e45c684e5951510986ee85e4de1f",
+  "ansatz_summary_sha256": "46ead6c7486391af333ca9b47f65dbcf087e862931cbaea72034d97db64efdf4",
   "assessment_path": "data/derived/cmb_tau_lensing_factorized_response_derivation_attempt_v01_assessment.csv",
   "assessment_sha256": "1c402a8d3bc9cf928ecc4db0552889557725f09bd56453d0c7b07f68dd38815f",
   "base_field_screening_derived": false,

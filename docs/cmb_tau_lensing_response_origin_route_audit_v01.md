@@ -18,7 +18,7 @@ A=1e-07
 L_c=120.0
 p=0.5
 q=1.0
-ACT_delta_chi2_vs_null=1727.6757044469052
+ACT_delta_chi2_vs_null=1727.675704446904
 Planck_delta_chi2_vs_null=1667.2063883803967
 ```
 

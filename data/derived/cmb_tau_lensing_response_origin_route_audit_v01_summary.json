@@ -1,5 +1,5 @@
 {
-  "act_delta_chi2_vs_null": 1727.6757044469052,
+  "act_delta_chi2_vs_null": 1727.675704446904,
   "base_field_route_status": "open_viable_but_unproved",
   "candidate_amplitude": 1e-07,
   "candidate_ell_c": 120.0,
@@ -11,7 +11,7 @@
   "formula_spec_path": "data/derived/cmb_tau_lensing_nonzero_candidate_derivation_status_audit_v01_formula_spec.csv",
   "formula_spec_sha256": "fd2919d0b3c9dcd227460a8c49a0d71deb19c335ce1a5d0015654b849d6f8936",
   "holdout_summary_path": "data/derived/cmb_planck_lensing_cross_readout_holdout_for_tau_candidate_v01_summary.json",
-  "holdout_summary_sha256": "41bb8b24ada2635c7ceef7fa1d000d3bf3d2c915289e43afa28ac886fe7e683a",
+  "holdout_summary_sha256": "93fe1bcac58b855b0d3f19a8727da1d47b33f94a8fd0acbbdba134f4b574a4fe",
   "hybrid_route_status": "open_high_burden_route",
   "next_required_artifact": "derive_or_reject_seed_only_or_base_field_origin_route_for_L_c_p_q_A",
   "physical_tau_response_claim_allowed": false,
@@ -31,6 +31,6 @@
   "status_audit_path": "data/derived/cmb_tau_lensing_nonzero_candidate_derivation_status_audit_v01.csv",
   "status_audit_sha256": "08d5606f5ad545d7b1b342039d013adb43840d3c772e55dd3fb9841152bf32cd",
   "status_summary_path": "data/derived/cmb_tau_lensing_nonzero_candidate_derivation_status_audit_v01_summary.json",
-  "status_summary_sha256": "e542579c18f27d58b9632b9d33a1268371c688caa0c7e7f4574689b2b7d6d2f4",
+  "status_summary_sha256": "8b21493460f870f7504fe8ceefcea20aef471fe0532a9c60cd4116ff058af196",
   "summary_id": "CMB_TAU_LENSING_RESPONSE_ORIGIN_ROUTE_AUDIT_V01"
 }

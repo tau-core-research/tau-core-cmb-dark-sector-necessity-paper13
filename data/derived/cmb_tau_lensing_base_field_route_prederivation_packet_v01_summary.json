@@ -24,7 +24,7 @@
   "route_requirements_sha256": "d1ca84111b624e7196a2ba621094accbd7eb46188b66237618fe6b9eb2d128c9",
   "route_selected_as_physical": false,
   "route_summary_path": "data/derived/cmb_tau_lensing_response_origin_route_audit_v01_summary.json",
-  "route_summary_sha256": "996c5b843c7b72e786b2534de0e39ef05069511c91e27acaccda478d253390e7",
+  "route_summary_sha256": "994ebb1448d1f821280eb63f1e211f761dc834e2df107b8e738de0bc8bd79be0",
   "seed_only_route_rejected": false,
   "selected_next_work_route": "ROUTE_02_BASE_FIELD",
   "summary_id": "CMB_TAU_LENSING_BASE_FIELD_ROUTE_PREDERIVATION_PACKET_V01"

@@ -20,7 +20,7 @@
   "factorized_next_steps_path": "data/derived/cmb_tau_lensing_factorized_response_derivation_attempt_v01_next_steps.csv",
   "factorized_next_steps_sha256": "b9e77347f1f63808fe7d55a4a8ab2955e535a16f67b81a98cbbf9ec186fbb81d",
   "factorized_summary_path": "data/derived/cmb_tau_lensing_factorized_response_derivation_attempt_v01_summary.json",
-  "factorized_summary_sha256": "0f32e0492db08f7d977d3e409d62a24e1b4c90bf597149f0edba80c692f16770",
+  "factorized_summary_sha256": "336fc222afe870001570728dd4e941e7e17e1d0c964f770c778ae6990d29fdb0",
   "next_required_artifact": "derive_transition_scale_and_amplitude_or_define_conditional_score_boundary",
   "next_steps_path": "data/derived/cmb_tau_lensing_seed_screening_minimal_closure_attempt_v01_next_steps.csv",
   "next_steps_sha256": "97022a06be17acbd6405639e9d063af9780ca28b2b55612dd8b434c2e4d697db",

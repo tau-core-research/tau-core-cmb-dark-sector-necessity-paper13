@@ -20,12 +20,12 @@ Summary:
 
 ```text
 candidate_count=12
-null_chi2=2129.1187283145146
+null_chi2=2129.1187283145136
 best_candidate_id=tau_shape_control_morph_lensing_broad_lowL_A1e-07
-best_chi2=401.4430238676094
-best_delta_chi2_vs_null=1727.6757044469052
-best_fractional_chi2_improvement_vs_null=0.8114510860625392
-best_chi2_per_naive_dof=22.302390214867188
+best_chi2=401.44302386760944
+best_delta_chi2_vs_null=1727.675704446904
+best_fractional_chi2_improvement_vs_null=0.811451086062539
+best_chi2_per_naive_dof=22.30239021486719
 ```
 
 ## Claim Boundary
