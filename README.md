@@ -824,3 +824,14 @@ the arXiv source ZIP, and runs the public tests.
 Paper 13 is intentionally not a galaxy-rotation continuation of Paper 11. It
 uses the CMB as a stronger global test of whether Tau Core can remain no-dark,
 or whether a Tau base-field response/effective dark-sector layer is required.
+
+<!-- BEGIN OBSERVER UPDATE 20260914 -->
+## Observer realization update (2026-09-14)
+
+No cosmological expansion law, occupied stress tensor, dark-sector replacement or offspring-universe transition is established by these observer calculations.
+
+The manuscript distinguishes inherited BRAC contact, conditional coherent-state
+selection and interacting local covariance from physical observer identification,
+preparation and stable resolution. Those physical claims remain open. No
+empirical score was changed. The [dependency and source-result ledger](data/derived/observer_update_2026_09_14.json) records the assumptions and controls.
+<!-- END OBSERVER UPDATE 20260914 -->
