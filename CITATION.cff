@@ -4,6 +4,7 @@ message: "If you use this public scaffold, cite the repository and the external 
 type: software
 authors:
   - name: "Tau Core Research"
+    orcid: "https://orcid.org/0009-0003-7311-6522"
 date-released: "2026-08-22"
 version: "v0.1.0"
 license: MIT
